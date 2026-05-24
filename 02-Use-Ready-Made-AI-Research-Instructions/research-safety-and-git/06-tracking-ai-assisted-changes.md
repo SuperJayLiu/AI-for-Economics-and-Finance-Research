@@ -1,3 +1,6 @@
+> Copyright (c) 2026 SuperJayLiu (Chaojie Liu). Licensed under the repository MIT License.
+> This instruction/workflow is original to this repository unless otherwise noted. External inspirations are cited in “Sources and workflow influences.”
+
 # Tracking AI-Assisted Changes
 
 Track AI-assisted work so you can reproduce, disclose, and audit your research process.

@@ -1,5 +1,20 @@
 # Roadmap
 
+## v0.2: Resource-First Reorganization
+
+Goal: make the repository easier to read and use as a bilingual handbook plus practical resource library.
+
+Included:
+
+- bilingual root entry with English and Chinese homepages
+- long-form handbook folder
+- directly usable research instructions folder
+- workflow setup folder for AI projects
+- examples, diagrams, and failure cases folder
+- source/resource folder for brief workflow influences and official docs
+- teaching, workshop, and slide-ready material folder
+- minimum setup, maturity ladder, what-not-to-automate, data sensitivity, AI-use log, review standards, and citation guidance
+
 ## v0.1: Useful First Release
 
 Goal: make the repository immediately useful for economics and finance scholars.
@@ -19,7 +34,7 @@ Included:
   - seminar presentation
 - GitHub and research-safety foundations
 
-## v0.2: Full Research Workflow
+## v0.3: Full Research Workflow
 
 Add fuller pages for:
 
@@ -33,7 +48,7 @@ Add fuller pages for:
 - submission and revision
 - Stata, R, Python, and LaTeX workflows
 
-## v0.3: Case Studies
+## v0.4: Case Studies
 
 Add realistic examples:
 
@@ -44,7 +59,7 @@ Add realistic examples:
 - text as data
 - seminar talk
 
-## v0.4: Advanced Automation
+## v0.5: Advanced Automation
 
 Add:
 

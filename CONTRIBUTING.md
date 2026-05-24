@@ -10,6 +10,7 @@ Contributions should improve responsible, practical AI use for economics and fin
 - safety guidance for data, privacy, disclosure, or reproducibility
 - teaching materials and workshop outlines
 - concise resource recommendations with explanations
+- reusable instructions that include copyright, source influences, and verification steps
 
 ## What To Avoid
 
@@ -18,6 +19,8 @@ Contributions should improve responsible, practical AI use for economics and fin
 - claims that AI can replace expert judgment
 - instructions that encourage uploading confidential or restricted materials
 - examples that fabricate citations, results, data, or robustness checks
+- copied external skills without license review and attribution
+- tool claims without a last-checked date
 
 ## Suggested Page Structure
 
@@ -38,3 +41,5 @@ For resources:
 - Who should read it
 - How it connects to economics or finance research
 - Any privacy, cost, or reliability caveats
+
+See [Review Standards](REVIEW-STANDARDS.md) before opening substantial additions.
