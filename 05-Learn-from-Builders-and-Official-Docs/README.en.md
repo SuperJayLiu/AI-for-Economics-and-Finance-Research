@@ -26,3 +26,6 @@ Tool behavior changes quickly, so tool-specific notes should be dated and period
 - [Source Use Policy](source-use-policy.md)
 - [Source To Section Map](source-to-section-map.md)
 - [Builder-Oriented AI Learning](builder-oriented-ai-learning.md)
+- [AI Learning Library For Economics And Finance](ai-learning-library-for-econ-finance.md)
+- [Resource Inclusion Criteria](resource-inclusion-criteria.md)
+- [AI Information Diet](ai-information-diet.md)

@@ -14,6 +14,8 @@ Included:
 - source/resource folder for brief workflow influences and official docs
 - teaching, workshop, and slide-ready material folder
 - minimum setup, maturity ladder, what-not-to-automate, data sensitivity, AI-use log, review standards, and citation guidance
+- tailored direct-use skills for interactive HTML research slides, traditional LaTeX/Beamer research slides, presentation practice, and personal academic websites
+- AI learning-library layer, resource inclusion rules, and AI information-diet guidance
 
 ## v0.1: Useful First Release
 

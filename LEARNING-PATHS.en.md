@@ -65,3 +65,18 @@ Use these paths to avoid reading the repository from top to bottom.
 2. [Two Session Intro Workshop](06-Teach-Workshops-and-Slides/workshops/01-two-session-intro-workshop.md)
 3. [AI Skills Management](01-Learn-AI-for-Econ-Finance-Research/ai-skills-management/00-overview.md)
 4. [Responsible Use and Risks](01-Learn-AI-for-Econ-Finance-Research/responsible-use-and-risks/00-overview.md)
+
+## Path 10: I Want Better Research Presentations
+
+1. [AI for Research Presentations](01-Learn-AI-for-Econ-Finance-Research/writing-reviewing-presenting/09-ai-for-research-presentations.md)
+2. [HTML Slides as Research Artifacts](01-Learn-AI-for-Econ-Finance-Research/writing-reviewing-presenting/10-html-slides-as-research-artifacts.md)
+3. [HTML Research Slides Skill](02-Use-Ready-Made-AI-Research-Instructions/html-research-slides-skill.md)
+4. [LaTeX Beamer Research Slides Skill](02-Use-Ready-Made-AI-Research-Instructions/latex-beamer-research-slides-skill.md)
+5. [Practice Your Research Presentation With AI](02-Use-Ready-Made-AI-Research-Instructions/presentation-practice-with-ai.md)
+
+## Path 11: I Want To Stay Updated Without Hype
+
+1. [AI Learning Library For Economics And Finance](05-Learn-from-Builders-and-Official-Docs/ai-learning-library-for-econ-finance.md)
+2. [AI Information Diet](05-Learn-from-Builders-and-Official-Docs/ai-information-diet.md)
+3. [Resource Inclusion Criteria](05-Learn-from-Builders-and-Official-Docs/resource-inclusion-criteria.md)
+4. [Build For One Research Workflows](01-Learn-AI-for-Econ-Finance-Research/ai-skills-management/08-build-for-one-research-workflows.md)

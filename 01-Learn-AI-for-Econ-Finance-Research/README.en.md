@@ -28,6 +28,7 @@ This folder explains how AI fits into economics and finance research:
 5. [Core AI Skills for Research](core-ai-skills-for-research/00-overview.md)
 6. [Econ Finance Research Workflow](econ-finance-research-workflow/00-overview.md)
 7. [Advanced Automation](advanced-automation/00-overview.md)
+8. [AI for Research Presentations](writing-reviewing-presenting/09-ai-for-research-presentations.md)
 
 ## Sources and Workflow Influences
 

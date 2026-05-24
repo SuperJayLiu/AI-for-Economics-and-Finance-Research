@@ -27,3 +27,16 @@
 1. [Teach Workshops and Slides](06-Teach-Workshops-and-Slides/README.en.md)
 2. [AI Assisted RA Onboarding](06-Teach-Workshops-and-Slides/ai-assisted-ra-onboarding.md)
 3. [Review Standards](REVIEW-STANDARDS.md)
+
+## 路径 5：我想改进研究展示和 slides
+
+1. [AI for Research Presentations](01-Learn-AI-for-Econ-Finance-Research/writing-reviewing-presenting/09-ai-for-research-presentations.md)
+2. [HTML Research Slides Skill](02-Use-Ready-Made-AI-Research-Instructions/html-research-slides-skill.md)
+3. [LaTeX Beamer Research Slides Skill](02-Use-Ready-Made-AI-Research-Instructions/latex-beamer-research-slides-skill.md)
+4. [Practice Your Research Presentation With AI](02-Use-Ready-Made-AI-Research-Instructions/presentation-practice-with-ai.md)
+
+## 路径 6：我想持续学习 AI 但避免信息噪音
+
+1. [AI Learning Library For Economics And Finance](05-Learn-from-Builders-and-Official-Docs/ai-learning-library-for-econ-finance.md)
+2. [AI Information Diet](05-Learn-from-Builders-and-Official-Docs/ai-information-diet.md)
+3. [Resource Inclusion Criteria](05-Learn-from-Builders-and-Official-Docs/resource-inclusion-criteria.md)

@@ -28,6 +28,7 @@ AI 可以自动化劳动，但不能替代学术责任。
 - 最小设置：[Minimum Setup for Scholars](01-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
 - 直接可用的说明和模板：[Use Ready-Made AI Research Instructions](02-Use-Ready-Made-AI-Research-Instructions/README.en.md)
 - AI 研究工作流设置：[Set Up AI Research Workflows](03-Set-Up-AI-Research-Workflows/README.en.md)
+- 研究展示和 slides：[HTML Research Slides Skill](02-Use-Ready-Made-AI-Research-Instructions/html-research-slides-skill.md)、[LaTeX Beamer Research Slides Skill](02-Use-Ready-Made-AI-Research-Instructions/latex-beamer-research-slides-skill.md)、[Practice Your Presentation With AI](02-Use-Ready-Made-AI-Research-Instructions/presentation-practice-with-ai.md)
 
 ## 仓库结构
 

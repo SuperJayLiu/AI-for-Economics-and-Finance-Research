@@ -12,6 +12,8 @@ Follow people and projects that build useful workflows, not sources that only re
 - tool evaluation methods
 - examples that can be tested
 - failure modes
+- resource-card structures that reduce information overload
+- "build for one" workflows that solve a repeated personal research problem first
 
 ## What Not To Copy Blindly
 

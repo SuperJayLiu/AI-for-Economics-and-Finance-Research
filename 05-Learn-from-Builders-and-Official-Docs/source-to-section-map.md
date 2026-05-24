@@ -6,6 +6,8 @@
 | Pedro Sant'Anna | academic workflow systems, agents, quality gates |
 | Claude Blattman / Chris Blattman | non-coder AI workflows, skills, project systems |
 | Zara Zhang | builder-oriented AI learning and information filtering |
+| Zara Zhang `frontend-slides` | interactive HTML research slides, slide-skill structure, visual style discovery |
+| Maverick Gao `slide-craft-skill` | slide-skill workflow design, bilingual slide tooling, content overflow handling |
 | Antonio Mele | economics-specific AI skills |
 | Aniket Panjwani | tool choice and agent onboarding for economists |
 | Mihail Velikov | curated AI and economics knowledge-base structure |

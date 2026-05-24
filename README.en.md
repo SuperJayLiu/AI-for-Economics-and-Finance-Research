@@ -27,6 +27,7 @@ For serious work, use one GitHub repository for the research project, one ChatGP
 - Need a minimum setup: [Minimum Setup for Scholars](01-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
 - Want direct reusable instructions: [Use Ready-Made AI Research Instructions](02-Use-Ready-Made-AI-Research-Instructions/README.en.md)
 - Want project setups: [Set Up AI Research Workflows](03-Set-Up-AI-Research-Workflows/README.en.md)
+- Want presentation help: [HTML Research Slides Skill](02-Use-Ready-Made-AI-Research-Instructions/html-research-slides-skill.md), [LaTeX Beamer Research Slides Skill](02-Use-Ready-Made-AI-Research-Instructions/latex-beamer-research-slides-skill.md), and [Practice Your Presentation With AI](02-Use-Ready-Made-AI-Research-Instructions/presentation-practice-with-ai.md)
 - Want to cite this repo: [How To Cite](HOW-TO-CITE.md)
 
 ## Repository Structure

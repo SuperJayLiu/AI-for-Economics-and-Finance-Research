@@ -30,7 +30,12 @@ Reusable instructions in this folder are original to this repository unless othe
 
 ## Start Here
 
+- [Tools And Templates Catalog](tools-and-templates-catalog.md)
 - [Skills vs Prompts vs Projects](skills-vs-prompts-vs-projects.md)
 - [How To Use External Skills Responsibly](how-to-use-external-skills-responsibly.md)
 - [Agent Instruction Files](agent-instructions-files.md)
 - [AI Use Log](research-safety-and-git/08-ai-use-log.md)
+- [Interactive HTML Research Slides Skill](html-research-slides-skill.md)
+- [Traditional LaTeX Beamer Research Slides Skill](latex-beamer-research-slides-skill.md)
+- [Practice Your Research Presentation With AI](presentation-practice-with-ai.md)
+- [Personal Academic Website Template](personal-academic-website-template.md)
