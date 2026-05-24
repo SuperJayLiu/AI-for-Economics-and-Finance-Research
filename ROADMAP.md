@@ -6,7 +6,7 @@ Goal: make the repository easier to read and use as a bilingual handbook plus pr
 
 Included:
 
-- bilingual root entry with English and Chinese homepages
+- bilingual root README with English and Chinese sections in the same file
 - long-form handbook folder
 - directly usable research instructions folder
 - workflow setup folder for AI projects
@@ -16,6 +16,7 @@ Included:
 - minimum setup, maturity ladder, what-not-to-automate, data sensitivity, AI-use log, review standards, and citation guidance
 - tailored direct-use skills for interactive HTML research slides, traditional LaTeX/Beamer research slides, presentation practice, and personal academic websites
 - AI learning-library layer, resource inclusion rules, and AI information-diet guidance
+- action-oriented folder names and one README per major folder whenever possible
 
 ## v0.1: Useful First Release
 

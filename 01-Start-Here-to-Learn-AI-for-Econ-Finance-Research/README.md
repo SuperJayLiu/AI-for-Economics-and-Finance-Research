@@ -15,9 +15,9 @@ This folder explains how AI fits into economics and finance research:
 ## How It Differs From Other Folders
 
 - Use this folder to learn.
-- Use [Ready-Made AI Research Instructions](../02-Use-Ready-Made-AI-Research-Instructions/README.en.md) when you want templates, checklists, logs, or direct instructions.
-- Use [Set Up AI Research Workflows](../03-Set-Up-AI-Research-Workflows/README.en.md) when you want a complete project setup.
-- Use [Examples and Case Studies](../04-Examples-Diagrams-and-Case-Studies/README.en.md) when you want to see workflows in action.
+- Use [Ready-Made AI Research Instructions](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md#english) when you want templates, checklists, logs, or direct instructions.
+- Use [Set Up AI Research Workflows](../03-How-to-Set-Up-Your-AI-Research-Workflow/README.md#english) when you want a complete project setup.
+- Use [Examples and Case Studies](../04-See-Examples-Diagrams-and-Failure-Cases/README.md#english) when you want to see workflows in action.
 
 ## Suggested Order
 
@@ -32,6 +32,6 @@ This folder explains how AI fits into economics and finance research:
 
 ## Sources and Workflow Influences
 
-Draws on public work by economists, finance scholars, AI workflow builders, and official tool documentation. See [Learn from Builders and Official Docs](../05-Learn-from-Builders-and-Official-Docs/README.en.md).
+Draws on public work by economists, finance scholars, AI workflow builders, and official tool documentation. See [Learn from Builders and Official Docs](../05-Check-Builders-Official-Docs-and-Resources/README.md#english).
 
 Last checked: 2026-05-24

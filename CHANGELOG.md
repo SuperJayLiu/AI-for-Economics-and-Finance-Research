@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Consolidated root README language selection into one README page with English and Chinese sections below anchor links.
+- Renamed top-level folders into clearer action/question-style labels for GitHub readers.
+- Renamed major folder README files to plain `README.md` to avoid unnecessary parallel README variants.
 - Reorganized the repository into a bilingual resource-first structure.
 - Added English and Chinese entry pages.
 - Added clearer top-level folders for learning, direct instructions, workflow setups, examples, sources, and teaching material.

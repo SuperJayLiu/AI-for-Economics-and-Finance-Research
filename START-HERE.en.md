@@ -18,7 +18,7 @@ Start with:
 6. A private folder structure for research projects
 7. Basic Git usage
 
-Read: [Minimum Setup for Scholars](01-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
+Read: [Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
 
 ## A Safe Beginner Workflow
 
@@ -31,16 +31,16 @@ Read: [Minimum Setup for Scholars](01-Learn-AI-for-Econ-Finance-Research/what-sc
 
 ## Recommended First Reading
 
-1. [What LLMs Are and Are Not](01-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/01-what-llms-are-and-are-not.md)
-2. [AI Research Workflow Maturity Ladder](01-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/05-ai-research-workflow-maturity-ladder.md)
-3. [Human Accountability](01-Learn-AI-for-Econ-Finance-Research/responsible-use-and-risks/01-human-accountability.md)
-4. [Data Sensitivity Matrix](01-Learn-AI-for-Econ-Finance-Research/responsible-use-and-risks/07-data-sensitivity-matrix.md)
-5. [Checking AI Outputs](01-Learn-AI-for-Econ-Finance-Research/core-ai-skills-for-research/06-checking-ai-outputs.md)
-6. [Skills vs Prompts vs Projects](02-Use-Ready-Made-AI-Research-Instructions/skills-vs-prompts-vs-projects.md)
-7. [AI Use Log](02-Use-Ready-Made-AI-Research-Instructions/research-safety-and-git/08-ai-use-log.md)
+1. [What LLMs Are and Are Not](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/01-what-llms-are-and-are-not.md)
+2. [AI Research Workflow Maturity Ladder](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/05-ai-research-workflow-maturity-ladder.md)
+3. [Human Accountability](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/responsible-use-and-risks/01-human-accountability.md)
+4. [Data Sensitivity Matrix](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/responsible-use-and-risks/07-data-sensitivity-matrix.md)
+5. [Checking AI Outputs](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/core-ai-skills-for-research/06-checking-ai-outputs.md)
+6. [Skills vs Prompts vs Projects](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills-vs-prompts-vs-projects.md)
+7. [AI Use Log](02-Copy-and-Use-AI-Research-Instructions-and-Templates/research-safety-and-git/08-ai-use-log.md)
 
 ## A Good First AI Project
 
 Start with a literature review project, not a full paper-writing project. Literature work makes the benefits and risks visible: AI can organize and compare ideas, but it may also invent citations or misstate contributions.
 
-Use: [Literature Review Project](03-Set-Up-AI-Research-Workflows/ai-projects/03-literature-review-project.md)
+Use: [Literature Review Project](03-How-to-Set-Up-Your-AI-Research-Workflow/ai-projects/03-literature-review-project.md)
