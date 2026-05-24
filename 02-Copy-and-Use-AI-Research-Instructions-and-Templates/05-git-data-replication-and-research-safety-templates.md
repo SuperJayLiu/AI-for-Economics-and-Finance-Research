@@ -175,10 +175,12 @@ If permission is unclear, recommend not uploading or exposing the material.
 ```markdown
 # AI Use Log
 
-| Date | Tool/model | Task | Files touched | Output accepted | Human checks | Remaining uncertainty | Commit |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| YYYY-MM-DD | [tool] | [task] | [files] | [what was used] | [checks] | [uncertainty] | [hash] |
+| Date | Tool/model/version | Task | Input materials | Files touched | Output accepted | Human checks | Remaining uncertainty | Disclosure needed? | Commit |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| YYYY-MM-DD | [tool/model/version if known] | [task] | [public/private/licensed/restricted?] | [files] | [what was used] | [checks] | [uncertainty] | [yes/no/check policy] | [hash] |
 ```
+
+For a fuller reproducibility packet or disclosure paragraph, use [Verification, Reproducibility, and Disclosure Skills](17-verification-reproducibility-and-disclosure-skills.md).
 
 ## Template 5: Replication Package Intake
 

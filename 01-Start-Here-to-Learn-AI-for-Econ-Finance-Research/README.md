@@ -17,19 +17,21 @@ Questions or suggestions for this handbook: email [jay.liu@bristol.ac.uk](mailto
 - [Quick Start: Choose Your Situation](#quick-start-choose-your-situation)
 - [1. What This Handbook Is For](#1-what-this-handbook-is-for)
 - [2. The Basic Mental Model](#2-the-basic-mental-model)
-- [3. The Maturity Ladder](#3-the-maturity-ladder)
-- [4. What AI Is Good At](#4-what-ai-is-good-at)
-- [5. What AI Should Not Do For You](#5-what-ai-should-not-do-for-you)
-- [6. Core Concepts](#6-core-concepts)
-- [7. The Econ/Finance Research Workflow](#7-the-econfinance-research-workflow)
-- [8. Responsible Use Rules](#8-responsible-use-rules)
-- [9. Data Safety Rules](#9-data-safety-rules)
-- [10. GitHub and Project Safety](#10-github-and-project-safety)
-- [11. Skills, Projects, Agents, and MCPs](#11-skills-projects-agents-and-mcps)
-- [12. Writing, Presenting, and Public Communication](#12-writing-presenting-and-public-communication)
-- [13. Staying Updated Without Chasing Hype](#13-staying-updated-without-chasing-hype)
-- [14. What To Use Next](#14-what-to-use-next)
-- [15. Sources and Workflow Influences](#15-sources-and-workflow-influences)
+- [3. Beginner Tool Glossary](#3-beginner-tool-glossary)
+- [4. The Maturity Ladder](#4-the-maturity-ladder)
+- [5. What AI Is Good At](#5-what-ai-is-good-at)
+- [6. What AI Should Not Do For You](#6-what-ai-should-not-do-for-you)
+- [7. Core Concepts](#7-core-concepts)
+- [8. The Econ/Finance Research Workflow](#8-the-econfinance-research-workflow)
+- [9. Responsible Use Rules](#9-responsible-use-rules)
+- [10. Verification Is a Skill](#10-verification-is-a-skill)
+- [11. Data Safety Rules](#11-data-safety-rules)
+- [12. GitHub and Project Safety](#12-github-and-project-safety)
+- [13. Skills, Projects, Agents, and MCPs](#13-skills-projects-agents-and-mcps)
+- [14. Writing, Presenting, and Public Communication](#14-writing-presenting-and-public-communication)
+- [15. Staying Updated Without Chasing Hype](#15-staying-updated-without-chasing-hype)
+- [16. What To Use Next](#16-what-to-use-next)
+- [17. Sources and Workflow Influences](#17-sources-and-workflow-influences)
 
 ## Quick Start: Choose Your Situation
 
@@ -38,9 +40,9 @@ Questions or suggestions for this handbook: email [jay.liu@bristol.ac.uk](mailto
 | "I am new to AI and do not know what matters." | Read the maturity ladder and core concepts below. | [Tool choice and skill improvement](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/09-tool-selection-updates-and-skill-improvement.md) |
 | "I have a paper idea but I am not sure it is good." | Read Sections 2, 4, 5, and 7. | [Research Idea Stress Test](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
 | "I need to write empirical methods." | Read Sections 7, 8, and 9. | [Economics methods skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md) or [finance methods skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md) |
-| "I want AI to edit code or files." | Read Sections 10 and 11 first. | [Clean project and set up Git](../03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
-| "I want to use agents." | Read Sections 10, 11, and 13 first. | [One paper, one repo, one AI project](../03-Set-Up-Agents-and-Automated-Research-Workflows/02-one-paper-one-repo-one-ai-project.md) |
-| "I need slides or a talk." | Read Section 12. | [Presentation, slides, website, and talk-practice skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md) |
+| "I want AI to edit code or files." | Read Sections 10, 11, and 12 first. | [Clean project and set up Git](../03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
+| "I want to use agents." | Read Sections 10, 11, 12, and 13 first. | [One paper, one repo, one AI project](../03-Set-Up-Agents-and-Automated-Research-Workflows/02-one-paper-one-repo-one-ai-project.md) |
+| "I need slides or a talk." | Read Section 14. | [Presentation, slides, website, and talk-practice skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md) |
 
 ## Minimum Safe Setup
 
@@ -119,7 +121,36 @@ If yes, AI may help.
 If no, the task is probably too vague, too risky, or too judgment-heavy.
 ```
 
-## 3. The Maturity Ladder
+## 3. Beginner Tool Glossary
+
+If you have never used AI for research before, start with these distinctions.
+
+| Term or tool | What it is | Good first use | Main caution |
+| --- | --- | --- | --- |
+| AI | broad term for systems that generate, classify, predict, or act using learned patterns | language help, code help, document organization | output is not evidence |
+| LLM | large language model that generates text/code from context | explain code, summarize supplied text, draft checklists | not a database and may hallucinate |
+| ChatGPT | OpenAI chat product; Projects can keep chats, files, and instructions together | one project per paper, literature review, or talk | check privacy settings and project instructions |
+| Claude | Anthropic chat product; Projects and long-context workflows are useful for reading/writing | document review, paper critique, project workspaces | still needs source verification |
+| Codex | OpenAI coding agent that can read, edit, and run code in a repo or sandbox | fix code, add tests, inspect Git diffs | use Git and review every file change |
+| Claude Code | Anthropic coding/agent tool for working in codebases and project folders | repo-aware writing/code workflows, `CLAUDE.md` instructions | permissions and auto modes need caution |
+| VS Code | code editor with Git, debugging, terminals, extensions, and file navigation | run scripts, inspect diffs, debug R/Python/Stata-adjacent workflows | editor convenience does not replace reproducibility |
+| GitHub | version control and collaboration platform | private research repos, issues, PRs, releases | never commit restricted data |
+| Zotero/BibTeX | citation and bibliography management | source-grounded literature work | AI-generated references still need verification |
+| RAG/search-grounded AI | AI grounded in retrieved sources | literature checks, source-based summaries | retrieval can miss sources or quote weakly |
+| MCP/connectors | ways for AI tools to connect to external apps/data | Zotero, GitHub, files, databases, search | more permissions and privacy risk |
+
+Use the tool that matches the task:
+
+| Task | Better starting point |
+| --- | --- |
+| quick explanation | ChatGPT or Claude chat |
+| ongoing paper context | ChatGPT/Claude Project |
+| code and file edits | Codex, Claude Code, Cursor, or VS Code with Git |
+| citation/literature verification | search-grounded tool, Zotero, Google Scholar, DOI, journal pages |
+| repeated research workflow | skill or project instruction |
+| multi-step automation | agent with Git, logs, and approval gates |
+
+## 4. The Maturity Ladder
 
 Use this ladder to locate your current practice.
 
@@ -143,7 +174,7 @@ Practical interpretation:
 - Level 4 is the minimum for code, data, or file edits.
 - Levels 5-7 are for repeated work where verification is stronger than automation.
 
-## 4. What AI Is Good At
+## 5. What AI Is Good At
 
 AI is useful when the task is structured, checkable, and not confidential.
 
@@ -157,8 +188,11 @@ AI is useful when the task is structured, checkable, and not confidential.
 | Writing | improve clarity, structure, transitions, and exposition |
 | Presenting | make talk outlines, speaker notes, Q&A drills, slide plans |
 | Teaching | create examples, quizzes, explanations, and workshop exercises |
+| Data execution | draft cleaning/merge scripts, generate EDA plans, create table/figure code |
+| Text-as-data | create coding protocols, label validation sets, audit LLM-generated variables |
+| Structural work | map moments to parameters, audit counterfactuals, check welfare interpretation |
 
-## 5. What AI Should Not Do For You
+## 6. What AI Should Not Do For You
 
 AI can assist, but it should not be treated as the author of scholarly judgment.
 
@@ -179,7 +213,7 @@ The short rule:
 
 > AI can automate labor, not responsibility.
 
-## 6. Core Concepts
+## 7. Core Concepts
 
 | Concept | Practical meaning for researchers |
 | --- | --- |
@@ -195,7 +229,16 @@ The short rule:
 | AGENTS.md / CLAUDE.md | repo-level instructions for AI agents |
 | AI-use log | record of task, tool, files touched, accepted output, checks, and uncertainty |
 
-## 7. The Econ/Finance Research Workflow
+Two distinctions matter for research:
+
+| Distinction | Why it matters |
+| --- | --- |
+| grounded vs. ungrounded | Literature, citations, facts, and policy details should use source-grounded tools or supplied sources, not bare model memory. |
+| reasoning vs. execution | A model can explain or critique a design, but a coding agent can also change files and run code. Execution requires Git and stronger approval gates. |
+| long-context vs. retrieval | Long context helps read large supplied documents; retrieval helps find and cite external sources. Both can fail. |
+| automation vs. verification | Automation is useful only when verification cost is lower than the labor saved. |
+
+## 8. The Econ/Finance Research Workflow
 
 The useful question is not "Can AI write a paper?" It is "Where in the research pipeline can AI reduce labor while preserving judgment?"
 
@@ -232,7 +275,17 @@ When AI makes an output cheap, ask what human research quality remains.
 
 If the human contribution is only "I asked the AI to generate it," the project is not ready.
 
-## 8. Responsible Use Rules
+### The AI Cost-Benefit Rule
+
+Use AI when:
+
+```text
+labor saved > setup cost + verification cost + privacy risk + future maintenance cost
+```
+
+Do not use AI when verifying the output would take longer than doing the task yourself, or when the task involves confidential material that cannot safely enter the tool.
+
+## 9. Responsible Use Rules
 
 Use this checklist before involving AI in real research.
 
@@ -260,7 +313,29 @@ This handbook gives research workflow guidance, not institutional permission. Al
 
 If a policy is stricter than this handbook, follow the stricter policy. If permission is unclear, do not upload or expose the material.
 
-## 9. Data Safety Rules
+## 10. Verification Is a Skill
+
+Many AI guides say "verify the output." That is correct but incomplete. A new researcher needs to know what kind of verification fits the object.
+
+| AI output | Good verification method |
+| --- | --- |
+| citation or literature claim | DOI/journal/page check, then confirm the source supports the exact sentence |
+| code | run on toy data with a known answer, then run on real data and inspect outputs |
+| merge | print match rates, duplicate keys, unmatched records, and timing checks after every merge |
+| coefficient interpretation | check units, transformations, baseline magnitude, confidence interval, and design support |
+| proof or model step | check notation, assumptions, limiting cases, dimensions, and counterexamples |
+| text-as-data variable | validate against human labels, test prompt/model sensitivity, archive prompt and model version |
+| slide or public summary | compare every claim, number, and graph label against the paper |
+
+Use this operational rule:
+
+```text
+If I cannot state how I will verify this AI output, I should not use it in research.
+```
+
+For direct copy/paste checks, use [Verification, Reproducibility, and Disclosure Skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/17-verification-reproducibility-and-disclosure-skills.md).
+
+## 11. Data Safety Rules
 
 | Material | Default rule |
 | --- | --- |
@@ -281,7 +356,7 @@ Safer alternatives:
 - share variable dictionaries instead of records
 - ask AI to write code on a toy example, then run locally
 
-## 10. GitHub and Project Safety
+## 12. GitHub and Project Safety
 
 If AI can edit files, use Git.
 
@@ -333,7 +408,7 @@ For serious restructuring, use a branch or worktree. Before accepting AI changes
 
 "Vibe coding" can be useful for fast prototypes, but it is risky for research. Do not accept code because it runs, compiles, or looks clean. For empirical work, AI code must match the research design, variable definitions, sample restrictions, and expected outputs. For paper or data pipelines, require a plan, Git diff, reproducibility check, and human review before accepting changes.
 
-## 11. Skills, Projects, Agents, and MCPs
+## 13. Skills, Projects, Agents, and MCPs
 
 Use the right tool concept for the job.
 
@@ -379,7 +454,7 @@ What not to do:
 Sources or workflow influences:
 ```
 
-## 12. Writing, Presenting, and Public Communication
+## 14. Writing, Presenting, and Public Communication
 
 AI can help make research clearer, but it can also flatten scholarly voice and overstate claims.
 
@@ -421,7 +496,7 @@ Every research talk should answer:
 6. What are the limits?
 7. What should the audience remember after one week?
 
-## 13. Staying Updated Without Chasing Hype
+## 15. Staying Updated Without Chasing Hype
 
 Do not follow AI news randomly. Build an information diet.
 
@@ -442,7 +517,7 @@ Adopt at most one new AI workflow per week.
 Ignore tool claims that are not tied to a concrete task, date, cost, safety rule, and verification check.
 ```
 
-## 14. What To Use Next
+## 16. What To Use Next
 
 After reading this page:
 
@@ -452,7 +527,7 @@ After reading this page:
 - Check sources and official docs: [Check Builders Official Docs and Resources](../05-Check-Builders-Official-Docs-and-Resources/README.md)
 - Teach or present the material: [Teach Workshops Practice Talks and Share Slides](../06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md)
 
-## 15. Sources and Workflow Influences
+## 17. Sources and Workflow Influences
 
 This handbook draws on public materials and adapts only the workflow ideas relevant to economics and finance research.
 

@@ -7,6 +7,8 @@ Use these when AI is helping with Stata, R, Python, MATLAB, SAS, LaTeX, tables, 
 > [!WARNING]
 > AI-generated code is not evidence. Run it, inspect outputs, test small examples, and compare against the empirical design.
 
+For full data-production workflows, use [Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md). This page is for debugging, review, and consistency checks.
+
 ## Skill 1: Debug Stata/R/Python Research Code
 
 ```text
@@ -35,6 +37,7 @@ Rules:
 - Do not change variable definitions silently.
 - Do not change sample restrictions silently.
 - Do not claim the result is correct until the code is run.
+- If the code touches research data, propose a toy-data test before real-data execution.
 ```
 
 ## Skill 2: Code Review for Empirical Research
@@ -59,6 +62,8 @@ Check for:
 - graph/table labels inconsistent with code
 - look-ahead bias or survivorship bias if finance data
 - hard-coded paths and non-reproducible assumptions
+- AI-generated code that is too complex for the task
+- output files created manually rather than from scripts
 
 Return:
 1. Severity-ranked issues.
@@ -66,6 +71,7 @@ Return:
 3. Why each issue matters for the research claim.
 4. Safer code or pseudo-code.
 5. Tests I should run.
+6. Whether a toy-data test, snapshot test, or output comparison is needed.
 ```
 
 ## Skill 3: Table and Figure Consistency Check
@@ -149,5 +155,49 @@ Return:
 - minimal Makefile or run order
 ```
 
-Sources and workflow influences: Paul Goldsmith-Pinkham's VS Code/Git/data workflow examples, applied methods implementation norms, and recent concerns about dependency gaps in AI-generated code.
+## Skill 6: AI-Written Code Acceptance Gate
 
+Use this before accepting code written by ChatGPT, Claude, Codex, Claude Code, Cursor, Copilot, or another agent.
+
+```text
+Decide whether I should accept this AI-written research code.
+
+Code or diff:
+[paste]
+
+Research task:
+[task]
+
+Expected output:
+[table/figure/dataset/model result]
+
+Project facts:
+- Data: [data]
+- Unit/time: [unit/time]
+- Method: [method]
+- Existing baseline output, if any: [describe]
+- Software: [Stata/R/Python/MATLAB/SAS]
+
+Check:
+1. Does the code implement the stated research design?
+2. Does it change sample restrictions, variables, timing, or inference?
+3. Does it touch raw or restricted data?
+4. Are paths, dependencies, seeds, and outputs reproducible?
+5. Is the code simpler than the problem requires, or unnecessarily clever?
+6. What toy-data test should pass?
+7. What real-data output should be compared to the previous version?
+
+Return:
+- accept / revise / reject;
+- required edits before acceptance;
+- tests to run;
+- outputs to inspect;
+- AI-use log entry.
+
+Rules:
+- Do not accept code because it merely runs.
+- Do not accept code that changes the empirical design without explicit human approval.
+- Do not accept code that cannot be explained to a coauthor or referee.
+```
+
+Sources and workflow influences: Paul Goldsmith-Pinkham's VS Code/Git/data workflow examples, applied methods implementation norms, and recent concerns about dependency gaps in AI-generated code.

@@ -37,7 +37,12 @@ The main page keeps only the primary reading and working folders visible. Suppor
 | a research idea stress test | [Research Idea Stress Test](02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
 | a source-grounded literature review | [Literature Review and Source Synthesis Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/10-literature-review-and-source-synthesis-skills.md) |
 | an empirical methods section | [Economics Methods Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) or [Finance Methods Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
+| a data-cleaning or merge pipeline | [Data Cleaning, Merging, Analysis, and Output Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/14-data-cleaning-merging-analysis-and-output-skills.md) |
 | causal inference or time-series checks | [Causal Inference, Econometrics, and Time-Series Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/11-causal-inference-econometrics-and-time-series-skills.md) |
+| a text-as-data or LLM measurement design | [Text-as-Data and LLM Measurement Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/15-text-as-data-and-llm-measurement-skills.md) |
+| a structural, quantitative, or welfare check | [Structural, Quantitative, and Welfare Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/16-structural-quantitative-and-welfare-skills.md) |
+| an AI-output verification method | [Verification, Reproducibility, and Disclosure Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/17-verification-reproducibility-and-disclosure-skills.md) |
+| a sharper research question or contribution | [Research Question, Taste, and Positioning Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/18-research-question-taste-and-positioning-skills.md) |
 | theory model review | [Theory Model and Math Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/12-theory-model-and-math-skills.md) |
 | a safe project cleanup | [Clean Existing Research Project and Set Up Git](03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
 | presentation practice | [Practice My Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) |
@@ -153,6 +158,9 @@ Email list rules:
 | 如果你有 15 分钟并且想要... | 直接打开... |
 | --- | --- |
 | 检查研究想法、写 proposal、写文献综述、写方法段落 | [02 复制即用：AI 研究指令与模板](ZH-中文-AI经济金融研究手册/02-复制即用：AI研究指令与模板.md) |
+| 设计数据清洗、合并、变量构造、表格和图形 workflow | [中文数据工作流模板](ZH-中文-AI经济金融研究手册/02-复制即用：AI研究指令与模板.md#数据清洗合并和输出工作流) |
+| 做 text-as-data 或 LLM-generated variable | [中文 Text-as-Data 模板](ZH-中文-AI经济金融研究手册/02-复制即用：AI研究指令与模板.md#text-as-data-和-llm-measurement-协议) |
+| 选择 AI 输出核查方法 | [中文核查方法选择器](ZH-中文-AI经济金融研究手册/02-复制即用：AI研究指令与模板.md#ai-输出核查方法选择器) |
 | 清理项目、设置 Git、写 `AGENTS.md` 或 `CLAUDE.md` | [03 设置 Agent 和自动化研究工作流](ZH-中文-AI经济金融研究手册/03-设置Agent和自动化研究工作流.md) |
 | 学习失败案例，避免假引用、错代码、过度因果解释 | [04 案例、图示与失败案例](ZH-中文-AI经济金融研究手册/04-案例图示与失败案例.md) |
 | 安全获取更新、查看资料来源、判断外部资源 | [05 资料来源、官方文档与更新](ZH-中文-AI经济金融研究手册/05-资料来源官方文档与更新.md) |

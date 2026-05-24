@@ -46,6 +46,20 @@ Use this extraction rule:
 Source -> workflow pattern -> econ/finance adaptation -> copy-ready asset -> verification rule
 ```
 
+## Why This Folder Exists
+
+New AI users often ask "which tool should I use?" A better research question is "which source tells me what is true, current, and useful for this task?"
+
+Use this folder to distinguish:
+
+| Source type | Use it for | Do not use it for |
+| --- | --- | --- |
+| official tool docs | current product behavior, permissions, file/project features | field-specific research judgment |
+| economist builders | practical research workflows and failure cases | timeless tool rankings |
+| canonical methods papers | estimator assumptions and diagnostics | copy-paste prompts |
+| skill repositories | examples of reusable workflow design | unlicensed copying |
+| newsletters/social media | discovery | unverified claims |
+
 ## Source-to-Repo Map
 
 | Source | What this repo extracts |
@@ -82,6 +96,22 @@ Source -> workflow pattern -> econ/finance adaptation -> copy-ready asset -> ver
 | [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) | connectors between AI tools and external systems |
 | [GitHub ignoring files](https://docs.github.com/en/get-started/git-basics/ignoring-files) | `.gitignore` safety for data and secrets |
 | [Git worktree docs](https://git-scm.com/docs/git-worktree) | isolated branches/worktrees for AI experiments |
+
+## Canonical Methods and Credibility Sources To Link With Skills
+
+These sources are not "AI resources." They are the method standards that make AI-generated methods and code worth checking.
+
+| Topic | Sources to know | How this repo uses them |
+| --- | --- | --- |
+| text-as-data | [Gentzkow, Kelly, and Taddy, "Text as Data"](https://www.aeaweb.org/articles?id=10.1257/jel.20181020) | frames text as a measurement and statistical object, not just a summarization task |
+| staggered DiD | [Callaway and Sant'Anna](https://ideas.repec.org/a/eee/econom/v225y2021i2p200-230.html), [Sun and Abraham](https://ideas.repec.org/a/eee/econom/v225y2021i2p175-199.html), [Borusyak, Jaravel, and Spiess](https://www.gsb.stanford.edu/faculty-research/publications/revisiting-event-study-designs-robust-efficient-estimation), [Goodman-Bacon](https://www.sciencedirect.com/science/article/pii/S0304407621001445) | turns "check parallel trends" into estimator choice, timing, heterogeneity, and weighting checks |
+| pre-trends | [Roth, "Pretest with Caution"](https://www.aeaweb.org/articles?id=10.1257/aeri.20210236) | warns that insignificant pre-trends are not proof of validity |
+| RD | [Calonico, Cattaneo, and Titiunik/rdrobust](https://rdpackages.github.io/rdrobust/), [McCrary density test](https://www.nber.org/papers/t0334) | adds bandwidth, robust bias correction, manipulation, and local interpretation checks |
+| weak IV | [Montiel Olea and Pflueger robust weak-instrument test](https://ideas.repec.org/a/taf/jnlbes/v31y2013i3p358-369.html), Anderson-Rubin/weak-IV robust inference | prevents mechanical "first-stage F > 10" reasoning |
+| clustering | [Abadie, Athey, Imbens, and Wooldridge](https://academic.oup.com/qje/article/138/1/1/6750017), [Cameron, Gelbach, and Miller](https://www.nber.org/papers/t0344) | turns clustering into a design decision and adds few-cluster bootstrap cautions |
+| finance factor/anomaly replication | [Chen and Zimmermann Open Source Asset Pricing](https://www.openassetpricing.com/), Hou-Xue-Zhang q-factor/anomaly replication work | motivates factor-mining, multiple-testing, sample construction, and out-of-sample checks |
+
+When adding a new method skill, include the method standard and the AI-specific risk. Example: for DiD, the AI-specific risk is not only "wrong prose"; it is that an agent may implement a conventional TWFE/event-study specification while the design needs group-time or imputation-style estimands.
 
 ## Resource Inclusion Criteria
 
@@ -166,3 +196,5 @@ These are not fully settled and should be updated carefully:
 | MCP security | connectors increase permissions and data exposure | official MCP docs and security advisories |
 | AI-generated finance research | paper production may scale faster than review standards | finance methodology, replication, and p-hacking discussions |
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
+| LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
+| AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |

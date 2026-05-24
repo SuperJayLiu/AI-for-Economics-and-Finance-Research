@@ -21,6 +21,7 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | RD | Skill 6 |
 | synthetic control | Skill 7 |
 | time-series AR/MA/ARMA/VAR | Skill 8 |
+| clustering and few-cluster inference | Skill 9 |
 
 ## Skill 1: Causal Design Diagnostic
 
@@ -111,6 +112,7 @@ Check:
 4. Is there serial correlation or within-cluster dependence?
 5. Are staggered timing or heterogeneous effects relevant?
 6. Does the text overclaim causality?
+7. Is the clustering level tied to treatment assignment, sampling, or residual correlation rather than habit?
 
 Return:
 - identifying variation explanation
@@ -142,12 +144,21 @@ Check:
 6. event-time binning and omitted category;
 7. clustering and inference;
 8. graph labels and interpretation.
+9. whether conventional TWFE is appropriate with staggered timing and heterogeneous effects;
+10. whether the design should consider Callaway-Sant'Anna, Sun-Abraham, Borusyak-Jaravel-Spiess imputation, de Chaisemartin-D'Haultfoeuille, or a Goodman-Bacon decomposition;
+11. whether pre-trend tests are underpowered and should be supplemented with sensitivity analysis.
 
 Return:
 - required diagnostics
+- estimator-choice recommendation with assumptions
 - event-study plot checklist
 - threats to validity
 - safer interpretation language
+
+Rules:
+- Do not say "parallel trends passed" only because pre-treatment coefficients are insignificant.
+- Do not use a TWFE event-study coefficient as the target estimand without checking treatment timing and heterogeneity.
+- If treatment timing is staggered, state what group-time comparisons identify the estimate.
 ```
 
 ## Skill 5: Instrumental Variables Check
@@ -171,6 +182,7 @@ Check:
 - direct effects
 - instrument timing
 - plausible defiers or heterogeneous effects
+- whether an effective F-statistic, Kleibergen-Paap-style diagnostic, Anderson-Rubin/weak-IV robust confidence set, or other weak-instrument robust inference is needed
 
 Return:
 - strongest IV argument
@@ -178,6 +190,10 @@ Return:
 - tests and diagnostics
 - what the coefficient estimates
 - cautious interpretation paragraph
+
+Rules:
+- Do not rely mechanically on "first-stage F > 10" when the design is clustered, heteroskedastic, or otherwise nonstandard.
+- If instruments may be weak, ask for weak-IV robust inference before writing strong conclusions.
 ```
 
 ## Skill 6: Regression Discontinuity Check
@@ -201,12 +217,18 @@ Check:
 - covariate balance
 - donut RD need
 - local interpretation
+- rdrobust-style robust bias-corrected inference, MSE-optimal bandwidth choices, and density/manipulation tests such as McCrary where relevant
 
 Return:
 - RD assumption summary
 - diagnostic checklist
 - graph/table checks
 - safe wording for methods and results
+
+Rules:
+- Do not choose bandwidths after seeing the desired result.
+- Do not treat global high-order polynomials as a substitute for local design credibility.
+- Report local interpretation and manipulation checks clearly.
 ```
 
 ## Skill 7: Synthetic Control Check
@@ -269,4 +291,42 @@ Return:
 - safer results wording
 ```
 
-Sources and workflow influences: applied econometrics teaching, credibility-revolution design language, finance event-study cautions, and AI-assisted methods-review workflows.
+## Skill 9: Clustering and Inference Check
+
+```text
+Audit the standard error and inference plan for this economics/finance design.
+
+Project facts:
+- Research question: [question]
+- Unit of observation: [unit]
+- Treatment/exposure level: [level]
+- Sampling or assignment level: [level]
+- Time dimension: [time]
+- Main specification: [equation/table]
+- Current standard errors: [robust/clustered/two-way/Newey-West/bootstrap/etc.]
+- Number of clusters: [number]
+- Cluster size balance: [balanced/unbalanced/unknown]
+
+Check:
+1. what dependence structure is plausible;
+2. whether treatment varies at a cluster level;
+3. whether clustering follows sampling, assignment, geography, firm, individual, time, or market structure;
+4. whether two-way clustering is needed;
+5. whether there are too few clusters for conventional cluster-robust inference;
+6. whether wild-cluster bootstrap, randomization inference, or design-based inference is needed;
+7. whether standard errors in the paper match the code and table notes.
+
+Return:
+- recommended inference approach;
+- assumptions behind it;
+- minimum table-note language;
+- code/table checks;
+- risks if the current inference is kept.
+
+Rules:
+- Do not choose clustering because it gives preferred significance.
+- Do not cluster mechanically without explaining why.
+- If clusters are few or highly unbalanced, require sensitivity checks.
+```
+
+Sources and workflow influences: applied econometrics teaching, credibility-revolution design language, modern DiD/event-study guidance, weak-IV inference, RD practice, clustering guidance, finance event-study cautions, and AI-assisted methods-review workflows.

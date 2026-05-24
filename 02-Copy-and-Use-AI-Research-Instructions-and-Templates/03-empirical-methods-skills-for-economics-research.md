@@ -17,6 +17,8 @@ These skills are tailored for applied economics: labor, public, development, hea
 | check whether the design is credible before writing | Skill 4 |
 | create a reviewer-facing limitations paragraph | Skill 5 |
 
+For execution, pair this page with [Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md). For method-specific checks, use [Causal Inference, Econometrics, and Time-Series Skills](11-causal-inference-econometrics-and-time-series-skills.md).
+
 ## Skill 1: Draft Empirical Methods Section for Economics
 
 ```text
@@ -36,6 +38,7 @@ Inputs:
 - Identification assumption: [assumption]
 - Threats to validity: [threats]
 - Inference plan: [standard errors/clustering/randomization inference/etc.]
+- Current estimator or package, if known: [e.g., fixest/reghdfe/csdid/eventstudyinteract/did_imputation/rdrobust/etc.]
 
 Write:
 1. Data and sample paragraph.
@@ -46,12 +49,16 @@ Write:
 6. Threats to validity and planned robustness checks.
 7. Interpretation paragraph explaining what the coefficient means.
 8. A short "what this design can and cannot establish" paragraph.
+9. A paragraph explaining why the chosen estimator is appropriate for timing, heterogeneity, and inference.
 
 Rules:
 - Do not claim causality unless the design and assumptions support it.
 - Do not invent controls, sample restrictions, or robustness checks.
 - State the identifying variation clearly.
 - Explain economic magnitude, not only statistical significance.
+- If the design is DiD/event study, discuss staggered timing and heterogeneous treatment effects where relevant.
+- If the design is IV, discuss weak-instrument diagnostics and weak-IV robust inference where relevant.
+- If the design is RD, discuss bandwidth, manipulation, and local interpretation.
 - Use cautious applied economics prose.
 - If information is missing, write [NEEDS AUTHOR INPUT] rather than filling it in.
 
@@ -86,6 +93,8 @@ Check:
 8. Are robustness checks real or merely promised?
 9. Does the prose overclaim causality?
 10. Are coefficient interpretations correct?
+11. Does the estimator match current applied standards for the design?
+12. Is inference justified rather than mechanically chosen?
 
 Return:
 - Major issues.
@@ -138,6 +147,7 @@ Project facts:
 - Comparison group or identifying variation: [describe]
 - Timing: [what happens when]
 - Main concern: [concern]
+- Estimator currently planned: [if known]
 
 Assess:
 1. What is the implied experiment or quasi-experiment?
@@ -147,12 +157,14 @@ Assess:
 5. What balance, pre-trend, manipulation, placebo, or falsification checks are relevant?
 6. What data or institutional facts must be documented?
 7. What language should I avoid in the paper?
+8. Which estimator or diagnostic would a good referee expect for this design?
 
 Return:
 - one-sentence design summary
 - identifying variation
 - identifying assumption
 - top five threats
+- estimator and inference concerns
 - minimum evidence needed before writing causal language
 - suggested methods paragraph outline
 ```

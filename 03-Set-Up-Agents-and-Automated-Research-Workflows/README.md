@@ -17,6 +17,33 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | [05 Parallel Agents and Git Worktrees](05-parallel-agents-and-git-worktrees.md) | run multiple AI tasks safely without corrupting the main project |
 | [06 GitHub Review Feedback and Publish Workflow](06-github-review-feedback-and-publish-workflow.md) | handle PR comments, stage changes intentionally, commit, push, and open PRs safely |
 
+## Why This Folder Exists
+
+A beginner can use ChatGPT or Claude in a browser without changing any files. An agentic workflow is different: the AI may inspect a project folder, edit scripts, run commands, create commits, or connect to other tools. That can save days of work, but it can also overwrite files, expose private data, or create results that look reproducible but are not.
+
+Use this folder when the task has three properties:
+
+1. It involves multiple steps.
+2. It touches files, code, data, slides, GitHub, or external sources.
+3. You can define approval gates and verification checks.
+
+Do not use this folder for quick literature questions, confidential data decisions, or final scholarly judgment.
+
+## Beginner Tool Map
+
+| Tool or concept | Plain meaning | Use it for | Be careful about |
+| --- | --- | --- | --- |
+| ChatGPT/Claude Project | persistent workspace with instructions and files | one paper, literature review, referee response, talk | stale files, privacy settings, unsupported claims |
+| Codex | OpenAI coding agent that can work in a repo | code edits, tests, Git diffs, research scripts | review every diff and run checks |
+| Claude Code | Anthropic terminal/repo agent | project-aware coding, writing, agents, skills, hooks | permissions, auto modes, private files |
+| VS Code | editor for code, Git, terminals, extensions | inspect files, run scripts, resolve diffs | convenience is not reproducibility |
+| AGENTS.md | repo instruction file for coding agents | project rules, validation commands, files never to edit | vague instructions lead to vague behavior |
+| CLAUDE.md | Claude Code project memory/instructions | project conventions, workflow rules, known commands | stale instructions can mislead |
+| Skill | reusable workflow instruction | repeated tasks such as code review or slide generation | weak skills automate weak habits |
+| MCP/connector | lets AI connect to apps, databases, or files | Zotero, GitHub, Drive, search, databases | permissions, token cost, data exposure |
+| Git branch | isolated line of work | try a change safely | branch drift |
+| Git worktree | separate folder for another branch | parallel agent experiments | mixing outputs across folders |
+
 ## Pick the Right Workflow
 
 | Situation | Best workflow | Be careful about |
@@ -27,6 +54,14 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | staying updated | research update digest | dated claims, official docs, and low-noise sources |
 | multiple AI tasks | branches/worktrees | agents editing same file or raw data |
 | GitHub feedback | review feedback and publish workflow | never reply, resolve, or push without approval |
+
+## Agentic AI in One Sentence
+
+```text
+Agentic AI is AI that does not only answer; it can plan, call tools, edit files, run commands, inspect results, and continue through a workflow.
+```
+
+For research, this means the central question changes from "Was the answer fluent?" to "Were the actions safe, logged, and verified?"
 
 ## Agent Rule
 

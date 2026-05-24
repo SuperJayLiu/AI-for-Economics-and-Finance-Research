@@ -18,6 +18,8 @@ These skills are tailored for asset pricing, corporate finance, banking, househo
 | check corporate/banking panel design | Skill 5 |
 | check event-study design | Skill 6 |
 
+For code, data construction, WRDS/CRSP/Compustat merges, portfolio sorts, and Fama-MacBeth implementation, pair this page with [Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md).
+
 ## Skill 1: Draft Empirical Methods Section for Finance
 
 ```text
@@ -35,6 +37,7 @@ Inputs:
 - Return measurement, if relevant: [raw/excess/abnormal/risk-adjusted]
 - Risk adjustment, if relevant: [CAPM/FF3/FF5/q-factor/characteristic controls/etc.]
 - Inference: [cluster, Newey-West, double clustering, bootstrap]
+- Data merge and timing rules: [CRSP/Compustat/CCM link rules, reporting lag, return window, availability timing]
 - Finance-specific concerns: [look-ahead, survivorship, delisting returns, microstructure, transaction costs, multiple testing]
 
 Write:
@@ -47,11 +50,14 @@ Write:
 7. Robustness and economic magnitude.
 8. Finance-specific caveats.
 9. Replication details needed for another researcher to rebuild the sample.
+10. Data lineage from raw source to final table/figure.
 
 Rules:
 - Do not invent data filters or risk factors.
 - Do not confuse predictability with causal effect.
 - Do not ignore look-ahead, survivorship, delisting, liquidity, and transaction cost concerns.
+- Do not assume ticker/CUSIP merges or accounting timing are valid without documentation.
+- Do not interpret a successful backtest as evidence of economic mechanism.
 - Distinguish statistical significance from economic magnitude.
 - If the design is associational, say so.
 - If information is missing, write [NEEDS AUTHOR INPUT] rather than filling it in.
@@ -89,6 +95,8 @@ Check:
 8. Are standard errors appropriate for panel/time-series dependence?
 9. Are multiple-testing or factor-mining risks acknowledged?
 10. Does the text overstate causal interpretation or investment implications?
+11. Does the methods section explain data lineage from raw sources to analysis-ready sample?
+12. Would a replicator know exactly how to rebuild the sample and outputs?
 
 Return:
 - Fatal problems.
@@ -176,6 +184,7 @@ Project facts:
 - Controls and fixed effects: [controls/FE]
 - Timing: [when variables are measured]
 - Inference: [clustering]
+- Merge/link rules: [identifier rules, link-date rules, reporting lag]
 
 Check:
 1. whether treatment timing precedes outcomes;
@@ -186,6 +195,7 @@ Check:
 6. whether merges create survivorship or selection bias;
 7. whether the text overstates causality;
 8. whether economic magnitude is reported clearly.
+9. whether data linkage and timing assumptions are documented enough for replication.
 
 Return:
 - fatal issues
@@ -224,6 +234,8 @@ Check:
 6. whether confounding events are addressed;
 7. whether abnormal returns are interpreted as causal effects too strongly;
 8. whether graph labels, cumulative windows, and standard errors are clear.
+9. whether the design follows causal event-study logic rather than only abnormal-return convention;
+10. whether long-horizon results are vulnerable to confounding, model misspecification, or overlapping events.
 
 Return:
 - design summary

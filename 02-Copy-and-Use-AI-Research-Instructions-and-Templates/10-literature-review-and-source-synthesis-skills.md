@@ -9,6 +9,24 @@ Use these skills when the task is more serious than "summarize this paper." The 
 
 Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Literature Review] Suggestion`.
 
+## Grounding Rule
+
+Use the right source mode for the task.
+
+| Task | Acceptable grounding | Not acceptable |
+| --- | --- | --- |
+| summarize a paper | supplied PDF, notes, abstract, or verified excerpt | model memory |
+| build a literature map | supplied papers, BibTeX, Zotero export, or verified search results | "find papers from memory" |
+| write a contribution paragraph | closest papers already read and verified | invented "gap" claims |
+| check citation support | original source, DOI, page/section, or verified notes | title similarity |
+| discover missing literatures | search-grounded exploration labeled as hypothesis | uncited AI suggestions treated as facts |
+
+The safest workflow is:
+
+```text
+search or collect sources -> verify source exists -> read/source-note -> AI synthesis -> claim-to-source check -> human rewrite
+```
+
 ## Choose a Skill
 
 | Need | Use |
@@ -19,6 +37,7 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | compare two or more papers | Skill 4 |
 | find fake novelty risk | Skill 5 |
 | create a source support bank | Skill 6 |
+| build a worked literature-review spine | Skill 7 |
 
 ## Skill 1: Source-Grounded Literature Review Builder
 
@@ -198,6 +217,67 @@ Rules:
 - If no supplied source supports a claim, say so.
 - Do not create references.
 - Do not use a famous paper as support unless it actually supports the sentence.
+```
+
+## Skill 7: Literature Review Spine With Worked Output
+
+Use this when you have a messy collection of notes and need a readable related-work section.
+
+```text
+Create a literature review spine for my economics/finance paper.
+
+Project:
+- Research question: [question]
+- Proposed contribution: [contribution]
+- Empirical design or model: [design/model]
+- Setting/data: [setting/data]
+- Target audience: [seminar/journal/proposal]
+
+Verified sources:
+[paste citation keys and short notes]
+
+Build:
+1. the closest-paper table;
+2. theme groups;
+3. what each theme establishes;
+4. what remains unresolved;
+5. how my project fits without overclaiming novelty;
+6. a paragraph-level outline;
+7. one sample synthesis paragraph.
+
+For the sample paragraph, label every sentence as:
+- [SOURCE-GROUNDED]
+- [INTERPRETATION]
+- [NEEDS VERIFICATION]
+
+Return:
+- literature review spine;
+- sample paragraph;
+- unsupported claims list;
+- reading/search tasks before writing the final version.
+
+Rules:
+- Do not write one paragraph per paper.
+- Do not invent missing literatures.
+- Do not claim novelty from absence of supplied sources.
+```
+
+### Mini Worked Example
+
+```text
+Input facts:
+- My paper studies whether bank branch closures reduce small-firm credit.
+- Supplied papers: one on branch closures and local credit, one on relationship lending, one on fintech substitution.
+
+Good AI output should say:
+- The literature groups around physical bank access, relationship lending, and digital substitution.
+- The closest papers are close because of mechanism and setting, not only because they mention "banks."
+- A possible contribution is about the margin where digital substitution fails, if the data support that.
+- The author must verify whether existing papers already study the same closure shock, geography, and firm outcomes.
+
+Bad AI output would say:
+- "No prior work studies this question" without verified search.
+- "This proves branch closures cause employment losses" before design evidence.
 ```
 
 Sources and workflow influences: Paper-review and literature-synthesis skill patterns, Paul Goldsmith-Pinkham's LLM-friendly paper orientation idea, PaperSpine-style audit trails, and source-grounded academic writing practices.

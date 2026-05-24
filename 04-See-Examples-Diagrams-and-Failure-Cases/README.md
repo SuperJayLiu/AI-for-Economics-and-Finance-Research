@@ -13,6 +13,7 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | --- | --- | --- |
 | positioning a paper in asset pricing | Example 1 | literature map skill |
 | writing a corporate finance methods section | Example 2 | finance empirical methods skill |
+| running a project from idea to output | Worked spine | pipeline skills |
 | checking a generated output | Failure case library | example audit prompt |
 | preparing seminar slides | Presentation failure cases | presentation practice skill |
 | setting up a research repo | Project safety failure cases | clean project workflow |
@@ -30,6 +31,37 @@ flowchart TD
   G -- "No" --> H["Revise task or reject output"]
   G -- "Yes" --> I["Record AI-use log and Git commit"]
 ```
+
+## Worked Spine: One Synthetic Paper From Idea to Seminar
+
+This is the missing assembly instruction. Use the skill library as a chain, not as isolated prompts.
+
+Synthetic paper:
+
+```text
+Question:
+Do local bank branch closures affect small-firm borrowing and employment?
+
+Data idea:
+Branch-level closures, county/firm outcomes, credit bureau or firm panel data, local labor outcomes.
+
+Main risk:
+Closures are not random; weak local demand may cause both closures and lower borrowing.
+```
+
+| Stage | AI-assisted action | Copy-ready skill | Human check |
+| --- | --- | --- | --- |
+| 1. Question | turn topic into a mechanism tension | [Topic-to-Tension Research Question Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/18-research-question-taste-and-positioning-skills.md#skill-1-topic-to-tension-research-question-builder) | is the question important, not just feasible? |
+| 2. Literature | map supplied banking/local credit papers | [Source-Grounded Literature Review Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) | verify closest papers and do not claim novelty too broadly |
+| 3. Design | pre-mortem the DiD/event-study design | [Difference-in-Differences and Event Study Check](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/11-causal-inference-econometrics-and-time-series-skills.md#skill-4-difference-in-differences-and-event-study-check) | check staggered timing, heterogeneous effects, pre-trend power, clustering |
+| 4. Data | create raw-to-analysis pipeline | [Reproducible Research Data Pipeline Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/14-data-cleaning-merging-analysis-and-output-skills.md#skill-1-reproducible-research-data-pipeline-builder) | ensure raw files are never changed and licensed data is protected |
+| 5. Code | build toy data before real code | [Toy Data Test Harness](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/14-data-cleaning-merging-analysis-and-output-skills.md#skill-6-toy-data-test-harness-for-ai-written-code) | known-answer test must pass by inspection |
+| 6. Methods | draft methods from verified facts | [Draft Empirical Methods Section for Economics](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) | prose must match code, tables, timing, and inference |
+| 7. Results | check coefficient interpretation | [Back-of-Envelope Coefficient and Magnitude Check](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/17-verification-reproducibility-and-disclosure-skills.md#skill-4-back-of-envelope-coefficient-and-magnitude-check) | units, baseline magnitude, CI, and design support |
+| 8. Talk | prepare seminar Q&A | [Practice My Presentation With AI](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) | do not invent answers to limitations |
+| 9. Trace | create disclosure and AI-use record | [AI Reproducibility Packet and Disclosure Draft](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/17-verification-reproducibility-and-disclosure-skills.md#skill-6-ai-reproducibility-packet-and-disclosure-draft) | check journal, coauthor, data-provider, and institutional policy |
+
+The point is not that AI produces the paper. The point is that each AI-assisted step produces a concrete artifact that can be checked before the next step.
 
 ## Example 1: Literature Review for Asset Pricing
 
@@ -147,6 +179,59 @@ Copy-ready skill: [Practice My Presentation With AI](../02-Copy-and-Use-AI-Resea
 | AI-generated slide overstates claim | confident title sounds persuasive | compare every slide title against the actual table or figure |
 | public summary becomes investment advice | audience-friendly language sounds useful | remove recommendations and state limits clearly |
 | AI-created methods section mismatches code | prose is cleaner than code comments | run a methods-to-code consistency check |
+| CRSP delisting returns omitted | portfolio results look clean and significant | print delisting treatment and compare returns with/without delisting adjustment |
+| Compustat timing uses future accounting data | annual variables merge successfully | enforce reporting-lag rule and check formation-date availability |
+| TWFE event study hides negative weights | coefficient table looks standard | run estimator-choice audit for staggered timing and heterogeneous effects |
+| LLM text score drifts across model versions | labels look semantically reasonable | pin model snapshot if possible and rerun prompt/model sensitivity |
+| structural counterfactual changes too much at once | policy simulation has a clean welfare number | isolate mechanism and list which prices, constraints, and agents reoptimize |
+
+## Filled Failure Case: AI-Written Merge Code Creates Look-Ahead Bias
+
+```markdown
+## Failure: accounting data used before it was public
+
+What happened:
+AI wrote a Compustat-to-CRSP merge that attached fiscal-year accounting variables to monthly stock returns in the same calendar year without a reporting lag.
+
+Why it looked plausible:
+The merge ran, the sample size looked reasonable, and the regression table had sensible signs.
+
+Where it entered the workflow:
+Data construction, before portfolio formation.
+
+What caught it:
+A timing audit asked: "Could an investor know this accounting variable at the portfolio formation date?"
+
+What would have prevented it:
+An explicit reporting-lag rule in DATA.md and a toy-data test with fiscal year end, report date, and return month.
+
+Rule to add:
+Never merge annual accounting variables into return tests without a documented public-availability or reporting-lag assumption.
+```
+
+## Filled Failure Case: LLM-Generated Text Measure Is Not Reproducible
+
+```markdown
+## Failure: disclosure-tone score changes after model update
+
+What happened:
+An LLM scored 10-K risk disclosures in January. The same prompt produced different scores in May after a model update.
+
+Why it looked plausible:
+Both outputs were fluent and each individual label seemed defensible.
+
+Where it entered the workflow:
+Text-as-data variable construction.
+
+What caught it:
+A rerun on a validation sample showed rank changes large enough to change regression coefficients.
+
+What would have prevented it:
+Archiving prompt, model snapshot, date, settings, raw outputs, parsed labels, and sensitivity runs.
+
+Rule to add:
+Treat LLM-generated variables as measurement instruments with model-version and prompt sensitivity checks.
+```
 
 ## Failure Case Template
 
