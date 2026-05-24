@@ -31,6 +31,15 @@ Read: [Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Re
 
 ## Recommended First Reading
 
+Read the handbook entry first:
+
+1. [Start Here: Learn AI for Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md)
+2. [How To Read This Handbook](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-how-to-read-this-handbook.md)
+3. [Concept Index and Glossary](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-concept-index-and-glossary.md)
+4. [Knowledge Links For Further Reading](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-knowledge-links.md)
+
+Then read the practical foundations:
+
 1. [What LLMs Are and Are Not](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/01-what-llms-are-and-are-not.md)
 2. [AI Research Workflow Maturity Ladder](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/05-ai-research-workflow-maturity-ladder.md)
 3. [Human Accountability](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/responsible-use-and-risks/01-human-accountability.md)

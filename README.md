@@ -41,6 +41,9 @@ The repo is designed so readers can click into a topic, copy a reusable instruct
 ### Where To Start
 
 - New to AI: [Start Here](START-HERE.en.md)
+- Want the handbook as a book: [Start Here: Learn AI for Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md)
+- Want the vocabulary first: [Concept Index and Glossary](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-concept-index-and-glossary.md)
+- Want original docs and deeper reading: [Knowledge Links for Further Reading](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-knowledge-links.md)
 - Need a route through the material: [Learning Paths](LEARNING-PATHS.en.md)
 - Need a minimum setup: [Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
 - Want copy-and-use materials: [Copy and Use AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md)
@@ -118,6 +121,9 @@ AI 可以自动化劳动，但不能替代学术责任。
 ### 从哪里开始
 
 - 初学者入口：[Start Here / 从这里开始](START-HERE.zh.md)
+- 像读书一样阅读手册：[Start Here: Learn AI for Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md)
+- 先看核心概念：[Concept Index and Glossary](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-concept-index-and-glossary.md)
+- 查看官方文档和延伸阅读：[Knowledge Links for Further Reading](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-knowledge-links.md)
 - 学习路线：[Learning Paths / 学习路径](LEARNING-PATHS.zh.md)
 - 最小设置：[Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
 - 直接可用的说明和模板：[Copy and Use AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md)

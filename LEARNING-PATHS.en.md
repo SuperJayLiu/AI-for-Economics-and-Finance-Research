@@ -5,10 +5,12 @@ Use these paths to avoid reading the repository from top to bottom.
 ## Path 1: I Am Completely New To AI
 
 1. [Start Here](START-HERE.en.md)
-2. [Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
-3. [AI Research Workflow Maturity Ladder](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/05-ai-research-workflow-maturity-ladder.md)
-4. [What LLMs Are and Are Not](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/01-what-llms-are-and-are-not.md)
-5. [Skills vs Prompts vs Projects](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills-vs-prompts-vs-projects.md)
+2. [How To Read This Handbook](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-how-to-read-this-handbook.md)
+3. [Concept Index and Glossary](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-concept-index-and-glossary.md)
+4. [Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
+5. [AI Research Workflow Maturity Ladder](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/05-ai-research-workflow-maturity-ladder.md)
+6. [What LLMs Are and Are Not](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/01-what-llms-are-and-are-not.md)
+7. [Skills vs Prompts vs Projects](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills-vs-prompts-vs-projects.md)
 
 ## Path 2: I Want AI For Literature Review
 

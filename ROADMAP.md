@@ -7,7 +7,7 @@ Goal: make the repository easier to read and use as a bilingual handbook plus pr
 Included:
 
 - bilingual root README with English and Chinese sections in the same file
-- long-form handbook folder
+- long-form handbook folder with book-style navigation, learning checkpoints, concept glossary, and knowledge links
 - directly usable research instructions folder
 - workflow setup folder for AI projects
 - examples, diagrams, and failure cases folder
