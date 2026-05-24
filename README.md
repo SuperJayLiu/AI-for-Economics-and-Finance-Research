@@ -81,6 +81,25 @@ Email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with one of these su
 - `[AI Econ Finance Skills] Suggest a new skill`
 - `[AI Econ Finance Chinese] 中文版本建议`
 
+### Get Updates Safely
+
+Low-risk options:
+
+| Option | How to use it | Privacy/security note |
+| --- | --- | --- |
+| GitHub Watch | Use GitHub's Watch button and choose the notification level you want. | Best if you already use GitHub. The repo owner does not need to collect your email address. |
+| GitHub Releases | Watch releases if you only want stable update notices. | Good for low-noise updates. |
+| Email update list | Email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Updates] Subscribe`. | Send only your name and email address if you want. Do not send research data, manuscripts, referee material, student data, or confidential information. |
+
+Email list rules:
+
+- Use the list only for repository updates, release notes, workshops, and major new skill pages.
+- Store only the minimum needed contact information.
+- Do not share the list with third parties.
+- Do not send attachments or confidential research material to subscribe.
+- To leave, email the same address with subject `[AI Econ Finance Updates] Unsubscribe`.
+- If your university, employer, or institution has stricter information-security rules, follow those rules.
+
 ### What AI Can Help With
 
 - organizing literature notes
@@ -145,6 +164,23 @@ Email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with one of these su
 ### 核心原则
 
 AI 可以自动化劳动，但不能替代学术责任。AI 输出只能作为草稿、解释、清单、批评意见或代码辅助，必须用原始文献、数据、代码或推导来核查。
+
+### 安全获取更新
+
+| 方式 | 如何使用 | 隐私与信息安全说明 |
+| --- | --- | --- |
+| GitHub Watch | 点击 GitHub 的 Watch 按钮，选择你想收到的通知类型。 | 推荐给 GitHub 用户。仓库维护者不需要额外收集你的邮箱。 |
+| GitHub Releases | 只关注 releases，接收稳定版本更新。 | 适合只想收到低频更新的读者。 |
+| 邮件更新列表 | 给 [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) 发邮件，标题写 `[AI Econ Finance Updates] Subscribe`。 | 只发送姓名和邮箱即可。不要发送研究数据、论文草稿、审稿材料、学生数据或任何 confidential information。 |
+
+邮件列表规则：
+
+- 只用于本仓库更新、release notes、workshop 信息和重要 skill 更新。
+- 只保存必要联系信息。
+- 不向第三方分享邮件列表。
+- 订阅时不要发送附件或任何 confidential/restricted/licensed research material。
+- 退订邮件标题写 `[AI Econ Finance Updates] Unsubscribe`。
+- 如果你的学校、雇主或机构有更严格的信息安全要求，请遵守更严格的规则。
 
 ### 直接可用原则
 

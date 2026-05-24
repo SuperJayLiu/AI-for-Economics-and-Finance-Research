@@ -7,6 +7,25 @@
 
 如有中文版本建议，请邮件联系 [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk)，邮件标题建议使用 `[AI Econ Finance Chinese] 中文版本建议`。
 
+## 安全获取更新
+
+推荐优先使用 GitHub 原生通知，这样维护者不需要额外收集你的邮箱。
+
+| 方式 | 如何使用 | 信息安全说明 |
+| --- | --- | --- |
+| GitHub Watch | 在仓库页面点击 Watch，选择通知类型。 | 最少额外个人信息，适合 GitHub 用户。 |
+| GitHub Releases | 只关注 releases，接收稳定版本更新。 | 低频、低噪音。 |
+| 邮件更新列表 | 给 [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) 发邮件，标题写 `[AI Econ Finance Updates] Subscribe`。 | 只需要姓名和邮箱。不要发送研究数据、论文草稿、审稿材料、学生数据、restricted/licensed data 或 confidential information。 |
+
+邮件列表规则：
+
+- 只用于本仓库更新、release notes、workshop 信息和重要 skill 更新。
+- 只保存必要联系信息。
+- 不向第三方分享邮件列表。
+- 不通过订阅邮件接收或处理 confidential research material。
+- 退订邮件标题写 `[AI Econ Finance Updates] Unsubscribe`。
+- 如果学校、雇主、期刊、会议、基金、数据提供方或合作者有更严格的信息安全规则，请遵守更严格的规则。
+
 ## 快速选择
 
 | 如果你想要... | 打开 |

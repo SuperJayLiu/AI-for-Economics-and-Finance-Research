@@ -7,6 +7,35 @@ This folder is not a link dump. It explains which external resources influenced 
 
 Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Sources] Resource suggestion`.
 
+## Update Notifications and Privacy
+
+Readers can stay informed through GitHub-native notifications or a minimal email update list.
+
+Recommended order:
+
+1. Use GitHub Watch or GitHub Releases if you already use GitHub.
+2. Use the email update list only if you prefer email.
+
+Email update list:
+
+```text
+To subscribe:
+Email jay.liu@bristol.ac.uk
+Subject: [AI Econ Finance Updates] Subscribe
+
+To unsubscribe:
+Email jay.liu@bristol.ac.uk
+Subject: [AI Econ Finance Updates] Unsubscribe
+```
+
+Information-security rules:
+
+- Do not send research data, manuscripts, referee reports, student data, licensed database extracts, private code, or confidential information when subscribing.
+- The update list should be used only for repository updates, release notes, workshop notices, and major new skill pages.
+- Collect and retain only the minimum contact information needed for updates.
+- Do not share the list with third parties.
+- Follow university, employer, data-provider, funder, journal, and conference rules if they are stricter.
+
 ## Source Use Policy
 
 We cite briefly and adapt only relevant workflow ideas. We do not copy external skills wholesale unless the license permits it.
