@@ -606,4 +606,31 @@ Selected links are grouped below so readers can see the difference between workf
 | asset-pricing replication | [Chen and Zimmermann, Open Source Asset Pricing](https://www.openassetpricing.com/) | transparent anomaly replication and factor research infrastructure |
 | asset-pricing replication | [Hou, Xue, and Zhang, "Replicating Anomalies"](https://academic.oup.com/rfs/article/33/5/2019/5236964) | replication, multiple testing, and finance-anomaly discipline |
 
+### Dataset Starting Points
+
+These links are starting points, not permission. Public website access, university library access, and AI-tool upload permission are different things. Before using AI with any dataset, check the data provider license, university or employer policy, IRB/ethics rules, coauthor agreements, and journal/funder requirements.
+
+For a fuller access table, see [Dataset Starting Points and Access Notes](../05-Check-Builders-Official-Docs-and-Resources/README.md#dataset-starting-points-and-access-notes).
+
+| Dataset or portal | Best for | Access and AI-use note |
+| --- | --- | --- |
+| [FRED](https://fred.stlouisfed.org/) and [FRED API](https://fred.stlouisfed.org/docs/api/fred/) | macro, financial, and policy time series | public data; cite series and transformations; use [ALFRED](https://alfred.stlouisfed.org/) when real-time/vintage data matter |
+| [BEA data and API](https://apps.bea.gov/api/signup/) | national accounts, regional accounts, international accounts | public data; record table IDs, release dates, and revisions |
+| [BLS data and API](https://www.bls.gov/bls/api_features.htm) | labor, prices, productivity, occupation data | public data; check seasonal adjustment, benchmark revisions, and series definitions |
+| [Census Data API](https://www.census.gov/data/developers/data-sets.html) | public aggregate Census/ACS/economic data | public aggregates differ from restricted microdata; never infer restricted access from API availability |
+| [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392) | international development indicators | public indicators; cite indicator codes and source definitions |
+| [IMF Data APIs](https://data.imf.org/en/Resource-Pages/IMF-API) | international macro and financial statistics | access terms vary by dataset; record API endpoint, dataset code, and download date |
+| [OECD Data Explorer API](https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html) | OECD country indicators | public/registered access depending dataset; cite dataset and version |
+| [SEC EDGAR APIs](https://www.sec.gov/edgar/sec-api-documentation) | filings, submissions, XBRL company facts | public filings; follow SEC fair-access rules and log parsing/version decisions |
+| [WRDS](https://wrds-www.wharton.upenn.edu/) | access platform for many licensed finance/accounting/econ datasets | institution-licensed; do not upload extracts to public AI tools unless license and institution explicitly allow |
+| [CRSP](https://www.crsp.org/) | securities prices, returns, indexes, delisting and market data | licensed; protect extracts and document delisting, survivorship, linking, and sample filters |
+| [S&P Global Academic Research Essentials / Compustat](https://www.spglobal.com/market-intelligence/en/solutions/products/spglobal-academic-research-essentials) | firm fundamentals and market intelligence data | licensed; check redistribution, cloud upload, and AI-tool rules before use |
+| [FINRA TRACE Data and Licensing](https://www.finra.org/filing-reporting/trace/data) | fixed-income transaction and market data | some products require subscription/licensing; respect dissemination and redistribution limits |
+| [IPUMS Terms of Use](https://www.ipums.org/about/terms) | public-use population and survey microdata | registration and terms apply; do not attempt reidentification; public-use does not mean upload-anywhere |
+| [ICPSR confidentiality and restricted-use data](https://www.icpsr.umich.edu/sites/icpsr/about/policies/confidentiality) | social science datasets, including restricted-use files | restricted data require applications, DUAs, and security plans; do not use public AI tools |
+| [Census Federal Statistical Research Data Centers](https://www.census.gov/about/adrm/fsrdc.html) | restricted federal microdata | secure approved environments only; AI use requires explicit approval |
+| [World Bank Microdata Library](https://microdata.worldbank.org/index.php/about) | household, firm, facility, and survey microdata | access categories vary; check terms for each dataset before analysis or AI use |
+| [AEA RCT Registry](https://www.aeaweb.org/journals/policies/rct-registry) | trial registration, protocols, and transparency records | public metadata may coexist with embargoed/confidential materials; respect PI and registry permissions |
+| [NBER Public Use Data Archive](https://www.nber.org/research/data) | public-use economic, demographic, and enterprise data | convenient mirrors may lag source updates; check original source and license |
+
 Last checked: 2026-05-24

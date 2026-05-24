@@ -119,6 +119,78 @@ These sources are not "AI resources." They are the method standards that make AI
 
 When adding a new method skill, include the method standard and the AI-specific risk. Example: for DiD, the AI-specific risk is not only "wrong prose"; it is that an agent may implement a conventional TWFE/event-study specification while the design needs group-time or imputation-style estimands.
 
+## Dataset Starting Points and Access Notes
+
+Use this section as a starting map for economics and finance data. It is not a legal opinion and not upload permission. The practical rule is:
+
+```text
+Dataset link -> access terms -> data sensitivity -> allowed compute environment -> AI-use rule -> citation and version log
+```
+
+Before asking AI to read, clean, merge, summarize, or transform data, check:
+
+- the data-provider license or terms of use;
+- university, employer, IRB/ethics, funder, journal, and conference rules;
+- whether the material is public, licensed, restricted, embargoed, proprietary, or coauthored;
+- whether public AI tools, cloud tools, MCP connectors, coding agents, or external APIs are allowed;
+- whether metadata, toy data, synthetic data, or code-only assistance would be safer.
+
+### Open or Public Economic Data
+
+| Source | Best for | Access/confidentiality note | AI-use guidance |
+| --- | --- | --- | --- |
+| [FRED](https://fred.stlouisfed.org/) and [FRED API](https://fred.stlouisfed.org/docs/api/fred/) | macro, monetary, financial, labor, and policy time series | public; series definitions and transformations still matter | fine for source-grounded AI help; log series IDs, transformations, frequency, and download date |
+| [ALFRED](https://alfred.stlouisfed.org/) | real-time/vintage economic data | public vintage data | use when revised data could create look-ahead bias |
+| [BEA data and API](https://apps.bea.gov/api/signup/) | national income and product accounts, regional accounts, international accounts | public; tables can be revised | log table IDs, line numbers, vintage/release date, and transformation |
+| [BLS data and API](https://www.bls.gov/bls/api_features.htm) | labor markets, CPI/PPI, productivity, occupation data | public; benchmark revisions and seasonal adjustment matter | ask AI to draft retrieval code, but verify series IDs and definitions from BLS |
+| [Census Data API](https://www.census.gov/data/developers/data-sets.html) | public Census/ACS/economic aggregate data | public API data are not the same as restricted microdata | use AI for API queries and documentation, not for restricted data unless approved |
+| [Federal Reserve Data Download Program](https://www.federalreserve.gov/datadownload/help/) | Board statistical releases such as H.8, H.15, Z.1, and related series | public current-release data; real-time history may require other sources | log release, series, and access date; check whether vintage data are needed |
+| [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392) | development indicators and international comparisons | public indicators, but definitions differ across countries and time | use AI to draft API code and metadata summaries; verify indicator definitions |
+| [IMF Data APIs](https://data.imf.org/en/Resource-Pages/IMF-API) | international macro, balance of payments, IFS, WEO-style data | dataset access and portals may vary | record dataset code, API endpoint, filters, and download date |
+| [OECD Data Explorer API](https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html) | OECD indicators and cross-country panels | public/registered access varies by dataset | cite dataset, version, filters, and API date |
+| [NBER Public Use Data Archive](https://www.nber.org/research/data) | public-use economic, demographic, and enterprise datasets | convenient public archive; source updates may not propagate | check the original source and license, not only the NBER mirror |
+
+### Finance, Accounting, and Market Data
+
+| Source | Best for | Access/confidentiality note | AI-use guidance |
+| --- | --- | --- | --- |
+| [SEC EDGAR APIs](https://www.sec.gov/edgar/sec-api-documentation) | filings, submissions history, XBRL company facts | public filings; automated access must follow SEC fair-access guidance | use AI for parsers and extraction plans; log CIKs, forms, filing dates, parser version, and SEC endpoint |
+| [OpenFIGI](https://www.openfigi.com/) | security identifiers and metadata mapping | public API tools with rate/access terms | useful for identifier mapping, but never treat a mapping as verified without spot checks |
+| [WRDS](https://wrds-www.wharton.upenn.edu/) | institutional access platform for CRSP, Compustat, TAQ, IBES, OptionMetrics, and many other datasets | licensed through institution or subscription | do not upload raw extracts, query results, or licensed files to public AI tools unless explicitly allowed |
+| [CRSP](https://www.crsp.org/) | stock returns, prices, delisting returns, indexes, mutual funds, and security history | licensed data; often accessed through WRDS | protect extracts; document delisting return treatment, share codes, exchange codes, identifiers, and sample filters |
+| [S&P Global Academic Research Essentials / Compustat](https://www.spglobal.com/market-intelligence/en/solutions/products/spglobal-academic-research-essentials) | Compustat fundamentals and related academic finance datasets | licensed product; access and redistribution terms apply | use AI on variable dictionaries or toy examples unless institutional rules permit otherwise |
+| [S&P Global Fundamental Financial Data](https://www.spglobal.com/market-intelligence/en/solutions/products/fundamental-data) | global firm fundamentals and point-in-time financial data | commercial licensed data | keep raw extracts out of public AI and public GitHub; document point-in-time logic |
+| [FINRA TRACE Data and Licensing](https://www.finra.org/filing-reporting/trace/data) | corporate bond and fixed-income transaction data | some products are subscription/licensed; redistribution can be restricted | verify license before AI/cloud use; log filters, reporting rules, and cleaned-price logic |
+| [Bloomberg Professional Data](https://www.bloomberg.com/professional/products/data/) | market, reference, news, and analytics data | commercial license; terminal and API terms are strict | do not upload extracts to public AI unless your license and institution allow it |
+| [LSEG Data and Analytics](https://www.lseg.com/en/data-analytics) | Refinitiv/LSEG market, fundamentals, ownership, and news datasets | commercial license | use metadata and toy schemas for AI help unless approved |
+| [FactSet Data](https://www.factset.com/data) | market, fundamentals, ownership, estimates, and analytics data | commercial license | treat extracts as licensed/confidential; check redistribution and cloud rules |
+| [Open Source Asset Pricing](https://www.openassetpricing.com/) | finance anomaly replication and factor research infrastructure | public research infrastructure; check code/data terms | useful for replication learning and anomaly-discipline examples |
+
+### Microdata, Restricted Data, and Registries
+
+| Source | Best for | Access/confidentiality note | AI-use guidance |
+| --- | --- | --- | --- |
+| [IPUMS Terms of Use](https://www.ipums.org/about/terms) | census, ACS, international, health, and harmonized microdata | registration and terms apply; no reidentification | public-use does not mean upload-anywhere; use AI with metadata/toy data unless allowed |
+| [ICPSR confidentiality and restricted-use data](https://www.icpsr.umich.edu/sites/icpsr/about/policies/confidentiality) | social science public-use and restricted-use datasets | restricted-use files require applications, DUAs, and security plans | do not use public AI tools for restricted files; ask AI to help with code on synthetic examples |
+| [Census Federal Statistical Research Data Centers](https://www.census.gov/about/adrm/fsrdc.html) | restricted federal household, firm, linked employer-employee, and administrative data | secure approved environments only | AI use requires explicit approval from the data authority and institution |
+| [World Bank Microdata Library](https://microdata.worldbank.org/index.php/about) | household, firm, facility, and development survey microdata | each dataset has its own access category and terms | read terms for each dataset; do not assume all World Bank microdata are open |
+| [AEA RCT Registry](https://www.aeaweb.org/journals/policies/rct-registry) | trial registration, protocols, version history, and transparency records | public metadata may coexist with embargoed/confidential files | use AI for public protocols and planning; do not expose confidential trial documents |
+
+### Copy-Ready Dataset Access Checklist
+
+```text
+Before using AI with a dataset, answer:
+
+1. What is the dataset name, provider, version, and download date?
+2. Is it public, licensed, restricted, confidential, embargoed, or coauthored?
+3. What rules govern redistribution, cloud upload, AI use, and derived outputs?
+4. Does the project require IRB/ethics, DUA, or provider approval?
+5. Can AI work from metadata, variable dictionaries, toy data, or synthetic examples instead of raw data?
+6. What files must stay out of GitHub and public AI tools?
+7. What citation, license note, and access statement will appear in the paper or replication package?
+8. What code, logs, and checks will prove that the dataset was handled correctly?
+```
+
 ## Resource Inclusion Criteria
 
 Add a resource only if it does at least one of these:
