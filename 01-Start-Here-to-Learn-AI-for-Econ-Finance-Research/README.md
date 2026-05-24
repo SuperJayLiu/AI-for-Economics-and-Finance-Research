@@ -539,22 +539,71 @@ Key influences include:
 - Official OpenAI, Anthropic, MCP, Git, and GitHub documentation for skills, agent instructions, connectors, `.gitignore`, worktrees, and repository-level AI instructions.
 - Economist-facing work on AI agents and generative AI for economic research.
 
-Selected links:
+Selected links are grouped below so readers can see the difference between workflow builders, official documentation, and methods standards. These links are not a required reading list. Use them when a page needs source context, tool behavior, or a methodological reference.
 
-- [Paul Goldsmith-Pinkham, Applied Empirical Methods PhD course](https://github.com/paulgp/applied-methods-phd)
-- [Paul Goldsmith-Pinkham, Using AI in Research and Teaching](https://paulgp.com/2024/06/24/llm_talk.html)
-- [Paul Goldsmith-Pinkham, Research in the Time of AI](https://paulgp.com/2026/03/16/research-in-time-of-ai.html)
-- [Paul Goldsmith-Pinkham, LLM-Friendly Academic Papers](https://paulgp.com/2026/03/10/llms-txt-for-academic-papers.html)
-- [Paul Goldsmith-Pinkham, AI writing and Claude Code roundup](https://paulgp.com/2026/04/27/ai-writing-roundup.html)
-- [Zara Zhang, AI learning library](https://zara.faces.site/ai)
-- [Zara Zhang, Follow Builders](https://github.com/zarazhangrui/follow-builders)
-- [PaperSpine](https://github.com/WUBING2023/PaperSpine)
-- [Nature Skills](https://github.com/Yuan1z0825/nature-skills)
-- [OpenAI Codex Skills](https://developers.openai.com/codex/skills)
-- [OpenAI AGENTS.md guide](https://developers.openai.com/codex/guides/agents-md)
-- [Claude Skills](https://docs.claude.com/en/docs/claude-code/skills)
-- [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
-- [GitHub Docs: ignoring files](https://docs.github.com/en/get-started/git-basics/ignoring-files)
-- [Git worktree documentation](https://git-scm.com/docs/git-worktree)
+### AI Workflow Builders and Economist-Facing Resources
+
+| Resource | Why it is included |
+| --- | --- |
+| [Paul Goldsmith-Pinkham, Applied Empirical Methods PhD course](https://github.com/paulgp/applied-methods-phd) | practical empirical implementation, research design intuition, and communication |
+| [Paul Goldsmith-Pinkham, Using AI in Research and Teaching](https://paulgp.com/2024/06/24/llm_talk.html) | AI for code explanation, project help, scraping, local models, VS Code, and Git workflows |
+| [Paul Goldsmith-Pinkham, Research in the Time of AI](https://paulgp.com/2026/03/16/research-in-time-of-ai.html) | AI lowering execution costs, research-pipeline changes, p-hacking risk, and slop risk |
+| [Paul Goldsmith-Pinkham, LLM-Friendly Academic Papers](https://paulgp.com/2026/03/10/llms-txt-for-academic-papers.html) | llms.txt-style paper orientation files and AI-readable paper bundles |
+| [Paul Goldsmith-Pinkham, Things I Want to Build](https://paulgp.com/2026/04/08/incomplete-list-things-i-want-to-build.html) | citation networks, knowledge databases, replication package metadata, and better econometric tooling |
+| [Paul Goldsmith-Pinkham, AI writing and Claude Code roundup](https://paulgp.com/2026/04/27/ai-writing-roundup.html) | writing help that preserves thinking, voice, evidence, and field-specific caution |
+| [Paul Goldsmith-Pinkham, Tracking the Credibility Revolution across Fields](https://www.nber.org/papers/w35051) | field differences in empirical design language and credibility-revolution diffusion |
+| [Paul Goldsmith-Pinkham, Causal Inference in Financial Event Studies](https://paulgp.com/papers/financial_event_studies_dec282025.pdf) | finance event-study caution, long-horizon interpretation, confounding, and design-vs-model interpretation |
+| [Pedro Sant'Anna, Claude Code academic workflow](https://psantanna.com/claude-code-my-workflow/) | plan-first contractor workflows, specialized agents, quality checks, and reusable commands |
+| [Pedro Sant'Anna, workflow guide](https://psantanna.com/claude-code-my-workflow/workflow-guide.html) | skills, agents, permissions, hooks, and quality-gate workflow design |
+| [Chris Blattman / Claude Blattman](https://claudeblattman.com/) | non-coder academic workflows, project folders, reusable skills, and council-of-critics review |
+| [Claude Blattman templates and workflows](https://claudeblattman.com/downloads/) | templates, first-session skills, project setup, and practical non-coder onboarding patterns |
+| [Chris Blattman, claudeblattman repo](https://github.com/chrisblattman/claudeblattman) | public workflow system design and documentation structure |
+| [Anton Korinek, AI agents for economic research](https://www.nber.org/papers/w34202) | economist-facing explanation of agents for literature, code, data, and workflow coordination |
+| [Mihail Velikov, AI in Business and Economic Research](https://velikov-mihail.github.io/ai-econ-wiki/) | curated source index, summaries, categories, and knowledge-base maintenance |
+| [Novy-Marx and Velikov, AI-powered finance scholarship](https://www.aeaweb.org/articles?id=10.1257/jel.20251821) | industrialized finance-paper production, HARKing, factor mining, and research-integrity risk |
+| [Joshua Gans](https://joshuagans.substack.com/) | AI's effect on research and teaching production |
+| [Luis Garicano](https://sites.google.com/site/luisgaricano/) | AI, knowledge work, task bundling, and the changing value of human judgment |
+| [Aniket Panjwani](https://aniketpanjwani.com/) | economist-facing agent onboarding and dated tool-comparison discipline |
+| [Brandon Uttley, vibe coding risks](https://www.linkedin.com/pulse/promises-risks-vibe-coding-brandon-uttley-nbk2e/) | caution that AI-generated code needs review, testing, maintainability, and ownership |
+| [Zara Zhang, AI learning library](https://zara.faces.site/ai) | curated learning paths and low-noise AI learning |
+| [Zara Zhang, Follow Builders](https://github.com/zarazhangrui/follow-builders) | builder-focused digests, daily/weekly updates, bilingual summaries, and public-source tracking |
+| [Zara Zhang, frontend-slides](https://github.com/zarazhangrui/frontend-slides) | web-native slide skills, visual exploration, single-file HTML artifacts, and avoiding generic AI aesthetics |
+| [Maverick Gao, slide-craft-skill](https://github.com/maverickgao8848/slide-craft-skill) | structured slide workflow, style choices, overflow handling, and bilingual slide-skill design |
+| [PaperSpine](https://github.com/WUBING2023/PaperSpine) | staged academic writing skills, branch skills, citation support bank, writing rationale matrix, and audit trail |
+| [Nature Skills](https://github.com/Yuan1z0825/nature-skills) | source-grounded skill design, directly usable artifacts, and journal-style rules |
+
+### Official Tool Documentation
+
+| Resource | Why it is included |
+| --- | --- |
+| [OpenAI Help Center, Projects in ChatGPT](https://help.openai.com/en/articles/10169521-chatgpt-projects) | official behavior for ChatGPT Projects, files, instructions, sharing, and project scope |
+| [OpenAI Developers, Codex Skills](https://developers.openai.com/codex/skills) | skills as reusable instruction packages for Codex |
+| [OpenAI Developers, AGENTS.md guide](https://developers.openai.com/codex/guides/agents-md) | repo-level custom instructions for AI agents |
+| [Claude Help Center, Claude Projects](https://support.anthropic.com/en/articles/9517075-what-are-projects) | official description of Claude Projects as workspaces with context and knowledge |
+| [Claude Code Docs, How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works) | agentic loop, project interaction, built-in tools, and command-line workflow |
+| [Claude Code Docs, Skills](https://docs.claude.com/en/docs/claude-code/skills) | skill format and Claude Code workflow concept |
+| [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) | connector standard between AI applications and external systems |
+| [VS Code documentation](https://code.visualstudio.com/docs) | editor, terminal, debugging, Git, and project-navigation basics |
+| [GitHub Docs, ignoring files](https://docs.github.com/en/get-started/git-basics/ignoring-files) | `.gitignore` safety for data, secrets, and generated outputs |
+| [Git worktree documentation](https://git-scm.com/docs/git-worktree) | isolated branches/worktrees for parallel AI experiments |
+
+### Methods, Measurement, and Credibility References
+
+| Topic | Resource | Why it is included |
+| --- | --- | --- |
+| text-as-data | [Gentzkow, Kelly, and Taddy, "Text as Data"](https://www.aeaweb.org/articles?id=10.1257/jel.20181020) | frames text as a measurement and statistical object, not only a summarization task |
+| staggered DiD | [Callaway and Sant'Anna](https://ideas.repec.org/a/eee/econom/v225y2021i2p200-230.html) | group-time treatment effects and modern DiD workflow |
+| staggered DiD | [Sun and Abraham](https://ideas.repec.org/a/eee/econom/v225y2021i2p175-199.html) | event-study issues under heterogeneous treatment effects |
+| staggered DiD | [Borusyak, Jaravel, and Spiess](https://www.gsb.stanford.edu/faculty-research/publications/revisiting-event-study-designs-robust-efficient-estimation) | imputation-based event-study estimation |
+| staggered DiD | [Goodman-Bacon](https://www.sciencedirect.com/science/article/pii/S0304407621001445) | decomposition and weighting issues in variation-timing DiD |
+| pre-trends | [Roth, "Pretest with Caution"](https://www.aeaweb.org/articles?id=10.1257/aeri.20210236) | why insignificant pre-trends do not prove design validity |
+| RD | [Calonico, Cattaneo, and Titiunik / rdrobust](https://rdpackages.github.io/rdrobust/) | robust bias correction, bandwidth choice, and RD implementation |
+| RD | [McCrary density test](https://www.nber.org/papers/t0334) | manipulation and sorting checks around RD cutoffs |
+| weak IV | [Montiel Olea and Pflueger robust weak-instrument test](https://ideas.repec.org/a/taf/jnlbes/v31y2013i3p358-369.html) | effective-F style weak-instrument diagnostics |
+| weak IV | [Andrews, Moreira, and Stock, robust confidence sets](https://economics.mit.edu/research/publications/robust-confidence-sets-presence-weak-instruments) | weak-IV robust confidence-set logic, including Anderson-Rubin-style inference |
+| clustering | [Abadie, Athey, Imbens, and Wooldridge](https://academic.oup.com/qje/article/138/1/1/6750017) | when and why to adjust standard errors for clustering |
+| clustering | [Cameron, Gelbach, and Miller](https://www.nber.org/papers/t0344) | wild-cluster/bootstrap inference with clustered errors |
+| asset-pricing replication | [Chen and Zimmermann, Open Source Asset Pricing](https://www.openassetpricing.com/) | transparent anomaly replication and factor research infrastructure |
+| asset-pricing replication | [Hou, Xue, and Zhang, "Replicating Anomalies"](https://academic.oup.com/rfs/article/33/5/2019/5236964) | replication, multiple testing, and finance-anomaly discipline |
 
 Last checked: 2026-05-24

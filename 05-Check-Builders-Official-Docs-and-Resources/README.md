@@ -4,6 +4,8 @@ This folder is not a link dump. It explains which external resources influenced 
 
 > [!IMPORTANT]
 > This page is for learning what to extract from outside sources. It is not a recommendation to copy another person's skill, code, or writing without checking license, attribution, and fit.
+>
+> The consolidated selected-links list now also appears in the [01 handbook](../01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md#17-sources-and-workflow-influences), so readers can find source context without leaving the book-style entry page.
 
 Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Sources] Resource suggestion`.
 
@@ -90,10 +92,14 @@ Use this folder to distinguish:
 | [Maverick Gao: slide-craft-skill](https://github.com/maverickgao8848/slide-craft-skill) | structured slide workflow, style choices, overflow handling, bilingual slide-skill design |
 | [PaperSpine](https://github.com/WUBING2023/PaperSpine) | staged academic writing skills, branch skills, citation support bank, writing rationale matrix, audit trail |
 | [Nature Skills](https://github.com/Yuan1z0825/nature-skills) | source-grounded skill design, directly usable artifacts, journal-style rules |
+| [OpenAI Help Center: Projects in ChatGPT](https://help.openai.com/en/articles/10169521-chatgpt-projects) | official behavior for ChatGPT Projects, files, instructions, sharing, and project scope |
 | [OpenAI Codex Skills](https://developers.openai.com/codex/skills) | skills as reusable instruction packages |
 | [OpenAI AGENTS.md](https://developers.openai.com/codex/guides/agents-md) | repo-level AI agent instructions |
+| [Claude Help Center: Claude Projects](https://support.anthropic.com/en/articles/9517075-what-are-projects) | official description of Claude project workspaces |
+| [Claude Code Docs: How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works) | agentic loop, project interaction, built-in tools, and command-line workflow |
 | [Claude Skills](https://docs.claude.com/en/docs/claude-code/skills) | skill format and Claude Code workflow concept |
 | [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) | connectors between AI tools and external systems |
+| [VS Code documentation](https://code.visualstudio.com/docs) | editor, terminal, debugging, Git, and project-navigation basics |
 | [GitHub ignoring files](https://docs.github.com/en/get-started/git-basics/ignoring-files) | `.gitignore` safety for data and secrets |
 | [Git worktree docs](https://git-scm.com/docs/git-worktree) | isolated branches/worktrees for AI experiments |
 
@@ -107,9 +113,9 @@ These sources are not "AI resources." They are the method standards that make AI
 | staggered DiD | [Callaway and Sant'Anna](https://ideas.repec.org/a/eee/econom/v225y2021i2p200-230.html), [Sun and Abraham](https://ideas.repec.org/a/eee/econom/v225y2021i2p175-199.html), [Borusyak, Jaravel, and Spiess](https://www.gsb.stanford.edu/faculty-research/publications/revisiting-event-study-designs-robust-efficient-estimation), [Goodman-Bacon](https://www.sciencedirect.com/science/article/pii/S0304407621001445) | turns "check parallel trends" into estimator choice, timing, heterogeneity, and weighting checks |
 | pre-trends | [Roth, "Pretest with Caution"](https://www.aeaweb.org/articles?id=10.1257/aeri.20210236) | warns that insignificant pre-trends are not proof of validity |
 | RD | [Calonico, Cattaneo, and Titiunik/rdrobust](https://rdpackages.github.io/rdrobust/), [McCrary density test](https://www.nber.org/papers/t0334) | adds bandwidth, robust bias correction, manipulation, and local interpretation checks |
-| weak IV | [Montiel Olea and Pflueger robust weak-instrument test](https://ideas.repec.org/a/taf/jnlbes/v31y2013i3p358-369.html), Anderson-Rubin/weak-IV robust inference | prevents mechanical "first-stage F > 10" reasoning |
+| weak IV | [Montiel Olea and Pflueger robust weak-instrument test](https://ideas.repec.org/a/taf/jnlbes/v31y2013i3p358-369.html), [Andrews, Moreira, and Stock robust confidence sets](https://economics.mit.edu/research/publications/robust-confidence-sets-presence-weak-instruments) | prevents mechanical "first-stage F > 10" reasoning |
 | clustering | [Abadie, Athey, Imbens, and Wooldridge](https://academic.oup.com/qje/article/138/1/1/6750017), [Cameron, Gelbach, and Miller](https://www.nber.org/papers/t0344) | turns clustering into a design decision and adds few-cluster bootstrap cautions |
-| finance factor/anomaly replication | [Chen and Zimmermann Open Source Asset Pricing](https://www.openassetpricing.com/), Hou-Xue-Zhang q-factor/anomaly replication work | motivates factor-mining, multiple-testing, sample construction, and out-of-sample checks |
+| finance factor/anomaly replication | [Chen and Zimmermann Open Source Asset Pricing](https://www.openassetpricing.com/), [Hou, Xue, and Zhang, "Replicating Anomalies"](https://academic.oup.com/rfs/article/33/5/2019/5236964) | motivates factor-mining, multiple-testing, sample construction, and out-of-sample checks |
 
 When adding a new method skill, include the method standard and the AI-specific risk. Example: for DiD, the AI-specific risk is not only "wrong prose"; it is that an agent may implement a conventional TWFE/event-study specification while the design needs group-time or imputation-style estimands.
 
