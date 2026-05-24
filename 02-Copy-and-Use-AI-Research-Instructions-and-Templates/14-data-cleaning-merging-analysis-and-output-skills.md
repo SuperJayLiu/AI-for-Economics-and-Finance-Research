@@ -73,6 +73,8 @@ Output:
 
 Use this before writing merge code for finance data.
 
+Resource note: external WRDS-oriented agent toolkits show a useful pattern: separate specialist agents for CRSP, Compustat, OptionMetrics, TAQ, and a query orchestrator; preload schema information before writing queries; and keep psql/SSH/SAS execution rules explicit. Do not copy permissions or connection settings blindly. WRDS credentials, SSH keys, scratch paths, licensed extracts, and downloaded files must follow WRDS and institutional rules.
+
 ```text
 Act as a finance data-construction auditor.
 

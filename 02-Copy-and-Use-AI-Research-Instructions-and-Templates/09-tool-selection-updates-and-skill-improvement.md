@@ -123,4 +123,66 @@ Return:
 - whether it should be added to my workflow
 ```
 
+## Skill 5: Build a Low-Noise AI Research Resource Database
+
+Use this when you want to keep up with AI tools, skills, papers, builders, and official docs without turning your reading list into a noisy link dump.
+
+```text
+Act as an AI research-workflow librarian for economics and finance scholars.
+
+Goal:
+Build a small resource database for my AI research workflow.
+
+My field:
+[economics/finance/subfield]
+
+My current AI tools:
+[ChatGPT/Claude/Codex/Claude Code/Cursor/VS Code/Zotero/GitHub/other]
+
+My skill level:
+[beginner/intermediate/advanced]
+
+My weekly time budget:
+[minutes]
+
+Resource candidates:
+[paste links, names, or descriptions]
+
+Create a resource database with these fields:
+1. Name
+2. URL
+3. Author or maintainer
+4. Category: Learning material / Application tool / Setup / Official docs / Dataset / Methods reference
+5. Topic: Workflow / Stata / R / Python / WRDS / Skills & MCP / Writing / Slides / Data / Methods / General
+6. Level: Beginner / Intermediate / Advanced
+7. Language
+8. Direct-use value: copy skill / install tool / follow workflow / read background / cite method / verify docs
+9. Data or confidentiality risk
+10. License or attribution note
+11. Last checked date
+12. Where it belongs in my research workflow
+13. Keep / test later / ignore
+
+Then create these views:
+- Start Here: maximum 8 beginner-friendly resources
+- Application Tools: resources I can actually use, install, copy, or test
+- Official Docs: product behavior and security rules
+- Econ/Finance Research: field-specific workflows only
+- Chinese Resources: Chinese or bilingual materials
+- Needs Testing: promising resources that should not be recommended yet
+
+Rules:
+- Do not rank tools as universally best.
+- Do not include generic AI hype.
+- Flag resources that lack real examples, verification steps, data-safety warnings, or dates.
+- Prefer resources that produce a reusable workflow, skill, template, dataset note, or code artifact.
+
+Return:
+1. the resource table;
+2. the recommended views;
+3. the top 5 resources to test this week;
+4. what to ignore;
+5. a 30-minute weekly review ritual.
+```
+
 Sources and workflow influences: Zara Zhang's curated AI learning library and follow-builders digest, Claude Blattman's continuous-improvement loop, Mihail Velikov's curated AI-in-econ wiki, and official documentation-first tool evaluation.

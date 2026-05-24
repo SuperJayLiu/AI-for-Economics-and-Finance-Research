@@ -62,10 +62,61 @@ Use this folder to distinguish:
 | skill repositories | examples of reusable workflow design | unlicensed copying |
 | newsletters/social media | discovery | unverified claims |
 
+## Resource Library Pattern To Reuse
+
+A good AI research-resource page should behave like a small searchable database, not a long unordered reading list. The most useful pattern is:
+
+```text
+resource -> category -> topic -> level -> language -> direct-use value -> risk note -> where it belongs in this repo
+```
+
+Use these fields when adding or reviewing resources:
+
+| Field | Why it matters |
+| --- | --- |
+| Name and URL | lets readers click through immediately |
+| Author or maintainer | helps readers judge source context and accountability |
+| Category | separates learning materials, application tools, setup guides, methods references, datasets, and official docs |
+| Topic | shows whether the item is about workflow, Stata, WRDS, skills/MCP, writing, data, presentation, or general AI |
+| Level | helps beginners avoid advanced tools too early |
+| Language | makes Chinese and English routes easier to maintain |
+| Direct-use value | says whether the reader can copy a skill, install a tool, follow a workflow, or only read for background |
+| Risk note | records license, data-safety, tool-version, or hallucination risks |
+| Last checked | prevents stale tool claims |
+| Repo destination | states which README, skill, or workflow should absorb the useful idea |
+
+Recommended views:
+
+| View | Purpose |
+| --- | --- |
+| Start Here | first resources for new users |
+| Learning Materials | tutorials, talks, courses, and explainers |
+| Application Tools | skills, agents, MCPs, scripts, and templates readers may directly try |
+| Chinese Resources | Chinese-language paths and bilingual resources |
+| Needs Testing | promising resources that should not be recommended until tested |
+
+Copy-ready resource card:
+
+```markdown
+## [Resource name]
+
+URL:
+Author/maintainer:
+Category: Learning material / Application tool / Setup / Official docs / Dataset / Methods reference
+Topic:
+Level: Beginner / Intermediate / Advanced
+Language:
+Direct-use value:
+Risk note:
+Where it belongs in this repo:
+Last checked:
+```
+
 ## Source-to-Repo Map
 
 | Source | What this repo extracts |
 | --- | --- |
+| [Gen Li and Siyang Liu: Claude Code Learning Resources for Economics and Finance Researchers](https://gen-li.notion.site/339195e07a238020b8aae6b5a1661f08?v=339195e07a2380c0ad01000c92c92011&pvs=149) | resource-library design: category/topic/level/language tags, separate learning/tool/setup views, Chinese-resource routing, and econ/finance Claude Code discovery |
 | [Paul Goldsmith-Pinkham: Applied Methods PhD](https://github.com/paulgp/applied-methods-phd) | practical empirical implementation, research design intuition, communication and artisanship |
 | [Paul Goldsmith-Pinkham: Using AI in Research and Teaching](https://paulgp.com/2024/06/24/llm_talk.html) | VS Code/Git mindset, code explanation, scraping, Makefile/project help, local models for sensitive contexts |
 | [Paul Goldsmith-Pinkham: Research in the Time of AI](https://paulgp.com/2026/03/16/research-in-time-of-ai.html) | research pipeline thinking, AI lowering execution costs, p-hacking and slop risks |
@@ -86,6 +137,13 @@ Use this folder to distinguish:
 | [Luis Garicano](https://sites.google.com/site/luisgaricano/) | AI, knowledge work, task bundling, and the changing value of human judgment |
 | [Aniket Panjwani](https://aniketpanjwani.com/) | practical economist-facing agent onboarding and dated tool-comparison discipline |
 | [Brandon Uttley: vibe coding risks](https://www.linkedin.com/pulse/promises-risks-vibe-coding-brandon-uttley-nbk2e/) | caution that AI-generated code needs human review, testing, and maintainability checks |
+| [luongnv89: Master Claude Code in a Weekend](https://github.com/luongnv89/claude-howto) | progressive Claude Code learning path, self-assessment, copy-paste templates, and modules for commands, memory, skills, subagents, MCP, hooks, plugins, and checkpoints |
+| [Piotr Orlowski: Claude Code WRDS Toolkit](https://github.com/piotrek-orlowski/claude-wrds-public) | WRDS specialist agents, schema preloading, psql/SSH/TAQ workflows, and permission patterns that need strong data-license safeguards |
+| [Siyang Liu fork: Claude Code WRDS Toolkit](https://github.com/lsy617004926/claude-wrds-public) | extended WRDS-oriented workflow reference for economics and finance researchers |
+| [Alexander Dickerson: AI Asset Pricing](https://github.com/Alexander-M-Dickerson/ai-asset-pricing) | empirical asset-pricing workflow design around WRDS, factor-model workflows, PyBondLab, repeated research automation, and LaTeX paper writing |
+| [Alejandro Lopez-Lira: Research Idea Evaluation Pipeline](https://github.com/alejandroll10/idea-evaluation-pipeline) | staged idea screening for finance research, including web-search-dependent evaluation steps and top-journal fit discipline |
+| [David Yanagizawa-Drott: Project APE](https://ape.socialcatalystlab.org/) | public experiment in autonomous policy evaluation at scale, including the need to expose failures, code, data, uncertainty, and human evaluation |
+| [Conor Bronsdon: avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) | two-pass detection and revision of AI writing patterns; useful as a design model for academic voice preservation rather than generic style polishing |
 | [Zara Zhang: AI Learning Library](https://zara.faces.site/ai) | curated learning paths and low-noise AI learning |
 | [Zara Zhang: Follow Builders](https://github.com/zarazhangrui/follow-builders) | builder-focused digest, daily/weekly updates, bilingual summaries, public-source tracking |
 | [Zara Zhang: frontend-slides](https://github.com/zarazhangrui/frontend-slides) | web-native slide skills, visual exploration, single-file HTML artifacts, avoiding generic AI aesthetics |

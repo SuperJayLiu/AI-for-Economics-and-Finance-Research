@@ -47,6 +47,7 @@ The main page keeps only the primary reading and working folders visible. Suppor
 | theory model review | [Theory Model and Math Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/12-theory-model-and-math-skills.md) |
 | a safe project cleanup | [Clean Existing Research Project and Set Up Git](03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
 | presentation practice | [Practice My Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) |
+| a low-noise AI resource database | [Build a Low-Noise AI Research Resource Database](02-Copy-and-Use-AI-Research-Instructions-and-Templates/09-tool-selection-updates-and-skill-improvement.md#skill-5-build-a-low-noise-ai-research-resource-database) |
 | a weekly AI update filter | [AI Research Update Digest Workflow](03-Set-Up-Agents-and-Automated-Research-Workflows/04-ai-research-update-digest-workflow.md) |
 
 ### Reader Rule
@@ -166,6 +167,7 @@ Email list rules:
 | 清理项目、设置 Git、写 `AGENTS.md` 或 `CLAUDE.md` | [03 设置 Agent 和自动化研究工作流](ZH-中文-AI经济金融研究手册/03-设置Agent和自动化研究工作流.md) |
 | 学习失败案例，避免假引用、错代码、过度因果解释 | [04 案例、图示与失败案例](ZH-中文-AI经济金融研究手册/04-案例图示与失败案例.md) |
 | 安全获取更新、查看资料来源、判断外部资源 | [05 资料来源、官方文档与更新](ZH-中文-AI经济金融研究手册/05-资料来源官方文档与更新.md) |
+| 建立低噪音 AI 资源库 | [中文资源库结构模板](ZH-中文-AI经济金融研究手册/05-资料来源官方文档与更新.md#可以借鉴的资源库结构) |
 | 设计 workshop、培训 RA、练习 seminar 或 job talk | [06 教学、工作坊、展示与分享](ZH-中文-AI经济金融研究手册/06-教学工作坊展示与分享.md) |
 
 ### 核心原则

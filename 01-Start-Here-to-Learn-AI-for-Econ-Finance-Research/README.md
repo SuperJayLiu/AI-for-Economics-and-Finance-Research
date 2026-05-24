@@ -545,6 +545,7 @@ Selected links are grouped below so readers can see the difference between workf
 
 | Resource | Why it is included |
 | --- | --- |
+| [Gen Li and Siyang Liu, Claude Code Learning Resources for Economics and Finance Researchers](https://gen-li.notion.site/339195e07a238020b8aae6b5a1661f08?v=339195e07a2380c0ad01000c92c92011&pvs=149) | curated econ/finance Claude Code resource database; useful model for category, topic, level, language, and application-tool views |
 | [Paul Goldsmith-Pinkham, Applied Empirical Methods PhD course](https://github.com/paulgp/applied-methods-phd) | practical empirical implementation, research design intuition, and communication |
 | [Paul Goldsmith-Pinkham, Using AI in Research and Teaching](https://paulgp.com/2024/06/24/llm_talk.html) | AI for code explanation, project help, scraping, local models, VS Code, and Git workflows |
 | [Paul Goldsmith-Pinkham, Research in the Time of AI](https://paulgp.com/2026/03/16/research-in-time-of-ai.html) | AI lowering execution costs, research-pipeline changes, p-hacking risk, and slop risk |
@@ -565,6 +566,12 @@ Selected links are grouped below so readers can see the difference between workf
 | [Luis Garicano](https://sites.google.com/site/luisgaricano/) | AI, knowledge work, task bundling, and the changing value of human judgment |
 | [Aniket Panjwani](https://aniketpanjwani.com/) | economist-facing agent onboarding and dated tool-comparison discipline |
 | [Brandon Uttley, vibe coding risks](https://www.linkedin.com/pulse/promises-risks-vibe-coding-brandon-uttley-nbk2e/) | caution that AI-generated code needs review, testing, maintainability, and ownership |
+| [luongnv89, Master Claude Code in a Weekend](https://github.com/luongnv89/claude-howto) | progressive Claude Code learning path with copy-paste templates, self-assessment, commands, memory, skills, subagents, MCP, hooks, plugins, and checkpoints |
+| [Piotr Orlowski, Claude Code WRDS Toolkit](https://github.com/piotrek-orlowski/claude-wrds-public) | WRDS specialist agents and skills for CRSP, Compustat, OptionMetrics, TAQ, schema preloading, psql, SSH, and SAS workflows |
+| [Alexander Dickerson, AI Asset Pricing](https://github.com/Alexander-M-Dickerson/ai-asset-pricing) | empirical asset-pricing workflow reference around WRDS, factor models, repeated research automation, and LaTeX paper writing |
+| [Alejandro Lopez-Lira, Research Idea Evaluation Pipeline](https://github.com/alejandroll10/idea-evaluation-pipeline) | staged finance research-idea evaluation pipeline with explicit web-search steps and top-journal fit discipline |
+| [David Yanagizawa-Drott, Project APE](https://ape.socialcatalystlab.org/) | public autonomous policy-evaluation experiment that highlights both scale and the need to expose failures, code, data, and uncertainty |
+| [Conor Bronsdon, avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) | two-pass AI-writing audit pattern that can be adapted for preserving academic voice and avoiding generic AI prose |
 | [Zara Zhang, AI learning library](https://zara.faces.site/ai) | curated learning paths and low-noise AI learning |
 | [Zara Zhang, Follow Builders](https://github.com/zarazhangrui/follow-builders) | builder-focused digests, daily/weekly updates, bilingual summaries, and public-source tracking |
 | [Zara Zhang, frontend-slides](https://github.com/zarazhangrui/frontend-slides) | web-native slide skills, visual exploration, single-file HTML artifacts, and avoiding generic AI aesthetics |
