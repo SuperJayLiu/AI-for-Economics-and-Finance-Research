@@ -8,6 +8,9 @@ This workflow sets up a durable research system for one paper.
 One paper = one GitHub repo + one ChatGPT/Claude Project + one AI-use log + one data rule.
 ```
 
+> [!IMPORTANT]
+> This is the default workflow for serious research. Do not start with multiple agents, MCP connectors, or automation until this basic system is working.
+
 ## Project Setup Instructions
 
 ```text
@@ -52,12 +55,39 @@ Rules:
 - Preserve cautious causal language.
 - Do not treat uploaded drafts as public.
 - Do not summarize confidential or restricted material unless I confirm it is allowed.
+- Ask for approval before editing code, rewriting paper text, changing file structure, or preparing public materials.
 
 Default output format:
 1. Short answer.
 2. Evidence or reasoning.
 3. Risks/uncertainty.
 4. What I should do next.
+```
+
+## Quality Gate Before Accepting AI Output
+
+```text
+Before I accept this AI-assisted output, audit it.
+
+Output:
+[paste output]
+
+Project facts:
+[paste known facts]
+
+Check:
+1. Does it invent citations, facts, variables, data, results, or robustness checks?
+2. Does it change causal language or contribution claims?
+3. Does it match the code, tables, figures, or source documents?
+4. Does it expose private, licensed, or restricted material?
+5. Does it need coauthor, PI, journal, or data-provider approval?
+6. What should be recorded in the AI-use log?
+
+Return:
+- accept / revise / reject
+- required edits
+- manual checks
+- AI-use log entry
 ```
 
 ## Good Project Roles
@@ -71,5 +101,14 @@ Default output format:
 - Seminar Q&A Opponent
 - Revision Strategy Assistant
 
-Sources and workflow influences: ChatGPT/Claude Projects, Paul Goldsmith-Pinkham's one-research-pipeline framing, and PaperSpine-style stage separation.
+## First Week Checklist
 
+```text
+Day 1: create repo, README, DATA.md, AI-USE-LOG.md, AGENTS.md.
+Day 2: write project instructions for ChatGPT/Claude.
+Day 3: run one small literature or code task with AI.
+Day 4: verify output and record AI-use log.
+Day 5: turn one repeated task into a skill.
+```
+
+Sources and workflow influences: ChatGPT/Claude Projects, Paul Goldsmith-Pinkham's one-research-pipeline framing, and PaperSpine-style stage separation.

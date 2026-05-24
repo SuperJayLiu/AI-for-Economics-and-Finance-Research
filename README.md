@@ -2,6 +2,9 @@
 
 A practical, GitHub-native handbook and resource library for using AI responsibly in economics and finance research.
 
+> [!IMPORTANT]
+> This repository is built around a simple workflow: read the handbook, copy a skill, use it on a real research task, verify the output, and record what changed.
+
 ## Choose Your Language / 选择语言
 
 | English | 中文 |
@@ -26,6 +29,16 @@ The main page keeps only the primary reading and working folders visible. Suppor
 | See concrete examples, diagrams, and failure cases | [See Examples Diagrams and Failure Cases](04-See-Examples-Diagrams-and-Failure-Cases/README.md) |
 | Check official docs and durable references | [Check Builders Official Docs and Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) |
 | Teach a workshop, onboard RAs, or prepare talks | [Teach Workshops Practice Talks and Share Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) |
+
+### Fast Paths
+
+| If you have 15 minutes and want... | Go directly to... |
+| --- | --- |
+| a research idea stress test | [Research Idea Stress Test](02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
+| an empirical methods section | [Economics Methods Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) or [Finance Methods Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
+| a safe project cleanup | [Clean Existing Research Project and Set Up Git](03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
+| presentation practice | [Practice My Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) |
+| a weekly AI update filter | [AI Research Update Digest Workflow](03-Set-Up-Agents-and-Automated-Research-Workflows/04-ai-research-update-digest-workflow.md) |
 
 ### Reader Rule
 
@@ -75,6 +88,16 @@ If a page only talks around a workflow, revise it into a directly usable skill, 
 - theoretical derivations without manual checking
 - final submission decisions
 
+### What Makes This Repo Different
+
+| Not this | Instead this repo tries to provide |
+| --- | --- |
+| prompt dump | reusable research skills with inputs, outputs, and verification |
+| tool ranking | dated tool evaluation by task |
+| "AI writes papers" | AI helps build accountable research workflows |
+| generic productivity advice | economics and finance-specific workflows |
+| scattered links | source-aware synthesis and official docs |
+
 ---
 
 ## 中文
@@ -95,6 +118,16 @@ If a page only talks around a workflow, revise it into a directly usable skill, 
 | 看例子、图示和失败案例 | [See Examples Diagrams and Failure Cases](04-See-Examples-Diagrams-and-Failure-Cases/README.md) |
 | 查官方文档和可靠资料 | [Check Builders Official Docs and Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) |
 | 教工作坊、培训 RA、准备展示 | [Teach Workshops Practice Talks and Share Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) |
+
+### 快速入口
+
+| 如果你有 15 分钟并且想要... | 直接打开... |
+| --- | --- |
+| 检查一个研究想法 | [Research Idea Stress Test](02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
+| 写实证方法部分 | [Economics Methods Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) 或 [Finance Methods Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
+| 清理项目并设置 Git | [Clean Existing Research Project and Set Up Git](03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
+| 练习 presentation | [Practice My Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) |
+| 跟进 AI 更新但避免噪音 | [AI Research Update Digest Workflow](03-Set-Up-Agents-and-Automated-Research-Workflows/04-ai-research-update-digest-workflow.md) |
 
 ### 核心原则
 

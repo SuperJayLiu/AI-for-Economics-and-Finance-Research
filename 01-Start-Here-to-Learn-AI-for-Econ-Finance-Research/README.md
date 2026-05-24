@@ -7,8 +7,12 @@ The rest of the repo gives copy-ready skills, project setups, workflow templates
 > [!IMPORTANT]
 > AI can make research labor cheaper. It does not make a research question important, an identification strategy credible, a citation real, a dataset safe to upload, or a paper worth writing.
 
+> [!TIP]
+> If you only have five minutes, read Sections 1, 3, 5, and 10. Then go to the copy-ready skills folder and use one skill on a small, non-confidential task.
+
 ## Table of Contents
 
+- [Quick Start: Choose Your Situation](#quick-start-choose-your-situation)
 - [1. What This Handbook Is For](#1-what-this-handbook-is-for)
 - [2. The Basic Mental Model](#2-the-basic-mental-model)
 - [3. The Maturity Ladder](#3-the-maturity-ladder)
@@ -24,6 +28,41 @@ The rest of the repo gives copy-ready skills, project setups, workflow templates
 - [13. Staying Updated Without Chasing Hype](#13-staying-updated-without-chasing-hype)
 - [14. What To Use Next](#14-what-to-use-next)
 - [15. Sources and Workflow Influences](#15-sources-and-workflow-influences)
+
+## Quick Start: Choose Your Situation
+
+| If you are thinking... | Start here | Then copy/use |
+| --- | --- | --- |
+| "I am new to AI and do not know what matters." | Read the maturity ladder and core concepts below. | [Tool choice and skill improvement](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/09-tool-selection-updates-and-skill-improvement.md) |
+| "I have a paper idea but I am not sure it is good." | Read Sections 2, 4, 5, and 7. | [Research Idea Stress Test](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
+| "I need to write empirical methods." | Read Sections 7, 8, and 9. | [Economics methods skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md) or [finance methods skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md) |
+| "I want AI to edit code or files." | Read Sections 10 and 11 first. | [Clean project and set up Git](../03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
+| "I want to use agents." | Read Sections 10, 11, and 13 first. | [One paper, one repo, one AI project](../03-Set-Up-Agents-and-Automated-Research-Workflows/02-one-paper-one-repo-one-ai-project.md) |
+| "I need slides or a talk." | Read Section 12. | [Presentation, slides, website, and talk-practice skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md) |
+
+## Minimum Safe Setup
+
+You do not need an elaborate system to start. You need a small system that prevents obvious mistakes.
+
+| Component | Minimum version | Why it matters |
+| --- | --- | --- |
+| AI account | ChatGPT, Claude, or institution-approved tool | basic reading, writing, coding help |
+| Version control | GitHub repo, even private | recover files and inspect AI edits |
+| Research folder | `data/`, `code/`, `output/`, `paper/`, `slides/` | prevents raw data, code, and drafts from mixing |
+| Citation manager | Zotero, BibTeX, or equivalent | prevents fake citation dependence |
+| AI-use log | one markdown file | records what AI changed and what you checked |
+| Data rule | one paragraph in `DATA.md` | prevents unsafe upload decisions |
+
+Copy this rule into your first project:
+
+```text
+Before AI edits files, writes methods text, summarizes literature, or generates slides, it must state:
+1. what inputs it used;
+2. what it changed or produced;
+3. what it is uncertain about;
+4. what I must verify manually;
+5. whether any private, licensed, or restricted material is involved.
+```
 
 ## 1. What This Handbook Is For
 
@@ -42,6 +81,8 @@ It is not a prompt collection. It is not a ranking of tools. It is a field-speci
 The practical goal is:
 
 > One paper, one research repo, one AI project workspace, one AI-use log, one verification habit.
+
+The deeper goal is to make scholars better at research, not merely faster at producing research-looking artifacts.
 
 ## 2. The Basic Mental Model
 
@@ -67,6 +108,15 @@ The key is not "ask better prompts." The key is controlled workflow design:
 | Verification | What must the scholar check manually? |
 | Trace | What changed, what was accepted, and what remains uncertain? |
 
+Use this test before using AI:
+
+```text
+Can I define the input, expected output, and verification check?
+
+If yes, AI may help.
+If no, the task is probably too vague, too risky, or too judgment-heavy.
+```
+
 ## 3. The Maturity Ladder
 
 Use this ladder to locate your current practice.
@@ -83,6 +133,13 @@ Use this ladder to locate your current practice.
 | 7 | Research operating system | AI + GitHub + logs + data rules + source tracking | governance burden |
 
 Do not jump to agents before you can verify outputs, use Git, and define data rules.
+
+Practical interpretation:
+
+- Levels 1-2 are fine for learning and brainstorming.
+- Level 3 is the right default for a paper, literature review, or seminar.
+- Level 4 is the minimum for code, data, or file edits.
+- Levels 5-7 are for repeated work where verification is stronger than automation.
 
 ## 4. What AI Is Good At
 
@@ -157,6 +214,21 @@ AI is strongest in the middle execution layers: coding, organizing, summarizing,
 AI is weakest where taste and credibility matter most: problem choice, research design, interpretation, contribution, and final judgment.
 
 This is especially important in finance. If AI makes it easy to generate endless factor stories, the scarce skill becomes stronger discipline: theory, data quality, out-of-sample discipline, transaction costs, identification, and honesty about multiple testing.
+
+### The "Paper Machine, So What?" Test
+
+When AI makes an output cheap, ask what human research quality remains.
+
+| AI can make this faster | The scholar must still supply |
+| --- | --- |
+| paper outline | important question and contribution |
+| data cleaning code | measurement judgment and data provenance |
+| econometric implementation | credible design and interpretation |
+| robustness tables | discipline against specification searching |
+| literature prose | verified positioning and real novelty |
+| seminar slides | clear argument and honest limitations |
+
+If the human contribution is only "I asked the AI to generate it," the project is not ready.
 
 ## 8. Responsible Use Rules
 
@@ -266,6 +338,28 @@ A good research skill is not a long prompt. It has:
 - failure modes
 - verification checklist
 
+Good skills are useful because they turn repeated scholarly judgment into a repeatable procedure. Weak skills are just long prompts with no verification.
+
+| Asset | Good for | Bad use |
+| --- | --- | --- |
+| Prompt | one quick task | repeated project workflow |
+| Project instructions | stable context for a paper or role | one-off factual search |
+| Skill | repeated procedure with inputs and checks | vague "write my paper" commands |
+| Agent workflow | multi-step file/code work | confidential or unverified tasks |
+| MCP connector | connecting tools and data sources | broad permissions without rules |
+
+For any new skill, require:
+
+```text
+Inputs:
+Steps:
+Output:
+Failure modes:
+Verification:
+What not to do:
+Sources or workflow influences:
+```
+
 ## 12. Writing, Presenting, and Public Communication
 
 AI can help make research clearer, but it can also flatten scholarly voice and overstate claims.
@@ -291,6 +385,23 @@ Do not use AI to:
 
 For talks, the goal is not "make pretty slides." The goal is to turn a paper into a clear argument for a specific audience.
 
+Two useful presentation formats:
+
+| Format | Use when | Guardrail |
+| --- | --- | --- |
+| Interactive HTML slides | you want web sharing, teaching interaction, animated mechanisms, or public explainers | interactivity must clarify the research, not decorate it |
+| LaTeX/Beamer slides | you need standard seminar/conference slides, equations, institutional style, or easy PDF export | do not let slide compression remove assumptions and limitations |
+
+Every research talk should answer:
+
+1. What is the question?
+2. Why should this audience care?
+3. What is the setting or model?
+4. What is the identifying variation, mechanism, or theoretical argument?
+5. What is the main result?
+6. What are the limits?
+7. What should the audience remember after one week?
+
 ## 13. Staying Updated Without Chasing Hype
 
 Do not follow AI news randomly. Build an information diet.
@@ -304,6 +415,13 @@ Do not follow AI news randomly. Build an information diet.
 | newsletters and social media | discovery | hype and noise |
 
 Follow builders and official docs because they show workflows, artifacts, failures, and updates. Do not organize your research life around viral tool rankings.
+
+Use a weekly update rule:
+
+```text
+Adopt at most one new AI workflow per week.
+Ignore tool claims that are not tied to a concrete task, date, cost, safety rule, and verification check.
+```
 
 ## 14. What To Use Next
 

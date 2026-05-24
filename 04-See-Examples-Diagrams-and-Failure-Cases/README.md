@@ -2,6 +2,19 @@
 
 This folder keeps examples in one place so readers can learn by pattern, not by scattered advice.
 
+> [!TIP]
+> Read this page when you want to see what "responsible AI use" looks like in actual economics and finance tasks. The failure cases are as important as the success examples.
+
+## Choose an Example
+
+| If your task is... | Look at | Copy/use |
+| --- | --- | --- |
+| positioning a paper in asset pricing | Example 1 | literature map skill |
+| writing a corporate finance methods section | Example 2 | finance empirical methods skill |
+| checking a generated output | Failure case library | example audit prompt |
+| preparing seminar slides | Presentation failure cases | presentation practice skill |
+| setting up a research repo | Project safety failure cases | clean project workflow |
+
 ## AI Research Workflow Diagram
 
 ```mermaid
@@ -33,6 +46,29 @@ Bad AI use:
 
 Copy-ready skill: [Literature Map Without Fake Citations](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-3-literature-map-without-fake-citations)
 
+### Mini Case Card
+
+```text
+Research task:
+Position a return-predictability idea relative to supplied papers.
+
+AI inputs:
+- real paper list or BibTeX
+- notes from papers already read
+- proposed predictor, horizon, sample, benchmark
+
+AI output:
+- mechanism/method/setting map
+- contribution table
+- fake novelty risk list
+
+Human verification:
+- confirm each citation
+- read the closest papers
+- check whether the predictor is already known under another name
+- check multiple-testing and data-mining risk
+```
+
 ## Example 2: Corporate Finance Empirical Paper
 
 Task: write methods for a firm-level panel design.
@@ -51,6 +87,50 @@ Bad AI use:
 
 Copy-ready skill: [Empirical Methods Skills for Finance Research](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md)
 
+### Mini Case Card
+
+```text
+Research task:
+Write and audit methods for a firm-level panel design.
+
+AI inputs:
+- verified data source list
+- unit of observation
+- sample screens
+- equation or table shell
+- timing of outcome, treatment, controls
+
+AI output:
+- draft methods prose
+- missing replication details
+- timing and inference checklist
+
+Human verification:
+- compare text to code
+- confirm sample filters
+- inspect fixed effects and clustering
+- ensure causal language matches design
+```
+
+## Example 3: Presentation Practice for a Job Talk or Seminar
+
+Task: prepare for an economics or finance seminar where the audience may challenge identification, measurement, mechanism, and contribution.
+
+Good AI use:
+- create hostile-but-fair questions
+- identify slide sequence problems
+- flag overclaiming
+- prepare short answers with evidence requirements
+- translate technical answers for mixed audiences
+
+Bad AI use:
+- invent answers to questions you cannot answer
+- hide limitations
+- turn a weak design into confident prose
+- generate flashy slides that obscure the paper's core argument
+
+Copy-ready skill: [Practice My Presentation With AI](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai)
+
 ## Failure Case Library
 
 | Failure | Why it looks plausible | How to catch it |
@@ -62,6 +142,31 @@ Copy-ready skill: [Empirical Methods Skills for Finance Research](../02-Copy-and
 | AI overwrites raw data | agent "cleans" files | use Git, `.gitignore`, and raw-data rules |
 | figure label changed | slide looks cleaner | compare to original table/figure |
 | factor-mining story | narrative sounds like finance theory | require pre-specification, out-of-sample checks, and costs |
+| AI-generated slide overstates claim | confident title sounds persuasive | compare every slide title against the actual table or figure |
+| public summary becomes investment advice | audience-friendly language sounds useful | remove recommendations and state limits clearly |
+| AI-created methods section mismatches code | prose is cleaner than code comments | run a methods-to-code consistency check |
+
+## Failure Case Template
+
+Use this to document failures found in your own research workflow.
+
+```markdown
+## Failure: [short name]
+
+What happened:
+
+Why it looked plausible:
+
+Where it entered the workflow:
+
+What caught it:
+
+What would have prevented it:
+
+Rule to add to future AI instructions:
+
+Related files or commits:
+```
 
 ## Example Audit Prompt
 

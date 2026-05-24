@@ -4,6 +4,19 @@
 
 These skills are tailored for applied economics: labor, public, development, health, education, macro, IO, urban, political economy, and related fields.
 
+> [!IMPORTANT]
+> These skills help draft and audit methods prose. They do not choose identification for you. You must verify design assumptions, code, tables, and data provenance.
+
+## Choose the Right Skill
+
+| Need | Use |
+| --- | --- |
+| write a first methods draft from verified facts | Skill 1 |
+| audit an existing methods section | Skill 2 |
+| compare methods prose to scripts/tables | Skill 3 |
+| check whether the design is credible before writing | Skill 4 |
+| create a reviewer-facing limitations paragraph | Skill 5 |
+
 ## Skill 1: Draft Empirical Methods Section for Economics
 
 ```text
@@ -32,6 +45,7 @@ Write:
 5. Inference paragraph.
 6. Threats to validity and planned robustness checks.
 7. Interpretation paragraph explaining what the coefficient means.
+8. A short "what this design can and cannot establish" paragraph.
 
 Rules:
 - Do not claim causality unless the design and assumptions support it.
@@ -39,6 +53,12 @@ Rules:
 - State the identifying variation clearly.
 - Explain economic magnitude, not only statistical significance.
 - Use cautious applied economics prose.
+- If information is missing, write [NEEDS AUTHOR INPUT] rather than filling it in.
+
+Output format:
+- Draft methods section.
+- Missing inputs table.
+- Verification checklist for code/tables.
 ```
 
 ## Skill 2: Check Empirical Methods Section for Economics
@@ -72,6 +92,7 @@ Return:
 - Minor issues.
 - Suggested rewrite for the weakest paragraph.
 - Checklist of analyses to verify in code.
+- One paragraph explaining the strongest version of the design and the main reason it may fail.
 ```
 
 ## Skill 3: Methods-to-Code Consistency Check
@@ -100,5 +121,66 @@ Identify mismatches:
 Return a table with: issue, evidence, severity, required fix.
 ```
 
-Sources and workflow influences: Paul Goldsmith-Pinkham's Applied Empirical Methods course emphasis on practical implementation, research design intuition, communication, and disentangling the experiment behind causal claims.
+## Skill 4: Identification Design Pre-Mortem
 
+Use before writing or presenting the empirical strategy.
+
+```text
+Act as a skeptical applied microeconomist reviewing my proposed design before I write the methods section.
+
+Project facts:
+- Research question: [question]
+- Setting: [institutional background]
+- Data: [sources, unit, period]
+- Outcome: [outcome]
+- Treatment/exposure/shock: [treatment]
+- Proposed design: [DiD/event study/RD/IV/RCT/panel FE/synthetic control/etc.]
+- Comparison group or identifying variation: [describe]
+- Timing: [what happens when]
+- Main concern: [concern]
+
+Assess:
+1. What is the implied experiment or quasi-experiment?
+2. What variation identifies the coefficient?
+3. What would make the design credible?
+4. What would make it fail?
+5. What balance, pre-trend, manipulation, placebo, or falsification checks are relevant?
+6. What data or institutional facts must be documented?
+7. What language should I avoid in the paper?
+
+Return:
+- one-sentence design summary
+- identifying variation
+- identifying assumption
+- top five threats
+- minimum evidence needed before writing causal language
+- suggested methods paragraph outline
+```
+
+## Skill 5: Limitations Paragraph That Does Not Undermine the Paper
+
+Use when you need honest limitations without vague defensiveness.
+
+```text
+Draft a limitations paragraph for an applied economics empirical paper.
+
+Inputs:
+- Research question: [question]
+- Design: [design]
+- Main result: [result]
+- Data limitations: [limitations]
+- Identification limitations: [limitations]
+- External validity limits: [limits]
+- What the paper still contributes: [contribution]
+
+Write a concise limitations paragraph that:
+1. states what the design cannot prove;
+2. explains which threats remain;
+3. avoids overstating weakness;
+4. preserves the paper's real contribution;
+5. does not add new robustness checks or citations.
+
+Also return a checklist of claims in the paper that should be softened.
+```
+
+Sources and workflow influences: Paul Goldsmith-Pinkham's Applied Empirical Methods course emphasis on practical implementation, research design intuition, communication, and disentangling the experiment behind causal claims.

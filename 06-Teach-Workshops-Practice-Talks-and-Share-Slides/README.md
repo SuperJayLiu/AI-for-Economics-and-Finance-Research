@@ -2,6 +2,19 @@
 
 This folder is for instructors, PIs, PhD organizers, and seminar leaders who want to teach the material.
 
+> [!TIP]
+> Treat every workshop as a live workflow-design session. Participants should leave with one usable project instruction, one skill, and one verification rule for their own research.
+
+## Use This Folder For
+
+| Goal | Use |
+| --- | --- |
+| teach a 90-minute introduction | Two-session workshop, Session 1 only |
+| teach a half-day workshop | both sessions plus live skill-building |
+| onboard RAs | RA onboarding checklist |
+| prepare a seminar or job talk | presentation practice activity |
+| make shareable material | slide-ready outline and HTML/Beamer skills |
+
 ## Two-Session Workshop
 
 ### Session 1: Foundations
@@ -25,6 +38,15 @@ Take one research task you do repeatedly. Convert it into:
 3. AI instruction
 4. expected output
 5. verification checklist
+```
+
+Live demo:
+
+```text
+Pick a harmless task such as summarizing a public abstract or rewriting a methods paragraph.
+Ask AI to do it casually.
+Then rerun the task with purpose, inputs, rules, output contract, and verification checklist.
+Compare the two outputs.
 ```
 
 ### Session 2: Applied Workflows
@@ -51,6 +73,15 @@ Create a safe AI project setup for one paper:
 - first verification check
 ```
 
+Live demo:
+
+```text
+Take a messy mock research folder.
+Ask AI to propose a Git-safe reorganization plan.
+Reject any plan that changes raw data, deletes files, or skips verification.
+Then show how a branch or worktree isolates the experiment.
+```
+
 ## Slide-Ready Outline
 
 ```text
@@ -70,6 +101,21 @@ Title: AI for Economics and Finance Research
 12. Q&A and live workflow design
 ```
 
+## Workshop Handout: One-Page Rules
+
+```text
+1. AI output is not evidence.
+2. Never trust generated citations.
+3. If AI can edit files, use Git.
+4. If data is private, licensed, restricted, or confidential, do not upload it without permission.
+5. Plan before execution.
+6. Turn repeated tasks into skills.
+7. Keep an AI-use log.
+8. Check code, tables, equations, and citations against original sources.
+9. Use dated tool claims.
+10. Automate only when verification is stronger than automation.
+```
+
 ## RA Onboarding Checklist
 
 ```text
@@ -86,6 +132,24 @@ Before an RA uses AI on a project:
 - ask before uploading or sharing drafts
 ```
 
+## RA First Assignment
+
+```text
+Create a safe project orientation note for this research project.
+
+Use only the files and rules provided by the PI.
+
+Include:
+1. project purpose
+2. folder map
+3. data sensitivity rules
+4. files never to edit
+5. how to run the main code
+6. how to record AI use
+7. first reproducibility check
+8. questions for the PI
+```
+
 ## Presentation Practice Activity
 
 Use the [presentation practice skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai).
@@ -98,3 +162,28 @@ Ask each participant to prepare:
 - one-slide limitation
 
 Then have AI generate tough questions and require human answers.
+
+## Slide-Building Exercise
+
+Use both slide styles so participants see the tradeoff.
+
+| Slide style | Exercise | Best for |
+| --- | --- | --- |
+| HTML interactive | create an animated mechanism, event timeline, or data-flow slide | teaching, online sharing, public explainers |
+| LaTeX/Beamer | create a standard seminar deck with equations, tables, and limitations | conferences, job talks, academic seminars |
+
+Prompt:
+
+```text
+Take this paper abstract and results summary.
+Create two presentation plans:
+1. an interactive HTML explainer deck;
+2. a traditional LaTeX Beamer seminar deck.
+
+For each, explain:
+- target audience
+- slide sequence
+- what interaction or equation belongs where
+- what claims must be verified
+- where limitations should be shown
+```
