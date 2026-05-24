@@ -40,16 +40,11 @@ The repo is designed so readers can click into a topic, copy a reusable instruct
 
 ### Where To Start
 
-- New to AI: [Start Here](START-HERE.en.md)
-- Want the handbook as a book: [Start Here: Learn AI for Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md)
-- Want the vocabulary first: [Concept Index and Glossary](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-concept-index-and-glossary.md)
-- Want original docs and deeper reading: [Knowledge Links for Further Reading](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-knowledge-links.md)
-- Need a route through the material: [Learning Paths](LEARNING-PATHS.en.md)
-- Need a minimum setup: [Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
+- Read the handbook as a book: [Start Here: A Practical Handbook for AI in Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md)
 - Want copy-and-use materials: [Copy and Use AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md)
-- Want project setups: [How to Set Up Your AI Research Workflow](03-How-to-Set-Up-Your-AI-Research-Workflow/README.md)
-- Want presentation help: [HTML Research Slides Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/html-research-slides-skill.md), [LaTeX Beamer Research Slides Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/latex-beamer-research-slides-skill.md), and [Practice Your Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/presentation-practice-with-ai.md)
-- Want to cite this repo: [How To Cite](HOW-TO-CITE.md)
+- Want project setups and agents: [Set Up Agents and Automated Research Workflows](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md)
+- Want presentation help: [Presentations, Slides, Websites, and Talk Practice Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md)
+- Want to cite or contribute: [Repository Metadata and Archived Old Pages](99-Repository-Metadata-and-Archived-Old-Pages/README.md)
 
 ### Repository Structure
 
@@ -57,7 +52,7 @@ The repo is designed so readers can click into a topic, copy a reusable instruct
 | --- | --- |
 | [Start Here to Learn AI for Econ Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) | Long-form handbook chapters: concepts, risks, research workflow, empirical coding, writing, automation |
 | [Copy and Use AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) | Directly usable instructions, skills, checklists, AI-use logs, agent rules, and Git safety practices |
-| [How to Set Up Your AI Research Workflow](03-How-to-Set-Up-Your-AI-Research-Workflow/README.md) | Complete AI project setups for literature review, empirical papers, theory, replication, seminars, conferences, and revision |
+| [Set Up Agents and Automated Research Workflows](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) | Step-by-step agent workflows for Git setup, one-paper-one-repo projects, replication packages, and update digests |
 | [See Examples Diagrams and Failure Cases](04-See-Examples-Diagrams-and-Failure-Cases/README.md) | Concrete examples, failure cases, diagrams, and applied economics/finance workflow illustrations |
 | [Check Builders Official Docs and Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) | Briefly credited workflow influences, source-use policy, source-to-section map, and official tool documentation links |
 | [Teach Workshops Practice Talks and Share Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | Workshop outlines, slide-ready material, classroom exercises, presentation practice, and RA onboarding material |
@@ -88,7 +83,7 @@ Tool behavior changes quickly, so tool-specific notes should be dated and period
 
 ### Contributing
 
-Suggestions, corrections, examples, and field-specific additions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) and [Review Standards](REVIEW-STANDARDS.md).
+Suggestions, corrections, examples, and field-specific additions are welcome. See [Repository Metadata and Archived Old Pages](99-Repository-Metadata-and-Archived-Old-Pages/README.md).
 
 ---
 
@@ -120,15 +115,10 @@ AI 可以自动化劳动，但不能替代学术责任。
 
 ### 从哪里开始
 
-- 初学者入口：[Start Here / 从这里开始](START-HERE.zh.md)
-- 像读书一样阅读手册：[Start Here: Learn AI for Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md)
-- 先看核心概念：[Concept Index and Glossary](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-concept-index-and-glossary.md)
-- 查看官方文档和延伸阅读：[Knowledge Links for Further Reading](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/00-knowledge-links.md)
-- 学习路线：[Learning Paths / 学习路径](LEARNING-PATHS.zh.md)
-- 最小设置：[Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
+- 像读书一样阅读手册：[Start Here: A Practical Handbook for AI in Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md)
 - 直接可用的说明和模板：[Copy and Use AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md)
-- AI 研究工作流设置：[How to Set Up Your AI Research Workflow](03-How-to-Set-Up-Your-AI-Research-Workflow/README.md)
-- 研究展示和 slides：[HTML Research Slides Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/html-research-slides-skill.md)、[LaTeX Beamer Research Slides Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/latex-beamer-research-slides-skill.md)、[Practice Your Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/presentation-practice-with-ai.md)
+- AI 研究工作流和 agents：[Set Up Agents and Automated Research Workflows](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md)
+- 研究展示和 slides：[Presentations, Slides, Websites, and Talk Practice Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md)
 
 ### 仓库结构
 
@@ -136,7 +126,7 @@ AI 可以自动化劳动，但不能替代学术责任。
 | --- | --- |
 | [Start Here to Learn AI for Econ Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) | 长篇手册：AI 概念、风险、研究流程、实证编码、写作和自动化 |
 | [Copy and Use AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) | 可直接使用的 AI 指令、skills、检查清单、研究日志、Git 安全规则 |
-| [How to Set Up Your AI Research Workflow](03-How-to-Set-Up-Your-AI-Research-Workflow/README.md) | 文献综述、实证论文、理论论文、复现、研讨会、返修等 AI 项目设置 |
+| [Set Up Agents and Automated Research Workflows](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) | Git 设置、one-paper-one-repo、replication package、AI 更新 digest 等 agent 工作流 |
 | [See Examples Diagrams and Failure Cases](04-See-Examples-Diagrams-and-Failure-Cases/README.md) | 例子、图示、失败案例和经济金融研究场景 |
 | [Check Builders Official Docs and Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) | 外部来源、官方文档和工作流灵感的简要索引 |
 | [Teach Workshops Practice Talks and Share Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | 工作坊、课程材料、slide-ready 大纲、展示练习和 RA 培训 |

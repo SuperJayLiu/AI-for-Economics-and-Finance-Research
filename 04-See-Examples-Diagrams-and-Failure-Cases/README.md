@@ -1,24 +1,89 @@
-# Examples Diagrams and Case Studies
+# See Examples, Diagrams, and Failure Cases
 
-This folder shows what AI-assisted research workflows look like in practice.
+This folder keeps examples in one place so readers can learn by pattern, not by scattered advice.
 
-## What This Folder Is For
+## AI Research Workflow Diagram
 
-Use it for:
+```mermaid
+flowchart TD
+  A["Research task"] --> B{"Sensitive material?"}
+  B -- "Yes" --> C["Use local/institution-approved tool or do not use AI"]
+  B -- "No" --> D["Give bounded context"]
+  D --> E["Ask for structured output"]
+  E --> F["Verify against sources/data/code/theory"]
+  F --> G{"Passes checks?"}
+  G -- "No" --> H["Revise task or reject output"]
+  G -- "Yes" --> I["Record AI-use log and Git commit"]
+```
 
-- concrete economics and finance examples
-- diagrams of research workflows
-- failure cases
-- before/after examples
-- sample project folder structures
-- case studies for teaching and workshops
+## Example 1: Literature Review for Asset Pricing
 
-## Why Failure Cases Matter
+Task: position a new paper on return predictability.
 
-AI mistakes often look plausible. A failure case library helps scholars learn what can go wrong before it happens in their own work.
+Good AI use:
+- build a table of supplied papers
+- separate predictor, sample, horizon, benchmark, and result
+- flag factor-mining and multiple-testing concerns
+- identify which novelty claims need manual verification
 
-## Start Here
+Bad AI use:
+- ask AI to "find all relevant papers" and trust the answer
+- accept invented citations
+- let AI write a contribution claim without checking the literature
 
-- [Workflow Diagram Gallery](workflow-diagram-gallery.md)
-- [Failure Cases](failure-cases/README.md)
-- [Case Studies Overview](case-studies/00-overview.md)
+Copy-ready skill: [Literature Map Without Fake Citations](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-3-literature-map-without-fake-citations)
+
+## Example 2: Corporate Finance Empirical Paper
+
+Task: write methods for a firm-level panel design.
+
+Good AI use:
+- clarify unit of observation
+- check variable timing
+- check controls and fixed effects
+- identify clustering and serial-correlation issues
+- compare methods prose to code
+
+Bad AI use:
+- claim causality because the regression has fixed effects
+- describe robustness checks that were not run
+- ignore sample-selection and measurement issues
+
+Copy-ready skill: [Empirical Methods Skills for Finance Research](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md)
+
+## Failure Case Library
+
+| Failure | Why it looks plausible | How to catch it |
+| --- | --- | --- |
+| fake citation | title sounds field-appropriate | verify DOI, journal, author, year |
+| wrong Stata/R/Python code that runs | code produces output | test toy example and compare formulas |
+| event-study timing error | graph looks normal | inspect treatment date, event window, and leads/lags |
+| coefficient overinterpretation | prose sounds academic | check units and economic magnitude |
+| AI overwrites raw data | agent "cleans" files | use Git, `.gitignore`, and raw-data rules |
+| figure label changed | slide looks cleaner | compare to original table/figure |
+| factor-mining story | narrative sounds like finance theory | require pre-specification, out-of-sample checks, and costs |
+
+## Example Audit Prompt
+
+```text
+Audit this AI-assisted output for economics/finance research failure modes.
+
+Output to audit:
+[paste]
+
+Project context:
+[context]
+
+Check for:
+- fake citations
+- invented data/results
+- overclaimed causality
+- wrong coefficient interpretation
+- missing limitations
+- code/method mismatch
+- finance-specific factor-mining or backtest risks
+
+Return a severity-ranked list of issues and what I must verify.
+```
+
+Sources and workflow influences: applied empirical methods teaching, finance p-hacking concerns, and AI research workflow discussions.

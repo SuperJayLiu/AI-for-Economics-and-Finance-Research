@@ -1,41 +1,40 @@
-> Copyright (c) 2026 SuperJayLiu (Chaojie Liu). Licensed under the repository MIT License.
-> This instruction/workflow is original to this repository unless otherwise noted. External inspirations are cited in “Sources and workflow influences.”
+> Copyright (c) 2026 SuperJayLiu (Chaojie Liu). Licensed under the repository MIT License. These instructions/workflows are original to this repository unless otherwise noted. External inspirations are cited in relevant files.
 
-# Use Ready-Made AI Research Instructions
+# Copy and Use AI Research Instructions and Templates
 
-This folder contains directly usable AI research instructions, checklists, logs, and safety rules.
+This folder is for direct use. Open a file, copy the block you need, paste it into ChatGPT, Claude, Codex, Claude Code, Cursor, GitHub Copilot, or another AI tool, and adapt the bracketed fields.
 
-## What This Folder Is For
+This is not the reading book. For concepts and risks, start with [the handbook](../01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md).
 
-Use it when you want something operational:
+## What Is Here
 
-- project instructions
-- reusable skill-style procedures
-- AI-use logs
-- Git and file safety rules
-- agent instruction files
-- external-skill review rules
-- templates for repeated research tasks
+| File | Use it when you need... |
+| --- | --- |
+| [01 Ideas, Brainstorming, Proposal, and Literature Skills](01-ideas-brainstorming-proposal-and-literature-skills.md) | research ideas, proposal framing, literature maps, paper summaries |
+| [02 Paper Drafting, Revision, and Citation Skills](02-paper-drafting-revision-and-citation-skills.md) | introduction, paper drafting, revision, citation support, referee response |
+| [03 Empirical Methods Skills for Economics Research](03-empirical-methods-skills-for-economics-research.md) | drafting or checking empirical methods in applied economics |
+| [04 Empirical Methods Skills for Finance Research](04-empirical-methods-skills-for-finance-research.md) | drafting or checking empirical methods in asset pricing, corporate finance, banking, household finance |
+| [05 Git, Data, Replication, and Research Safety Templates](05-git-data-replication-and-research-safety-templates.md) | project cleanup, `.gitignore`, AGENTS.md, DATA.md, AI-use log, replication checks |
+| [06 Presentations, Slides, Websites, and Talk Practice Skills](06-presentations-slides-websites-and-talk-practice-skills.md) | HTML slides, Beamer slides, presentation practice, personal academic websites |
+| [07 Project Instructions and Agent Role Templates](07-project-instructions-and-agent-role-templates.md) | ChatGPT/Claude Projects, tough referee, paper summarizer, idea verifier, conference tracker |
 
-## How It Differs From The Handbook
+## How To Use These Blocks
 
-The handbook explains why a practice matters. This folder gives you material to use directly in a research project.
+1. Copy one block.
+2. Replace bracketed fields like `[paper title]`, `[data source]`, or `[target journal]`.
+3. Add your actual materials.
+4. Ask for a plan before letting AI write, edit, or code.
+5. Verify everything.
+6. Save the accepted output and checks in your AI-use log.
 
-## Copyright Rule
+## Universal Safety Instruction
 
-Reusable instructions in this folder are original to this repository unless otherwise noted.
+Add this to any skill when working on serious research:
 
-> Copyright (c) 2026 SuperJayLiu (Chaojie Liu). Licensed under the repository MIT License.
-> This instruction/workflow is original to this repository unless otherwise noted. External inspirations are cited in “Sources and workflow influences.”
+```text
+Do not invent citations, data sources, coefficients, robustness checks, institutional details, mathematical derivations, or claims about the literature. If information is missing, say exactly what is missing and what I must verify manually. Separate verified facts, interpretation, suggestions, and uncertainty.
+```
 
-## Start Here
+## Source Use Rule
 
-- [Tools And Templates Catalog](tools-and-templates-catalog.md)
-- [Skills vs Prompts vs Projects](skills-vs-prompts-vs-projects.md)
-- [How To Use External Skills Responsibly](how-to-use-external-skills-responsibly.md)
-- [Agent Instruction Files](agent-instructions-files.md)
-- [AI Use Log](research-safety-and-git/08-ai-use-log.md)
-- [Interactive HTML Research Slides Skill](html-research-slides-skill.md)
-- [Traditional LaTeX Beamer Research Slides Skill](latex-beamer-research-slides-skill.md)
-- [Practice Your Research Presentation With AI](presentation-practice-with-ai.md)
-- [Personal Academic Website Template](personal-academic-website-template.md)
+Some skills are inspired by public workflow ideas from Paul Goldsmith-Pinkham, Zara Zhang, PaperSpine, Nature-style skill repositories, and official tool documentation. Do not copy external skills wholesale unless the license permits it. This repo adapts workflow ideas into economics and finance research instructions.

@@ -1,0 +1,75 @@
+# One Paper, One Repo, One AI Project
+
+This workflow sets up a durable research system for one paper.
+
+## Principle
+
+```text
+One paper = one GitHub repo + one ChatGPT/Claude Project + one AI-use log + one data rule.
+```
+
+## Project Setup Instructions
+
+```text
+Help me set up an AI-assisted research workspace for one economics/finance paper.
+
+Paper/project:
+- Title: [title]
+- Field: [field]
+- Coauthors: [yes/no]
+- Data sensitivity: [public/licensed/restricted/private]
+- Current stage: [idea/data/methods/results/draft/revision]
+- Tools: [ChatGPT/Claude/Codex/Claude Code/Cursor/GitHub/etc.]
+
+Create:
+1. A project purpose statement.
+2. A safe folder structure.
+3. Project instructions for ChatGPT/Claude.
+4. AGENTS.md instructions for coding agents.
+5. AI-USE-LOG.md template.
+6. DATA.md template.
+7. A first-week task plan.
+8. A verification checklist.
+
+Rules:
+- Do not upload restricted data.
+- Do not invent citations or results.
+- Keep human approval points before code edits, paper rewrites, and public sharing.
+```
+
+## ChatGPT/Claude Project Instructions
+
+```text
+You are my AI research workspace for this paper.
+
+Purpose:
+Help organize, critique, draft, and verify research work. Do not replace scholarly judgment.
+
+Rules:
+- Never invent citations, data, results, robustness checks, institutional facts, or theoretical derivations.
+- Separate facts, interpretation, suggestions, and uncertainty.
+- Always state what I must verify manually.
+- Preserve cautious causal language.
+- Do not treat uploaded drafts as public.
+- Do not summarize confidential or restricted material unless I confirm it is allowed.
+
+Default output format:
+1. Short answer.
+2. Evidence or reasoning.
+3. Risks/uncertainty.
+4. What I should do next.
+```
+
+## Good Project Roles
+
+- Literature Cartographer
+- Tough Referee
+- Empirical Design Critic
+- Code Auditor
+- Theory Intuition Checker
+- Writing Coach
+- Seminar Q&A Opponent
+- Revision Strategy Assistant
+
+Sources and workflow influences: ChatGPT/Claude Projects, Paul Goldsmith-Pinkham's one-research-pipeline framing, and PaperSpine-style stage separation.
+

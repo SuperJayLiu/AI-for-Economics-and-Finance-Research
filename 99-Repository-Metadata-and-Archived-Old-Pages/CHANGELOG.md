@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Consolidated the reader-facing structure: `01` is now one long handbook README, `02` is a flat copy-and-use skills folder, and `03` is a flat agent/automation workflow folder.
+- Moved old short scaffold pages and repository admin files into `99-Repository-Metadata-and-Archived-Old-Pages` so the main GitHub page is easier to browse.
+- Added directly usable skills for idea testing, proposal building, literature mapping, paper revision, citation support, economics empirical methods, finance empirical methods, Git/data safety, presentations, websites, and project roles.
 - Made the first handbook folder more book-like with a guided landing page, reader promise, learning checkpoints, concept glossary, and selected knowledge links.
 - Added richer callouts, tables, and practical "what to verify" cues to key overview pages so the handbook is less passive and easier to use.
 - Consolidated root README language selection into one README page with English and Chinese sections below anchor links.
