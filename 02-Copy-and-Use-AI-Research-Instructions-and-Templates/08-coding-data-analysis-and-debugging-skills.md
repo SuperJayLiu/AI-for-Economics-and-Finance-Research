@@ -9,6 +9,9 @@ Use these when AI is helping with Stata, R, Python, MATLAB, SAS, LaTeX, tables, 
 
 For full data-production workflows, use [Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md). This page is for debugging, review, and consistency checks.
 
+> [!NOTE]
+> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Skill 1: Debug Stata/R/Python Research Code
 
 ```text

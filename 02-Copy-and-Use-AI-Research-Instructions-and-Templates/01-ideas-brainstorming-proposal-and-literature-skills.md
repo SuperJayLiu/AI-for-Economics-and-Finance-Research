@@ -6,6 +6,9 @@ Copy the relevant block and paste it into your AI tool.
 
 For full literature review workflows, use [Literature Review and Source Synthesis Skills](10-literature-review-and-source-synthesis-skills.md). This file keeps only the early-stage idea, proposal, and paper-orientation blocks.
 
+> [!NOTE]
+> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Skill 1: Research Idea Stress Test
 
 Use for early-stage ideas before you invest weeks.

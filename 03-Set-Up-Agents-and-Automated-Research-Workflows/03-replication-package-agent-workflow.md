@@ -2,6 +2,9 @@
 
 Use this for AEA-style packages, finance journal zip files, or author replication folders.
 
+> [!NOTE]
+> Default add-on for this workflow: `If any required input, file permission, data rule, Git term, agent permission, or output format is unclear, ask me up to five clarifying questions before acting. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Copy-Paste Workflow
 
 ```text
@@ -74,4 +77,3 @@ Software:
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's interest in replication package infrastructure and metadata databases; applied empirical methods practice.
-

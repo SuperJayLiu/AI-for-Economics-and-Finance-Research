@@ -6,6 +6,9 @@ Use these only after reading the [handbook](../01-Start-Here-to-Learn-AI-for-Eco
 
 Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Automation] Workflow question`.
 
+> [!NOTE]
+> Default add-on for every workflow here: `If any required input, file permission, data rule, Git term, agent permission, or output format is unclear, ask me up to five clarifying questions before acting. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Files
 
 | File | Use it for |
@@ -43,6 +46,25 @@ Do not use this folder for quick literature questions, confidential data decisio
 | MCP/connector | lets AI connect to apps, databases, or files | Zotero, GitHub, Drive, search, databases | permissions, token cost, data exposure |
 | Git branch | isolated line of work | try a change safely | branch drift |
 | Git worktree | separate folder for another branch | parallel agent experiments | mixing outputs across folders |
+
+## What These Terms Look Like In Practice
+
+| Term | Concrete example |
+| --- | --- |
+| `.gitignore` | a file containing `data/raw/` so raw data stays on your computer and is not tracked for GitHub upload |
+| branch | `codex/rewrite-table-code`, a temporary version where an agent can revise table code before it is merged |
+| worktree | a second folder named `paper-revision-worktree/` where a separate agent edits the introduction while the main folder remains untouched |
+| Git diff | the line-by-line change report you inspect before accepting AI edits |
+| commit | a named checkpoint such as `Add data dictionary and merge checks` |
+| MCP | a connector that lets an AI tool reach GitHub, Zotero, Drive, or a database; use only with explicit permissions |
+| agent permission | the boundary saying whether AI may read files, edit files, run commands, install packages, push to GitHub, or access external services |
+| approval gate | a pause point where the agent must ask before changing files, moving data, publishing, or running risky commands |
+
+Useful instruction for any agent:
+
+```text
+If you use a software or AI term that a non-CS economics/finance researcher may not know, define it briefly and give one example from this research project.
+```
 
 ## Pick the Right Workflow
 

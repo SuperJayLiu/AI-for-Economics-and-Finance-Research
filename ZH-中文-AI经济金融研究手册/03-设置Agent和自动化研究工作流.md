@@ -29,6 +29,25 @@
 | `CLAUDE.md` | Claude Code 项目记忆和规则 | 保存项目阶段、规则、命令 | 过期规则会误导 AI |
 | MCP/connector | 让 AI 连接外部工具或数据 | Zotero、GitHub、搜索、数据库 | 权限和数据暴露 |
 
+## 这些词在实际操作中长什么样？
+
+| 术语 | 具体例子 |
+| --- | --- |
+| `.gitignore` | 一个写着 `data/raw/` 的文件，意思是原始数据不被 Git 追踪，也不应上传 GitHub。 |
+| branch | `codex/rewrite-table-code`，让 agent 在旁支里改表格代码，主项目先不受影响。 |
+| worktree | 第二个项目文件夹，让另一个 agent 在不同 branch 上改 introduction。 |
+| diff | AI 改文件后显示的逐行修改记录。 |
+| commit | 一个命名检查点，例如 `Add data dictionary and merge checks`。 |
+| MCP | 让 AI 连接 GitHub、Zotero、Drive 或数据库的接口；只有权限清楚时才使用。 |
+| agent permission | 规定 AI 是否可以读文件、改文件、运行命令、安装包、push GitHub 或连接外部工具。 |
+| approval gate | AI 在改文件、移动数据、公开发布或运行高风险命令前必须停下来询问。 |
+
+给任何 agent 的有用规则：
+
+```text
+如果你使用非计算机专业经济学/金融学研究者可能不熟悉的软件或 AI 术语，请先用一句话解释，并给出本项目中的例子。
+```
+
 ## 什么时候使用自动化？
 
 | 情况 | 推荐方式 | 注意事项 |
@@ -86,6 +105,8 @@ Gate 4: Trace
 - 不修改 raw data。
 - 不提交 restricted/private data。
 - 不经明确批准，不 push 到公开 GitHub。
+- 如果项目路径、数据敏感性、GitHub 隐私设置或软件环境不清楚，先提出最多五个澄清问题。
+- 首次出现 `.gitignore`、branch、commit、diff、raw data 等术语时，用普通语言解释。
 ```
 
 ## `AGENTS.md` 基本模板
@@ -104,6 +125,8 @@ Gate 4: Trace
 - 改代码后运行最小相关测试或脚本。
 - 改论文文字时保留 citation、数字、notation、hedging。
 - 不要编造结果、引用、稳健性检验或制度事实。
+- 如果任务、数据敏感性、验证命令或权限边界不清楚，先提问。
+- 对非计算机专业经济学/金融学研究者简要解释技术词。
 
 ## 文件夹结构
 - `data/raw/`：原始数据，不要编辑
@@ -135,6 +158,8 @@ Gate 4: Trace
 - 改文件结构、运行危险命令、重写论文、准备公开材料前必须问我。
 - 保留 citation、数字、notation、table labels、变量定义、样本定义和 hedging。
 - 不要编造结果、引用、数据来源、稳健性检验、制度事实或理论结论。
+- 如果任务、数据规则、验证命令或预期输出不清楚，先提出澄清问题。
+- 对非计算机专业经济学/金融学研究者简要解释技术词。
 
 ## 推荐工作流
 1. 重述任务。
@@ -166,6 +191,7 @@ Gate 4: Trace
 - 不允许任何 agent 编辑 raw data。
 - 不允许任何 agent 直接 push 到 main。
 - 每个 agent 必须报告改了哪些文件、跑了哪些命令、检查了哪些输出、还有什么不确定。
+- 如果任务分配、可编辑文件、禁止编辑文件或验证命令不清楚，先提出澄清问题。
 
 请先提出：
 1. branch/worktree 名称；

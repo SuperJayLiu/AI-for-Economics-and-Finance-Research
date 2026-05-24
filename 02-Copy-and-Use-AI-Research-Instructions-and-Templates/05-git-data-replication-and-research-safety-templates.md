@@ -5,6 +5,9 @@
 > [!IMPORTANT]
 > Follow university, employer, data-provider, journal, conference, funder, and coauthor policies on AI use. These templates are not permission to upload confidential or restricted material.
 
+> [!NOTE]
+> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Template 1: Clean Up Existing Project and Start Git Safely
 
 ```text
@@ -33,6 +36,8 @@ Rules:
 - Do not edit raw data.
 - Do not commit restricted/private data.
 - Do not push to public GitHub unless I explicitly approve.
+- Ask clarifying questions before acting if data sensitivity, target folder structure, GitHub privacy, or software environment is unclear.
+- Define Git and software terms in plain language the first time they appear.
 ```
 
 ## Template 2: Minimal `.gitignore` for Econ/Finance Research
@@ -86,6 +91,8 @@ tmp/
 - After editing code, run the smallest relevant test or script.
 - After editing paper text, preserve citations, numbers, notation, and hedging.
 - Do not invent results, citations, robustness checks, or institutional facts.
+- Ask clarifying questions if the task, data sensitivity, validation command, or permission boundary is unclear.
+- Define technical terms briefly for non-CS economics/finance researchers.
 
 ## Folder Structure
 - `data/raw/`: original data, do not edit
@@ -124,6 +131,8 @@ Use this when working with Claude Code or another tool that reads project memory
 - Preserve citations, numbers, notation, table labels, variable definitions, sample definitions, and hedging.
 - Do not invent results, citations, data sources, robustness checks, institutional facts, or theory claims.
 - If policy or data sensitivity is uncertain, stop and ask.
+- If the task, data rule, validation command, or expected output is unclear, ask clarifying questions before acting.
+- Define technical terms briefly for non-CS economics/finance researchers.
 
 ## Preferred Workflow
 1. Restate the task.
@@ -168,6 +177,7 @@ Return:
 
 Rule:
 If permission is unclear, recommend not uploading or exposing the material.
+If policy language is ambiguous, list the exact questions I should ask and who should answer them.
 ```
 
 ## Template 4: AI-USE-LOG.md
@@ -206,6 +216,7 @@ Rules:
 - Do not alter files yet.
 - Do not claim replication success unless code runs and outputs match.
 - Create a checklist before running anything.
+- Ask clarifying questions if the paper, target output, software environment, or data permission is unclear.
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's emphasis on replication package infrastructure and AI-assisted code/data workflows; Git and GitHub documentation.

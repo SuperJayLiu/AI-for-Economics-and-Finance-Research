@@ -14,6 +14,22 @@ This is not the reading book. For concepts and risks, start with [the handbook](
 
 Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Skills] Suggest a skill or prompt`.
 
+## Default Clarification Rule
+
+Paste this before any skill when the task is serious, the inputs are incomplete, or the audience may not know technical terms:
+
+```text
+Before producing the final answer, check whether any required input, term, data rule, method detail, institutional detail, policy constraint, or output format is unclear.
+
+If something is unclear, ask up to five numbered clarifying questions first. If you can proceed with reasonable assumptions, state those assumptions clearly and ask me to confirm or correct them.
+
+When you use technical terms, define them in plain language and give one economics or finance research example.
+
+At the end, include a short section called "Questions for you" listing anything I should decide, check, or clarify next.
+```
+
+Use this rule especially for Git, `.gitignore`, branches, worktrees, MCPs, agent permissions, data licenses, identification assumptions, variable construction, and disclosure policies.
+
 ## What Is Here
 
 | File | Use it when you need... |
@@ -124,9 +140,10 @@ flowchart LR
 1. Copy one block.
 2. Replace bracketed fields like `[paper title]`, `[data source]`, or `[target journal]`.
 3. Add your actual materials.
-4. Ask for a plan before letting AI write, edit, or code.
-5. Verify everything.
-6. Save the accepted output and checks in your AI-use log.
+4. Ask the AI to clarify missing inputs before it writes, edits, or codes.
+5. Ask for a plan before letting AI write, edit, or code.
+6. Verify everything.
+7. Save the accepted output and checks in your AI-use log.
 
 ## Universal Safety Instruction
 
@@ -136,6 +153,8 @@ Add this to any skill when working on serious research:
 Do not invent citations, data sources, coefficients, robustness checks, institutional details, mathematical derivations, or claims about the literature. If information is missing, say exactly what is missing and what I must verify manually. Separate verified facts, interpretation, suggestions, and uncertainty.
 
 Follow all university, employer, journal, conference, funder, data-provider, and coauthor policies on AI use. If the relevant rule is stricter than this instruction, follow the stricter rule.
+
+If any input, term, policy, method, data rule, or output format is unclear, ask up to five clarifying questions before giving the final answer. If you proceed with assumptions, state them explicitly. End with "Questions for you" if anything remains uncertain.
 ```
 
 ## Universal Output Contract
@@ -148,7 +167,7 @@ Return your answer in five sections:
 2. Assumptions you made.
 3. Items I must verify manually.
 4. Risks or failure modes.
-5. Next action checklist.
+5. Questions for you and next action checklist.
 ```
 
 ## Source Use Rule

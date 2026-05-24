@@ -2,6 +2,9 @@
 
 Use this to stay updated without chasing tool hype.
 
+> [!NOTE]
+> Default add-on for this workflow: `If any required input, source type, date, tool term, permission boundary, or output format is unclear, ask me up to five clarifying questions before acting. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Principle
 
 Follow builders, official docs, and field users. Extract workflows, not opinions.

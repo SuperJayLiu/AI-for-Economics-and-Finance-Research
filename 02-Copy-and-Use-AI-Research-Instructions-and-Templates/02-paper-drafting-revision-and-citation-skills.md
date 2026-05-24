@@ -7,6 +7,9 @@ These are for writing with guardrails. They should improve structure and clarity
 > [!TIP]
 > Diagnose before rewriting. A polished paragraph with a vague research question, weak evidence, or unsupported contribution is still weak.
 
+> [!NOTE]
+> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Skill 1: Introduction Spine Builder
 
 ```text

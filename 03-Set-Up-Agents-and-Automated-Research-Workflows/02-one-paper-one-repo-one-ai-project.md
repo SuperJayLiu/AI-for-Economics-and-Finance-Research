@@ -2,6 +2,9 @@
 
 This workflow sets up a durable research system for one paper.
 
+> [!NOTE]
+> Default add-on for this workflow: `If any required input, file permission, data rule, Git term, agent permission, or output format is unclear, ask me up to five clarifying questions before acting. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Principle
 
 ```text
@@ -38,6 +41,8 @@ Rules:
 - Do not upload restricted data.
 - Do not invent citations or results.
 - Keep human approval points before code edits, paper rewrites, and public sharing.
+- Ask up to five clarifying questions before building the workspace if data sensitivity, coauthor rules, target output, or tool permissions are unclear.
+- Define technical terms such as repo, project instructions, AGENTS.md, AI-use log, branch, and `.gitignore` in plain language.
 ```
 
 ## ChatGPT/Claude Project Instructions
@@ -56,12 +61,15 @@ Rules:
 - Do not treat uploaded drafts as public.
 - Do not summarize confidential or restricted material unless I confirm it is allowed.
 - Ask for approval before editing code, rewriting paper text, changing file structure, or preparing public materials.
+- Ask clarifying questions when project facts, data permissions, output expectations, or terminology are unclear.
+- Explain technical terms briefly for non-CS economics/finance researchers.
 
 Default output format:
 1. Short answer.
 2. Evidence or reasoning.
 3. Risks/uncertainty.
-4. What I should do next.
+4. Questions for you.
+5. What I should do next.
 ```
 
 ## Quality Gate Before Accepting AI Output

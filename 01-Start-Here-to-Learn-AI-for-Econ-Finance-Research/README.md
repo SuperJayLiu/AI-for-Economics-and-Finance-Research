@@ -139,6 +139,32 @@ If you have never used AI for research before, start with these distinctions.
 | RAG/search-grounded AI | AI grounded in retrieved sources | literature checks, source-based summaries | retrieval can miss sources or quote weakly |
 | MCP/connectors | ways for AI tools to connect to external apps/data | Zotero, GitHub, files, databases, search | more permissions and privacy risk |
 
+### Plain-Language Examples
+
+Many AI tools use software words. Here is what they mean in a research setting.
+
+| Term | Simple research example |
+| --- | --- |
+| repo | the project folder plus version history for one paper, replication, or dataset |
+| Git commit | a saved snapshot, like "version after fixing Table 2 code," that you can return to later |
+| Git diff | the exact before/after changes AI made to your files |
+| branch | a safe side version, such as `try-new-event-study`, where AI can experiment without touching the main project |
+| worktree | a second folder for a different branch, useful when two AI agents work on separate tasks at the same time |
+| `.gitignore` | a do-not-upload list for Git; for example, `data/raw/` tells Git not to track raw data files |
+| raw data | original data exactly as received; store it, document it, but do not edit it directly |
+| derived data | cleaned or merged data produced by scripts from raw data |
+| `AGENTS.md` | the instruction sheet for coding agents, telling them which files are safe, which files are forbidden, and which checks to run |
+| `CLAUDE.md` | the project memory file Claude Code reads for project rules, stage, commands, and cautions |
+| MCP/connector | a plug that lets AI talk to another system, such as GitHub, Zotero, Drive, or a database |
+| skill | a reusable research recipe, such as "audit my DiD design" or "build a WRDS merge plan" |
+| AI-use log | a research diary for AI work: tool used, task, files touched, output accepted, checks run, remaining uncertainty |
+
+When an AI answer uses a term you do not know, ask it:
+
+```text
+Explain every technical term in plain language and give one economics or finance research example for each term.
+```
+
 Use the tool that matches the task:
 
 | Task | Better starting point |
@@ -385,6 +411,20 @@ project-name/
   slides/
 ```
 
+Read this structure as a research workflow, not a software exercise:
+
+| Folder or file | Plain meaning |
+| --- | --- |
+| `README.md` | tells a new RA, coauthor, or future you what the project is and how to run it |
+| `DATA.md` | records where data came from, what is restricted, and what cannot be uploaded to AI tools |
+| `AGENTS.md` | tells AI agents the project rules before they read, edit, or run files |
+| `AI-USE-LOG.md` | records AI assistance so the project remains traceable |
+| `data/raw/` | original files; keep unchanged |
+| `data/derived/` | cleaned files created by scripts |
+| `code/` | scripts that transform raw data into results |
+| `output/tables/` and `output/figures/` | generated research outputs, ideally reproducible from code |
+| `paper/` and `slides/` | scholarly communication outputs |
+
 Minimum `.gitignore`:
 
 ```gitignore
@@ -401,6 +441,8 @@ data/restricted/
 .env
 __pycache__/
 ```
+
+This `.gitignore` says: "Git, do not track raw/restricted data, spreadsheets, logs, secret keys, or generated cache files." It reduces the risk of accidentally pushing private or licensed material to GitHub. It does not delete those files from your computer.
 
 For serious restructuring, use a branch or worktree. Before accepting AI changes, inspect the diff, run the relevant code, and record what changed.
 
@@ -452,7 +494,16 @@ Failure modes:
 Verification:
 What not to do:
 Sources or workflow influences:
+Clarifying questions if anything is missing or unclear:
 ```
+
+Good AI workflows also follow five habits:
+
+1. Clarify first: if the task, data rule, target audience, or output format is unclear, the AI should ask before producing final output.
+2. Define terms: if the AI uses terms such as `.gitignore`, branch, worktree, MCP, or seed, it should explain them in plain language.
+3. Use the smallest test: before real data, ask for a toy example with a known answer.
+4. Separate action from judgment: AI may draft, organize, code, and critique; humans decide what is true, ethical, and worth claiming.
+5. End with open questions: every serious answer should state what remains uncertain and what the researcher should decide next.
 
 ## 14. Writing, Presenting, and Public Communication
 

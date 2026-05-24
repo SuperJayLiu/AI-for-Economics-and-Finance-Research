@@ -7,6 +7,9 @@ Use this when a research repo, code package, paper repository, or handbook contr
 
 Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance GitHub Workflow] Question`.
 
+> [!NOTE]
+> Default add-on for this workflow: `If any required input, repository visibility, branch, PR status, file permission, data rule, or output format is unclear, ask me up to five clarifying questions before acting. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## Workflow 1: Address Review Comments Safely
 
 ```text

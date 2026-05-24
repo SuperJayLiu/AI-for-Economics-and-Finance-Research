@@ -5,6 +5,9 @@ Use this when you want several AI agents to work on different parts of a project
 > [!WARNING]
 > Parallel agents are useful only if each agent has a narrow task, its own branch or worktree, and a clear merge/review gate.
 
+> [!NOTE]
+> Default add-on for this workflow: `If any required input, file permission, data rule, Git term, agent permission, or output format is unclear, ask me up to five clarifying questions before acting. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+
 ## When To Use
 
 Good uses:
