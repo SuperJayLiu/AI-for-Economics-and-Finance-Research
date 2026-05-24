@@ -9,11 +9,13 @@ This is not the reading book. For concepts and risks, start with [the handbook](
 > [!TIP]
 > Start with one narrow task. Copy one block. Add your project facts. Ask for a plan. Then verify.
 
+Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Skills] Suggest a skill or prompt`.
+
 ## What Is Here
 
 | File | Use it when you need... |
 | --- | --- |
-| [01 Ideas, Brainstorming, Proposal, and Literature Skills](01-ideas-brainstorming-proposal-and-literature-skills.md) | research ideas, proposal framing, literature maps, paper summaries |
+| [01 Research Ideas, Brainstorming, and Proposal Skills](01-ideas-brainstorming-proposal-and-literature-skills.md) | research idea stress tests, proposal framing, LLM-friendly paper orientation |
 | [02 Paper Drafting, Revision, and Citation Skills](02-paper-drafting-revision-and-citation-skills.md) | introduction, paper drafting, revision, citation support, referee response |
 | [03 Empirical Methods Skills for Economics Research](03-empirical-methods-skills-for-economics-research.md) | drafting or checking empirical methods in applied economics |
 | [04 Empirical Methods Skills for Finance Research](04-empirical-methods-skills-for-finance-research.md) | drafting or checking empirical methods in asset pricing, corporate finance, banking, household finance |
@@ -22,6 +24,21 @@ This is not the reading book. For concepts and risks, start with [the handbook](
 | [07 Project Instructions and Agent Role Templates](07-project-instructions-and-agent-role-templates.md) | ChatGPT/Claude Projects, tough referee, paper summarizer, idea verifier, conference tracker |
 | [08 Coding, Data Analysis, and Debugging Skills](08-coding-data-analysis-and-debugging-skills.md) | Stata/R/Python debugging, code review, table/figure checks, reproducibility |
 | [09 Tool Selection, Updates, and Skill Improvement](09-tool-selection-updates-and-skill-improvement.md) | dated tool comparison, update digest, continuous improvement, bad-advice filter |
+| [10 Literature Review and Source Synthesis Skills](10-literature-review-and-source-synthesis-skills.md) | source-grounded literature review, paper matrices, research gaps, citation-safe synthesis |
+| [11 Causal Inference, Econometrics, and Time-Series Skills](11-causal-inference-econometrics-and-time-series-skills.md) | OLS, panel FE, DiD, IV, RD, event studies, synthetic control, AR/MA/ARMA/VAR checks |
+| [12 Theory Model and Math Skills](12-theory-model-and-math-skills.md) | theory-model reconstruction, assumption audit, proof gaps, economic interpretation |
+| [13 Referee Reports and Peer Review Skills](13-referee-reports-and-peer-review-skills.md) | referee reports, journal response planning, revision triage, GitHub-style feedback handling |
+
+## Why Some Topics Have Separate Files
+
+Most topics should stay in one README-style file. Separate files are useful only when readers will repeatedly search for that skill family:
+
+| Separate file | Why it is separate |
+| --- | --- |
+| literature review | large enough to need source matrices, synthesis workflows, and fake-citation guardrails |
+| causal inference/econometrics/time series | method-specific checks are easier to find in one place |
+| theory and math | proof, equilibrium, and model-audit workflows require different guardrails |
+| referee/review | reviewer comments, journal responses, and PR-style feedback need a different workflow |
 
 ## Most-Used Blocks
 
@@ -29,12 +46,16 @@ This is not the reading book. For concepts and risks, start with [the handbook](
 | --- | --- |
 | early idea | [Research Idea Stress Test](01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
 | proposal | [Proposal Builder](01-ideas-brainstorming-proposal-and-literature-skills.md#skill-2-proposal-builder-for-econfinance) |
+| literature review | [Source-Grounded Literature Review Builder](10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) |
 | intro | [Introduction Spine Builder](02-paper-drafting-revision-and-citation-skills.md#skill-1-introduction-spine-builder) |
 | econ methods | [Draft Empirical Methods Section for Economics](03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) |
 | finance methods | [Draft Empirical Methods Section for Finance](04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
+| causal inference | [Causal Design Diagnostic](11-causal-inference-econometrics-and-time-series-skills.md#skill-1-causal-design-diagnostic) |
+| theory model | [Economic Model Discussant](12-theory-model-and-math-skills.md#skill-1-economic-model-discussant) |
 | messy repo | [Clean Up Existing Project and Start Git Safely](05-git-data-replication-and-research-safety-templates.md#template-1-clean-up-existing-project-and-start-git-safely) |
 | slides | [Interactive HTML Research Slides](06-presentations-slides-websites-and-talk-practice-skills.md#skill-1-interactive-html-research-slides) |
 | coding | [Debug Stata/R/Python Research Code](08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
+| referee response | [Journal Referee Response Planner](13-referee-reports-and-peer-review-skills.md#skill-2-journal-referee-response-planner) |
 
 ## How To Use These Blocks
 
@@ -51,6 +72,8 @@ Add this to any skill when working on serious research:
 
 ```text
 Do not invent citations, data sources, coefficients, robustness checks, institutional details, mathematical derivations, or claims about the literature. If information is missing, say exactly what is missing and what I must verify manually. Separate verified facts, interpretation, suggestions, and uncertainty.
+
+Follow all university, employer, journal, conference, funder, data-provider, and coauthor policies on AI use. If the relevant rule is stricter than this instruction, follow the stricter rule.
 ```
 
 ## Universal Output Contract
@@ -69,3 +92,18 @@ Return your answer in five sections:
 ## Source Use Rule
 
 Some skills are inspired by public workflow ideas from Paul Goldsmith-Pinkham, Zara Zhang, PaperSpine, Nature-style skill repositories, and official tool documentation. Do not copy external skills wholesale unless the license permits it. This repo adapts workflow ideas into economics and finance research instructions.
+
+## Suggest a New Skill
+
+```text
+Email subject: [AI Econ Finance Skills] Suggest a new skill
+
+Suggested skill name:
+Research task:
+Who would use it:
+Required inputs:
+Expected output:
+Risks/failure modes:
+Verification checklist:
+External inspiration or source, if any:
+```

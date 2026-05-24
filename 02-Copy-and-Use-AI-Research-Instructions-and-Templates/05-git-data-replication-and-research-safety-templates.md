@@ -2,6 +2,9 @@
 
 # Git, Data, Replication, and Research Safety Templates
 
+> [!IMPORTANT]
+> Follow university, employer, data-provider, journal, conference, funder, and coauthor policies on AI use. These templates are not permission to upload confidential or restricted material.
+
 ## Template 1: Clean Up Existing Project and Start Git Safely
 
 ```text
@@ -101,6 +104,72 @@ Before reporting completion, state:
 - remaining uncertainty
 ```
 
+## Template 3B: CLAUDE.md for Research Repo
+
+Use this when working with Claude Code or another tool that reads project memory/instructions.
+
+```markdown
+# CLAUDE.md
+
+## Project Purpose
+[One paragraph describing the research project.]
+
+## Current Research Stage
+[idea / data cleaning / empirical analysis / theory / writing / revision / replication]
+
+## Non-Negotiable Rules
+- Do not edit `data/raw/`, `data/restricted/`, or `data/private/`.
+- Do not upload, expose, summarize, or commit private, restricted, licensed, identifiable, or confidential material.
+- Ask before changing file structure, running destructive commands, rewriting paper text, or preparing public output.
+- Preserve citations, numbers, notation, table labels, variable definitions, sample definitions, and hedging.
+- Do not invent results, citations, data sources, robustness checks, institutional facts, or theory claims.
+- If policy or data sensitivity is uncertain, stop and ask.
+
+## Preferred Workflow
+1. Restate the task.
+2. Propose a plan.
+3. Identify files to read/edit.
+4. Identify risks.
+5. Wait for approval when edits or public actions are involved.
+6. Implement narrowly.
+7. Run checks.
+8. Report files changed, commands run, outputs checked, and uncertainty.
+
+## Validation Commands
+[add commands such as `make`, `Rscript code/main.R`, `python code/build.py`, `latexmk paper/main.tex`]
+
+## AI-Use Logging
+After any accepted AI-assisted change, suggest an AI-USE-LOG entry.
+```
+
+## Template 3C: Institutional AI Policy Check
+
+```text
+Before using AI on this task, help me check the policy risk.
+
+Task:
+[describe]
+
+Materials:
+[public paper / coauthor draft / referee report / restricted data / licensed data / student data / code / public data]
+
+Policies I must consider:
+- university or employer policy: [known/unknown]
+- journal or conference policy: [known/unknown]
+- data-provider license: [known/unknown]
+- funder or IRB/research ethics rule: [known/unknown]
+- coauthor agreement: [known/unknown]
+
+Return:
+1. likely risk level;
+2. policies I must check before proceeding;
+3. safer alternatives, such as synthetic examples, metadata only, local approved tools, or manual review;
+4. exact questions to ask my institution, coauthors, editor, or data provider.
+
+Rule:
+If permission is unclear, recommend not uploading or exposing the material.
+```
+
 ## Template 4: AI-USE-LOG.md
 
 ```markdown
@@ -138,4 +207,3 @@ Rules:
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's emphasis on replication package infrastructure and AI-assisted code/data workflows; Git and GitHub documentation.
-

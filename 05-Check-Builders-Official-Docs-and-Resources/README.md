@@ -5,6 +5,8 @@ This folder is not a link dump. It explains which external resources influenced 
 > [!IMPORTANT]
 > This page is for learning what to extract from outside sources. It is not a recommendation to copy another person's skill, code, or writing without checking license, attribution, and fit.
 
+Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Sources] Resource suggestion`.
+
 ## Source Use Policy
 
 We cite briefly and adapt only relevant workflow ideas. We do not copy external skills wholesale unless the license permits it.
@@ -28,13 +30,17 @@ Source -> workflow pattern -> econ/finance adaptation -> copy-ready asset -> ver
 | [Paul Goldsmith-Pinkham: Tracking the Credibility Revolution across Fields](https://www.nber.org/papers/w35051) | field differences in empirical design language, especially applied micro vs finance/macroeconomics |
 | [Paul Goldsmith-Pinkham: Causal Inference in Financial Event Studies](https://paulgp.com/papers/financial_event_studies_dec282025.pdf) | event-study caution, especially long horizons, confounding, and design-vs-model interpretation |
 | [Pedro Sant'Anna: Claude Code academic workflow](https://psantanna.com/claude-code-my-workflow/) | plan-first contractor workflow, specialized agents, quality checks, reusable commands |
+| [Pedro Sant'Anna: workflow guide](https://psantanna.com/claude-code-my-workflow/workflow-guide.html) | skills, agents, permissions, hooks, and quality-gate workflow design |
 | [Chris Blattman / Claude Blattman](https://claudeblattman.com/) | non-coder academic workflows, project folders, reusable skills, council-of-critics style review |
+| [Claude Blattman templates and workflows](https://claudeblattman.com/downloads/) | templates, first-session skills, project setup, and practical non-coder onboarding patterns |
+| [Chris Blattman: claudeblattman repo](https://github.com/chrisblattman/claudeblattman) | public workflow system design and documentation structure |
 | [Anton Korinek: AI agents for economic research](https://www.nber.org/papers/w34202) | economist-facing explanation of agents for literature, code, data, and workflow coordination |
 | [Mihail Velikov: AI in Business and Economic Research](https://velikov-mihail.github.io/ai-econ-wiki/) | curated source index, summaries, categories, and knowledge-base maintenance |
 | [Novy-Marx and Velikov: AI-powered finance scholarship](https://www.aeaweb.org/articles?id=10.1257/jel.20251821) | caution about industrialized finance paper production, HARKing, and factor-mining incentives |
 | [Joshua Gans](https://joshuagans.substack.com/) | AI's effect on research and teaching production, course-specific AI assistants |
 | [Luis Garicano](https://sites.google.com/site/luisgaricano/) | AI, knowledge work, task bundling, and the changing value of human judgment |
 | [Aniket Panjwani](https://aniketpanjwani.com/) | practical economist-facing agent onboarding and dated tool-comparison discipline |
+| [Brandon Uttley: vibe coding risks](https://www.linkedin.com/pulse/promises-risks-vibe-coding-brandon-uttley-nbk2e/) | caution that AI-generated code needs human review, testing, and maintainability checks |
 | [Zara Zhang: AI Learning Library](https://zara.faces.site/ai) | curated learning paths and low-noise AI learning |
 | [Zara Zhang: Follow Builders](https://github.com/zarazhangrui/follow-builders) | builder-focused digest, daily/weekly updates, bilingual summaries, public-source tracking |
 | [Zara Zhang: frontend-slides](https://github.com/zarazhangrui/frontend-slides) | web-native slide skills, visual exploration, single-file HTML artifacts, avoiding generic AI aesthetics |

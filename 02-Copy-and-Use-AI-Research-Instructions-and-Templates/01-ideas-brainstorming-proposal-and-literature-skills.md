@@ -1,8 +1,10 @@
 > Copyright (c) 2026 SuperJayLiu (Chaojie Liu). Licensed under the repository MIT License.
 
-# Ideas, Brainstorming, Proposal, and Literature Skills
+# Research Ideas, Brainstorming, and Proposal Skills
 
 Copy the relevant block and paste it into your AI tool.
+
+For full literature review workflows, use [Literature Review and Source Synthesis Skills](10-literature-review-and-source-synthesis-skills.md). This file keeps only the early-stage idea, proposal, and paper-orientation blocks.
 
 ## Skill 1: Research Idea Stress Test
 
@@ -70,7 +72,7 @@ Guardrails:
 
 ## Skill 3: Literature Map Without Fake Citations
 
-Use after you have real papers, PDFs, BibTeX, or notes.
+Use this for a quick first-pass map after you have real papers, PDFs, BibTeX, or notes. For a fuller literature review, use the separate literature review file.
 
 ```text
 Build a literature map from the materials I provide. Use only the papers, notes, and citations I give you unless I explicitly ask for search.
@@ -134,4 +136,3 @@ Rules:
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's research pipeline and LLM-friendly paper proposal; PaperSpine's artifact-trail logic.
-

@@ -4,6 +4,9 @@
 
 These are for writing with guardrails. They should improve structure and clarity without inventing substance.
 
+> [!TIP]
+> Diagnose before rewriting. A polished paragraph with a vague research question, weak evidence, or unsupported contribution is still weak.
+
 ## Skill 1: Introduction Spine Builder
 
 ```text
@@ -115,5 +118,73 @@ Rules:
 - Keep tone professional, not defensive.
 ```
 
-Sources and workflow influences: PaperSpine's writing rationale matrix and citation support bank; Paul Goldsmith-Pinkham's warnings about AI writing and cognitive offloading.
+## Skill 5: Top-Journal Introduction Diagnostic
 
+```text
+Diagnose this economics/finance paper introduction before rewriting it.
+
+Introduction:
+[paste]
+
+Project facts:
+- Field: [field]
+- Research question: [question]
+- Setting/data/model: [setting/data/model]
+- Identification or mechanism: [design/mechanism]
+- Main result: [verified result]
+- Target audience/journal: [target]
+
+Check the introduction funnel:
+1. broad stakes
+2. object of study
+3. specific unanswered question
+4. why prior work could not answer
+5. ideal evidence or model needed
+6. why this setting/data/design works
+7. strategy
+8. findings
+9. contribution
+
+Return:
+- funnel status: intact / partly broken / broken
+- first failure point
+- main issue
+- why it matters
+- surgical fix
+- optional rewrite of only the weakest paragraph
+
+Rules:
+- Do not invent results, citations, data, or mechanisms.
+- Do not turn the introduction into a literature review.
+- Use placeholders like [MAIN ESTIMATE] or [CLOSEST PAPER] when information is missing.
+```
+
+## Skill 6: Finance Journal Prose Revision
+
+```text
+Revise this finance manuscript prose for a serious journal audience while preserving meaning.
+
+Text:
+[paste]
+
+Context:
+- Section: [introduction/results/discussion/literature/etc.]
+- Design/evidence: [brief]
+- Target journal/audience: [target]
+
+Rules:
+1. Preserve all citations, numbers, notation, variables, sample definitions, and hedging.
+2. Do not add claims, mechanisms, results, or robustness checks.
+3. Keep causal language disciplined.
+4. Emphasize economic magnitude where supplied.
+5. Avoid generic academic filler and chatbot-style phrasing.
+6. Do not use LaTeX emphasis commands unless functionally necessary.
+
+Return:
+- revised prose
+- change log
+- claims requiring verification
+- sentences where meaning may have changed
+```
+
+Sources and workflow influences: PaperSpine's writing rationale matrix and citation support bank; Paul Goldsmith-Pinkham's warnings about AI writing and cognitive offloading; the repository author's top-journal introduction, paper-writer, and paper-review coaching skills.

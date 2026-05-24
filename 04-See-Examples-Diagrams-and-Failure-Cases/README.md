@@ -5,6 +5,8 @@ This folder keeps examples in one place so readers can learn by pattern, not by 
 > [!TIP]
 > Read this page when you want to see what "responsible AI use" looks like in actual economics and finance tasks. The failure cases are as important as the success examples.
 
+Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Examples] Suggest an example or failure case`.
+
 ## Choose an Example
 
 | If your task is... | Look at | Copy/use |

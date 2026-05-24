@@ -9,7 +9,7 @@ A practical, GitHub-native handbook and resource library for using AI responsibl
 
 | English | 中文 |
 | --- | --- |
-| [Read below in English](#english) | [向下阅读中文版](#中文) |
+| [Read below in English](#english) | [阅读完整中文入口页](ZH-中文-AI经济金融研究手册/README.md) |
 
 ---
 
@@ -23,19 +23,22 @@ The main page keeps only the primary reading and working folders visible. Suppor
 
 | Need | Open |
 | --- | --- |
-| Read the handbook like a book | [Start Here to Learn AI for Econ Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) |
-| Copy usable instructions, skills, and templates | [Copy and Use AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) |
-| Set up agents and automated research workflows | [Set Up Agents and Automated Research Workflows](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) |
-| See concrete examples, diagrams, and failure cases | [See Examples Diagrams and Failure Cases](04-See-Examples-Diagrams-and-Failure-Cases/README.md) |
-| Check official docs and durable references | [Check Builders Official Docs and Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) |
-| Teach a workshop, onboard RAs, or prepare talks | [Teach Workshops Practice Talks and Share Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) |
+| Read the handbook like a book | [01 Start Here: Learn AI for Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) |
+| Copy usable instructions, skills, and templates | [02 Copy and Use: AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) |
+| Set up agents and automated research workflows | [03 Set Up: Agents and Automated Research Workflows](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) |
+| See concrete examples, diagrams, and failure cases | [04 See Examples: Diagrams and Failure Cases](04-See-Examples-Diagrams-and-Failure-Cases/README.md) |
+| Check official docs and durable references | [05 Check Sources: Builders, Official Docs, and Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) |
+| Teach a workshop, onboard RAs, or prepare talks | [06 Teach and Share: Workshops, Practice Talks, and Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) |
 
 ### Fast Paths
 
 | If you have 15 minutes and want... | Go directly to... |
 | --- | --- |
 | a research idea stress test | [Research Idea Stress Test](02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
+| a source-grounded literature review | [Literature Review and Source Synthesis Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/10-literature-review-and-source-synthesis-skills.md) |
 | an empirical methods section | [Economics Methods Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) or [Finance Methods Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
+| causal inference or time-series checks | [Causal Inference, Econometrics, and Time-Series Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/11-causal-inference-econometrics-and-time-series-skills.md) |
+| theory model review | [Theory Model and Math Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/12-theory-model-and-math-skills.md) |
 | a safe project cleanup | [Clean Existing Research Project and Set Up Git](03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
 | presentation practice | [Practice My Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) |
 | a weekly AI update filter | [AI Research Update Digest Workflow](03-Set-Up-Agents-and-Automated-Research-Workflows/04-ai-research-update-digest-workflow.md) |
@@ -43,6 +46,8 @@ The main page keeps only the primary reading and working folders visible. Suppor
 ### Reader Rule
 
 AI can automate labor, but not scholarly responsibility. Treat AI output as a draft, checklist, critique, explanation, or coding aid. Verify claims, citations, coefficients, code, equations, and policy details before using them in research.
+
+Always read and follow your university, employer, funder, journal, conference, data-provider, and coauthor rules on AI use. When those rules are stricter than this repository, follow the stricter rule.
 
 ### Direct-Use Promise
 
@@ -67,6 +72,14 @@ If a page only talks around a workflow, revise it into a directly usable skill, 
 | [05-Check-Builders-Official-Docs-and-Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) | Verify source claims, official docs, builder workflows, and resource inclusion rules. |
 | [06-Teach-Workshops-Practice-Talks-and-Share-Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | Use workshop outlines, slide-ready material, classroom exercises, presentation practice, and RA onboarding material. |
 | [99-Repository-Reference-and-Maintenance](99-Repository-Reference-and-Maintenance/README.md) | Open only when you need citation, contribution, review, changelog, roadmap, or archived old pages. |
+
+### Suggest a Skill or Correction
+
+Email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with one of these subject lines:
+
+- `[AI Econ Finance Handbook] Question or correction`
+- `[AI Econ Finance Skills] Suggest a new skill`
+- `[AI Econ Finance Chinese] 中文版本建议`
 
 ### What AI Can Help With
 

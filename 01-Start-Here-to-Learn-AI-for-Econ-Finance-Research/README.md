@@ -10,6 +10,8 @@ The rest of the repo gives copy-ready skills, project setups, workflow templates
 > [!TIP]
 > If you only have five minutes, read Sections 1, 3, 5, and 10. Then go to the copy-ready skills folder and use one skill on a small, non-confidential task.
 
+Questions or suggestions for this handbook: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Handbook] Question or correction`.
+
 ## Table of Contents
 
 - [Quick Start: Choose Your Situation](#quick-start-choose-your-situation)
@@ -245,6 +247,19 @@ Use this checklist before involving AI in real research.
 
 High-risk materials include referee reports, unpublished manuscripts, coauthor drafts, restricted administrative microdata, student records, proprietary firm data, transaction-level data, and licensed database extracts.
 
+### Institutional Rules Come First
+
+This handbook gives research workflow guidance, not institutional permission. Always check:
+
+- university or employer AI policy
+- research ethics or IRB rules
+- data-provider license
+- journal, conference, or funder rules
+- coauthor and PI expectations
+- classroom or student-data rules
+
+If a policy is stricter than this handbook, follow the stricter policy. If permission is unclear, do not upload or expose the material.
+
 ## 9. Data Safety Rules
 
 | Material | Default rule |
@@ -313,6 +328,10 @@ __pycache__/
 ```
 
 For serious restructuring, use a branch or worktree. Before accepting AI changes, inspect the diff, run the relevant code, and record what changed.
+
+### Vibe Coding Warning
+
+"Vibe coding" can be useful for fast prototypes, but it is risky for research. Do not accept code because it runs, compiles, or looks clean. For empirical work, AI code must match the research design, variable definitions, sample restrictions, and expected outputs. For paper or data pipelines, require a plan, Git diff, reproducibility check, and human review before accepting changes.
 
 ## 11. Skills, Projects, Agents, and MCPs
 
