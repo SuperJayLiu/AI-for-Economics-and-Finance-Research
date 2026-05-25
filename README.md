@@ -46,6 +46,7 @@ The main page keeps only the primary reading and working folders visible. Suppor
 | a sharper research question or contribution | [Research Question, Taste, and Positioning Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/18-research-question-taste-and-positioning-skills.md) |
 | theory model review | [Theory Model and Math Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/12-theory-model-and-math-skills.md) |
 | a safe project cleanup | [Clean Existing Research Project and Set Up Git](03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
+| a detailed agentic workflow runbook | [Agentic Workflow Anatomy](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#agentic-workflow-anatomy) |
 | presentation practice | [Practice My Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) |
 | plain-language explanations of Git, agents, MCPs, and other technical terms | [Beginner Tool Glossary](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md#3-beginner-tool-glossary) |
 | a low-noise AI resource database | [Build a Low-Noise AI Research Resource Database](02-Copy-and-Use-AI-Research-Instructions-and-Templates/09-tool-selection-updates-and-skill-improvement.md#skill-5-build-a-low-noise-ai-research-resource-database) |
@@ -168,6 +169,7 @@ Email list rules:
 | 选择 AI 输出核查方法 | [中文核查方法选择器](ZH-中文-AI经济金融研究手册/02-复制即用：AI研究指令与模板.md#ai-输出核查方法选择器) |
 | 理解 Git、agent、MCP 等技术词 | [中文技术词解释](ZH-中文-AI经济金融研究手册/01-从这里开始：AI经济金融研究手册.md#这些技术词在研究项目里是什么意思) |
 | 清理项目、设置 Git、写 `AGENTS.md` 或 `CLAUDE.md` | [03 设置 Agent 和自动化研究工作流](ZH-中文-AI经济金融研究手册/03-设置Agent和自动化研究工作流.md) |
+| 查看 agentic workflow 具体步骤和批准表 | [中文 Agent 工作流](ZH-中文-AI经济金融研究手册/03-设置Agent和自动化研究工作流.md#agentic-workflow-应该如何运行) |
 | 学习失败案例，避免假引用、错代码、过度因果解释 | [04 案例、图示与失败案例](ZH-中文-AI经济金融研究手册/04-案例图示与失败案例.md) |
 | 安全获取更新、查看资料来源、判断外部资源 | [05 资料来源、官方文档与更新](ZH-中文-AI经济金融研究手册/05-资料来源官方文档与更新.md) |
 | 建立低噪音 AI 资源库 | [中文资源库结构模板](ZH-中文-AI经济金融研究手册/05-资料来源官方文档与更新.md#可以借鉴的资源库结构) |

@@ -42,6 +42,28 @@ search or collect sources -> verify source exists -> read/source-note -> AI synt
 | create a source support bank | Skill 6 |
 | build a worked literature-review spine | Skill 7 |
 
+## Filled Mini Example
+
+```text
+Research project:
+Do analyst-question tone in earnings calls predict post-call stock returns?
+
+Sources I provide:
+- 8 verified papers on earnings calls and disclosure tone
+- 4 verified papers on return predictability and textual analysis
+- my notes on sample period, transcript source, and return window
+
+Good AI output should:
+- separate earnings-call literature from asset-pricing predictability literature;
+- identify closest papers by data and measurement, not just topic;
+- mark every unsupported novelty claim as [VERIFY];
+- propose a paragraph structure, not a final claim of contribution.
+
+Bad AI output to reject:
+"No prior paper studies this question."
+Reject unless the AI identifies the exact search method and the closest verified papers.
+```
+
 ## Skill 1: Source-Grounded Literature Review Builder
 
 ```text

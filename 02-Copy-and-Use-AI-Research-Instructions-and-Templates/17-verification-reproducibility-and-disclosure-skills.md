@@ -23,6 +23,26 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | equation/proof/model claim | Skill 5 |
 | AI-use reproducibility/disclosure | Skill 6 |
 
+## Filled Mini Example
+
+```text
+AI output:
+"The coefficient of 0.08 means treated firms increase investment by 8%."
+
+Verification:
+1. Check whether the dependent variable is log investment, investment/assets, or a percentage point measure.
+2. Check the baseline mean.
+3. Check whether the standard error and confidence interval support a precise estimate.
+4. Check whether the design supports causal wording.
+5. Compare the sentence to the table note and code.
+
+Safer wording if dependent variable is log investment:
+"The estimate implies an approximately 8 percent increase in investment under the maintained identification assumptions."
+
+Bad output to reject:
+"This proves the policy increased investment by 8%."
+```
+
 ## Skill 1: Verification Method Selector
 
 ```text

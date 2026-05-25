@@ -22,6 +22,27 @@ These skills are tailored for applied economics: labor, public, development, hea
 
 For execution, pair this page with [Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md). For method-specific checks, use [Causal Inference, Econometrics, and Time-Series Skills](11-causal-inference-econometrics-and-time-series-skills.md).
 
+## Filled Mini Example
+
+```text
+Research question:
+Do expanded bus routes affect employment among low-income workers?
+
+Design:
+Staggered rollout across neighborhoods, monthly employment outcomes, neighborhood and month fixed effects, event-study graph.
+
+Good AI output should:
+- ask whether treatment timing is staggered and whether effects may be heterogeneous;
+- ask which DiD/event-study estimator is used;
+- describe the identifying variation and comparison group;
+- flag pre-trend power, clustering, spillovers, and neighborhood selection;
+- mark missing information as [NEEDS AUTHOR INPUT].
+
+Bad AI output to reject:
+"Because the regression includes fixed effects, the coefficient identifies the causal effect."
+Reject because fixed effects alone do not establish identification.
+```
+
 ## Skill 1: Draft Empirical Methods Section for Economics
 
 ```text

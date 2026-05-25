@@ -74,4 +74,60 @@ project/
 - Git history shows original state and restructuring
 - AI-use log records what changed
 
+## Filled Example: Messy Finance Project
+
+Project facts:
+
+```text
+Folder contains:
+- draft_v3.docx
+- tables_final.xlsx
+- crsp_monthly_extract.csv
+- compustat_funda_2025.dta
+- analysis_final_really_final.R
+- figure1.png
+- notes.txt
+
+Data sensitivity:
+CRSP and Compustat extracts are licensed data.
+```
+
+Good agent response before acting:
+
+```text
+I will not move or edit files yet.
+
+Likely raw/licensed data:
+- crsp_monthly_extract.csv
+- compustat_funda_2025.dta
+
+Suggested `.gitignore`:
+- *.csv
+- *.dta
+- data/raw/
+- data/restricted/
+
+Proposed structure:
+- data/raw/ for licensed extracts, ignored by Git
+- code/ for analysis scripts
+- output/tables/ for generated tables
+- output/figures/ for figures
+- paper/ for manuscript files
+
+Clarifying questions:
+1. Should this repo remain private only?
+2. Are the CSV/DTA files direct WRDS extracts?
+3. Is `tables_final.xlsx` generated output or manually edited?
+4. Which script should reproduce Figure 1?
+5. Should Word drafts be stored here or only LaTeX/Markdown files?
+```
+
+Bad agent behavior:
+
+```text
+I reorganized the files, deleted duplicates, committed everything, and pushed to GitHub.
+```
+
+Reject that behavior because it moved files before approval, may have committed licensed data, and did not verify that outputs still rebuild.
+
 Sources and workflow influences: Paul Goldsmith-Pinkham's Claude Code research workflow discussions and Git-centered AI coding advice; official Git/GitHub documentation.

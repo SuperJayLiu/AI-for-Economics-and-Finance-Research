@@ -76,4 +76,33 @@ Software:
 ## Remaining Uncertainty
 ```
 
+## Concrete Run Order Example
+
+For a package with `README.pdf`, `code/`, `data/`, and `output/`, ask the agent to proceed like this:
+
+```text
+Start with inventory only.
+
+Then propose a run order such as:
+1. read package README and list software versions;
+2. locate main driver script, such as `master.do`, `main.R`, or `run_all.py`;
+3. identify raw data files and confirm they will not be edited;
+4. run the smallest target, such as one table or one figure;
+5. save logs under `output/logs/`;
+6. compare generated table/figure to supplied output;
+7. report exact differences.
+
+Do not fix code until after reporting the first failure and asking for approval.
+```
+
+Useful failure categories:
+
+| Failure | What it means |
+| --- | --- |
+| missing raw data | package cannot fully reproduce without controlled-access or omitted files |
+| version mismatch | code may depend on old Stata/R/Python/package behavior |
+| hard-coded path | script assumes the author's local computer path |
+| manual output | tables or figures may require hand edits outside code |
+| nonmatching output | generated result differs from published or included result |
+
 Sources and workflow influences: Paul Goldsmith-Pinkham's interest in replication package infrastructure and metadata databases; applied empirical methods practice.

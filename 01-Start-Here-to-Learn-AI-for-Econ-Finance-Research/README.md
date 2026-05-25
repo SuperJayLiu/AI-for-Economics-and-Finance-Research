@@ -121,6 +121,32 @@ If yes, AI may help.
 If no, the task is probably too vague, too risky, or too judgment-heavy.
 ```
 
+### Concrete Task Examples
+
+| Vague request | Controlled AI workflow |
+| --- | --- |
+| "Summarize this literature." | "Using only these 12 supplied papers, create a table with question, data, identification/model, finding, limitation, and how it relates to my project. Mark any missing citation facts as [verify]." |
+| "Write my methods section." | "Using only the verified facts below, draft a methods section with data, sample, equation, identification assumptions, inference, limitations, and [needs author input] markers." |
+| "Clean my data." | "Inspect the folder and propose a raw-to-derived pipeline. Do not edit files yet. Identify raw data, derived data, code, outputs, privacy risks, and checks I should approve." |
+| "Make my slides." | "Build a 25-minute seminar outline from this paper. For each slide, state the claim, evidence, figure/table needed, risk of overclaiming, and speaker note." |
+| "Use agents on my project." | "Create a plan with files to read, files allowed to edit, files forbidden, commands to run, checks to pass, and approval gates before changing anything." |
+
+Copy this when you are not sure how to phrase a task:
+
+```text
+I want to use AI for this economics/finance research task:
+[describe task]
+
+Before answering, help me turn it into a controlled workflow. Ask clarifying questions if needed. Then specify:
+1. safe inputs;
+2. forbidden inputs;
+3. expected output;
+4. what the AI may do;
+5. what the AI must not decide;
+6. how I should verify the result;
+7. what to record in the AI-use log.
+```
+
 ## 3. Beginner Tool Glossary
 
 If you have never used AI for research before, start with these distinctions.
@@ -175,6 +201,16 @@ Use the tool that matches the task:
 | citation/literature verification | search-grounded tool, Zotero, Google Scholar, DOI, journal pages |
 | repeated research workflow | skill or project instruction |
 | multi-step automation | agent with Git, logs, and approval gates |
+
+### Concrete Tool Choice Examples
+
+| Situation | Use | Why |
+| --- | --- | --- |
+| You want a definition of "parallel trends" | ChatGPT/Claude chat | no files or private data needed |
+| You are building one paper over months | ChatGPT/Claude Project | keeps project instructions, notes, and context together |
+| You need to fix a Python script that creates Table 3 | Codex/Claude Code inside a Git repo | the AI needs file access, but every diff must be reviewed |
+| You want to connect AI to Zotero or GitHub | MCP/connector | useful only if permissions and data exposure are understood |
+| You repeatedly audit event-study designs | skill | turns a repeated check into a reusable procedure |
 
 ## 4. The Maturity Ladder
 
@@ -360,6 +396,21 @@ If I cannot state how I will verify this AI output, I should not use it in resea
 ```
 
 For direct copy/paste checks, use [Verification, Reproducibility, and Disclosure Skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/17-verification-reproducibility-and-disclosure-skills.md).
+
+### What Verification Looks Like
+
+| Claim or output | Concrete check |
+| --- | --- |
+| "Smith and Zhang (2021, JF) show..." | Search the title/author/year, open the journal or DOI page, confirm the paper exists, then confirm the sentence is supported by the paper. |
+| "The treatment effect is 0.05 log points." | Convert to approximate percent, check whether the baseline makes this economically meaningful, and verify whether the design supports causal language. |
+| "The code correctly merges firms to returns." | Create three toy firms with known identifiers and dates, run the merge, and confirm only valid links appear. |
+| "The model proof is complete." | Check each assumption used in each step, test boundary cases, and ask whether an equilibrium object changes when a parameter goes to zero or infinity. |
+
+Example AI-use log entry:
+
+```markdown
+| 2026-05-25 | ChatGPT / Claude / Codex [version if known] | Drafted methods prose from verified design notes | no raw data; only equation and variable dictionary | paper/methods.md | paragraph structure and limitations wording | compared against code, table shell, and identification notes | need coauthor check on inference wording | check journal policy | abc1234 |
+```
 
 ## 11. Data Safety Rules
 

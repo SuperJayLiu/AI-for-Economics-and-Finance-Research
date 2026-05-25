@@ -85,6 +85,67 @@ Agentic AI is AI that does not only answer; it can plan, call tools, edit files,
 
 For research, this means the central question changes from "Was the answer fluent?" to "Were the actions safe, logged, and verified?"
 
+## Agentic Workflow Anatomy
+
+An agentic workflow should be a sequence of small contracts, not one large instruction.
+
+```mermaid
+flowchart LR
+  A["Research goal"] --> B["Agent asks clarifying questions"]
+  B --> C["Agent proposes plan and permissions"]
+  C --> D{"Human approval"}
+  D -- "No" --> C
+  D -- "Yes" --> E["Agent reads/edits allowed files"]
+  E --> F["Agent runs checks"]
+  F --> G["Human reviews diff and outputs"]
+  G --> H["AI-use log and commit"]
+```
+
+| Step | What the agent should produce | Human decision |
+| --- | --- | --- |
+| Clarify | missing inputs, unclear terms, data sensitivity questions | answer, narrow scope, or stop |
+| Plan | files to read, files to edit, forbidden files, commands, risks | approve or revise |
+| Execute | small changes only, tied to the approved plan | do not accept unreviewed changes |
+| Check | commands run, outputs inspected, failures found | rerun, reject, or continue |
+| Trace | diff summary, AI-use log entry, commit suggestion | commit only after review |
+
+## Concrete Agentic Workflow Examples
+
+| Research task | Safe agent role | Allowed actions | Forbidden actions | Success check |
+| --- | --- | --- | --- | --- |
+| clean an old project folder | project organizer | list files, propose structure, write README/DATA/AGENTS after approval | delete files, edit raw data, push public repo | raw files untouched, Git diff reviewed |
+| build a WRDS merge plan | data-construction assistant | draft query plan, variable dictionary, audit tables, toy data test | expose credentials, upload licensed extracts, assume ticker matching is enough | link logic and timing rules documented |
+| debug Table 2 code | coding assistant | inspect code, propose fix, edit script after approval, run minimal test | change sample restrictions silently, edit outputs by hand | code runs and output matches expected table shell |
+| prepare seminar Q&A | talk practice opponent | ask tough questions, propose concise answers, flag weak slides | invent results, hide limitations, strengthen causal claims | answers trace to paper evidence |
+| handle GitHub review comments | PR assistant | summarize comments, propose fixes, edit approved files | resolve comments or push without approval | review threads addressed and checks pass |
+
+## Modes Of Agent Work
+
+Use the lowest-power mode that solves the problem.
+
+| Mode | Agent may... | Use when | Do not use when |
+| --- | --- | --- | --- |
+| explain | answer questions without file access | learning a method or term | output needs to change files |
+| plan | inspect context and propose actions | task is unclear or risky | you already approved a narrow edit |
+| edit | change approved files | code, docs, slides, or paper text need revision | raw data or confidential files are involved |
+| run | execute approved commands | code/test/compile checks are needed | commands may move/delete/upload data |
+| publish | commit, push, open PR, reply on GitHub | changes are reviewed and safe to share | repo visibility, data sensitivity, or authorship is unclear |
+
+Copy this if an agent starts doing too much:
+
+```text
+Pause. Do not make further edits or run commands.
+
+Restate:
+1. what you have done;
+2. which files you changed;
+3. which commands you ran;
+4. what remains uncertain;
+5. what you propose to do next.
+
+Wait for approval before continuing.
+```
+
 ## Agent Rule
 
 For any agentic workflow:
@@ -125,6 +186,52 @@ Gate 3: Verification
 
 Gate 4: Trace
 - Record files changed, commands run, outputs checked, uncertainty, and commit hash.
+```
+
+## Concrete Approval Gate Template
+
+Paste this before allowing an agent to edit files:
+
+```text
+Before editing, give me an approval table:
+
+| Proposed action | Files affected | Why needed | Risk | Verification command/check | Needs approval? |
+| --- | --- | --- | --- | --- | --- |
+
+Rules:
+- Do not edit raw, restricted, private, or licensed data.
+- Do not change sample definitions, variable construction, identification assumptions, or paper claims unless explicitly asked.
+- Do not install packages, push to GitHub, publish files, or contact external services without approval.
+- If a term or risk is unclear, define it in plain language and ask me.
+```
+
+## What Counts As Done
+
+An agentic task is not done when the AI says it is done. It is done when the relevant artifact passes a check.
+
+| Artifact | Done means |
+| --- | --- |
+| cleaned repo | backup exists, Git initialized, `.gitignore` protects data, raw files untouched |
+| data pipeline | scripts rebuild derived data from raw inputs, with logs and audit tables |
+| code fix | minimal test passes, real script runs, output changes are explained |
+| methods prose | text matches data, code, equation, sample, timing, and inference |
+| slides | claims match paper, figures are correct, limitations are visible |
+| GitHub PR | diff reviewed, checks pass, no confidential material included |
+
+## What To Put In `AGENTS.md`
+
+At minimum, every AI-assisted research repo should tell agents:
+
+```markdown
+## Project rules for AI agents
+
+- Ask clarifying questions before acting when task scope, data sensitivity, or expected output is unclear.
+- Never edit `data/raw/`, `data/restricted/`, or `data/private/`.
+- Never expose private, licensed, identifiable, embargoed, or confidential material.
+- Preserve citations, numbers, notation, variable definitions, sample definitions, and hedging.
+- Before editing files, provide a plan and wait for approval.
+- After editing files, report the diff summary, commands run, checks passed or failed, and remaining uncertainty.
+- If you use technical terms, define them in plain language for an economics/finance researcher.
 ```
 
 ## Tool Concepts

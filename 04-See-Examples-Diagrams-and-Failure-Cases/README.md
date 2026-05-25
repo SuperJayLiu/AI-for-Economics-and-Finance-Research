@@ -63,6 +63,83 @@ Closures are not random; weak local demand may cause both closures and lower bor
 
 The point is not that AI produces the paper. The point is that each AI-assisted step produces a concrete artifact that can be checked before the next step.
 
+## Agentic Version: Same Paper With File-Editing AI
+
+Use this only after Git, `.gitignore`, `DATA.md`, `AGENTS.md`, and `AI-USE-LOG.md` exist.
+
+Synthetic repo:
+
+```text
+bank-closures-small-firms/
+  README.md
+  DATA.md
+  AGENTS.md
+  AI-USE-LOG.md
+  data/raw/          # not edited, not committed
+  data/derived/
+  code/
+  output/tables/
+  output/figures/
+  paper/
+  slides/
+```
+
+Agentic workflow:
+
+| Stage | Agent task | Allowed files | Forbidden files | Human approval point | Success check |
+| --- | --- | --- | --- | --- | --- |
+| 1. Repo intake | inspect structure and propose `.gitignore` | file list only | all file edits | approve cleanup plan | raw data is ignored and untouched |
+| 2. Data dictionary | draft `DATA.md` from metadata and variable names | `DATA.md` | raw records | approve sensitivity labels | data access rules are explicit |
+| 3. Toy pipeline | create synthetic toy data and merge test | `code/toy_*`, `output/logs/` | real data | approve test logic | known-answer merge passes |
+| 4. Real pipeline | update data scripts after toy test | approved `code/` files | `data/raw/` | approve exact files | scripts run and audit tables print |
+| 5. Methods audit | compare paper methods to code and tables | `paper/methods.md` comments or draft | code/data unless approved | approve prose edits | methods match scripts and sample |
+| 6. Talk prep | create Q&A and slide outline | `slides/`, copied figures | raw data, code | approve public-facing claims | slide claims match paper |
+| 7. Trace | draft AI-use log entry and commit message | `AI-USE-LOG.md` | none | approve commit | diff reviewed and logged |
+
+Copy-ready instruction:
+
+```text
+Act as a cautious research agent for this economics/finance project.
+
+Goal:
+Help move one approved stage of the project forward without exposing data, changing research design silently, or creating unreproducible output.
+
+Current stage:
+[repo intake / data dictionary / toy pipeline / real pipeline / methods audit / talk prep / trace]
+
+Project folder:
+[path]
+
+Data sensitivity:
+[public/licensed/restricted/private/unknown]
+
+Before doing anything:
+1. Ask clarifying questions if task scope, data sensitivity, allowed files, forbidden files, or validation command is unclear.
+2. Explain any Git or agent term in plain language.
+3. Propose an approval table with action, files affected, risk, and check.
+4. Wait for approval before editing files, running commands that modify outputs, installing packages, pushing to GitHub, or preparing public materials.
+
+After approved work:
+1. Report files changed.
+2. Report commands run.
+3. Report outputs checked.
+4. Report failures or uncertainty.
+5. Draft an AI-USE-LOG entry.
+```
+
+Bad agentic workflow:
+
+```text
+The agent rewrites data scripts, edits the methods section, regenerates figures, and updates slides in one pass without asking which files are allowed.
+```
+
+Why it is bad:
+
+- the task mixes data, code, paper claims, and public communication;
+- changes cannot be reviewed stage by stage;
+- a methods edit may reflect code that has not been verified;
+- raw or licensed data may be exposed by mistake.
+
 ## Example 1: Literature Review for Asset Pricing
 
 Task: position a new paper on return predictability.

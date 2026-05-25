@@ -23,6 +23,27 @@ These skills are tailored for asset pricing, corporate finance, banking, househo
 
 For code, data construction, WRDS/CRSP/Compustat merges, portfolio sorts, and Fama-MacBeth implementation, pair this page with [Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md).
 
+## Filled Mini Example
+
+```text
+Research question:
+Does a firm-level governance measure predict future stock returns?
+
+Data:
+CRSP monthly returns, Compustat annual fundamentals, governance data, 1995-2024.
+
+Good AI output should:
+- ask for CRSP/Compustat link rules and fiscal-year reporting lag;
+- ask whether delisting returns are included;
+- distinguish predictability from causality;
+- require risk adjustment, transaction cost discussion, and multiple-testing caution;
+- state how portfolios or Fama-MacBeth regressions are formed.
+
+Bad AI output to reject:
+"This proves that governance causes higher returns."
+Reject because return predictability does not by itself establish a causal mechanism.
+```
+
 ## Skill 1: Draft Empirical Methods Section for Finance
 
 ```text

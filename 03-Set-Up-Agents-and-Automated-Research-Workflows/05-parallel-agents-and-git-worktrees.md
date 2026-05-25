@@ -66,6 +66,28 @@ worktrees:
 ../project-replication-check
 ```
 
+## Concrete Split Example
+
+Suppose a paper needs a revision package.
+
+| Agent | Branch/worktree | Allowed files | Forbidden files | Check |
+| --- | --- | --- | --- | --- |
+| methods reviewer | `revise-methods` | `paper/methods.tex`, `paper/appendix.tex` | `data/`, `code/` | compare prose to equation and table shell |
+| code auditor | `audit-table2-code` | `code/table2.*`, `output/logs/` | `data/raw/`, `paper/` | run Table 2 script and toy test |
+| slide builder | `seminar-slides` | `slides/`, `output/figures/` copies only | `data/`, `code/` | check each slide claim against paper |
+
+Merge order:
+
+1. code auditor first, because methods and slides should reflect code;
+2. methods reviewer second;
+3. slide builder last.
+
+Conflict risk:
+
+- methods and slides may both refer to Table 2;
+- no two agents should edit the same manuscript file at the same time;
+- no agent should edit raw or licensed data.
+
 ## Review Gate
 
 Before merging any agent output:

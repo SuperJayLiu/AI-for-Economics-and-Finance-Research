@@ -23,6 +23,25 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | create EDA, tables, and figures without hidden hand edits | Skill 5 |
 | test AI-written code on toy data before using real data | Skill 6 |
 
+## Filled Mini Example
+
+```text
+Task:
+Build a monthly firm-level dataset from CRSP returns and Compustat fundamentals.
+
+Good AI output should:
+- propose a raw -> derived -> analysis-ready pipeline;
+- keep raw WRDS extracts out of Git and public AI tools;
+- require CCM link-date validity checks;
+- require a reporting-lag rule before using accounting variables in return tests;
+- include a toy merge with three firms and known link windows;
+- print match rates, duplicates, unmatched records, and date-range checks.
+
+Bad AI output to reject:
+"Merge by ticker and year, then run the regression."
+Reject because ticker/year matching can be wrong, ignores link validity, and may create look-ahead bias.
+```
+
 ## Skill 1: Reproducible Research Data Pipeline Builder
 
 ```text

@@ -48,6 +48,55 @@
 如果你使用非计算机专业经济学/金融学研究者可能不熟悉的软件或 AI 术语，请先用一句话解释，并给出本项目中的例子。
 ```
 
+## Agentic workflow 应该如何运行？
+
+Agentic workflow 不应该是一句“大指令”，而应该是一连串小合同：
+
+```mermaid
+flowchart LR
+  A["研究目标"] --> B["agent 先提澄清问题"]
+  B --> C["agent 提出计划和权限边界"]
+  C --> D{"研究者批准？"}
+  D -- "否" --> C
+  D -- "是" --> E["agent 只读/改允许的文件"]
+  E --> F["agent 运行检查"]
+  F --> G["研究者审查 diff 和输出"]
+  G --> H["记录 AI-use log 和 commit"]
+```
+
+| 步骤 | agent 应该给出什么 | 研究者要决定什么 |
+| --- | --- | --- |
+| 澄清 | 缺失输入、不清楚的术语、数据敏感性问题 | 回答、缩小范围或停止 |
+| 计划 | 可读文件、可改文件、禁止文件、命令、风险 | 批准或要求修改 |
+| 执行 | 小范围、按批准计划执行 | 不接受未审查改动 |
+| 检查 | 跑过的命令、检查过的输出、失败原因 | 重跑、拒绝或继续 |
+| 追踪 | diff 摘要、AI-use log、commit 建议 | 审查后再 commit |
+
+### 具体任务例子
+
+| 研究任务 | 安全 agent 角色 | 可以做什么 | 不能做什么 | 成功标准 |
+| --- | --- | --- | --- | --- |
+| 清理旧项目文件夹 | project organizer | 列文件、提结构、批准后写 README/DATA/AGENTS | 删除文件、改 raw data、push 公开 repo | raw data 未动，Git diff 已审查 |
+| 设计 WRDS 合并 | data-construction assistant | 写 query plan、变量字典、audit tables、toy merge | 暴露账号、上传授权数据、假设 ticker 匹配足够 | link 逻辑和 timing rule 写清楚 |
+| debug Table 2 代码 | coding assistant | 看代码、提修复、批准后改脚本、跑最小测试 | 悄悄改 sample restriction 或手改输出 | 代码能跑，输出和预期表格一致 |
+| 准备 seminar Q&A | talk opponent | 提尖锐问题、写简短回答、标出弱 slide | 编造结果、隐藏限制、强化因果说法 | 回答都能追溯到论文证据 |
+| 处理 GitHub review comments | PR assistant | 总结评论、提修复、改批准文件 | 未批准就 resolve、reply、push | 评论已回应，检查通过 |
+
+### 批准表模板
+
+```text
+在编辑前，请先给我一个批准表：
+
+| 拟执行动作 | 影响文件 | 为什么需要 | 风险 | 验证命令/检查 | 是否需要批准 |
+| --- | --- | --- | --- | --- | --- |
+
+规则：
+- 不要编辑 raw、restricted、private 或 licensed data。
+- 不要悄悄改变样本定义、变量构造、识别假设或论文结论。
+- 未经批准，不要安装包、push GitHub、公开发布或连接外部服务。
+- 如果术语或风险不清楚，请用普通语言解释并提问。
+```
+
 ## 什么时候使用自动化？
 
 | 情况 | 推荐方式 | 注意事项 |

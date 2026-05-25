@@ -234,6 +234,45 @@ Before asking AI to read, clean, merge, summarize, or transform data, check:
 | [World Bank Microdata Library](https://microdata.worldbank.org/index.php/about) | household, firm, facility, and development survey microdata | each dataset has its own access category and terms | read terms for each dataset; do not assume all World Bank microdata are open |
 | [AEA RCT Registry](https://www.aeaweb.org/journals/policies/rct-registry) | trial registration, protocols, version history, and transparency records | public metadata may coexist with embargoed/confidential files | use AI for public protocols and planning; do not expose confidential trial documents |
 
+### Concrete Dataset Handling Examples
+
+| Dataset situation | What AI can safely help with | What not to upload | Concrete instruction |
+| --- | --- | --- | --- |
+| FRED macro series | retrieve series metadata, draft API code, explain transformations | none if using public series, but still avoid private project notes if sensitive | "Use these public FRED series IDs and write reproducible download code. Log frequency, transformation, and download date." |
+| BLS employment data | draft API query, explain series definitions, create seasonal-adjustment checklist | private research notes if not ready to share | "Verify each series ID against BLS documentation before writing interpretation." |
+| ACS/CPS public-use microdata through IPUMS | help with variable dictionary, harmonized variable meanings, toy code | individual-level extracts unless terms and institution allow it | "Use only variable names and metadata. Write code on synthetic rows that mimic the schema." |
+| WRDS CRSP/Compustat | draft merge plan, link-table audit checklist, toy merge tests | raw extracts, query results, credentials, licensed files | "Work from schema descriptions and toy identifiers. Do not request or expose WRDS extracts." |
+| EDGAR filings | build scraper/parser plan, XBRL extraction checks, text-as-data validation | private annotations or unpublished linked datasets | "Use public filing URLs and log CIK, accession number, form type, filing date, parser version." |
+| TRACE/Bloomberg/FactSet/LSEG | design code structure, variable dictionary, audit plan | licensed extracts and terminal/API outputs unless license allows | "Use metadata and synthetic examples. Do not paste commercial data into public AI." |
+| Restricted administrative microdata | write code patterns on synthetic examples, draft disclosure review checklist | actual records, linked IDs, cell counts, raw outputs | "Assume no external AI upload. Ask what secure environment and disclosure rules apply." |
+
+Copy-ready dataset prompt:
+
+```text
+Act as a data-access and AI-safety assistant for an economics/finance project.
+
+Dataset:
+[name/provider]
+
+Research use:
+[brief purpose]
+
+Access status:
+[public/licensed/restricted/confidential/unknown]
+
+Materials I can safely provide:
+[metadata / variable names / toy data / public URLs / code only / other]
+
+Before giving advice:
+1. classify the data sensitivity;
+2. list what must not be uploaded to public AI tools;
+3. suggest safer AI inputs, such as metadata, variable dictionaries, toy data, or synthetic examples;
+4. identify license, IRB/ethics, university, journal, coauthor, or provider rules I must check;
+5. propose a reproducible citation/version/access log.
+
+If any term, rule, or permission boundary is unclear, ask clarifying questions before proceeding.
+```
+
 ### Copy-Ready Dataset Access Checklist
 
 ```text
