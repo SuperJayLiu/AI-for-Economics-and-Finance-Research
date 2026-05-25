@@ -14,6 +14,23 @@ This is not the reading book. For concepts and risks, start with [the handbook](
 
 Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Skills] Suggest a skill or prompt`.
 
+## Start With A Task Card
+
+Use these as the fastest entry points. Each card points to one copy-ready block and one verification habit.
+
+| I want to... | Copy first | Then verify by... |
+| --- | --- | --- |
+| test whether a research idea is worth pursuing | [Research Idea Stress Test](01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) | naming the closest papers, data obstacle, and identification/model obstacle |
+| build a literature review without fake citations | [Source-Grounded Literature Review Builder](10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) | checking every claim against supplied sources or verified search results |
+| write or revise an introduction | [Introduction Spine Builder](02-paper-drafting-revision-and-citation-skills.md#skill-1-introduction-spine-builder) | confirming the question, contribution, data/design, and strongest result are accurate |
+| draft empirical methods for applied economics | [Draft Empirical Methods Section for Economics](03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) | comparing prose with code, sample, timing, estimand, and inference |
+| draft empirical methods for finance | [Draft Empirical Methods Section for Finance](04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) | checking timing, link tables, survivorship, delisting, event windows, and factor-mining risk |
+| debug code in Python, R, or Stata | [Coding, Data Analysis, and Debugging Skills](08-coding-data-analysis-and-debugging-skills.md) | running a toy-data test before trusting real-data output |
+| use agents on files safely | [AGENTS.md for Research Repo](05-git-data-replication-and-research-safety-templates.md#template-3-agentsmd-for-research-repo) | inspecting `git diff`, running checks, and logging AI use |
+| prepare slides or practice a seminar | [Paper-to-Talk Converter](06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter) | matching every slide claim to the paper, table, figure, or model |
+| decide whether an AI answer can be accepted | [Verification Method Selector](17-verification-reproducibility-and-disclosure-skills.md#skill-1-verification-method-selector) | choosing source, code, data, math, policy, or disclosure checks |
+| find more tools/resources for one task | [Find More Resources For One Econ/Finance Research Task](09-tool-selection-updates-and-skill-improvement.md#skill-6-find-more-resources-for-one-econfinance-research-task) | rejecting generic hype and testing at most three resources first |
+
 ## Default Clarification Rule
 
 Paste this before any skill when the task is serious, the inputs are incomplete, or the audience may not know technical terms:

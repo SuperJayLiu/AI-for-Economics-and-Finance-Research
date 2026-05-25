@@ -247,6 +247,25 @@ Python-specific guardrails:
 - For finance data, check look-ahead bias, survivorship bias, delisting returns, event windows, and identifier changes when relevant.
 ```
 
+Mini example:
+
+```text
+Task:
+Build a firm-year panel and estimate a regression with firm and year fixed effects.
+
+Good AI output should include:
+- `merge(validate="one_to_one")` or another explicit merge validation where appropriate;
+- duplicate-key and missingness assertions;
+- a small synthetic firm-year panel that proves the fixed-effect code runs;
+- a warning if the requested package cannot cluster standard errors as needed;
+- a note that code running successfully does not validate identification.
+
+Reject output if:
+- it silently drops unmatched observations;
+- it uses calendar-year outcomes with future accounting variables without a reporting-lag rule;
+- it reports coefficients without units, sample size, and fixed-effect/clustering details.
+```
+
 ## Skill 8: R Econometrics Workflow Assistant
 
 Use this when the analysis is in R, especially with `tidyverse`, `data.table`, `fixest`, `did`, `rdrobust`, `plm`, `modelsummary`, `ggplot2`, or `targets`.
@@ -288,6 +307,25 @@ R-specific guardrails:
 - For DiD, do not default to TWFE when treatment timing is staggered without discussing heterogeneity and estimator choice.
 - For RD, report bandwidth, running variable, cutoff, polynomial order, and manipulation/density checks.
 - For output tables, ensure labels match the paper's variable definitions and model notes.
+```
+
+Mini example:
+
+```text
+Task:
+Estimate a staggered-adoption DiD and create a coefficient plot.
+
+Good AI output should include:
+- a warning that plain TWFE event-study coefficients may be misleading under heterogeneous treatment effects;
+- a suggested estimator workflow such as group-time or imputation-style estimates when appropriate;
+- checks for treatment timing, never-treated or not-yet-treated comparison groups, and event-time support;
+- code that prints dropped observations and sample counts by cohort/event time;
+- a plot caption that does not treat insignificant pre-trends as proof of validity.
+
+Reject output if:
+- it defaults to `lm(y ~ treat + factor(id) + factor(year))` without discussing timing;
+- it calls a pre-trend test "passed" without power or confidence-band discussion;
+- it changes clustering without explaining the design reason.
 ```
 
 ## Skill 9: Stata Research Workflow Assistant
@@ -334,6 +372,27 @@ Stata-specific guardrails:
 - For high-dimensional fixed effects, make absorbed fixed effects and clustered standard errors explicit.
 - For finance data, check PERMNO/GVKEY/link-table timing, delisting returns, event windows, and share/exchange-code filters when relevant.
 - Use logs and relative paths so the workflow is reproducible.
+```
+
+Mini example:
+
+```text
+Task:
+Merge CRSP monthly returns with Compustat annual fundamentals and run a portfolio-sort or panel regression.
+
+Good AI output should include:
+- `isid` or `duplicates report` checks before and after merges;
+- `_merge` tabulations and an explanation before dropping unmatched rows;
+- CCM link-date logic, not only GVKEY/PERMNO matching;
+- an explicit lag/availability rule for accounting variables;
+- diagnostics for share codes, exchange codes, delisting returns, and sample screens;
+- output notes that match the paper's sample and variable definitions.
+
+Reject output if:
+- it drops `_merge != 3` without inspection;
+- it overwrites the original `.dta`;
+- it uses future accounting information for return prediction;
+- it reports a table without documenting fixed effects and clustered standard errors.
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's VS Code/Git/data workflow examples, applied methods implementation norms, Aniket Panjwani's agentic coding exercise and Git/skills/planning warnings, Antonio Mele's economics skill catalog, Frank Lee's academic research skills catalog, Han Lulong's economics writing and AI-for-economists resource lists, and recent concerns about dependency gaps in AI-generated code.

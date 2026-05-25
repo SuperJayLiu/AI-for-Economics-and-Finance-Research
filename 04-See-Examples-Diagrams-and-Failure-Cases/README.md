@@ -401,6 +401,54 @@ Rule to add:
 Treat LLM-generated variables as measurement instruments with model-version and prompt sensitivity checks.
 ```
 
+## Filled Failure Case: Event-Study Slide Overclaims Causality
+
+```markdown
+## Failure: slide title turns an association into a causal claim
+
+What happened:
+AI converted an event-study table into a slide titled "Branch closures reduce small-firm employment."
+
+Why it looked plausible:
+The event-study coefficient was negative and statistically significant, and the slide title was short and persuasive.
+
+Where it entered the workflow:
+Presentation drafting after results were generated.
+
+What caught it:
+A slide-claim audit compared the title against the identification discussion and found unresolved concerns about local demand shocks and treatment timing.
+
+What would have prevented it:
+Requiring every slide title to pass this test: "Can the design support this exact verb?"
+
+Rule to add:
+For slides, use design-consistent verbs: "is associated with," "falls after," "is consistent with," or "we estimate" unless the causal design justifies stronger language.
+```
+
+## Filled Failure Case: AI-Written Code Runs But Changes The Sample
+
+```markdown
+## Failure: code fix silently drops treated units
+
+What happened:
+AI fixed an R merge error by adding `drop_na()` after joining treatment timing to panel data. The code ran and the table looked cleaner, but treated units with missing pre-period covariates disappeared.
+
+Why it looked plausible:
+The regression output had no error, sample size was still large, and the code looked like ordinary data cleaning.
+
+Where it entered the workflow:
+Data cleaning before the main DiD regression.
+
+What caught it:
+A before/after sample audit printed unit counts, treated-unit counts, and event-time support before and after each cleaning step.
+
+What would have prevented it:
+A rule that missing-data handling must be explicit and reported before any regression code is accepted.
+
+Rule to add:
+AI may propose missing-data fixes, but it must report what observations are lost by treatment status, time, and key subgroup before the fix is accepted.
+```
+
 ## Failure Case Template
 
 Use this to document failures found in your own research workflow.

@@ -43,7 +43,7 @@ By the end, participants should be able to:
 | One harmless public abstract | yes | use a public paper abstract, not a private draft |
 | One toy data example | optional | useful for showing verification by known answer |
 | Institutional AI policy link | recommended | remind participants local rules come first |
-| Screenshots | optional | placeholders are included in the HTML deck |
+| Safe visuals | optional | use public screenshots, synthetic screenshots, or no screenshots |
 
 ## Two-Hour Run Of Show
 
@@ -79,7 +79,7 @@ If you only have 90 minutes, skip the agent demo and keep the Git/GitHub section
 | 10 | Casual Prompt vs Controlled Workflow | show difference | vague prompts invite vague outputs | compare side-by-side |
 | 11 | Verification Is The Skill | teach method | match output to check | classify checks |
 | 12 | GitHub As Safety Infrastructure | versioning | if AI edits files, use Git | show branch/diff/commit idea |
-| 13 | Minimal Research Repo | practical setup | README, DATA, AGENTS, AI-USE-LOG | screenshot placeholder |
+| 13 | Minimal Research Repo | practical setup | README, DATA, AGENTS, AI-USE-LOG | show safe repo diagram or synthetic screenshot |
 | 14 | Agentic Workflow | agent safety | plan, approve, edit, check, log | approval gate |
 | 15 | Collaboration Workflow | team safety | coauthors and RAs need shared rules | ask who approves PRs |
 | 16 | Failure Case: Fake Citation | concrete risk | source grounding matters | ask how to catch |
@@ -227,7 +227,7 @@ Return:
 3. speaker notes;
 4. live demos;
 5. audience exercises;
-6. screenshot placeholders;
+6. safe visual slots;
 7. repo links for each major segment;
 8. what the presenter must verify before teaching.
 
