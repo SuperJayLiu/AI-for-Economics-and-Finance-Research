@@ -9,6 +9,26 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 
 ## Choose an Example
 
+### How To Learn From Examples
+
+Do not read examples as stories. Read them as patterns you can reuse.
+
+```mermaid
+flowchart LR
+  A["Research task"] --> B["AI-assisted move"]
+  B --> C["Plausible failure"]
+  C --> D["Concrete verification"]
+  D --> E["Better instruction next time"]
+```
+
+| What you see | What to extract |
+| --- | --- |
+| good example | the workflow structure, not the exact wording |
+| bad example | the hidden failure mode |
+| failure case | the verification method that would have caught it |
+| diagram | the sequence of approval, checking, and logging |
+| synthetic paper | how skills compose across a project |
+
 | If your task is... | Look at | Copy/use |
 | --- | --- | --- |
 | positioning a paper in asset pricing | Example 1 | literature map skill |
@@ -80,6 +100,27 @@ flowchart TD
   F --> G{"Passes checks?"}
   G -- "No" --> H["Revise task or reject output"]
   G -- "Yes" --> I["Record AI-use log and Git commit"]
+```
+
+## Failure Case Loop
+
+Most AI mistakes in research are not bizarre. They are plausible outputs that pass a quick glance.
+
+```mermaid
+flowchart TD
+  A["AI output looks fluent"] --> B{"What kind of claim is it?"}
+  B --> C["Citation or literature claim"]
+  B --> D["Code or data claim"]
+  B --> E["Causal or method claim"]
+  B --> F["Theory or math claim"]
+  C --> C1["Check source, DOI, paper, and sentence support"]
+  D --> D1["Run code on toy data and inspect units"]
+  E --> E1["Check design assumptions, timing, inference, estimator"]
+  F --> F1["Check algebra, limiting cases, equilibrium logic"]
+  C1 --> G["Accept, revise, or reject"]
+  D1 --> G
+  E1 --> G
+  F1 --> G
 ```
 
 ## Worked Spine: One Synthetic Paper From Idea to Seminar

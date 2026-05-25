@@ -32,6 +32,50 @@ Use this rule especially for Git, `.gitignore`, branches, worktrees, MCPs, agent
 
 ## What Is Here
 
+### How A Copy-Ready Skill Should Work
+
+Every usable skill should move through the same visible chain.
+
+```mermaid
+flowchart LR
+  I["Inputs you provide"] --> A["AI asks clarifying questions"]
+  A --> P["Plan and constraints"]
+  P --> O["Output you can use"]
+  O --> V["Verification checklist"]
+  V --> L["AI-use log entry"]
+```
+
+| Part | What the reader should see | Bad sign |
+| --- | --- | --- |
+| inputs | exactly what to paste or attach | "give me everything" |
+| clarifying questions | what the AI should ask before acting | AI guesses missing data rules |
+| plan | files, assumptions, steps, risks | AI jumps straight to final prose/code |
+| output | draft text, code, table, checklist, or slide plan | vague advice only |
+| verification | concrete source/code/data/math/policy check | "verify manually" with no method |
+| log | what to record after using the output | no trace of AI involvement |
+
+### Skill Selection Map
+
+Use the artifact you need, not the tool name, to choose a skill.
+
+```mermaid
+flowchart TD
+  T["What artifact do you need?"] --> I["Idea, proposal, or question"]
+  T --> L["Literature map or source synthesis"]
+  T --> D["Data, code, table, or figure"]
+  T --> M["Empirical method or design check"]
+  T --> W["Paper prose, revision, or response"]
+  T --> S["Slides, talk, website, or teaching material"]
+  T --> G["Git, agent rules, disclosure, verification"]
+  I --> F1["01 or 18"]
+  L --> F2["10"]
+  D --> F3["08 or 14"]
+  M --> F4["03, 04, 11, 16"]
+  W --> F5["02 or 13"]
+  S --> F6["06"]
+  G --> F7["05, 07, 09, 17"]
+```
+
 | File | Use it when you need... |
 | --- | --- |
 | [01 Research Ideas, Brainstorming, and Proposal Skills](01-ideas-brainstorming-proposal-and-literature-skills.md) | quick idea stress tests, proposal framing, LLM-friendly paper orientation |

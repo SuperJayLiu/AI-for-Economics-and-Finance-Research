@@ -9,6 +9,50 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 > [!NOTE]
 > Default add-on for every workflow here: `If any required input, file permission, data rule, Git term, agent permission, or output format is unclear, ask me up to five clarifying questions before acting. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
 
+## Agentic Workflow At A Glance
+
+Agentic AI becomes useful when it is placed inside a controlled research loop. The loop is deliberately slower than "just do it" because it makes the work reviewable.
+
+```mermaid
+flowchart TD
+  A["Researcher states goal"] --> B["Agent inspects allowed context"]
+  B --> C["Agent proposes plan, files, risks, checks"]
+  C --> D{"Human approves?"}
+  D -- "No" --> E["Revise plan or narrow task"]
+  D -- "Yes" --> F["Agent edits or runs approved step"]
+  F --> G["Agent reports diff, commands, outputs, uncertainty"]
+  G --> H{"Checks pass?"}
+  H -- "No" --> I["Fix, revert, or stop"]
+  H -- "Yes" --> J["AI-use log and Git commit"]
+```
+
+### Visual Approval Gates
+
+| Gate | Question | Example approval |
+| --- | --- | --- |
+| context gate | what can the agent read? | "Read `code/` and `paper/`, not `data/raw/`." |
+| plan gate | what will the agent do? | "Only draft a merge plan; do not edit files." |
+| edit gate | which files may change? | "Edit only `code/build_panel.R` and `README.md`." |
+| run gate | what commands may run? | "Run toy tests and `Rscript code/checks.R` only." |
+| publish gate | what leaves the machine? | "Do not push, email, deploy, or upload without approval." |
+
+### Collaboration Map
+
+Use this when coauthors, RAs, or multiple agents are involved.
+
+```mermaid
+flowchart LR
+  PI["PI or lead author"] --> R["Research rules: question, data, disclosure"]
+  CO["Coauthors"] --> R
+  RA["RA"] --> W["Tasks: code, data, notes"]
+  AG["AI agent"] --> W
+  R --> G["GitHub repo with issues, branches, reviews"]
+  W --> G
+  G --> L["AI-use log, PR review, final human approval"]
+```
+
+Rule: agents can help produce work products, but a named human should own every research decision, data-use decision, public claim, and final submission.
+
 ## Files
 
 | File | Use it for |

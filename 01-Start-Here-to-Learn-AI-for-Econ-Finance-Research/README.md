@@ -35,6 +35,26 @@ Questions or suggestions for this handbook: email [jay.liu@bristol.ac.uk](mailto
 
 ## Quick Start: Choose Your Situation
 
+### How To Read This Handbook
+
+This page is meant to work like a short field manual. Read the left side first if you are new; jump to the right side when you have a concrete task.
+
+```mermaid
+flowchart LR
+  A["Concepts: what AI is and is not"] --> B["Risks: what must not be trusted"]
+  B --> C["Tools: projects, skills, agents, MCPs, GitHub"]
+  C --> D["Workflow: literature, data, methods, writing, slides"]
+  D --> E["Verification: source, code, data, math, policy"]
+  E --> F["Practice: copy one skill and use it on a small task"]
+```
+
+| If you have... | Read this way | Stop when you can answer... |
+| --- | --- | --- |
+| 10 minutes | Sections 1, 3, 5, 10 | What can I safely ask AI to do today? |
+| 30 minutes | Sections 1-6 and 10-13 | What setup do I need before AI edits files? |
+| one hour | read the full handbook once | Where does AI help in my research workflow? |
+| a workshop audience | use this as speaker notes for the first half | What demo can participants verify in the room? |
+
 | If you are thinking... | Start here | Then copy/use |
 | --- | --- | --- |
 | "I am new to AI and do not know what matters." | Read the maturity ladder and core concepts below. | [Tool choice and skill improvement](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/09-tool-selection-updates-and-skill-improvement.md) |
@@ -102,6 +122,31 @@ flowchart LR
   V --> L["AI-use log and Git diff"]
   L --> O["Paper, code, slides, or public output"]
 ```
+
+### Researcher Control Panel
+
+Use this visual before giving AI a serious task.
+
+```mermaid
+flowchart TD
+  T["Task"] --> I{"Inputs safe and sufficient?"}
+  I -- "No" --> Q["Ask clarifying questions or use public/toy inputs"]
+  I -- "Yes" --> R{"Rules clear?"}
+  R -- "No" --> P["Specify what AI must not invent, edit, decide, or upload"]
+  R -- "Yes" --> O["Request structured output"]
+  O --> V{"Verification method known?"}
+  V -- "No" --> M["Choose source, code, data, math, or policy check"]
+  V -- "Yes" --> U["Use output only after checking"]
+  U --> G["Log AI use and save version"]
+```
+
+| Control | Plain meaning | Example |
+| --- | --- | --- |
+| input | what AI is allowed to read | public abstract, variable dictionary, toy data |
+| rule | what AI must not do | do not invent citations; do not edit raw data |
+| output | the artifact you want | table, code patch, slide outline, methods paragraph |
+| check | how you know it is acceptable | DOI lookup, toy-data test, coefficient unit check |
+| trace | record of what happened | AI-use log plus Git diff |
 
 The key is not "ask better prompts." The key is controlled workflow design:
 
@@ -217,6 +262,17 @@ Use the tool that matches the task:
 ## 4. The Maturity Ladder
 
 Use this ladder to locate your current practice.
+
+```mermaid
+flowchart LR
+  L0["0 No AI"] --> L1["1 Casual chat"]
+  L1 --> L2["2 Structured chat"]
+  L2 --> L3["3 AI project"]
+  L3 --> L4["4 GitHub-assisted workflow"]
+  L4 --> L5["5 Skills-based workflow"]
+  L5 --> L6["6 Agentic workflow"]
+  L6 --> L7["7 Research operating system"]
+```
 
 | Level | Name | What it looks like | Main risk |
 | --- | --- | --- | --- |

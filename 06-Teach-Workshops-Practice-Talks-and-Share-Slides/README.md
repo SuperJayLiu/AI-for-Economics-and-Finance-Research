@@ -21,6 +21,28 @@ For beginners, start with ordinary tools: ChatGPT or Claude for chat, GitHub for
 
 ## Use This Folder For
 
+### Teaching Flow
+
+The simplest strong workshop has three movements: show the problem, let participants use one skill, then make them verify the output.
+
+```mermaid
+flowchart LR
+  A["Part 1: AI is useful but not evidence"] --> B["Part 2: choose one research task"]
+  B --> C["Part 3: copy one skill"]
+  C --> D["Part 4: run a small safe demo"]
+  D --> E["Part 5: verify output"]
+  E --> F["Part 6: write a personal next step"]
+```
+
+| Teaching asset | Best visual format | What participants should leave with |
+| --- | --- | --- |
+| concept explanation | one diagram plus one example | a mental model |
+| live demo | side-by-side casual vs controlled prompt | a better instruction habit |
+| skill practice | copy block with bracketed fields | a reusable workflow |
+| failure case | small case card | a verification method |
+| agent setup | approval-gate diagram | a safe file-editing rule |
+| presentation practice | Q&A drill table | better answers under pressure |
+
 | Goal | Use |
 | --- | --- |
 | teach a two-hour presentation | [Two-hour presentation script](two-hour-ai-econ-finance-presentation.md) and [HTML slide deck](two-hour-ai-econ-finance-slides.html) |
@@ -157,6 +179,22 @@ The goal is not to distrust everything. The goal is to match each AI output to t
 ```
 
 ## Slide-Ready Outline
+
+### Slide Deck Choice Map
+
+```mermaid
+flowchart TD
+  A["Need slides?"] --> B{"Audience and format?"}
+  B --> C["Interactive workshop or public explainer"]
+  B --> D["Academic seminar or conference with conventional expectations"]
+  B --> E["Classroom handout or GitHub-only material"]
+  C --> H["Use HTML slides with placeholders and copy buttons"]
+  D --> L["Use Beamer/LaTeX or PowerPoint-style slides"]
+  E --> M["Use Markdown README plus Mermaid diagrams"]
+  H --> V["Verify claims, figures, screenshots, and public-sharing permissions"]
+  L --> V
+  M --> V
+```
 
 ```text
 Title: AI for Economics and Finance Research

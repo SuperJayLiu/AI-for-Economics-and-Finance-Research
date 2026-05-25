@@ -48,6 +48,35 @@ Use this extraction rule:
 Source -> workflow pattern -> econ/finance adaptation -> copy-ready asset -> verification rule
 ```
 
+### Source Evaluation Funnel
+
+Use this before adding any resource, tool claim, dataset link, or builder workflow.
+
+```mermaid
+flowchart TD
+  A["External resource"] --> B{"Relevant to econ/finance research?"}
+  B -- "No" --> X["Skip or archive"]
+  B -- "Yes" --> C{"Official, builder-tested, or method-standard?"}
+  C -- "No" --> Y["Mark as discovery only"]
+  C -- "Yes" --> D{"Can readers use it safely?"}
+  D -- "No" --> Z["Add risk note before linking"]
+  D -- "Yes" --> E["Extract workflow pattern"]
+  E --> F["Adapt into repo skill, checklist, dataset note, or teaching example"]
+  F --> G["Add last-checked date when tool behavior may change"]
+```
+
+### Resource Card Layout
+
+Each useful external link should answer five reader questions quickly.
+
+| Reader question | Resource-card answer |
+| --- | --- |
+| What is this? | category and topic |
+| Who is it for? | level and audience |
+| What can I do with it? | direct-use value |
+| What can go wrong? | risk note |
+| Where does it fit here? | repo destination |
+
 ## Why This Folder Exists
 
 New AI users often ask "which tool should I use?" A better research question is "which source tells me what is true, current, and useful for this task?"
@@ -184,6 +213,26 @@ Use this section as a starting map for economics and finance data. It is not a l
 ```text
 Dataset link -> access terms -> data sensitivity -> allowed compute environment -> AI-use rule -> citation and version log
 ```
+
+### Dataset Safety Map
+
+```mermaid
+flowchart TD
+  A["Dataset or research material"] --> B{"Public and licensed for this use?"}
+  B -- "No or unsure" --> C["Do not upload to public AI"]
+  B -- "Yes" --> D{"Contains people, firms, transactions, unpublished work, or identifiers?"}
+  D -- "Yes" --> E["Use metadata, toy data, or approved secure environment"]
+  D -- "No" --> F["AI may help with code, documentation, and checks"]
+  C --> G["Ask data provider, university, PI, or journal policy"]
+  E --> G
+  F --> H["Log source, version, access date, and AI use"]
+```
+
+| Safety color | Meaning | Examples | Default AI rule |
+| --- | --- | --- | --- |
+| green | public aggregate or public documentation | FRED series, public SEC filing URLs | OK for source-grounded help; still log IDs and dates |
+| yellow | public-use or licensed material with terms | IPUMS public-use extracts, WRDS metadata, journal PDFs | use metadata/toy data unless terms allow more |
+| red | restricted, confidential, proprietary, identifiable, or coauthored private material | administrative microdata, bank transactions, Bloomberg/FactSet extracts, referee manuscripts | do not upload to public AI without explicit approval |
 
 Before asking AI to read, clean, merge, summarize, or transform data, check:
 

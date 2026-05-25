@@ -34,6 +34,35 @@ flowchart LR
   H["Official docs and selected resources"] -. "verify tool behavior" .-> C
 ```
 
+### One-Screen Navigation
+
+Think of the repo as six working surfaces, not a pile of files.
+
+```mermaid
+flowchart TD
+  R["01 Read the handbook"] --> C{"What do you need next?"}
+  C --> S["02 Copy a skill or template"]
+  C --> A["03 Set up agents, Git, and automation"]
+  C --> E["04 Study examples and failure cases"]
+  C --> L["05 Check sources, tools, datasets, and docs"]
+  C --> T["06 Teach, present, and share"]
+  S --> V["Verify output"]
+  A --> V
+  E --> V
+  L --> V
+  T --> V
+  V --> G["Record AI use and save a Git commit"]
+```
+
+| Working surface | Reader action | Visual clue |
+| --- | --- | --- |
+| `01` handbook | read concepts in order | book path |
+| `02` skills | copy one block and use it | input -> output -> check |
+| `03` setup | follow steps before file-editing AI | plan -> approve -> diff -> commit |
+| `04` examples | learn by seeing good and bad patterns | case card |
+| `05` sources | verify tools, datasets, and claims | source -> rule -> workflow |
+| `06` teaching | turn the handbook into slides, demos, and workshops | talk flow |
+
 ### Start Here
 
 | Need | Open |
