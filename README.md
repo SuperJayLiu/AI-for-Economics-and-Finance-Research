@@ -19,62 +19,61 @@ This repository is designed for readers who want to **click, copy, paste, adapt,
 
 The main page keeps only the primary reading and working folders visible. Supporting files and old short pages are consolidated under [Repository Reference and Maintenance](99-Repository-Reference-and-Maintenance/README.md).
 
-### Visual Reader Map
+### Roadmap In Six Large Clicks
 
-Use this map when you are not sure where to click first.
+Use this roadmap when you are not sure where to click first. The links below are the main navigation; the short flow underneath is only a compact memory aid.
 
-```mermaid
-flowchart LR
-  A["Start with the handbook"] --> B["Copy one usable skill"]
-  B --> C["Set up Git, GitHub, and agent rules"]
-  C --> D["Apply the workflow to one research task"]
-  D --> E["Check against sources, data, code, or theory"]
-  E --> F["Record AI use and save a Git commit"]
-  G["Examples and failure cases"] -. "calibrate judgment" .-> D
-  H["Official docs and selected resources"] -. "verify tool behavior" .-> C
-  click A "01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md" "Open the handbook"
-  click B "02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md" "Open copy-ready skills"
-  click C "03-Set-Up-Agents-and-Automated-Research-Workflows/README.md" "Open setup workflows"
-  click G "04-See-Examples-Diagrams-and-Failure-Cases/README.md" "Open examples"
-  click H "05-Check-Builders-Official-Docs-and-Resources/README.md" "Open sources and resources"
-```
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3><a href="01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md">01 Read The Handbook</a></h3>
+      <p>Start here if you are new to AI, teaching the material, or deciding what AI should and should not do in economics and finance research.</p>
+      <p><strong>Use when:</strong> you need concepts, risks, workflow logic, and plain-language explanations.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3><a href="02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md">02 Copy One Usable Skill</a></h3>
+      <p>Open this when you have a concrete task: literature review, paper writing, empirical methods, Python/R/Stata, data cleaning, slides, or verification.</p>
+      <p><strong>Pattern:</strong> input -> AI draft -> human check -> revised output.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3><a href="03-Set-Up-Agents-and-Automated-Research-Workflows/README.md">03 Set Up Git, GitHub, And Agents</a></h3>
+      <p>Use this before AI edits files, runs code, pushes to GitHub, or collaborates with coauthors and RAs.</p>
+      <p><strong>Pattern:</strong> plan -> approve -> diff -> test -> commit.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <h3><a href="04-See-Examples-Diagrams-and-Failure-Cases/README.md">04 Learn From Examples And Failures</a></h3>
+      <p>See what good AI use looks like, how plausible errors happen, and how researchers catch them before they enter papers or code.</p>
+      <p><strong>Use when:</strong> you want calibration, not just rules.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3><a href="05-Check-Builders-Official-Docs-and-Resources/README.md">05 Check Sources, Datasets, And Docs</a></h3>
+      <p>Verify tool behavior, dataset access rules, confidentiality limits, official documentation, and useful builder workflows.</p>
+      <p><strong>Use when:</strong> you need evidence, links, or access notes.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3><a href="06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md">06 Teach, Present, Or Share</a></h3>
+      <p>Turn the handbook into a workshop, RA onboarding session, practice talk, HTML slide deck, Beamer deck, or public-facing explanation.</p>
+      <p><strong>Use when:</strong> you need material for an audience.</p>
+    </td>
+  </tr>
+</table>
 
-### One-Screen Navigation
+### The Basic Research Loop
 
-Think of the repo as six working surfaces, not a pile of files.
+> **Read** -> **copy one skill** -> **set up safely** -> **apply to one research task** -> **verify** -> **record AI use and commit**
 
-```mermaid
-flowchart TD
-  R["01 Read the handbook"] --> C{"What do you need next?"}
-  C --> S["02 Copy a skill or template"]
-  C --> A["03 Set up agents, Git, and automation"]
-  C --> E["04 Study examples and failure cases"]
-  C --> L["05 Check sources, tools, datasets, and docs"]
-  C --> T["06 Teach, present, and share"]
-  S --> V["Verify output"]
-  A --> V
-  E --> V
-  L --> V
-  T --> V
-  V --> G["Record AI use and save a Git commit"]
-  click R "01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md" "Open the handbook"
-  click S "02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md" "Open skills"
-  click A "03-Set-Up-Agents-and-Automated-Research-Workflows/README.md" "Open setup"
-  click E "04-See-Examples-Diagrams-and-Failure-Cases/README.md" "Open examples"
-  click L "05-Check-Builders-Official-Docs-and-Resources/README.md" "Open sources"
-  click T "06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md" "Open teaching materials"
-```
+### Six Working Surfaces
 
-| Working surface | Reader action | Visual clue |
+| Open | Best for | What to do there |
 | --- | --- | --- |
-| [01 handbook](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) | read concepts in order | book path |
-| [02 copy-ready skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) | copy one block and use it | input -> output -> check |
-| [03 setup and agents](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) | follow steps before file-editing AI | plan -> approve -> diff -> commit |
-| [04 examples and failures](04-See-Examples-Diagrams-and-Failure-Cases/README.md) | learn by seeing good and bad patterns | case card |
-| [05 sources and datasets](05-Check-Builders-Official-Docs-and-Resources/README.md) | verify tools, datasets, and claims | source -> rule -> workflow |
-| [06 teaching and slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | turn the handbook into slides, demos, and workshops | talk flow |
-
-If your Markdown viewer does not support clickable Mermaid nodes, use the linked table above.
+| [01 Read the handbook](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) | learning concepts, risks, and research judgment | read in order like a short book |
+| [02 Copy a skill or template](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) | direct use on a research task | copy one block, fill the inputs, ask AI to clarify unclear parts, then verify |
+| [03 Set up agents, Git, and automation](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) | file-editing AI, coding agents, GitHub, and collaboration | follow the setup before letting AI change project files |
+| [04 Study examples and failure cases](04-See-Examples-Diagrams-and-Failure-Cases/README.md) | learning what good and bad AI use look like | compare a good pattern, a failure, and the verification step |
+| [05 Check sources, datasets, and docs](05-Check-Builders-Official-Docs-and-Resources/README.md) | official docs, dataset links, builder resources, and access rules | verify claims, data permissions, tool behavior, and source quality |
+| [06 Teach, present, and share](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | workshops, slides, classroom use, RA onboarding, and practice talks | adapt the material for a live audience |
 
 ### Find By Function Or Keyword
 
