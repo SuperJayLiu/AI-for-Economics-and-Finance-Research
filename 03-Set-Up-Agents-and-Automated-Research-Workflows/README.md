@@ -20,6 +20,299 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | [05 Parallel Agents and Git Worktrees](05-parallel-agents-and-git-worktrees.md) | run multiple AI tasks safely without corrupting the main project |
 | [06 GitHub Review Feedback and Publish Workflow](06-github-review-feedback-and-publish-workflow.md) | handle PR comments, stage changes intentionally, commit, push, and open PRs safely |
 
+## Zero To Working Setup
+
+Use this path if you are starting from no Git/GitHub/agent setup.
+
+### Step 0: Choose The Lowest-Power Setup That Works
+
+| Need | Setup |
+| --- | --- |
+| ask questions, summarize public text, draft checklists | ChatGPT or Claude in browser |
+| keep one paper's context together | ChatGPT/Claude Project |
+| edit files, code, LaTeX, slides, or repo docs | local Git repo + Codex/Claude Code/Cursor/VS Code |
+| collaborate, back up, inspect changes, or publish code | private GitHub repo |
+| let AI connect to GitHub/Zotero/files/databases | connector/MCP only after permissions are clear |
+
+Do not start with MCPs, web-connected agents, or auto modes. Start with a private repo, clear data rules, and one narrow task.
+
+### Step 1: Install And Verify Basic Tools
+
+| Tool | Why you need it | How to verify |
+| --- | --- | --- |
+| Git | saves project history and lets you inspect AI changes | `git --version` |
+| GitHub account | private repo, backup, collaboration, issues, releases | sign in on GitHub |
+| GitHub CLI `gh` | create repos, authenticate Git, manage PRs from terminal | `gh --version` |
+| VS Code or another editor | inspect files, source control, terminal, diffs | open the project folder |
+| AI tool | ChatGPT/Claude for chat; Codex/Claude Code/Cursor for file-aware work | tool opens and can see only the intended folder |
+
+Official setup links:
+
+| Setup task | Official link |
+| --- | --- |
+| Git and GitHub setup | [GitHub Docs: Set up Git](https://docs.github.com/en/github/getting-started-with-github/set-up-git) |
+| GitHub CLI | [GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart) |
+| GitHub SSH keys | [GitHub Docs: Add a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) |
+| VS Code source control | [VS Code Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview) |
+| OpenAI Codex CLI | [OpenAI Help: Codex CLI getting started](https://help.openai.com/en/articles/11096431) and [OpenAI Codex GitHub repo](https://github.com/openai/codex) |
+| Claude Code | [Claude Code setup](https://docs.claude.com/en/docs/claude-code/setup) and [Claude Code quickstart](https://code.claude.com/docs/en/quickstart) |
+
+Tool commands change. If a command below conflicts with official docs, follow the official docs.
+
+### Step 2: Configure Git Identity
+
+Use the name and email you want attached to commits.
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global init.defaultBranch main
+```
+
+Check:
+
+```bash
+git config --global --list
+```
+
+Plain meaning:
+
+- `user.name` and `user.email`: who made the saved snapshot.
+- `main`: the default branch name.
+- commit: a saved checkpoint in the project history.
+
+### Step 3: Log In To GitHub CLI
+
+For most beginners, GitHub CLI with HTTPS is simplest because it can also authenticate Git operations.
+
+```bash
+gh auth login
+gh auth status
+```
+
+Typical choices:
+
+```text
+GitHub.com
+HTTPS
+Login with a web browser
+Yes, authenticate Git with GitHub credentials
+```
+
+If your institution or team prefers SSH, set up an SSH key using GitHub's SSH-key docs before pushing. Do not paste private keys into AI tools.
+
+### Step 4: Create A Safe Local Research Folder
+
+```bash
+mkdir my-paper
+cd my-paper
+git init
+mkdir -p data/raw data/derived code output/tables output/figures paper slides
+touch README.md DATA.md AGENTS.md AI-USE-LOG.md .gitignore
+touch data/derived/.gitkeep code/.gitkeep output/tables/.gitkeep output/figures/.gitkeep paper/.gitkeep slides/.gitkeep
+```
+
+Minimum `.gitignore`:
+
+```gitignore
+data/raw/
+data/restricted/
+data/private/
+*.dta
+*.sas7bdat
+*.rds
+*.parquet
+*.csv
+*.xlsx
+*.zip
+*.log
+.env
+__pycache__/
+```
+
+Plain meaning: `.gitignore` tells Git which files to ignore. It does not delete files. It prevents accidental tracking of raw, licensed, restricted, private, or generated files.
+
+### Step 5: Write Project Safety Files Before Using Agents
+
+Use these files before allowing Codex, Claude Code, Cursor, Copilot, or another agent to edit the repo.
+
+| File | What to write |
+| --- | --- |
+| `README.md` | project purpose, how to run code, folder map |
+| `DATA.md` | dataset sources, access rules, sensitivity, upload restrictions |
+| `AGENTS.md` | rules for file-editing agents |
+| `CLAUDE.md` | optional Claude Code project memory and rules |
+| `AI-USE-LOG.md` | record tool, task, files, output accepted, checks, uncertainty |
+
+Minimal `AGENTS.md`:
+
+```markdown
+# AGENTS.md
+
+## Project purpose
+[One paragraph on the research project.]
+
+## Rules for AI agents
+- Ask clarifying questions before acting when task scope, data sensitivity, permissions, or expected output is unclear.
+- Never edit `data/raw/`, `data/restricted/`, or `data/private/`.
+- Never expose private, licensed, identifiable, embargoed, or confidential material.
+- Before editing files, provide a plan and wait for approval.
+- Preserve citations, numbers, notation, variable definitions, sample definitions, and hedging.
+- After editing files, report the diff summary, commands run, checks passed or failed, and remaining uncertainty.
+- If you use technical terms, define them in plain language for an economics/finance researcher.
+
+## Validation commands
+[Add commands, for example: Rscript code/main.R, python code/build.py, latexmk paper/main.tex]
+```
+
+Minimal `DATA.md`:
+
+```markdown
+# DATA.md
+
+## Data sources
+| Dataset | Provider | Access | Sensitivity | AI-use rule |
+| --- | --- | --- | --- | --- |
+| [name] | [provider] | public/licensed/restricted/private | [level] | [what can/cannot be shared with AI] |
+
+## Files never to upload to public AI tools
+- data/raw/
+- data/restricted/
+- data/private/
+- licensed database extracts
+- identifiable or confidential records
+
+## Safer AI inputs
+- variable dictionary
+- synthetic/toy data
+- schema descriptions
+- public documentation links
+- error messages without private data
+```
+
+### Step 6: Make First Commit Before AI Edits Anything
+
+```bash
+git status
+git add README.md DATA.md AGENTS.md AI-USE-LOG.md .gitignore data/derived/.gitkeep code/.gitkeep output/tables/.gitkeep output/figures/.gitkeep paper/.gitkeep slides/.gitkeep
+git commit -m "Initialize AI-safe research project structure"
+```
+
+If `git status` shows raw or licensed data about to be added, stop and fix `.gitignore`.
+
+### Step 7: Link Local Repo To GitHub
+
+Option A: create a private GitHub repo with GitHub CLI.
+
+```bash
+gh repo create my-paper --private --source=. --remote=origin --push
+```
+
+Option B: create the private repo on GitHub.com, then link it.
+
+```bash
+git remote add origin git@github.com:USER/my-paper.git
+git push -u origin main
+```
+
+If using HTTPS, the remote will look like:
+
+```text
+https://github.com/USER/my-paper.git
+```
+
+If using SSH, the remote will look like:
+
+```text
+git@github.com:USER/my-paper.git
+```
+
+Check:
+
+```bash
+git remote -v
+git status
+```
+
+### Step 8: Open The Repo In An Agentic Tool
+
+| Tool route | How to use safely |
+| --- | --- |
+| Codex CLI/local agent | open the local repo, ask it to inspect and plan first; keep Git visible |
+| Claude Code/local agent | open the local repo, use `CLAUDE.md` and/or `AGENTS.md`; avoid auto modes until comfortable |
+| Cursor/Copilot/VS Code agent | open only the project folder; review diffs before accepting edits |
+| Web-based GitHub app agent | grant access only to the needed repo; prefer branch/PR workflow; never expose restricted data |
+
+First safe task:
+
+```text
+Inspect this repository and do not edit files yet.
+
+Please report:
+1. folder structure;
+2. whether `.gitignore` protects raw/restricted/private data;
+3. whether README.md, DATA.md, AGENTS.md, and AI-USE-LOG.md are present;
+4. missing safety rules;
+5. the first small task you recommend;
+6. questions for me before any edits.
+```
+
+First safe edit task:
+
+```text
+You may edit only README.md, DATA.md, AGENTS.md, and AI-USE-LOG.md.
+
+Do not edit data, code, paper, slides, or outputs.
+
+Before editing, show a plan and wait for approval.
+After editing, summarize the diff and tell me what I must verify.
+```
+
+### Step 9: Daily Workflow With Agents
+
+```text
+1. Pull latest changes: git pull
+2. Create a branch: git checkout -b agent/table2-fix
+3. Ask agent to plan.
+4. Approve a narrow edit.
+5. Inspect: git diff
+6. Run checks.
+7. Commit: git add [files] && git commit -m "[message]"
+8. Push branch.
+9. Open pull request or merge after review.
+10. Record AI-use log.
+```
+
+If you are not comfortable with command-line Git, use VS Code Source Control for staging, diff review, commits, and branch switching, but keep the same logic.
+
+### Step 10: What Not To Connect Yet
+
+Avoid these until you have Git, `.gitignore`, and approval gates working:
+
+- broad filesystem access;
+- unrestricted MCP connectors;
+- automatic package installation;
+- auto-approve modes;
+- public GitHub push from an agent;
+- agents working directly with raw/licensed/restricted data;
+- agents editing manuscript claims and code in the same task.
+
+### Beginner Setup Checklist
+
+```text
+I have:
+[ ] Git installed and configured.
+[ ] GitHub account.
+[ ] GitHub CLI authenticated.
+[ ] Private repo created.
+[ ] `.gitignore` protecting data and secrets.
+[ ] README.md, DATA.md, AGENTS.md, AI-USE-LOG.md.
+[ ] First commit made before AI edits.
+[ ] Agent opened only inside the intended repo.
+[ ] First agent task is inspect-only.
+[ ] I know how to run `git status` and inspect `git diff`.
+```
+
 ## Why This Folder Exists
 
 A beginner can use ChatGPT or Claude in a browser without changing any files. An agentic workflow is different: the AI may inspect a project folder, edit scripts, run commands, create commits, or connect to other tools. That can save days of work, but it can also overwrite files, expose private data, or create results that look reproducible but are not.

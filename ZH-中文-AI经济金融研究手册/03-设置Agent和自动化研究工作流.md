@@ -48,6 +48,276 @@
 如果你使用非计算机专业经济学/金融学研究者可能不熟悉的软件或 AI 术语，请先用一句话解释，并给出本项目中的例子。
 ```
 
+## 从零开始设置 Git/GitHub 和 AI agent
+
+这一节适合完全没有 Git、GitHub、Codex、Claude Code 或 VS Code 工作流基础的读者。目标不是成为程序员，而是让 AI 改文件之前有版本、边界和检查。
+
+### 第 0 步：选择最低权限方案
+
+| 需求 | 起步方案 |
+| --- | --- |
+| 问概念、总结公开文本、写清单 | 浏览器里的 ChatGPT 或 Claude |
+| 长期管理一篇论文的上下文 | ChatGPT/Claude Project |
+| 让 AI 改代码、LaTeX、slides 或 repo 文件 | 本地 Git repo + Codex/Claude Code/Cursor/VS Code |
+| 备份、协作、检查改动、发布代码 | private GitHub repo |
+| 让 AI 连接 GitHub/Zotero/文件/数据库 | 权限清楚后再使用 MCP/connector |
+
+不要一开始就使用自动批准、广泛 MCP、公开 push 或 raw data 文件访问。先建立 private repo、数据规则和一个小任务。
+
+### 第 1 步：安装并确认基础工具
+
+| 工具 | 为什么需要 | 如何确认 |
+| --- | --- | --- |
+| Git | 保存项目历史，查看 AI 改了什么 | `git --version` |
+| GitHub account | private repo、备份、协作、issues、releases | 登录 GitHub |
+| GitHub CLI `gh` | 终端创建 repo、登录、管理 PR | `gh --version` |
+| VS Code 或其他 editor | 看文件、看 diff、运行 terminal | 打开项目文件夹 |
+| AI 工具 | ChatGPT/Claude 做聊天；Codex/Claude Code/Cursor 做文件级工作 | 确认只打开目标项目文件夹 |
+
+官方设置链接：
+
+| 设置任务 | 官方链接 |
+| --- | --- |
+| Git 和 GitHub | [GitHub Docs: Set up Git](https://docs.github.com/en/github/getting-started-with-github/set-up-git) |
+| GitHub CLI | [GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart) |
+| GitHub SSH key | [GitHub Docs: Add a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) |
+| VS Code source control | [VS Code Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview) |
+| OpenAI Codex CLI | [OpenAI Help: Codex CLI getting started](https://help.openai.com/en/articles/11096431) 和 [OpenAI Codex GitHub repo](https://github.com/openai/codex) |
+| Claude Code | [Claude Code setup](https://docs.claude.com/en/docs/claude-code/setup) 和 [Claude Code quickstart](https://code.claude.com/docs/en/quickstart) |
+
+工具安装命令可能变化。如果本页与官方文档冲突，按官方文档执行。
+
+### 第 2 步：设置 Git 身份
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global init.defaultBranch main
+git config --global --list
+```
+
+普通解释：
+
+- `user.name` 和 `user.email`：commit 里显示是谁保存了这个版本。
+- `main`：默认主分支。
+- commit：项目历史里的一个检查点。
+
+### 第 3 步：登录 GitHub CLI
+
+```bash
+gh auth login
+gh auth status
+```
+
+常见选择：
+
+```text
+GitHub.com
+HTTPS
+Login with a web browser
+Yes, authenticate Git with GitHub credentials
+```
+
+如果你的团队偏好 SSH，请先按 GitHub SSH 文档设置 key。不要把 private key 粘贴给 AI。
+
+### 第 4 步：创建安全的本地研究文件夹
+
+```bash
+mkdir my-paper
+cd my-paper
+git init
+mkdir -p data/raw data/derived code output/tables output/figures paper slides
+touch README.md DATA.md AGENTS.md AI-USE-LOG.md .gitignore
+touch data/derived/.gitkeep code/.gitkeep output/tables/.gitkeep output/figures/.gitkeep paper/.gitkeep slides/.gitkeep
+```
+
+最小 `.gitignore`：
+
+```gitignore
+data/raw/
+data/restricted/
+data/private/
+*.dta
+*.sas7bdat
+*.rds
+*.parquet
+*.csv
+*.xlsx
+*.zip
+*.log
+.env
+__pycache__/
+```
+
+普通解释：`.gitignore` 是 Git 的“不要追踪清单”。它不会删除电脑里的文件，但能降低把 raw、licensed、restricted、private 数据推到 GitHub 的风险。
+
+### 第 5 步：AI agent 改文件前必须有安全文件
+
+| 文件 | 写什么 |
+| --- | --- |
+| `README.md` | 项目目的、如何运行代码、文件夹说明 |
+| `DATA.md` | 数据来源、权限、敏感性、上传限制 |
+| `AGENTS.md` | 给 Codex/Cursor/其他 agent 的规则 |
+| `CLAUDE.md` | 可选，给 Claude Code 的项目记忆和规则 |
+| `AI-USE-LOG.md` | 记录工具、任务、文件、采纳内容、检查和不确定性 |
+
+最小 `AGENTS.md`：
+
+```markdown
+# AGENTS.md
+
+## Project purpose
+[用一段话说明研究项目。]
+
+## Rules for AI agents
+- 如果任务范围、数据敏感性、权限或预期输出不清楚，先提澄清问题。
+- 不要编辑 `data/raw/`、`data/restricted/`、`data/private/`。
+- 不要暴露 private、licensed、identifiable、embargoed 或 confidential material。
+- 编辑文件前先给计划并等待批准。
+- 保留 citation、数字、notation、变量定义、样本定义和 hedging。
+- 编辑后报告 diff 摘要、运行命令、通过/失败的检查和剩余不确定性。
+- 使用技术词时，用普通语言解释给经济学/金融学研究者。
+
+## Validation commands
+[例如：Rscript code/main.R, python code/build.py, latexmk paper/main.tex]
+```
+
+最小 `DATA.md`：
+
+```markdown
+# DATA.md
+
+## Data sources
+| Dataset | Provider | Access | Sensitivity | AI-use rule |
+| --- | --- | --- | --- | --- |
+| [name] | [provider] | public/licensed/restricted/private | [level] | [what can/cannot be shared with AI] |
+
+## Files never to upload to public AI tools
+- data/raw/
+- data/restricted/
+- data/private/
+- licensed database extracts
+- identifiable or confidential records
+
+## Safer AI inputs
+- variable dictionary
+- synthetic/toy data
+- schema descriptions
+- public documentation links
+- error messages without private data
+```
+
+### 第 6 步：AI 改任何文件前先做第一个 commit
+
+```bash
+git status
+git add README.md DATA.md AGENTS.md AI-USE-LOG.md .gitignore data/derived/.gitkeep code/.gitkeep output/tables/.gitkeep output/figures/.gitkeep paper/.gitkeep slides/.gitkeep
+git commit -m "Initialize AI-safe research project structure"
+```
+
+如果 `git status` 显示 raw 或 licensed data 将被加入，停下来修正 `.gitignore`。
+
+### 第 7 步：连接到 GitHub
+
+方案 A：用 GitHub CLI 创建 private repo。
+
+```bash
+gh repo create my-paper --private --source=. --remote=origin --push
+```
+
+方案 B：先在 GitHub.com 创建 private repo，再连接。
+
+```bash
+git remote add origin git@github.com:USER/my-paper.git
+git push -u origin main
+```
+
+检查：
+
+```bash
+git remote -v
+git status
+```
+
+### 第 8 步：在 agent 工具中打开 repo
+
+| 工具路线 | 安全使用方式 |
+| --- | --- |
+| Codex CLI/local agent | 打开本地 repo，先要求 inspect 和 plan；保持 Git diff 可见 |
+| Claude Code/local agent | 打开本地 repo，使用 `CLAUDE.md` 和/或 `AGENTS.md`；先不要用 auto mode |
+| Cursor/Copilot/VS Code agent | 只打开项目文件夹；接受修改前看 diff |
+| Web-based GitHub app agent | 只授权必要 repo；优先 branch/PR workflow；不要暴露 restricted data |
+
+第一个安全任务：
+
+```text
+请检查这个 repo，但不要编辑任何文件。
+
+请报告：
+1. 文件夹结构；
+2. `.gitignore` 是否保护 raw/restricted/private data；
+3. README.md、DATA.md、AGENTS.md、AI-USE-LOG.md 是否存在；
+4. 缺少哪些安全规则；
+5. 建议的第一个小任务；
+6. 编辑任何文件前需要问我的问题。
+```
+
+第一个安全编辑任务：
+
+```text
+你只能编辑 README.md、DATA.md、AGENTS.md、AI-USE-LOG.md。
+
+不要编辑 data、code、paper、slides 或 output。
+
+编辑前先给计划并等我批准。
+编辑后总结 diff，并告诉我必须核查什么。
+```
+
+### 第 9 步：日常 agent 工作流
+
+```text
+1. 更新项目：git pull
+2. 新建 branch：git checkout -b agent/table2-fix
+3. 要求 agent 先给 plan。
+4. 批准一个窄任务。
+5. 检查：git diff
+6. 运行 checks。
+7. 提交：git add [files] && git commit -m "[message]"
+8. push branch。
+9. 审查后开 PR 或 merge。
+10. 记录 AI-use log。
+```
+
+如果不熟悉命令行 Git，可以用 VS Code Source Control 做 stage、diff review、commit、branch switch，但逻辑相同。
+
+### 第 10 步：先不要连接什么
+
+在 Git、`.gitignore` 和 approval gates 稳定前，避免：
+
+- 广泛 filesystem access；
+- unrestricted MCP connectors；
+- 自动安装 package；
+- auto-approve mode；
+- agent 直接 push public GitHub；
+- agent 直接处理 raw/licensed/restricted data；
+- 同一任务里同时改代码和论文结论。
+
+### 新手检查清单
+
+```text
+我已经：
+[ ] 安装并配置 Git。
+[ ] 有 GitHub account。
+[ ] GitHub CLI 已登录。
+[ ] 创建 private repo。
+[ ] `.gitignore` 保护数据和 secrets。
+[ ] 有 README.md、DATA.md、AGENTS.md、AI-USE-LOG.md。
+[ ] AI 编辑前已经做 first commit。
+[ ] agent 只打开目标 repo。
+[ ] 第一个 agent 任务是 inspect-only。
+[ ] 知道如何运行 `git status` 和查看 `git diff`。
+```
+
 ## Agentic workflow 应该如何运行？
 
 Agentic workflow 不应该是一句“大指令”，而应该是一连串小合同：

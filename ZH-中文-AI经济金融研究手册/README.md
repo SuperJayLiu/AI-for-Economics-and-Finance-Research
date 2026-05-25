@@ -72,6 +72,7 @@ AI 可以自动化劳动，但不能替代学术责任。
 | 任务 | 直接打开 |
 | --- | --- |
 | 检查研究想法、写 proposal、做文献综述、写实证方法 | [02 复制即用：AI 研究指令与模板](02-复制即用：AI研究指令与模板.md) |
+| 从零设置 Git、GitHub、private repo 和 AI agent | [03 从零开始设置 Git/GitHub 和 AI agent](03-设置Agent和自动化研究工作流.md#从零开始设置-gitgithub-和-ai-agent) |
 | 设计数据清洗、合并、变量构造、表格和图形 workflow | [02 数据清洗、合并和输出工作流](02-复制即用：AI研究指令与模板.md#数据清洗合并和输出工作流) |
 | 做 text-as-data 或 LLM-generated variable | [02 Text-as-Data 和 LLM Measurement 协议](02-复制即用：AI研究指令与模板.md#text-as-data-和-llm-measurement-协议) |
 | 选择 AI 输出核查方法或写 AI-use log | [02 AI 输出核查方法选择器](02-复制即用：AI研究指令与模板.md#ai-输出核查方法选择器) |

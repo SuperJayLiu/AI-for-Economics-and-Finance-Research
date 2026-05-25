@@ -41,6 +41,7 @@ Questions or suggestions for this handbook: email [jay.liu@bristol.ac.uk](mailto
 | "I have a paper idea but I am not sure it is good." | Read Sections 2, 4, 5, and 7. | [Research Idea Stress Test](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
 | "I need to write empirical methods." | Read Sections 7, 8, and 9. | [Economics methods skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md) or [finance methods skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md) |
 | "I want AI to edit code or files." | Read Sections 10, 11, and 12 first. | [Clean project and set up Git](../03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
+| "I have no Git/GitHub/agent setup yet." | Read Sections 3, 10, 11, and 12 first. | [Zero to working setup](../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#zero-to-working-setup) |
 | "I want to use agents." | Read Sections 10, 11, 12, and 13 first. | [One paper, one repo, one AI project](../03-Set-Up-Agents-and-Automated-Research-Workflows/02-one-paper-one-repo-one-ai-project.md) |
 | "I need slides or a talk." | Read Section 14. | [Presentation, slides, website, and talk-practice skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md) |
 
