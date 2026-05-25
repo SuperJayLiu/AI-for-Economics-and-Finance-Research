@@ -30,7 +30,6 @@ The main page keeps only the primary reading and working folders visible. Suppor
 | Draft or audit methods | [Economics Methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md) or [Finance Methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/04-empirical-methods-skills-for-finance-research.md) | methods prose or a design audit that states what must be verified |
 | Build slides or practice a talk | [06 Teach, Present, Or Share](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | a talk flow, slide path, practice prompt, or teaching exercise |
 | Find datasets or resources | [05 Check Sources, Datasets, And Docs](05-Check-Builders-Official-Docs-and-Resources/README.md) | source links, dataset access notes, and AI-use cautions |
-| Read or cite as a working paper | [SSRN Working Paper LaTeX](SSRN-Working-Paper/ai-for-economics-and-finance-research-handbook.tex) | a standalone English manuscript version of the handbook and toolbox |
 
 ### Choose By Role
 
@@ -323,7 +322,6 @@ flowchart LR
 | 从零设置 Git、GitHub 和 AI agent 工作流 | [中文从零设置路径](ZH-中文-AI经济金融研究手册/中文内容/03-设置Agent和自动化研究工作流.md#从零开始设置-gitgithub-和-ai-agent) |
 | 设计数据清洗、合并、变量构造、表格和图形 workflow | [中文数据工作流模板](ZH-中文-AI经济金融研究手册/中文内容/02-复制即用：AI研究指令与模板.md#数据清洗合并和输出工作流) |
 | 查经济学和金融学常用数据入口及权限提醒 | [中文数据资源与访问说明](ZH-中文-AI经济金融研究手册/中文内容/05-资料来源官方文档与更新.md#常用经济金融数据入口和权限提醒) |
-| 查看或引用英文工作论文版本 | [SSRN Working Paper LaTeX](SSRN-Working-Paper/ai-for-economics-and-finance-research-handbook.tex) |
 | 做 text-as-data 或 LLM-generated variable | [中文 Text-as-Data 模板](ZH-中文-AI经济金融研究手册/中文内容/02-复制即用：AI研究指令与模板.md#text-as-data-和-llm-measurement-协议) |
 | 选择 AI 输出核查方法 | [中文核查方法选择器](ZH-中文-AI经济金融研究手册/中文内容/02-复制即用：AI研究指令与模板.md#ai-输出核查方法选择器) |
 | 理解 Git、agent、MCP 等技术词 | [中文技术词解释](ZH-中文-AI经济金融研究手册/中文内容/01-从这里开始：AI经济金融研究手册.md#这些技术词在研究项目里是什么意思) |
