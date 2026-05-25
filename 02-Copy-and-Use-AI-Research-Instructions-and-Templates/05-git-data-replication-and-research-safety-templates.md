@@ -180,6 +180,107 @@ If permission is unclear, recommend not uploading or exposing the material.
 If policy language is ambiguous, list the exact questions I should ask and who should answer them.
 ```
 
+## Template 3D: Team AI-Use Agreement For Coauthors And RAs
+
+Use this at the start of a coauthored paper, RA project, lab project, replication project, or student research team.
+
+```markdown
+# Team AI-Use Agreement
+
+Project:
+[paper/project name]
+
+Team members:
+[names and roles]
+
+## Approved AI tools
+| Tool | Approved uses | Not approved for | Notes |
+| --- | --- | --- | --- |
+| [ChatGPT/Claude/Codex/Claude Code/Cursor/etc.] | [e.g., public text, code debugging, synthetic examples] | [e.g., restricted data, referee reports] | [privacy/settings/date checked] |
+
+## Materials that may be used with AI
+- public paper abstracts, citations, and links;
+- public documentation;
+- synthetic data;
+- code error messages with no private data;
+- variable dictionaries if allowed by data license;
+- manuscript excerpts only if coauthors agree.
+
+## Materials that must not be used with public AI tools
+- raw, restricted, private, licensed, identifiable, embargoed, or confidential data;
+- coauthor drafts without consent;
+- referee reports or confidential manuscripts unless policy explicitly allows it;
+- student data;
+- proprietary firm or client material;
+- passwords, tokens, SSH keys, API keys, or database credentials.
+
+## GitHub and file rules
+- Use a private repo unless the team explicitly approves public release.
+- Use branches for AI-assisted edits.
+- Do not let agents edit `main` directly.
+- Use pull requests for code, data-pipeline, paper, slide, or public-output changes.
+- At least one human project member reviews each AI-assisted PR.
+- Update AI-USE-LOG.md before merge when AI output is accepted.
+
+## Human review responsibilities
+| Area | Human owner | What they must verify |
+| --- | --- | --- |
+| data access and licenses | [name] | upload/sharing permissions |
+| code and pipelines | [name] | scripts run, toy tests pass, outputs match design |
+| empirical design | [name] | sample, timing, variables, inference, identification |
+| paper text | [name] | claims, citations, numbers, notation, hedging |
+| slides/public communication | [name] | no overclaiming or accidental disclosure |
+
+## Disclosure and policy
+- Check university, employer, funder, journal, conference, data-provider, and coauthor rules before submission or public release.
+- AI is not an author.
+- Humans remain responsible for all claims, code, data use, and disclosure.
+- If policy is unclear, pause and ask the relevant authority before using AI.
+```
+
+## Template 3E: Collaborative Research Agent Instruction
+
+```text
+You are helping a multi-author economics/finance research project.
+
+Task:
+[describe task]
+
+Human task owner:
+[name]
+
+Allowed files:
+[list]
+
+Forbidden files:
+[list, including data/raw, data/restricted, data/private if relevant]
+
+Data and confidentiality status:
+[public/licensed/restricted/private/confidential/unknown]
+
+Before editing:
+1. Ask clarifying questions if ownership, consent, allowed files, forbidden files, data sensitivity, validation commands, or expected output is unclear.
+2. Explain any technical terms in plain language for economics/finance researchers.
+3. Provide an approval table:
+   | Proposed action | Files affected | Human owner | Risk | Verification check | Needs approval? |
+4. Wait for explicit approval.
+
+Rules:
+- Work on a branch, not directly on `main`.
+- Do not edit shared manuscript text, code, sample definitions, variable construction, identification claims, result interpretation, slides, or public outputs unless those files are explicitly allowed.
+- Do not expose coauthor drafts, referee material, licensed data, restricted data, student data, identifiable records, proprietary data, credentials, or private comments.
+- Do not push, merge, resolve comments, publish, email, or notify external people without explicit approval.
+
+After approved work:
+1. Report files changed.
+2. Report commands run.
+3. Report outputs checked.
+4. State remaining uncertainty.
+5. Draft a pull request summary.
+6. Draft an AI-USE-LOG.md entry.
+7. End with "Questions for you" if any review, policy, or data issue remains open.
+```
+
 ## Template 4: AI-USE-LOG.md
 
 ```markdown

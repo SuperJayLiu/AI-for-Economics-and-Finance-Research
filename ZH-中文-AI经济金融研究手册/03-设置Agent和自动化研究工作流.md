@@ -352,6 +352,153 @@ flowchart LR
 | 准备 seminar Q&A | talk opponent | 提尖锐问题、写简短回答、标出弱 slide | 编造结果、隐藏限制、强化因果说法 | 回答都能追溯到论文证据 |
 | 处理 GitHub review comments | PR assistant | 总结评论、提修复、改批准文件 | 未批准就 resolve、reply、push | 评论已回应，检查通过 |
 
+## 与合作者、RA 和团队一起使用 AI agent
+
+协作项目的风险和个人项目不同。一个 agent 在团队项目里工作时，问题不只是“AI 能不能做”，还包括：
+
+- 谁有权批准这个修改？
+- 这份材料属于谁？
+- 这个数据、草稿或评论能不能给 AI 看？
+- 谁负责核查代码、表格、论文文字和公开材料？
+- 是否需要在 `AI-USE-LOG.md` 中记录？
+
+适用场景：
+
+- coauthored paper；
+- PI/RA 项目；
+- lab 或 research group 项目；
+- replication team；
+- 学生小组研究项目；
+- 需要 GitHub 协作的论文、代码、数据或 slides。
+
+```mermaid
+flowchart TD
+  A["共同研究目标"] --> B["团队 AI-use agreement"]
+  B --> C["private GitHub repo 和权限角色"]
+  C --> D["DATA.md 规定数据访问和上传规则"]
+  D --> E["AGENTS.md 规定团队 agent 规则"]
+  E --> F["GitHub Issue 或任务负责人"]
+  F --> G["agent 提出计划、文件、风险和检查"]
+  G --> H{"任务负责人批准？"}
+  H -- "否" --> G
+  H -- "是" --> I["agent 在 branch 上工作"]
+  I --> J["运行检查并审查 diff"]
+  J --> K["pull request 人工 review"]
+  K --> L{"coauthor/PI/RA lead 批准？"}
+  L -- "否" --> I
+  L -- "是" --> M["merge、记录 AI-use log、通知团队"]
+```
+
+### 团队设置检查清单
+
+```text
+在让 agent 进入共享研究 repo 前，确认：
+[ ] repo 是 private，除非团队明确决定公开。
+[ ] 每个合作者的 GitHub 权限级别清楚。
+[ ] DATA.md 分开说明 public、licensed、restricted、private 和 synthetic data。
+[ ] AGENTS.md 写清楚 agent 可以改什么、不能改什么。
+[ ] AI-USE-LOG.md 存在，并且团队同意什么时候更新。
+[ ] coauthors 已经同意哪些 drafts、notes、slides、referee material 可以或不可以用于 AI。
+[ ] RA 权限清楚：read-only、branch edits、PR creation 或 merge rights。
+[ ] 每个 agent-created pull request 至少有一个 human reviewer。
+```
+
+### 文件责任表
+
+可以放进 `README.md` 或 `AGENTS.md`：
+
+```markdown
+| Area | Human owner | Agent may edit? | Review required before merge | Notes |
+| --- | --- | --- | --- | --- |
+| `data/raw/` | [name] | no | yes | original files only |
+| `data/derived/` | [name] | only via approved scripts | yes | rebuild from code |
+| `code/` | [name] | yes, on branch | yes | tests or scripts must run |
+| `paper/` | [name] | only approved sections | yes | preserve claims, citations, notation |
+| `slides/` | [name] | yes, if claims checked | yes | no public sharing without approval |
+| `AI-USE-LOG.md` | [name] | draft entries allowed | yes | final log reviewed by task owner |
+```
+
+### Issue 到 PR 的团队 agent 工作流
+
+```text
+1. 创建 issue：
+   Title: [agent-task] Audit Table 2 code against methods section
+   Owner: [human name]
+   Files allowed: [code/table2.R, paper/methods.md]
+   Files forbidden: [data/raw/, data/restricted/]
+   Check: [Rscript code/table2.R; compare output/table2.tex]
+
+2. 创建 branch：
+   git checkout -b agent/table2-methods-audit
+
+3. 要求 agent 先给 plan，不要直接改文件。
+
+4. 只批准允许的文件和检查命令。
+
+5. 审查 diff 和输出。
+
+6. 开 pull request：
+   Summary: 改了什么
+   Verification: 跑了什么命令、检查了什么输出
+   AI-use log: 是否已写或更新
+   Remaining uncertainty: reviewer 还必须看什么
+
+7. human reviewer 批准后再 merge。
+```
+
+### 协作研究 agent 指令
+
+```text
+你正在帮助一个多人合作的经济学/金融学研究项目。
+
+编辑前，请先识别：
+1. human task owner；
+2. 当前研究阶段；
+3. 需要读取哪些文件；
+4. 请求编辑哪些文件；
+5. 哪些文件禁止编辑；
+6. 是否需要 coauthor、PI、RA lead、journal、conference、funder 或 data-provider permission；
+7. 材料是否 public、licensed、restricted、private、identifiable、embargoed 或 confidential；
+8. PR 或 merge 前需要哪些 verification checks；
+9. 需要在 AI-USE-LOG.md 记录什么。
+
+规则：
+- 如果 ownership、consent、data sensitivity、file permission 或 validation command 不清楚，先提澄清问题。
+- 未经明确批准，不要编辑共享 manuscript text、sample definition、variable construction、identification claim 或 result interpretation。
+- 不要编辑 `data/raw/`、`data/restricted/`、`data/private/`。
+- 未经明确批准，不要 push、publish、merge、resolve comments 或通知外部人员。
+- 必须在 branch 上工作。报告 diff、commands run、outputs checked 和 remaining uncertainty。
+- 如果还有 approval、policy 或 review 问题，最后用 “Questions for you” 列出。
+```
+
+### 团队 `AGENTS.md` 附加规则
+
+```markdown
+## Team collaboration rules
+
+- 这是共享研究项目。AI agents 必须尊重 human file ownership 和 coauthor consent。
+- Agents 只能在 approved branches 上工作，不能直接改 `main`。
+- 任何影响 code、data construction、paper text、slides 或 public materials 的 agent 改动，都必须由 human project member review 后才能 merge。
+- 未经明确批准，不要重写 coauthor text、referee responses、acknowledgments、author contributions 或 public-facing claims。
+- 不要悄悄改变 sample definitions、treatment timing、variable construction、fixed effects、clustering、inference、robustness checks 或 interpretation。
+- 未经团队确认许可，不要上传、总结或暴露 coauthor drafts、private comments、referee material、licensed data、restricted data、student data、identifiable records 或 proprietary material。
+- 如果任务涉及 RA，agent 必须说明 RA 应该核查什么，以及 PI/coauthor 必须批准什么。
+- Pull request summary 必须包括 files changed、commands run、outputs checked、policy/data concerns 和 AI-USE-LOG status。
+```
+
+### 协作风险表
+
+| 风险 | 怎么发生 | 更安全的做法 |
+| --- | --- | --- |
+| 未经同意上传 coauthor draft | 一个人把共享 manuscript 粘贴到 AI | 上传前先约定团队 AI-use rules |
+| AI 悄悄改共享代码 | agent 直接改 `main` 或共享文件 | branch + pull request |
+| RA 接受“能跑但错”的代码 | 没有 toy test 和 code review | known-answer test + human review |
+| agent 改了 sample construction | “cleanup” 过程中改 filters 或 merge keys | 在 `AGENTS.md` 禁止 silent design/data changes |
+| 两个 agent 改同一个文件 | 并行任务都改 `paper/main.tex` 或同一脚本 | 明确 file ownership 或使用 worktree |
+| private repo 误设为 public | GitHub 设置或 publish 步骤疏忽 | visibility change 前必须明确批准 |
+| journal/referee policy 冲突 | 用 AI 处理 confidential review material | 使用前先查 policy |
+| disclosure 不清楚 | 采纳 AI 修改但没记录 | PR review 时更新 `AI-USE-LOG.md` |
+
 ### 批准表模板
 
 ```text
@@ -374,6 +521,7 @@ flowchart LR
 | 旧项目文件夹很乱 | 先备份，再设置 Git 和 `.gitignore` | 不删除文件，不提交 raw/restricted data。 |
 | 一个正在写的 paper | one paper, one repo, one AI project | 先写 project instructions，再让 AI 编辑。 |
 | 复现包 | replication package workflow | 代码没跑通前，不声称复现成功。 |
+| coauthors、RA 或团队项目 | issue、branch、PR、AI-use log 的协作流程 | coauthor consent、file ownership、data access、disclosure |
 | 多个任务并行 | branch 或 worktree | 不让多个 agent 改同一个文件。 |
 | GitHub review comments | PR comment triage | 不经同意不公开回复、不 resolve、不 push。 |
 

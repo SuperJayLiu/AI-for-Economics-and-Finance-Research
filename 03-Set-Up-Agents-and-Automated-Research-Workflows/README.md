@@ -385,6 +385,7 @@ If you use a software or AI term that a non-CS economics/finance researcher may 
 | messy old folder | clean project and Git setup | never delete files or commit restricted data |
 | one active paper | one paper, one repo, one AI project | define project instructions before file edits |
 | replication package | replication package agent workflow | do not claim success until code runs and outputs match |
+| coauthor, RA, or team project | collaboration workflow with issues, branches, PRs, and AI-use log | coauthor consent, file ownership, data access, and disclosure |
 | staying updated | research update digest | dated claims, official docs, and low-noise sources |
 | multiple AI tasks | branches/worktrees | agents editing same file or raw data |
 | GitHub feedback | review feedback and publish workflow | never reply, resolve, or push without approval |
@@ -430,6 +431,153 @@ flowchart LR
 | debug Table 2 code | coding assistant | inspect code, propose fix, edit script after approval, run minimal test | change sample restrictions silently, edit outputs by hand | code runs and output matches expected table shell |
 | prepare seminar Q&A | talk practice opponent | ask tough questions, propose concise answers, flag weak slides | invent results, hide limitations, strengthen causal claims | answers trace to paper evidence |
 | handle GitHub review comments | PR assistant | summarize comments, propose fixes, edit approved files | resolve comments or push without approval | review threads addressed and checks pass |
+
+## Collaborating With Coauthors, RAs, And Agents
+
+Collaboration changes the risk profile. When an agent works in a shared research project, the question is not only "Can the AI do this?" but also "Who has authority to approve this change, who owns the material, and who must verify it?"
+
+Use this workflow for coauthored papers, RA projects, lab projects, replication teams, and student research teams.
+
+```mermaid
+flowchart TD
+  A["Shared research goal"] --> B["Team AI-use agreement"]
+  B --> C["Private GitHub repo and access roles"]
+  C --> D["DATA.md defines data access and upload rules"]
+  D --> E["AGENTS.md defines team agent rules"]
+  E --> F["GitHub Issue or task owner"]
+  F --> G["Agent proposes plan, files, risks, checks"]
+  G --> H{"Task owner approves?"}
+  H -- "No" --> G
+  H -- "Yes" --> I["Agent works on branch"]
+  I --> J["Run checks and inspect diff"]
+  J --> K["Pull request for human review"]
+  K --> L{"Coauthor/PI/RA lead approves?"}
+  L -- "No" --> I
+  L -- "Yes" --> M["Merge, log AI use, notify team"]
+```
+
+### Team Setup Checklist
+
+```text
+Before letting an agent work in a shared research repo, confirm:
+[ ] The repo is private unless the team intentionally made it public.
+[ ] Every collaborator has the right GitHub access level.
+[ ] DATA.md lists public, licensed, restricted, private, and synthetic data separately.
+[ ] AGENTS.md says which files agents may and may not edit.
+[ ] AI-USE-LOG.md exists and the team agrees when to update it.
+[ ] Coauthors agree whether drafts, notes, slides, and referee material may be used with AI.
+[ ] RA permissions are explicit: read-only, branch edits, PR creation, or merge rights.
+[ ] At least one human reviewer owns each agent-created pull request.
+```
+
+### File Ownership Table
+
+Use this table in `README.md` or `AGENTS.md` when a project has multiple people.
+
+```markdown
+| Area | Human owner | Agent may edit? | Review required before merge | Notes |
+| --- | --- | --- | --- | --- |
+| `data/raw/` | [name] | no | yes | original files only |
+| `data/derived/` | [name] | only via approved scripts | yes | rebuild from code |
+| `code/` | [name] | yes, on branch | yes | tests or scripts must run |
+| `paper/` | [name] | only approved sections | yes | preserve claims, citations, notation |
+| `slides/` | [name] | yes, if claims checked | yes | no public sharing without approval |
+| `AI-USE-LOG.md` | [name] | draft entries allowed | yes | final log reviewed by task owner |
+```
+
+### Issue-To-PR Agent Workflow
+
+For team projects, turn agent tasks into GitHub Issues or clearly named tasks.
+
+```text
+1. Create an issue:
+   Title: [agent-task] Audit Table 2 code against methods section
+   Owner: [human name]
+   Files allowed: [code/table2.R, paper/methods.md]
+   Files forbidden: [data/raw/, data/restricted/]
+   Check: [Rscript code/table2.R; compare output/table2.tex]
+
+2. Create a branch:
+   git checkout -b agent/table2-methods-audit
+
+3. Ask the agent to plan before editing.
+
+4. Approve only the allowed files and checks.
+
+5. Inspect diff and outputs.
+
+6. Open a pull request:
+   Summary: what changed
+   Verification: commands run and outputs checked
+   AI-use log: entry drafted or updated
+   Remaining uncertainty: what human reviewer must inspect
+
+7. Human reviewer approves before merge.
+```
+
+### Collaborative Research Agent Instruction
+
+```text
+You are helping a multi-author economics/finance research project.
+
+Before editing, identify:
+1. the human task owner;
+2. the research stage;
+3. files you need to read;
+4. files you request permission to edit;
+5. files that are forbidden;
+6. whether coauthor, PI, RA lead, journal, conference, funder, or data-provider permission may be needed;
+7. whether any material is public, licensed, restricted, private, identifiable, embargoed, or confidential;
+8. verification checks required before a pull request or merge;
+9. what should be recorded in AI-USE-LOG.md.
+
+Rules:
+- Ask clarifying questions if ownership, consent, data sensitivity, file permissions, or validation commands are unclear.
+- Do not edit shared manuscript text, sample definitions, variable construction, identification claims, or result interpretation without explicit approval.
+- Do not edit `data/raw/`, `data/restricted/`, or `data/private/`.
+- Do not push, publish, merge, resolve comments, or notify external people without explicit approval.
+- Work on a branch. Report the diff, commands run, outputs checked, and remaining uncertainty.
+- End with "Questions for you" if any approval, policy, or review issue remains open.
+```
+
+### Team `AGENTS.md` Add-On
+
+```markdown
+## Team collaboration rules
+
+- This is a shared research project. AI agents must respect human file ownership and coauthor consent.
+- Agents may work only on approved branches, never directly on `main`.
+- Every agent change that affects code, data construction, paper text, slides, or public materials must be reviewed by a human project member before merge.
+- Do not rewrite coauthor text, referee responses, acknowledgments, author contributions, or public-facing claims without explicit approval.
+- Do not change sample definitions, treatment timing, variable construction, fixed effects, clustering, inference, robustness checks, or interpretation silently.
+- Do not upload, summarize, or expose coauthor drafts, private comments, referee material, licensed data, restricted data, student data, identifiable records, or proprietary material unless the team has confirmed permission.
+- If a task involves an RA, the agent must state what the RA should verify and what the PI/coauthor must approve.
+- Pull request summaries must include files changed, commands run, outputs checked, policy/data concerns, and AI-USE-LOG status.
+```
+
+### Collaboration Risk Table
+
+| Risk | How it happens | Safer workflow |
+| --- | --- | --- |
+| coauthor draft uploaded without consent | one person uses a chat tool on shared manuscript text | agree on AI-use rules before uploading drafts |
+| AI changes shared code silently | agent edits `main` or a shared folder | use branches and pull requests |
+| RA accepts code that runs but is wrong | no toy test, no code review | require known-answer test and human review |
+| agent changes sample construction | "cleanup" modifies filters or merge keys | forbid silent design/data changes in `AGENTS.md` |
+| two agents edit same file | parallel tasks target `paper/main.tex` or one script | assign file ownership or use worktrees |
+| private repo made public | careless GitHub setting or publish step | require explicit approval before visibility changes |
+| journal/referee policy conflict | AI used on confidential review material | check policy before using AI |
+| disclosure uncertainty | AI edits accepted but not logged | update `AI-USE-LOG.md` during PR review |
+
+### Branch Names For Team Agent Work
+
+```text
+agent/table2-debug
+agent/methods-code-consistency
+ra/data-dictionary
+coauthor/intro-comments
+replication/run-package-check
+slides/seminar-qa
+```
 
 ## Modes Of Agent Work
 

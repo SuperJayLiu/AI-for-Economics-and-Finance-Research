@@ -43,6 +43,7 @@ Questions or suggestions for this handbook: email [jay.liu@bristol.ac.uk](mailto
 | "I want AI to edit code or files." | Read Sections 10, 11, and 12 first. | [Clean project and set up Git](../03-Set-Up-Agents-and-Automated-Research-Workflows/01-clean-existing-research-project-and-set-up-git.md) |
 | "I have no Git/GitHub/agent setup yet." | Read Sections 3, 10, 11, and 12 first. | [Zero to working setup](../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#zero-to-working-setup) |
 | "I want to use agents." | Read Sections 10, 11, 12, and 13 first. | [One paper, one repo, one AI project](../03-Set-Up-Agents-and-Automated-Research-Workflows/02-one-paper-one-repo-one-ai-project.md) |
+| "I work with coauthors, RAs, or a research team." | Read Sections 9, 10, 11, and 12 first. | [Collaborating with coauthors, RAs, and agents](../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#collaborating-with-coauthors-ras-and-agents) |
 | "I need slides or a talk." | Read Section 14. | [Presentation, slides, website, and talk-practice skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md) |
 
 ## Minimum Safe Setup
@@ -375,6 +376,34 @@ This handbook gives research workflow guidance, not institutional permission. Al
 - classroom or student-data rules
 
 If a policy is stricter than this handbook, follow the stricter policy. If permission is unclear, do not upload or expose the material.
+
+### Using AI With Coauthors And Research Teams
+
+AI use is not only an individual choice when the material belongs to a project team. A coauthor draft, shared GitHub repo, RA-written code, unpublished seminar note, or licensed dataset may create duties to other people even when the AI tool is technically available.
+
+Before using AI on shared work, agree on:
+
+| Team question | Why it matters |
+| --- | --- |
+| Which AI tools are allowed? | one coauthor's paid tool or settings may not satisfy the team's policy constraints |
+| What materials may be uploaded? | coauthor drafts, referee reports, licensed data, and private comments may require consent |
+| Who reviews AI-generated code? | code that runs can still change samples, timing, variables, or inference incorrectly |
+| How are agent edits reviewed? | Git branches and pull requests keep AI changes visible before merge |
+| How is AI use logged? | journals, data editors, coauthors, or future replication work may require traceability |
+| Who approves public outputs? | slides, summaries, social media posts, and repo releases can disclose too much |
+
+For teams, the safer default is:
+
+```text
+one private GitHub repo;
+one shared DATA.md;
+one shared AGENTS.md;
+one AI-USE-LOG.md;
+agent edits only on branches;
+pull requests reviewed by a human project member before merge.
+```
+
+Use the collaboration workflow in [Set Up Agents and Automated Research Workflows](../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#collaborating-with-coauthors-ras-and-agents) before letting agents work inside a shared project.
 
 ## 10. Verification Is a Skill
 
