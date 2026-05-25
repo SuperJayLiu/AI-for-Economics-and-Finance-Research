@@ -18,6 +18,56 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | preparing seminar slides | Presentation failure cases | presentation practice skill |
 | setting up a research repo | Project safety failure cases | clean project workflow |
 
+## GitHub-Native Visual Patterns You Can Reuse
+
+GitHub can render tables, task lists, alerts, collapsible sections, and Mermaid diagrams directly inside Markdown. These are enough to make the handbook interactive without adding Quarto, a website, or custom code.
+
+| Pattern | Best for | Why it helps |
+| --- | --- | --- |
+| Mermaid flowchart | research pipeline, agent workflow, approval gates | readers see the sequence before reading details |
+| Decision table | tool choice, data-safety choice, verification method | readers can choose quickly |
+| Task checklist | setup steps, replication checks, slide checks | readers can mark progress mentally or copy the list |
+| Failure card | concrete AI mistakes | readers remember risks better than abstract warnings |
+| Collapsible `<details>` | optional examples or long prompts | keeps pages shorter while preserving copy-ready material |
+
+<details>
+<summary>Copy a Mermaid workflow template</summary>
+
+````markdown
+```mermaid
+flowchart LR
+  A["Research input"] --> B["AI produces structured draft"]
+  B --> C["Human verifies source/data/code/theory"]
+  C --> D{"Passes checks?"}
+  D -- "No" --> E["Revise or reject"]
+  D -- "Yes" --> F["Record AI-use log and commit"]
+```
+````
+
+</details>
+
+<details>
+<summary>Copy a failure-case card template</summary>
+
+```text
+Failure:
+[What went wrong]
+
+Why it looked plausible:
+[Why the AI output seemed convincing]
+
+Where it entered the workflow:
+[Literature / data / code / methods / slides / review]
+
+How to catch it:
+[Concrete verification method]
+
+How to prevent it next time:
+[Workflow rule, Git rule, data rule, or skill change]
+```
+
+</details>
+
 ## AI Research Workflow Diagram
 
 ```mermaid

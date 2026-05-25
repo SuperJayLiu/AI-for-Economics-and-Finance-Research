@@ -1,42 +1,15 @@
-# 学习路径
+# 中文学习路径
 
-不用从头到尾读完整个仓库。可以按目标选择路径。
+这是旧版参考页。当前仓库已经把中文学习路径整合进中文入口和主页面，读者不需要再打开很多短文件。
 
-## 路径 1：我刚开始学习 AI
+请使用这些当前页面：
 
-1. [从这里开始](START-HERE.zh.md)
-2. [Minimum Setup for Scholars](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/00-minimum-setup-for-scholars.md)
-3. [AI Research Workflow Maturity Ladder](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/05-ai-research-workflow-maturity-ladder.md)
-4. [What LLMs Are and Are Not](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/what-scholars-must-know/01-what-llms-are-and-are-not.md)
-
-## 路径 2：我想用 AI 做文献综述
-
-1. [Literature Review Project](03-How-to-Set-Up-Your-AI-Research-Workflow/ai-projects/03-literature-review-project.md)
-2. [Fake Citations and Fake Literature](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/responsible-use-and-risks/05-fake-citations-and-fake-literature.md)
-3. [Literature Mapping](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/econ-finance-research-workflow/02-literature-mapping.md)
-
-## 路径 3：我想用 AI 做实证研究和代码
-
-1. [Empirical Paper Project](03-How-to-Set-Up-Your-AI-Research-Workflow/ai-projects/04-empirical-paper-project.md)
-2. [Data Sensitivity Matrix](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/responsible-use-and-risks/07-data-sensitivity-matrix.md)
-3. [Using AI for Code](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/core-ai-skills-for-research/04-using-ai-for-code.md)
-4. [AI Use Log](02-Copy-and-Use-AI-Research-Instructions-and-Templates/research-safety-and-git/08-ai-use-log.md)
-
-## 路径 4：我想组织研究团队或 RA
-
-1. [Teach Workshops and Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md#english)
-2. [AI Assisted RA Onboarding](06-Teach-Workshops-Practice-Talks-and-Share-Slides/ai-assisted-ra-onboarding.md)
-3. [Review Standards](REVIEW-STANDARDS.md)
-
-## 路径 5：我想改进研究展示和 slides
-
-1. [AI for Research Presentations](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/writing-reviewing-presenting/09-ai-for-research-presentations.md)
-2. [HTML Research Slides Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/html-research-slides-skill.md)
-3. [LaTeX Beamer Research Slides Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/latex-beamer-research-slides-skill.md)
-4. [Practice Your Research Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/presentation-practice-with-ai.md)
-
-## 路径 6：我想持续学习 AI 但避免信息噪音
-
-1. [AI Learning Library For Economics And Finance](05-Check-Builders-Official-Docs-and-Resources/ai-learning-library-for-econ-finance.md)
-2. [AI Information Diet](05-Check-Builders-Official-Docs-and-Resources/ai-information-diet.md)
-3. [Resource Inclusion Criteria](05-Check-Builders-Official-Docs-and-Resources/resource-inclusion-criteria.md)
+| 如果你想要... | 打开... |
+| --- | --- |
+| 中文总入口 | [中文入口：AI 经济金融研究手册](../ZH-中文-AI经济金融研究手册/README.md) |
+| 像读书一样学习 | [01 从这里开始：AI 经济金融研究手册](../ZH-中文-AI经济金融研究手册/01-从这里开始：AI经济金融研究手册.md) |
+| 复制中文技能、指令和模板 | [02 复制即用：AI 研究指令与模板](../ZH-中文-AI经济金融研究手册/02-复制即用：AI研究指令与模板.md) |
+| 设置 Git、GitHub、agent 和自动化流程 | [03 设置 Agent 和自动化研究工作流](../ZH-中文-AI经济金融研究手册/03-设置Agent和自动化研究工作流.md) |
+| 看案例、图示和失败案例 | [04 案例、图示与失败案例](../ZH-中文-AI经济金融研究手册/04-案例图示与失败案例.md) |
+| 查资料来源、官方文档和更新 | [05 资料来源、官方文档与更新](../ZH-中文-AI经济金融研究手册/05-资料来源官方文档与更新.md) |
+| 教学、工作坊和展示练习 | [06 教学、工作坊、展示与分享](../ZH-中文-AI经济金融研究手册/06-教学工作坊展示与分享.md) |

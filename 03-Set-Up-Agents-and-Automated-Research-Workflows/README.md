@@ -24,6 +24,21 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 
 Use this path if you are starting from no Git/GitHub/agent setup.
 
+### Visual Setup Map
+
+```mermaid
+flowchart TD
+  A["Install Git and GitHub CLI"] --> B["Configure Git identity"]
+  B --> C["Log in with gh auth login"]
+  C --> D["Create local research folder"]
+  D --> E["Add .gitignore, DATA.md, AGENTS.md, AI-USE-LOG.md"]
+  E --> F["Make first commit before AI edits"]
+  F --> G["Create private GitHub repo and push"]
+  G --> H["Open repo in Codex, Claude Code, Cursor, or VS Code"]
+  H --> I["First task: inspect only, no edits"]
+  I --> J["Approve narrow edit, inspect diff, run checks, commit"]
+```
+
 ### Step 0: Choose The Lowest-Power Setup That Works
 
 | Need | Setup |
@@ -58,6 +73,8 @@ Official setup links:
 | Claude Code | [Claude Code setup](https://docs.claude.com/en/docs/claude-code/setup) and [Claude Code quickstart](https://code.claude.com/docs/en/quickstart) |
 
 Tool commands change. If a command below conflicts with official docs, follow the official docs.
+
+Last checked against official setup docs: 2026-05-25.
 
 ### Step 2: Configure Git Identity
 
@@ -131,6 +148,8 @@ __pycache__/
 ```
 
 Plain meaning: `.gitignore` tells Git which files to ignore. It does not delete files. It prevents accidental tracking of raw, licensed, restricted, private, or generated files.
+
+Important accuracy note: `.gitignore` only affects files that Git is not already tracking. If a private file was already committed, adding it to `.gitignore` is not enough. You must remove it from Git history or at least stop tracking it with care, rotate any exposed secrets, and follow institutional/data-provider rules.
 
 ### Step 5: Write Project Safety Files Before Using Agents
 
@@ -415,6 +434,14 @@ flowchart LR
 ## Modes Of Agent Work
 
 Use the lowest-power mode that solves the problem.
+
+```mermaid
+flowchart LR
+  A["Explain - lowest risk"] --> B["Plan"]
+  B --> C["Edit"]
+  C --> D["Run"]
+  D --> E["Publish - highest risk"]
+```
 
 | Mode | Agent may... | Use when | Do not use when |
 | --- | --- | --- | --- |

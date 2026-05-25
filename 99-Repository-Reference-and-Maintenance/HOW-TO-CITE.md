@@ -1,6 +1,6 @@
 # How To Cite This Repository
 
-Use [CITATION.cff](CITATION.cff) for citation metadata.
+Use [CITATION.cff](../CITATION.cff) for citation metadata.
 
 ## Suggested Citation
 

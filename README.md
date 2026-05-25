@@ -19,6 +19,21 @@ This repository is designed for readers who want to **click, copy, paste, adapt,
 
 The main page keeps only the primary reading and working folders visible. Supporting files and old short pages are consolidated under [Repository Reference and Maintenance](99-Repository-Reference-and-Maintenance/README.md).
 
+### Visual Reader Map
+
+Use this map when you are not sure where to click first.
+
+```mermaid
+flowchart LR
+  A["Start with the handbook"] --> B["Copy one usable skill"]
+  B --> C["Set up Git, GitHub, and agent rules"]
+  C --> D["Apply the workflow to one research task"]
+  D --> E["Check against sources, data, code, or theory"]
+  E --> F["Record AI use and save a Git commit"]
+  G["Examples and failure cases"] -. "calibrate judgment" .-> D
+  H["Official docs and selected resources"] -. "verify tool behavior" .-> C
+```
+
 ### Start Here
 
 | Need | Open |
@@ -148,6 +163,15 @@ Email list rules:
 这是一个 GitHub 原生的手册和资源库，帮助经济学和金融学研究者负责任地使用 AI 和大语言模型。本仓库不是提示词合集，也不是 AI 工具清单，而是面向研究流程、数据安全、可复现性和人工核查的实用手册。
 
 ### 从这里开始
+
+```mermaid
+flowchart LR
+  A["先读中文手册"] --> B["复制一个可用模板"]
+  B --> C["设置 Git、GitHub 和 agent 规则"]
+  C --> D["用于一个真实研究任务"]
+  D --> E["用文献、数据、代码或推导核查"]
+  E --> F["记录 AI 使用并保存版本"]
+```
 
 | 需求 | 打开 |
 | --- | --- |
