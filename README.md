@@ -60,6 +60,62 @@ Use this roadmap when you are not sure where to click first. The links below are
   </tr>
 </table>
 
+### Visual Roadmaps With Larger Text
+
+These diagrams are intentionally simple so the text stays readable in GitHub. Use the linked cards above as the main navigation and the diagrams below as visual memory aids.
+
+```mermaid
+%%{init: {"theme": "base", "flowchart": {"htmlLabels": true, "nodeSpacing": 55, "rankSpacing": 75}, "themeVariables": {"fontSize": "22px", "fontFamily": "Arial", "primaryColor": "#F4F0FF", "primaryBorderColor": "#6D5BD0", "primaryTextColor": "#111827", "lineColor": "#4B5563"}}}%%
+flowchart LR
+  A["01<br/>Read"] --> B["02<br/>Copy"]
+  B --> C["03<br/>Set Up"]
+  C --> D["Apply To<br/>One Task"]
+  D --> E["Verify"]
+  E --> F["Record<br/>And Commit"]
+  G["04<br/>Examples"] -. "calibrate" .-> D
+  H["05<br/>Sources"] -. "check" .-> C
+  T["06<br/>Teach/Share"] -. "adapt" .-> F
+
+  classDef big fill:#F4F0FF,stroke:#6D5BD0,stroke-width:2px,color:#111827,font-size:22px;
+  class A,B,C,D,E,F,G,H,T big;
+
+  click A "01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md" "Open the handbook"
+  click B "02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md" "Open copy-ready skills"
+  click C "03-Set-Up-Agents-and-Automated-Research-Workflows/README.md" "Open setup workflows"
+  click G "04-See-Examples-Diagrams-and-Failure-Cases/README.md" "Open examples"
+  click H "05-Check-Builders-Official-Docs-and-Resources/README.md" "Open sources"
+  click T "06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md" "Open teaching materials"
+```
+
+```mermaid
+%%{init: {"theme": "base", "flowchart": {"htmlLabels": true, "nodeSpacing": 45, "rankSpacing": 80}, "themeVariables": {"fontSize": "22px", "fontFamily": "Arial", "primaryColor": "#EEF7FF", "primaryBorderColor": "#2563EB", "primaryTextColor": "#111827", "lineColor": "#4B5563"}}}%%
+flowchart TD
+  R["Start With<br/>01 Handbook"] --> Q{"What Do You<br/>Need Next?"}
+  Q --> S["02<br/>Use A Skill"]
+  Q --> A["03<br/>Set Up Agents"]
+  Q --> E["04<br/>See Examples"]
+  Q --> L["05<br/>Check Sources"]
+  Q --> P["06<br/>Teach Or Present"]
+  S --> V["Verify Output"]
+  A --> V
+  E --> V
+  L --> V
+  P --> V
+  V --> G["Record AI Use<br/>And Save With Git"]
+
+  classDef decision fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,color:#111827,font-size:24px;
+  classDef step fill:#EEF7FF,stroke:#2563EB,stroke-width:2px,color:#111827,font-size:22px;
+  class Q decision;
+  class R,S,A,E,L,P,V,G step;
+
+  click R "01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md" "Open the handbook"
+  click S "02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md" "Open skills"
+  click A "03-Set-Up-Agents-and-Automated-Research-Workflows/README.md" "Open setup"
+  click E "04-See-Examples-Diagrams-and-Failure-Cases/README.md" "Open examples"
+  click L "05-Check-Builders-Official-Docs-and-Resources/README.md" "Open sources"
+  click P "06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md" "Open teaching materials"
+```
+
 ### The Basic Research Loop
 
 > **Read** -> **copy one skill** -> **set up safely** -> **apply to one research task** -> **verify** -> **record AI use and commit**
