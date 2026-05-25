@@ -231,6 +231,46 @@ Why it is bad:
 - a methods edit may reflect code that has not been verified;
 - raw or licensed data may be exposed by mistake.
 
+## Three Worked Examples With Good And Bad Outputs
+
+These examples show what readers should look for when using the copy-ready skills. The outputs are synthetic and shortened, but the verification logic is the real lesson.
+
+### Worked Example A: Literature Review Without Fake Citations
+
+| Part | Content |
+| --- | --- |
+| Research task | map supplied papers on bank competition, credit access, and small-firm outcomes |
+| Copy-ready skill | [Source-Grounded Literature Review Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) |
+| User input | five verified papers, BibTeX records, one paragraph on the new project |
+| Good AI output | "Based only on the supplied papers, the literature separates into bank-market structure, local credit access, and firm employment responses. The closest contribution test is whether the paper identifies credit-supply effects separately from local demand shocks." |
+| Bad AI output | "This paper is the first to study branch closures and employment, as shown by Smith and Jones (2021)." |
+| What the researcher verifies | every cited paper exists; the "first" claim is removed unless manually verified; each literature gap is tied to a supplied paper |
+| Final safer output | "The project is closest to papers on local banking access and firm outcomes. Its contribution should be stated conditionally until the closest branch-closure and small-firm credit papers are checked." |
+
+### Worked Example B: Finance Methods And Look-Ahead Bias
+
+| Part | Content |
+| --- | --- |
+| Research task | draft methods for a monthly portfolio sort using Compustat accounting variables and CRSP returns |
+| Copy-ready skill | [Draft Empirical Methods Section for Finance](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
+| User input | variable list, formation month, sample screens, CRSP/Compustat merge notes, benchmark factors |
+| Good AI output | "The methods section must state the reporting-lag rule, CCM link filters, share/exchange-code screens, delisting-return treatment, factor model, and whether tests are pre-specified or exploratory." |
+| Bad AI output | "We merge annual fundamentals to same-year monthly returns and find robust predictability." |
+| What the researcher verifies | accounting information availability date; delisting return handling; survivorship filters; factor set; multiple-testing adjustment or exploratory framing |
+| Final safer output | "Portfolios are formed only after accounting information is assumed publicly available. Results are reported with and without delisting-return adjustments, and exploratory anomaly tests are labeled as such." |
+
+### Worked Example C: Applied Econ DiD And Panel Design
+
+| Part | Content |
+| --- | --- |
+| Research task | audit a DiD/event-study design for policy adoption across states |
+| Copy-ready skill | [Difference-in-Differences and Event Study Check](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/11-causal-inference-econometrics-and-time-series-skills.md#skill-4-difference-in-differences-and-event-study-check) |
+| User input | treatment timing, panel unit, outcome, baseline controls, planned fixed effects, clustering level |
+| Good AI output | "Because treatment is staggered, first decide whether a TWFE coefficient is interpretable under heterogeneous treatment effects. Report group-time or imputation-style estimates if appropriate, and do not treat insignificant pre-trends as proof of validity." |
+| Bad AI output | "The event-study pre-trends are insignificant, so parallel trends holds and the coefficient is causal." |
+| What the researcher verifies | treatment timing; comparison groups; estimator; event-time support; cluster count; pre-trend power; robustness to alternative estimators |
+| Final safer output | "The paper presents the event study as evidence consistent with the design, adds estimator-specific checks for staggered timing, and states remaining threats from differential shocks." |
+
 ## Example 1: Literature Review for Asset Pricing
 
 Task: position a new paper on return predictability.

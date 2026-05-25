@@ -5,7 +5,7 @@
 Use these for ChatGPT Projects, Claude Projects, Codex, Claude Code, Cursor, or similar tools.
 
 > [!NOTE]
-> Default add-on for any role on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+> Default add-on for any role on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language. After producing output, state what changed, what did not change, and what the researcher must verify. End with "Questions for you" if anything remains uncertain.`
 
 ## Role 1: Tough Referee
 
@@ -137,7 +137,7 @@ Check:
 Rules:
 - Do not create vague "write my paper" prompts.
 - Make the skill directly usable.
-- Add missing-input placeholders.
+- Add bracketed missing-input fields.
 - Add a test case I can try on a harmless example.
 ```
 

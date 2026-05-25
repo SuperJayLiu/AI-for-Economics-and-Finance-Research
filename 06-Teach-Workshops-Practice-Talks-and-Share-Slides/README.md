@@ -62,12 +62,24 @@ Use this if another scholar wants to teach the handbook as a self-contained talk
 | [Interactive HTML slide deck](materials/two-hour-ai-econ-finance-slides.html) | live presentation | open locally in a browser |
 | [Presentation and slide skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md) | adapting the talk to other audiences | includes HTML, Beamer, talk-practice, and paper-to-talk prompts |
 
+### Teach This Repo In Two Hours
+
+| Time | Concept | Demo | Skill to copy | Warning to emphasize | Audience exercise |
+| --- | --- | --- | --- | --- | --- |
+| 0-15 min | AI output is not evidence | casual prompt vs controlled prompt | default clarification rule | fluency can hide errors | rewrite one vague request as a controlled workflow |
+| 15-35 min | literature and citations | supplied-source mini literature map | source-grounded literature review | never trust generated citations | mark which claims need DOI/source checks |
+| 35-55 min | empirical methods | methods paragraph audit | econ or finance methods skill | fixed effects are not identification by themselves | identify sample, timing, inference, and causal language |
+| 55-75 min | Git and data safety | show `.gitignore`, `DATA.md`, `AGENTS.md`, AI-use log | Git/data safety template | private/licensed data must not leak | classify a dataset as public, licensed, restricted, or private |
+| 75-95 min | agents | plan -> approve -> diff -> check -> commit | approval gate template | agents must not silently change design/code/data | draft one approval table for a small task |
+| 95-115 min | verification | failure case audit | verification selector | "verify manually" is not enough | choose source/code/data/math/policy check |
+| 115-120 min | personal next step | one-minute reflection | one selected skill | adopt one workflow at a time | write one skill they will test this week |
+
 Suggested use:
 
 ```text
 1. Read the Markdown script.
 2. Open the HTML deck in a browser.
-3. Replace any screenshot placeholders only with public or synthetic examples if desired.
+3. Use the synthetic visuals in the deck, or replace them only with public examples you have permission to show.
 4. Use public or synthetic examples only.
 5. Keep the live demo small enough to verify in the room.
 ```
@@ -188,7 +200,7 @@ flowchart TD
   B --> C["Interactive workshop or public explainer"]
   B --> D["Academic seminar or conference with conventional expectations"]
   B --> E["Classroom handout or GitHub-only material"]
-  C --> H["Use HTML slides with placeholders and copy buttons"]
+  C --> H["Use HTML slides with safe visual cards and copy buttons"]
   D --> L["Use Beamer/LaTeX or PowerPoint-style slides"]
   E --> M["Use Markdown README plus Mermaid diagrams"]
   H --> V["Verify claims, figures, screenshots, and public-sharing permissions"]

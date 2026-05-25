@@ -132,6 +132,31 @@ If you are using GitHub search, search these words inside this folder. If you ar
 | LaTeX/Beamer | [Presentations, Slides, Websites, and Talk Practice Skills](skills/06-presentations-slides-websites-and-talk-practice-skills.md) | paper section, Beamer deck, table/figure formatting |
 | Codex/Claude Code/Cursor | [Project Instructions and Agent Role Templates](skills/07-project-instructions-and-agent-role-templates.md) | project instructions, agent role, approval gates |
 
+### Tagged Skill Index
+
+Use this table when you know the artifact you need but not the file name. Levels mean the expected reader setup: beginner = browser AI and public material; intermediate = project context and source checks; advanced = Git, code, data, or agent workflow.
+
+| Skill page | Field | Level | Required input | Output | Verification | Best tool mode |
+| --- | --- | --- | --- | --- | --- | --- |
+| [01 Ideas, brainstorming, proposal](skills/01-ideas-brainstorming-proposal-and-literature-skills.md) | both | beginner | topic, setting, possible data, audience | idea stress test, proposal frame, paper orientation | closest papers, data obstacle, identification/model obstacle | chat or project |
+| [02 Paper drafting, revision, citation](skills/02-paper-drafting-revision-and-citation-skills.md) | both | intermediate | verified claims, paper stage, target audience | introduction spine, revision, response plan | citations, claims, hedging, author voice | project |
+| [03 Economics empirical methods](skills/03-empirical-methods-skills-for-economics-research.md) | economics | intermediate | design, data, sample, equation, timing | methods prose or design audit | code, estimand, sample, timing, inference | project or agent |
+| [04 Finance empirical methods](skills/04-empirical-methods-skills-for-finance-research.md) | finance | intermediate | data source, security/firms, timing, model, benchmark | finance methods prose or audit | look-ahead, survivorship, delisting, link tables, multiple testing | project or agent |
+| [05 Git, data, replication safety](skills/05-git-data-replication-and-research-safety-templates.md) | both | beginner-intermediate | project folder, data rules, desired structure | `.gitignore`, `DATA.md`, `AGENTS.md`, AI-use log | Git diff, ignored files, data permissions | GitHub workflow |
+| [06 Presentations, slides, websites](skills/06-presentations-slides-websites-and-talk-practice-skills.md) | both | beginner-intermediate | paper summary, audience, time, figures | HTML slides, Beamer plan, talk drill, website plan | claim-to-evidence match, privacy, public-sharing permission | chat, project, or agent |
+| [07 Project instructions and roles](skills/07-project-instructions-and-agent-role-templates.md) | both | beginner-intermediate | research purpose, role, files, rules | project instructions, role prompts, agent rules | missing-input questions, permissions, output scope | project or agent |
+| [08 Coding, data analysis, debugging](skills/08-coding-data-analysis-and-debugging-skills.md) | both | intermediate | code, error, expected output, data schema | diagnosis, patch plan, toy test, code review | run code, inspect output, compare to design | coding agent |
+| [09 Tool selection and updates](skills/09-tool-selection-updates-and-skill-improvement.md) | both | beginner | task, budget, tool access, risk tolerance | dated tool choice, update digest, resource shortlist | date, official docs, small-task test | chat |
+| [10 Literature review](skills/10-literature-review-and-source-synthesis-skills.md) | both | beginner-intermediate | supplied papers, notes, BibTeX, verified links | literature matrix, synthesis, claim-source bank | source match, DOI/journal page, no invented citations | project or search-grounded chat |
+| [11 Causal inference/econometrics/time series](skills/11-causal-inference-econometrics-and-time-series-skills.md) | both | intermediate-advanced | design, timing, panel, outcome, treatment, code/table | estimator diagnostic and inference checklist | estimator assumptions, clustering, robustness, timing | project or agent |
+| [12 Theory/model/math](skills/12-theory-model-and-math-skills.md) | both | advanced | model, assumptions, proposition, proof sketch | model audit, proof gaps, implications | algebra, limiting cases, equilibrium logic | project |
+| [13 Referee and peer review](skills/13-referee-reports-and-peer-review-skills.md) | both | intermediate | manuscript, review policy, comments, target journal | self-review, report aid, response plan | confidentiality policy, claim support, tone | project |
+| [14 Data cleaning/merging/output](skills/14-data-cleaning-merging-analysis-and-output-skills.md) | both | advanced | schema, merge keys, timing, code, desired outputs | pipeline, merge plan, toy data, tables/figures | toy-data answer, audit tables, lineage | coding agent |
+| [15 Text-as-data/LLM measurement](skills/15-text-as-data-and-llm-measurement-skills.md) | both | advanced | corpus, labels, construct, validation sample | measurement protocol, prompt sensitivity, methods paragraph | validation, model version, leakage, sensitivity | project or agent |
+| [16 Structural/quantitative/welfare](skills/16-structural-quantitative-and-welfare-skills.md) | both | advanced | model, moments, parameters, estimation, counterfactual | structural map, estimation plan, welfare guardrail | fit, convergence, identification, counterfactual interpretation | project or coding agent |
+| [17 Verification/disclosure](skills/17-verification-reproducibility-and-disclosure-skills.md) | both | beginner-intermediate | AI output, source/code/data object, target use | verification method, disclosure, reproducibility packet | source/code/data/math/policy check | chat, project, or agent |
+| [18 Research question/taste/positioning](skills/18-research-question-taste-and-positioning-skills.md) | both | beginner-intermediate | topic, mechanism, closest papers, data idea | sharper question, mechanism tension, so-what test | importance, novelty, feasibility, contribution | chat or project |
+
 | File | Use it when you need... |
 | --- | --- |
 | [01 Research Ideas, Brainstorming, and Proposal Skills](skills/01-ideas-brainstorming-proposal-and-literature-skills.md) | quick idea stress tests, proposal framing, LLM-friendly paper orientation |
@@ -255,6 +280,8 @@ Do not invent citations, data sources, coefficients, robustness checks, institut
 Follow all university, employer, journal, conference, funder, data-provider, and coauthor policies on AI use. If the relevant rule is stricter than this instruction, follow the stricter rule.
 
 If any input, term, policy, method, data rule, or output format is unclear, ask up to five clarifying questions before giving the final answer. If you proceed with assumptions, state them explicitly. End with "Questions for you" if anything remains uncertain.
+
+Before finishing, state what you changed or produced, what you did not change, and what I must verify manually.
 ```
 
 ## Universal Output Contract
@@ -267,7 +294,8 @@ Return your answer in five sections:
 2. Assumptions you made.
 3. Items I must verify manually.
 4. Risks or failure modes.
-5. Questions for you and next action checklist.
+5. What you changed, what you did not change, and what I must verify.
+6. Questions for you and next action checklist.
 ```
 
 ## Source Use Rule

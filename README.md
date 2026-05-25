@@ -19,6 +19,29 @@ This repository is designed for readers who want to **click, copy, paste, adapt,
 
 The main page keeps only the primary reading and working folders visible. Supporting files and old short pages are consolidated under [Repository Reference and Maintenance](99-Repository-Reference-and-Maintenance/README.md).
 
+### What Do You Want To Do?
+
+| Goal | Open | What you should leave with |
+| --- | --- | --- |
+| Learn the concepts | [01 Read The Handbook](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) | a mental model for AI, LLMs, agents, GitHub, data safety, and verification |
+| Copy a usable skill | [02 Copy One Usable Skill](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) | one prompt/instruction you can paste into an AI tool today |
+| Set up Git, GitHub, or agents | [03 Set Up Git, GitHub, And Agents](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) | a private repo, safety files, approval gates, and a first agent task |
+| Check citations or literature | [Literature Review Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/10-literature-review-and-source-synthesis-skills.md) | a source-grounded literature map and a citation-verification habit |
+| Draft or audit methods | [Economics Methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md) or [Finance Methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/04-empirical-methods-skills-for-finance-research.md) | methods prose or a design audit that states what must be verified |
+| Build slides or practice a talk | [06 Teach, Present, Or Share](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | a talk flow, slide path, practice prompt, or teaching exercise |
+| Find datasets or resources | [05 Check Sources, Datasets, And Docs](05-Check-Builders-Official-Docs-and-Resources/README.md) | source links, dataset access notes, and AI-use cautions |
+
+### Choose By Role
+
+| Reader | Start with | Then do this |
+| --- | --- | --- |
+| New PhD student | [01 Handbook](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) | copy one small skill on public material and verify it |
+| RA starting empirical work | [03 Setup](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) | create `DATA.md`, `AGENTS.md`, `.gitignore`, and a first AI-use log |
+| Junior faculty revising a paper | [02 Writing and review skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/02-paper-drafting-revision-and-citation-skills.md) | use self-review, referee-response, and verification skills before rewriting |
+| Finance researcher working with data | [Finance methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/04-empirical-methods-skills-for-finance-research.md) and [data skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/14-data-cleaning-merging-analysis-and-output-skills.md) | check timing, link tables, delisting returns, survivorship, and factor-mining risk |
+| Instructor preparing a two-hour workshop | [06 Teaching materials](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | use the talk script, HTML deck, live demo, and verification exercise |
+| Coauthor team or lab lead | [03 Collaboration workflow](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#collaborating-with-coauthors-ras-and-agents) | define file ownership, approval gates, PR review, and AI-use logging |
+
 ### Roadmap: Choose Where To Start
 
 Use this roadmap when you are not sure where to click first.
@@ -60,12 +83,12 @@ Use this roadmap when you are not sure where to click first.
   </tr>
 </table>
 
-### Visual Roadmaps
+### Clickable Research Roadmaps
 
 Use these diagrams to understand the flow of the repository.
 
 ```mermaid
-%%{init: {"theme": "base", "flowchart": {"htmlLabels": true, "nodeSpacing": 55, "rankSpacing": 75}, "themeVariables": {"fontSize": "22px", "fontFamily": "Arial", "primaryColor": "#F4F0FF", "primaryBorderColor": "#6D5BD0", "primaryTextColor": "#111827", "lineColor": "#4B5563"}}}%%
+%%{init: {"theme": "base", "flowchart": {"htmlLabels": true, "nodeSpacing": 65, "rankSpacing": 85}, "themeVariables": {"fontSize": "24px", "fontFamily": "Arial", "primaryColor": "#F4F0FF", "primaryBorderColor": "#6D5BD0", "primaryTextColor": "#111827", "lineColor": "#4B5563"}}}%%
 flowchart LR
   A["01<br/>Read"] --> B["02<br/>Copy"]
   B --> C["03<br/>Set Up"]
@@ -76,7 +99,7 @@ flowchart LR
   H["05<br/>Sources"] -. "check" .-> C
   T["06<br/>Teach/Share"] -. "adapt" .-> F
 
-  classDef big fill:#F4F0FF,stroke:#6D5BD0,stroke-width:2px,color:#111827,font-size:22px;
+  classDef big fill:#F4F0FF,stroke:#6D5BD0,stroke-width:2px,color:#111827,font-size:24px;
   class A,B,C,D,E,F,G,H,T big;
 
   click A "01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md" "Open the handbook"
@@ -88,7 +111,7 @@ flowchart LR
 ```
 
 ```mermaid
-%%{init: {"theme": "base", "flowchart": {"htmlLabels": true, "nodeSpacing": 45, "rankSpacing": 80}, "themeVariables": {"fontSize": "22px", "fontFamily": "Arial", "primaryColor": "#EEF7FF", "primaryBorderColor": "#2563EB", "primaryTextColor": "#111827", "lineColor": "#4B5563"}}}%%
+%%{init: {"theme": "base", "flowchart": {"htmlLabels": true, "nodeSpacing": 55, "rankSpacing": 90}, "themeVariables": {"fontSize": "24px", "fontFamily": "Arial", "primaryColor": "#EEF7FF", "primaryBorderColor": "#2563EB", "primaryTextColor": "#111827", "lineColor": "#4B5563"}}}%%
 flowchart TD
   R["Start With<br/>01 Handbook"] --> Q{"What Do You<br/>Need Next?"}
   Q --> S["02<br/>Use A Skill"]
@@ -103,8 +126,8 @@ flowchart TD
   P --> V
   V --> G["Record AI Use<br/>And Save With Git"]
 
-  classDef decision fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,color:#111827,font-size:24px;
-  classDef step fill:#EEF7FF,stroke:#2563EB,stroke-width:2px,color:#111827,font-size:22px;
+  classDef decision fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,color:#111827,font-size:26px;
+  classDef step fill:#EEF7FF,stroke:#2563EB,stroke-width:2px,color:#111827,font-size:24px;
   class Q decision;
   class R,S,A,E,L,P,V,G step;
 

@@ -174,9 +174,9 @@ Ask participants to classify each item:
 | proof step | assumptions, limiting cases, notation |
 | slide title | compare to actual table/figure and causal design |
 
-## Screenshot Guidance For The HTML Deck
+## Visual Guidance For The HTML Deck
 
-The HTML deck already labels the screenshot slots. Replace them only with public or synthetic screenshots: no private repo names, data paths, paper drafts, coauthor comments, student data, licensed extracts, referee material, or credentials.
+The HTML deck uses synthetic visual cards so it can be taught without exposing private projects. If you replace a visual, use only public or synthetic material: no private repo names, data paths, paper drafts, coauthor comments, student data, licensed extracts, referee material, or credentials.
 
 ## Participant Takeaway Sheet
 

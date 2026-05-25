@@ -6,7 +6,7 @@
 > Follow university, employer, data-provider, journal, conference, funder, and coauthor policies on AI use. These templates are not permission to upload confidential or restricted material.
 
 > [!NOTE]
-> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language. After producing output, state what changed, what did not change, and what the researcher must verify. End with "Questions for you" if anything remains uncertain.`
 
 ## Template 1: Clean Up Existing Project and Start Git Safely
 

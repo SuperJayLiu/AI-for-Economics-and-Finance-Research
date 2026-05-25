@@ -8,7 +8,7 @@ These skills are tailored for asset pricing, corporate finance, banking, househo
 > Finance AI outputs are especially vulnerable to clean narratives around noisy patterns. Use these skills to document timing, benchmarks, sample construction, risk adjustment, and limits. Do not use them to manufacture a story after searching many specifications.
 
 > [!NOTE]
-> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language. After producing output, state what changed, what did not change, and what the researcher must verify. End with "Questions for you" if anything remains uncertain.`
 
 ## Choose the Right Skill
 

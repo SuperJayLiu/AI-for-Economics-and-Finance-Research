@@ -656,6 +656,113 @@ replication/run-package-check
 slides/seminar-qa
 ```
 
+### Copy-Ready Team Templates
+
+Use these when a coauthor team, RA, or lab project wants a shared AI workflow. Replace bracketed fields before use.
+
+#### Coauthor AI-Use Agreement
+
+```text
+Project:
+[paper/project name]
+
+Team rule:
+AI may help with organization, coding assistance, literature tables from supplied sources, writing clarity, slides, and verification checklists. AI may not decide the research question, identification strategy, final claims, data access permissions, authorship, or submission readiness.
+
+Materials:
+- Public material allowed with normal source checks: [list].
+- Coauthored drafts allowed only with consent from: [names].
+- Licensed/restricted/private/confidential material not allowed in public AI tools: [list].
+
+File workflow:
+- Work happens on branches, not directly on main.
+- Agent tasks use GitHub Issues or written task cards.
+- Pull requests must state files changed, commands run, outputs checked, and remaining uncertainty.
+
+Human ownership:
+- Data access owner:
+- Code owner:
+- Methods/identification owner:
+- Paper text owner:
+- AI-use log owner:
+
+Disclosure:
+The team will check university, employer, journal, conference, funder, and data-provider policies before submission or public release.
+```
+
+#### RA Onboarding Message
+
+```text
+Subject: AI-assisted research workflow for [project name]
+
+Please start by reading README.md, DATA.md, AGENTS.md, and AI-USE-LOG.md.
+
+Your first task is inspect-only:
+1. summarize the folder structure;
+2. identify data-sensitivity rules;
+3. list files agents must never edit;
+4. list commands needed to reproduce current outputs;
+5. suggest one small AI-assisted task that can be verified with public, synthetic, or non-sensitive material.
+
+Do not upload data, coauthor drafts, referee material, or private notes to an AI tool unless the project owner has approved it.
+Do not accept AI-generated code unless it runs and passes a toy or known-answer check.
+Ask questions if file ownership, data permissions, or validation commands are unclear.
+```
+
+#### Pull Request Review Checklist For AI-Assisted Research
+
+```text
+Before merging this pull request, check:
+[ ] The PR explains what AI helped produce.
+[ ] Files changed match the approved task.
+[ ] No raw, restricted, licensed, private, identifiable, or confidential data are included.
+[ ] Code changes run on a toy or known-answer example when possible.
+[ ] Main scripts or notebooks still run.
+[ ] Tables/figures match the methods and sample definition.
+[ ] Citations and literature claims are source-checked.
+[ ] Any changed causal, empirical, theoretical, or policy claim has a named human reviewer.
+[ ] AI-USE-LOG.md is updated or the PR explains why no log entry is needed.
+[ ] Remaining uncertainty is stated.
+```
+
+#### Research-Team AI-Use Log Entry
+
+```markdown
+## [YYYY-MM-DD] [task title]
+
+Project:
+Task owner:
+AI tool/model:
+Mode: chat / project / coding agent / GitHub workflow / other
+
+Inputs used:
+- [public/supplied/synthetic/materials]
+
+Files changed:
+- [file paths]
+
+Output accepted:
+- [what was accepted]
+
+Human edits:
+- [what humans changed after AI output]
+
+Checks run:
+- [commands, source checks, toy tests, table checks]
+
+What changed:
+- [summary]
+
+What did not change:
+- [sample, identification, data source, claims, etc.]
+
+Remaining uncertainty:
+- [what still needs human review]
+
+Commit or PR:
+- [hash or link]
+```
+
 ## Modes Of Agent Work
 
 Use the lowest-power mode that solves the problem.

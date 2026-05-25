@@ -8,7 +8,7 @@ These skills are for turning research into usable communication artifacts: inter
 > Slides are not a decoration task. A good slide workflow converts a paper into a clear sequence of claims, evidence, limits, and audience questions.
 
 > [!NOTE]
-> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language. After producing output, state what changed, what did not change, and what the researcher must verify. End with "Questions for you" if anything remains uncertain.`
 
 ## Choose a Skill
 
@@ -110,7 +110,7 @@ Output:
    - contribution
    - conclusion/Q&A
 3. Speaker-note bullets below each slide as comments.
-4. Figure placeholders with clear filenames.
+4. Figure-needed markers with clear filenames.
 5. A backup slide plan for robustness, data details, and extra results.
 
 Rules:

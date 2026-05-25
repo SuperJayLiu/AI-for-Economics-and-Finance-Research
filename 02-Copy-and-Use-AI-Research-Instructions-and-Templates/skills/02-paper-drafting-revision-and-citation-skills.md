@@ -8,7 +8,7 @@ These are for writing with guardrails. They should improve structure and clarity
 > Diagnose before rewriting. A polished paragraph with a vague research question, weak evidence, or unsupported contribution is still weak.
 
 > [!NOTE]
-> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language and end with "Questions for you" if anything remains uncertain.`
+> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language. After producing output, state what changed, what did not change, and what the researcher must verify. End with "Questions for you" if anything remains uncertain.`
 
 ## Skill 1: Introduction Spine Builder
 
@@ -159,7 +159,7 @@ Return:
 Rules:
 - Do not invent results, citations, data, or mechanisms.
 - Do not turn the introduction into a literature review.
-- Use placeholders like [MAIN ESTIMATE] or [CLOSEST PAPER] when information is missing.
+- Use bracketed fields like [MAIN ESTIMATE] or [CLOSEST PAPER] when information is missing.
 ```
 
 ## Skill 6: Finance Journal Prose Revision

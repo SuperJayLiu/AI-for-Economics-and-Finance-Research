@@ -66,6 +66,17 @@ flowchart LR
 | "I work with coauthors, RAs, or a research team." | Read Sections 9, 10, 11, and 12 first. | [Collaborating with coauthors, RAs, and agents](../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#collaborating-with-coauthors-ras-and-agents) |
 | "I need slides or a talk." | Read Section 14. | [Presentation, slides, website, and talk-practice skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md) |
 
+### Chapter Map: What You Learn
+
+| Chapter group | Plain-language outcome | Use it when... |
+| --- | --- | --- |
+| Sections 1-4 | understand AI, LLMs, GitHub, projects, skills, agents, MCPs, and the maturity ladder | you are new or explaining the repo to someone else |
+| Sections 5-8 | know where AI helps across literature, data, methods, theory, writing, and presentations | you want to place AI inside the research workflow |
+| Sections 9-11 | avoid unsafe use, fake citations, bad code, confidential uploads, and data-permission mistakes | you are using real research material |
+| Sections 12-13 | set up GitHub, project rules, reusable skills, and agent workflows | AI may edit files or run code |
+| Sections 14-16 | turn research into papers, slides, public explanations, and durable learning habits | you are writing, teaching, presenting, or staying updated |
+| Section 17 | check selected builders, official docs, methods references, and workflow influences | you need source context or further reading |
+
 ## Minimum Safe Setup
 
 You do not need an elaborate system to start. You need a small system that prevents obvious mistakes.
@@ -76,7 +87,7 @@ You do not need an elaborate system to start. You need a small system that preve
 | Version control | GitHub repo, even private | recover files and inspect AI edits |
 | Research folder | `data/`, `code/`, `output/`, `paper/`, `slides/` | prevents raw data, code, and drafts from mixing |
 | Citation manager | Zotero, BibTeX, or equivalent | prevents fake citation dependence |
-| AI-use log | one markdown file | records what AI changed and what you checked |
+| AI-use log | one markdown file | records AI assistance, accepted output, and human checks |
 | Data rule | one paragraph in `DATA.md` | prevents unsafe upload decisions |
 
 Copy this rule into your first project:
@@ -177,6 +188,32 @@ If no, the task is probably too vague, too risky, or too judgment-heavy.
 | "Clean my data." | "Inspect the folder and propose a raw-to-derived pipeline. Do not edit files yet. Identify raw data, derived data, code, outputs, privacy risks, and checks I should approve." |
 | "Make my slides." | "Build a 25-minute seminar outline from this paper. For each slide, state the claim, evidence, figure/table needed, risk of overclaiming, and speaker note." |
 | "Use agents on my project." | "Create a plan with files to read, files allowed to edit, files forbidden, commands to run, checks to pass, and approval gates before changing anything." |
+
+### Positive Workflows To Copy
+
+AI is most useful when it turns a repeated research job into a checkable artifact. The point is not to automate judgment. The point is to save labor where the output can be inspected.
+
+| Workflow | Why it works | Verification habit |
+| --- | --- | --- |
+| Literature map from supplied papers | AI organizes sources faster than a manual spreadsheet | every claim must point to a supplied source, DOI, or verified page |
+| First empirical-project setup | AI drafts folder structure, `.gitignore`, `DATA.md`, `AGENTS.md`, and an AI-use log | check that raw/licensed/restricted data are excluded before the first commit |
+| Methods prose from verified facts | AI turns a design into clearer text without choosing the design | compare prose to code, sample, timing, equation, and inference |
+| Data pipeline plan | AI lists raw-to-derived steps, merge keys, audit tables, and toy tests | run toy data with a known answer before trusting real data |
+| Seminar Q&A drill | AI generates hostile-but-fair questions and short answer structures | answer only with evidence from the paper, not invented defenses |
+| Reusable skill creation | AI helps convert a repeated task into input, procedure, output, and checks | test the skill once on a small public or synthetic example |
+
+### From Chat To Reusable Workflow
+
+```mermaid
+flowchart LR
+  A["One-time chat"] --> B["Structured instruction"]
+  B --> C["Reusable skill"]
+  C --> D["Project rule"]
+  D --> E["Agent workflow with Git"]
+  E --> F["Verified research artifact"]
+```
+
+Move right only when the task repeats and the verification method is clear.
 
 Copy this when you are not sure how to phrase a task:
 

@@ -91,6 +91,21 @@ Use this folder to distinguish:
 | skill repositories | examples of reusable workflow design | unlicensed copying |
 | newsletters/social media | discovery | unverified claims |
 
+## Selected Links By Task
+
+Use this as the fast view before the long source map.
+
+| Task | Start with | Why |
+| --- | --- | --- |
+| Learn AI basics for research | [Zara Zhang, AI learning library](https://zara.faces.site/ai), [Claude Blattman](https://claudeblattman.com/) | beginner-friendly learning paths and non-coder workflow examples |
+| Learn coding agents for economists | [Paul Goldsmith-Pinkham AI posts](https://paulgp.com/blog.html), [Pedro Sant'Anna workflow guide](https://psantanna.com/claude-code-my-workflow/workflow-guide.html), [The AI Economist agent tutorial](https://aieconomist.io/tutorials/ai-agents-for-economics-research) | practical plan-first, Git-aware, agentic research workflows |
+| Find econ/finance AI workflow examples | [Mihail Velikov AI econ wiki](https://velikov-mihail.github.io/ai-econ-wiki/), [Awesome Econ AI Stuff](https://meleantonio.github.io/awesome-econ-ai-stuff/), [Awesome AI for Economists](https://github.com/hanlulong/awesome-ai-for-economists) | curated field-specific examples and skills |
+| Find econometrics and methods references | [Applied Methods PhD](https://github.com/paulgp/applied-methods-phd), [Callaway-Sant'Anna DiD](https://ideas.repec.org/a/eee/econom/v225y2021i2p200-230.html), [rdrobust](https://rdpackages.github.io/rdrobust/) | method standards to check AI-generated methods against |
+| Find finance datasets and replication discipline | [WRDS](https://wrds-www.wharton.upenn.edu/), [SEC EDGAR APIs](https://www.sec.gov/edgar/sec-api-documentation), [Open Source Asset Pricing](https://www.openassetpricing.com/) | finance data access, filings, and anomaly-replication standards |
+| Find public economics datasets | [FRED](https://fred.stlouisfed.org/), [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392), [IPUMS](https://www.ipums.org/about/terms), [NBER Public Use Data](https://www.nber.org/research/data) | common public or public-use starting points with access rules |
+| Check official AI/tool docs | [OpenAI Codex skills](https://developers.openai.com/codex/skills), [OpenAI AGENTS.md](https://developers.openai.com/codex/guides/agents-md), [Claude Code docs](https://code.claude.com/docs/en/how-claude-code-works), [MCP docs](https://modelcontextprotocol.io/docs/getting-started/intro) | current tool behavior, permissions, and setup |
+| Check responsible-use constraints | your university, employer, journal, funder, conference, coauthor, and data-provider policies | local policy can be stricter than any general AI handbook |
+
 ## Resource Library Pattern To Reuse
 
 A good AI research-resource page should behave like a small searchable database, not a long unordered reading list. The most useful pattern is:
@@ -254,6 +269,19 @@ Before asking AI to read, clean, merge, summarize, or transform data, check:
 - whether the material is public, licensed, restricted, embargoed, proprietary, or coauthored;
 - whether public AI tools, cloud tools, MCP connectors, coding agents, or external APIs are allowed;
 - whether metadata, toy data, synthetic data, or code-only assistance would be safer.
+
+### Dataset Decision Table
+
+| Dataset/material | Access type | Public AI upload? | Rule to check | Safer AI workflow |
+| --- | --- | --- | --- | --- |
+| FRED, BEA, BLS, World Bank, IMF, OECD aggregate data | public | usually yes for public series IDs and documentation | source citation, revision/vintage, API terms | ask AI for retrieval code and metadata checks; log series IDs and dates |
+| Public SEC filings and EDGAR metadata | public | usually yes for filing URLs and public text | SEC fair-access guidance and parser limits | use CIK/accession/form/date logs and parser-version records |
+| IPUMS or public-use microdata | registered public-use | not automatically | IPUMS terms, reidentification rules, institution rules | use variable metadata, code, and toy rows unless terms allow more |
+| WRDS/CRSP/Compustat/IBES/OptionMetrics/TAQ | licensed institutional | generally no for raw extracts | WRDS and vendor license, institution cloud/AI rules | use schemas, variable dictionaries, toy examples, and code templates |
+| Bloomberg, FactSet, LSEG, TRACE licensed products | commercial/licensed | generally no | terminal/API/license/redistribution rules | use metadata and synthetic examples; keep extracts out of public AI |
+| Administrative or restricted microdata | restricted/confidential | no unless explicitly approved | DUA, IRB/ethics, secure-environment policy | use approved secure environment, synthetic examples, and disclosure review |
+| Proprietary firm data or private transaction data | private/confidential | no unless contract permits | NDA, client, employer, legal, security rules | use schemas and toy data; never paste actual records into public AI |
+| Referee reports, unpublished drafts, coauthor notes | confidential or coowned | only if policy and consent allow | journal/conference/editor/coauthor rules | use local/institution-approved tool or summarize questions without confidential text |
 
 ### Open or Public Economic Data
 
