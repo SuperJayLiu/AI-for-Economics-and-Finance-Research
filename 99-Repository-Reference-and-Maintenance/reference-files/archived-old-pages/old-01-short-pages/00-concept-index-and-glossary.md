@@ -21,11 +21,11 @@ Use this page when a term appears in the handbook and you need the research mean
 | Concept | Research meaning | Read next |
 | --- | --- | --- |
 | Prompt | One-time instruction | [Prompts, Projects, Skills, Agents, MCPs](tools-and-features/01-prompts-projects-skills-agents-mcps.md) |
-| Project | Persistent AI workspace for a paper, dataset, talk, or recurring task | [Skills, Projects, Agents, and MCPs](../../../01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md#13-skills-projects-agents-and-mcps) |
+| Project | Persistent AI workspace for a paper, dataset, talk, or recurring task | [Skills, Projects, Agents, and MCPs](../../../../01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md#13-skills-projects-agents-and-mcps) |
 | Skill | Reusable procedure for a repeated task | [Build For One Workflows](ai-skills-management/08-build-for-one-research-workflows.md) |
 | MCP | Connector standard that lets AI applications connect to external tools and data sources | [Knowledge Links](00-knowledge-links.md) |
-| AGENTS.md | Project instruction file for coding agents | [Git, Data, Replication, and Research Safety Templates](../../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/05-git-data-replication-and-research-safety-templates.md) |
-| AI-use log | Record of AI-assisted tasks, accepted output, checks, and remaining uncertainty | [Verification, Reproducibility, and Disclosure Skills](../../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/17-verification-reproducibility-and-disclosure-skills.md) |
+| AGENTS.md | Project instruction file for coding agents | [Git, Data, Replication, and Research Safety Templates](../../../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/05-git-data-replication-and-research-safety-templates.md) |
+| AI-use log | Record of AI-assisted tasks, accepted output, checks, and remaining uncertainty | [Verification, Reproducibility, and Disclosure Skills](../../../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/17-verification-reproducibility-and-disclosure-skills.md) |
 
 ## Economics And Finance Concepts AI Often Mishandles
 

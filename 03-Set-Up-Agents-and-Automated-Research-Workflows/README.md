@@ -1,6 +1,6 @@
 # Set Up Agents and Automated Research Workflows
 
-This folder is for multi-step workflows where AI may plan, edit files, run code, inspect outputs, or monitor updates.
+This folder is the setup and automation guide for AI-assisted research projects. Use this README to understand the approval gates, collaboration rules, and safe defaults; use the detailed runbooks inside [`workflows/`](workflows/) when you need a step-by-step setup for Git, GitHub, agents, replication packages, worktrees, or update digests.
 
 Use these only after reading the [handbook](../01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) and setting up Git.
 
@@ -90,12 +90,12 @@ Do not edit files yet. After I approve the plan, I will start a fresh execution 
 
 | File | Use it for |
 | --- | --- |
-| [01 Clean Existing Research Project and Set Up Git](01-clean-existing-research-project-and-set-up-git.md) | turn a messy folder into a safe repo |
-| [02 One Paper, One Repo, One AI Project](02-one-paper-one-repo-one-ai-project.md) | set up a durable AI workspace for a paper |
-| [03 Replication Package Agent Workflow](03-replication-package-agent-workflow.md) | inspect, run, and document replication packages |
-| [04 AI Research Update Digest Workflow](04-ai-research-update-digest-workflow.md) | build a low-noise update system from official docs and builders |
-| [05 Parallel Agents and Git Worktrees](05-parallel-agents-and-git-worktrees.md) | run multiple AI tasks safely without corrupting the main project |
-| [06 GitHub Review Feedback and Publish Workflow](06-github-review-feedback-and-publish-workflow.md) | handle PR comments, stage changes intentionally, commit, push, and open PRs safely |
+| [01 Clean Existing Research Project and Set Up Git](workflows/01-clean-existing-research-project-and-set-up-git.md) | turn a messy folder into a safe repo |
+| [02 One Paper, One Repo, One AI Project](workflows/02-one-paper-one-repo-one-ai-project.md) | set up a durable AI workspace for a paper |
+| [03 Replication Package Agent Workflow](workflows/03-replication-package-agent-workflow.md) | inspect, run, and document replication packages |
+| [04 AI Research Update Digest Workflow](workflows/04-ai-research-update-digest-workflow.md) | build a low-noise update system from official docs and builders |
+| [05 Parallel Agents and Git Worktrees](workflows/05-parallel-agents-and-git-worktrees.md) | run multiple AI tasks safely without corrupting the main project |
+| [06 GitHub Review Feedback and Publish Workflow](workflows/06-github-review-feedback-and-publish-workflow.md) | handle PR comments, stage changes intentionally, commit, push, and open PRs safely |
 
 ## Zero To Working Setup
 

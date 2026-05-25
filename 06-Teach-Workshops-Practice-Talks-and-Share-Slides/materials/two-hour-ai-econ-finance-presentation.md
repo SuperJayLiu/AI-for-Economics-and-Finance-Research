@@ -6,9 +6,9 @@ Use it with the live HTML deck: [two-hour-ai-econ-finance-slides.html](two-hour-
 
 This deck follows the repo's own slide guidance:
 
-- [Interactive HTML Research Slides](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-1-interactive-html-research-slides)
-- [Paper-to-Talk Converter](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter)
-- [Practice My Presentation With AI](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai)
+- [Interactive HTML Research Slides](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-1-interactive-html-research-slides)
+- [Paper-to-Talk Converter](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter)
+- [Practice My Presentation With AI](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai)
 
 > [!IMPORTANT]
 > Do not demo with private data, unpublished coauthor material, referee reports, student records, licensed database extracts, or confidential work. Use public abstracts, synthetic examples, screenshots, or toy data.

@@ -1,6 +1,6 @@
 # Teach Workshops, Practice Talks, and Share Slides
 
-This folder is for instructors, PIs, PhD organizers, and seminar leaders who want to teach the material.
+This folder is for instructors, PIs, PhD organizers, seminar leaders, and researchers who want to turn the handbook into live teaching or presentation material. Use this README for the teaching flow, exercises, and audience guidance; use [`materials/`](materials/) for the two-hour presentation script and HTML slide deck.
 
 > [!TIP]
 > Treat every workshop as a live workflow-design session. Participants should leave with one usable project instruction, one skill, and one verification rule for their own research.
@@ -45,7 +45,7 @@ flowchart LR
 
 | Goal | Use |
 | --- | --- |
-| teach a two-hour presentation | [Two-hour presentation script](two-hour-ai-econ-finance-presentation.md) and [HTML slide deck](two-hour-ai-econ-finance-slides.html) |
+| teach a two-hour presentation | [Two-hour presentation script](materials/two-hour-ai-econ-finance-presentation.md) and [HTML slide deck](materials/two-hour-ai-econ-finance-slides.html) |
 | teach a 90-minute introduction | Two-session workshop, Session 1 only |
 | teach a half-day workshop | both sessions plus live skill-building |
 | onboard RAs | RA onboarding checklist |
@@ -58,9 +58,9 @@ Use this if another scholar wants to teach the handbook as a self-contained talk
 
 | Asset | Use it for | Notes |
 | --- | --- | --- |
-| [Two-hour presentation script](two-hour-ai-econ-finance-presentation.md) | readable GitHub version, speaker plan, timed agenda, demos, exercises | source of truth for teaching |
-| [Interactive HTML slide deck](two-hour-ai-econ-finance-slides.html) | live presentation | open locally in a browser |
-| [Presentation and slide skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md) | adapting the talk to other audiences | includes HTML, Beamer, talk-practice, and paper-to-talk prompts |
+| [Two-hour presentation script](materials/two-hour-ai-econ-finance-presentation.md) | readable GitHub version, speaker plan, timed agenda, demos, exercises | source of truth for teaching |
+| [Interactive HTML slide deck](materials/two-hour-ai-econ-finance-slides.html) | live presentation | open locally in a browser |
+| [Presentation and slide skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md) | adapting the talk to other audiences | includes HTML, Beamer, talk-practice, and paper-to-talk prompts |
 
 Suggested use:
 
@@ -265,7 +265,7 @@ Include:
 
 ## Presentation Practice Activity
 
-Use the [presentation practice skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai).
+Use the [presentation practice skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai).
 
 Ask each participant to prepare:
 

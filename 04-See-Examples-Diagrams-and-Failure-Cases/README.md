@@ -142,15 +142,15 @@ Closures are not random; weak local demand may cause both closures and lower bor
 
 | Stage | AI-assisted action | Copy-ready skill | Human check |
 | --- | --- | --- | --- |
-| 1. Question | turn topic into a mechanism tension | [Topic-to-Tension Research Question Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/18-research-question-taste-and-positioning-skills.md#skill-1-topic-to-tension-research-question-builder) | is the question important, not just feasible? |
-| 2. Literature | map supplied banking/local credit papers | [Source-Grounded Literature Review Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) | verify closest papers and do not claim novelty too broadly |
-| 3. Design | pre-mortem the DiD/event-study design | [Difference-in-Differences and Event Study Check](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/11-causal-inference-econometrics-and-time-series-skills.md#skill-4-difference-in-differences-and-event-study-check) | check staggered timing, heterogeneous effects, pre-trend power, clustering |
-| 4. Data | create raw-to-analysis pipeline | [Reproducible Research Data Pipeline Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/14-data-cleaning-merging-analysis-and-output-skills.md#skill-1-reproducible-research-data-pipeline-builder) | ensure raw files are never changed and licensed data is protected |
-| 5. Code | build toy data before real code | [Toy Data Test Harness](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/14-data-cleaning-merging-analysis-and-output-skills.md#skill-6-toy-data-test-harness-for-ai-written-code) | known-answer test must pass by inspection |
-| 6. Methods | draft methods from verified facts | [Draft Empirical Methods Section for Economics](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) | prose must match code, tables, timing, and inference |
-| 7. Results | check coefficient interpretation | [Back-of-Envelope Coefficient and Magnitude Check](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/17-verification-reproducibility-and-disclosure-skills.md#skill-4-back-of-envelope-coefficient-and-magnitude-check) | units, baseline magnitude, CI, and design support |
-| 8. Talk | prepare seminar Q&A | [Practice My Presentation With AI](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) | do not invent answers to limitations |
-| 9. Trace | create disclosure and AI-use record | [AI Reproducibility Packet and Disclosure Draft](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/17-verification-reproducibility-and-disclosure-skills.md#skill-6-ai-reproducibility-packet-and-disclosure-draft) | check journal, coauthor, data-provider, and institutional policy |
+| 1. Question | turn topic into a mechanism tension | [Topic-to-Tension Research Question Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/18-research-question-taste-and-positioning-skills.md#skill-1-topic-to-tension-research-question-builder) | is the question important, not just feasible? |
+| 2. Literature | map supplied banking/local credit papers | [Source-Grounded Literature Review Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) | verify closest papers and do not claim novelty too broadly |
+| 3. Design | pre-mortem the DiD/event-study design | [Difference-in-Differences and Event Study Check](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/11-causal-inference-econometrics-and-time-series-skills.md#skill-4-difference-in-differences-and-event-study-check) | check staggered timing, heterogeneous effects, pre-trend power, clustering |
+| 4. Data | create raw-to-analysis pipeline | [Reproducible Research Data Pipeline Builder](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/14-data-cleaning-merging-analysis-and-output-skills.md#skill-1-reproducible-research-data-pipeline-builder) | ensure raw files are never changed and licensed data is protected |
+| 5. Code | build toy data before real code | [Toy Data Test Harness](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/14-data-cleaning-merging-analysis-and-output-skills.md#skill-6-toy-data-test-harness-for-ai-written-code) | known-answer test must pass by inspection |
+| 6. Methods | draft methods from verified facts | [Draft Empirical Methods Section for Economics](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) | prose must match code, tables, timing, and inference |
+| 7. Results | check coefficient interpretation | [Back-of-Envelope Coefficient and Magnitude Check](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/17-verification-reproducibility-and-disclosure-skills.md#skill-4-back-of-envelope-coefficient-and-magnitude-check) | units, baseline magnitude, CI, and design support |
+| 8. Talk | prepare seminar Q&A | [Practice My Presentation With AI](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) | do not invent answers to limitations |
+| 9. Trace | create disclosure and AI-use record | [AI Reproducibility Packet and Disclosure Draft](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/17-verification-reproducibility-and-disclosure-skills.md#skill-6-ai-reproducibility-packet-and-disclosure-draft) | check journal, coauthor, data-provider, and institutional policy |
 
 The point is not that AI produces the paper. The point is that each AI-assisted step produces a concrete artifact that can be checked before the next step.
 
@@ -246,7 +246,7 @@ Bad AI use:
 - accept invented citations
 - let AI write a contribution claim without checking the literature
 
-Copy-ready skill: [Literature Map Without Fake Citations](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-3-literature-map-without-fake-citations)
+Copy-ready skill: [Literature Map Without Fake Citations](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-3-literature-map-without-fake-citations)
 
 ### Mini Case Card
 
@@ -287,7 +287,7 @@ Bad AI use:
 - describe robustness checks that were not run
 - ignore sample-selection and measurement issues
 
-Copy-ready skill: [Empirical Methods Skills for Finance Research](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md)
+Copy-ready skill: [Empirical Methods Skills for Finance Research](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/04-empirical-methods-skills-for-finance-research.md)
 
 ### Mini Case Card
 
@@ -331,7 +331,7 @@ Bad AI use:
 - turn a weak design into confident prose
 - generate flashy slides that obscure the paper's core argument
 
-Copy-ready skill: [Practice My Presentation With AI](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai)
+Copy-ready skill: [Practice My Presentation With AI](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai)
 
 ## Failure Case Library
 

@@ -671,4 +671,4 @@ Gate 4: Trace
 
 ## 下一步
 
-如果你需要可复制技能，请回到 [02 复制即用：AI 研究指令与模板](02-复制即用：AI研究指令与模板.md)。如果你需要英文完整工作流，可查看 [英文自动化工作流文件夹](../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md)。
+如果你需要可复制技能，请回到 [02 复制即用：AI 研究指令与模板](02-复制即用：AI研究指令与模板.md)。如果你需要英文完整工作流，可查看 [英文自动化工作流文件夹](../../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md)。

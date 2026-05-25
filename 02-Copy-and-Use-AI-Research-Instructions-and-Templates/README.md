@@ -1,8 +1,10 @@
-> Copyright (c) 2026 SuperJayLiu (Chaojie Liu). Licensed under the repository MIT License. These instructions/workflows are original to this repository unless otherwise noted. External inspirations are cited in relevant files.
-
 # Copy and Use AI Research Instructions and Templates
 
-This folder is for direct use. Open a file, copy the block you need, paste it into ChatGPT, Claude, Codex, Claude Code, Cursor, GitHub Copilot, or another AI tool, and adapt the bracketed fields.
+This folder is the direct-use toolbox for the repository. Use this README as the index, then open the detailed skill pages inside [`skills/`](skills/) when you want a copy-ready block for a specific research task.
+
+Open a skill page, copy the block you need, paste it into ChatGPT, Claude, Codex, Claude Code, Cursor, GitHub Copilot, or another AI tool, and adapt the bracketed fields. The goal is not to read every file; the goal is to find one usable instruction, run it on a small task, verify it, and save what changed.
+
+> Copyright (c) 2026 SuperJayLiu (Chaojie Liu). Licensed under the repository MIT License. These instructions/workflows are original to this repository unless otherwise noted. External inspirations are cited in relevant files.
 
 This is not the reading book. For concepts and risks, start with [the handbook](../01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md).
 
@@ -20,16 +22,16 @@ Use these as the fastest entry points. Each card points to one copy-ready block 
 
 | I want to... | Copy first | Then verify by... |
 | --- | --- | --- |
-| test whether a research idea is worth pursuing | [Research Idea Stress Test](01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) | naming the closest papers, data obstacle, and identification/model obstacle |
-| build a literature review without fake citations | [Source-Grounded Literature Review Builder](10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) | checking every claim against supplied sources or verified search results |
-| write or revise an introduction | [Introduction Spine Builder](02-paper-drafting-revision-and-citation-skills.md#skill-1-introduction-spine-builder) | confirming the question, contribution, data/design, and strongest result are accurate |
-| draft empirical methods for applied economics | [Draft Empirical Methods Section for Economics](03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) | comparing prose with code, sample, timing, estimand, and inference |
-| draft empirical methods for finance | [Draft Empirical Methods Section for Finance](04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) | checking timing, link tables, survivorship, delisting, event windows, and factor-mining risk |
-| debug code in Python, R, or Stata | [Coding, Data Analysis, and Debugging Skills](08-coding-data-analysis-and-debugging-skills.md) | running a toy-data test before trusting real-data output |
-| use agents on files safely | [AGENTS.md for Research Repo](05-git-data-replication-and-research-safety-templates.md#template-3-agentsmd-for-research-repo) | inspecting `git diff`, running checks, and logging AI use |
-| prepare slides or practice a seminar | [Paper-to-Talk Converter](06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter) | matching every slide claim to the paper, table, figure, or model |
-| decide whether an AI answer can be accepted | [Verification Method Selector](17-verification-reproducibility-and-disclosure-skills.md#skill-1-verification-method-selector) | choosing source, code, data, math, policy, or disclosure checks |
-| find more tools/resources for one task | [Find More Resources For One Econ/Finance Research Task](09-tool-selection-updates-and-skill-improvement.md#skill-6-find-more-resources-for-one-econfinance-research-task) | rejecting generic hype and testing at most three resources first |
+| test whether a research idea is worth pursuing | [Research Idea Stress Test](skills/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) | naming the closest papers, data obstacle, and identification/model obstacle |
+| build a literature review without fake citations | [Source-Grounded Literature Review Builder](skills/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) | checking every claim against supplied sources or verified search results |
+| write or revise an introduction | [Introduction Spine Builder](skills/02-paper-drafting-revision-and-citation-skills.md#skill-1-introduction-spine-builder) | confirming the question, contribution, data/design, and strongest result are accurate |
+| draft empirical methods for applied economics | [Draft Empirical Methods Section for Economics](skills/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) | comparing prose with code, sample, timing, estimand, and inference |
+| draft empirical methods for finance | [Draft Empirical Methods Section for Finance](skills/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) | checking timing, link tables, survivorship, delisting, event windows, and factor-mining risk |
+| debug code in Python, R, or Stata | [Coding, Data Analysis, and Debugging Skills](skills/08-coding-data-analysis-and-debugging-skills.md) | running a toy-data test before trusting real-data output |
+| use agents on files safely | [AGENTS.md for Research Repo](skills/05-git-data-replication-and-research-safety-templates.md#template-3-agentsmd-for-research-repo) | inspecting `git diff`, running checks, and logging AI use |
+| prepare slides or practice a seminar | [Paper-to-Talk Converter](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter) | matching every slide claim to the paper, table, figure, or model |
+| decide whether an AI answer can be accepted | [Verification Method Selector](skills/17-verification-reproducibility-and-disclosure-skills.md#skill-1-verification-method-selector) | choosing source, code, data, math, policy, or disclosure checks |
+| find more tools/resources for one task | [Find More Resources For One Econ/Finance Research Task](skills/09-tool-selection-updates-and-skill-improvement.md#skill-6-find-more-resources-for-one-econfinance-research-task) | rejecting generic hype and testing at most three resources first |
 
 ## Default Clarification Rule
 
@@ -106,50 +108,50 @@ If you are using GitHub search, search these words inside this folder. If you ar
 
 | Function / keyword | First place to look | Typical output |
 | --- | --- | --- |
-| `write`, `revise`, `introduction`, `abstract` | [Paper Drafting, Revision, and Citation Skills](02-paper-drafting-revision-and-citation-skills.md) | section draft, revision plan, citation-safe prose |
-| `review`, `referee`, `response`, `R&R` | [Referee Reports and Peer Review Skills](13-referee-reports-and-peer-review-skills.md) | self-review, referee report, response table |
-| `literature`, `matrix`, `source`, `citation` | [Literature Review and Source Synthesis Skills](10-literature-review-and-source-synthesis-skills.md) | paper matrix, synthesis outline, claim-source bank |
-| `idea`, `proposal`, `brainstorm`, `research question` | [Ideas, Brainstorming, Proposal, and Literature Skills](01-ideas-brainstorming-proposal-and-literature-skills.md) | idea stress test, proposal frame, question refinement |
-| `economics methods`, `identification`, `design` | [Empirical Methods Skills for Economics Research](03-empirical-methods-skills-for-economics-research.md) | methods section, design audit, pre-mortem |
-| `finance methods`, `asset pricing`, `corporate finance`, `banking` | [Empirical Methods Skills for Finance Research](04-empirical-methods-skills-for-finance-research.md) | finance methods draft, return/window/survivorship checks |
-| `Python`, `R`, `Stata`, `debug`, `code review` | [Coding, Data Analysis, and Debugging Skills](08-coding-data-analysis-and-debugging-skills.md) | language-specific code plan, diagnosis, toy test |
-| `WRDS`, `CRSP`, `Compustat`, `merge`, `table`, `figure` | [Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md) | pipeline, merge plan, output audit |
-| `DiD`, `IV`, `RD`, `panel`, `time series` | [Causal Inference, Econometrics, and Time-Series Skills](11-causal-inference-econometrics-and-time-series-skills.md) | method diagnostic, estimator checklist |
-| `text-as-data`, `LLM measurement`, `filings` | [Text-as-Data and LLM Measurement Skills](15-text-as-data-and-llm-measurement-skills.md) | labeling protocol, validation plan |
-| `Git`, `DATA.md`, `AGENTS.md`, `AI-use log` | [Git, Data, Replication, and Research Safety Templates](05-git-data-replication-and-research-safety-templates.md) | project safety files and logging templates |
-| `slides`, `Beamer`, `HTML`, `website`, `practice talk` | [Presentations, Slides, Websites, and Talk Practice Skills](06-presentations-slides-websites-and-talk-practice-skills.md) | slide workflow, talk drill, website prompt |
-| `find resources`, `resource scout`, `follow builders`, `tool updates` | [Tool Selection, Updates, and Skill Improvement](09-tool-selection-updates-and-skill-improvement.md) | dated comparison, update filter, resource shortlist |
+| `write`, `revise`, `introduction`, `abstract` | [Paper Drafting, Revision, and Citation Skills](skills/02-paper-drafting-revision-and-citation-skills.md) | section draft, revision plan, citation-safe prose |
+| `review`, `referee`, `response`, `R&R` | [Referee Reports and Peer Review Skills](skills/13-referee-reports-and-peer-review-skills.md) | self-review, referee report, response table |
+| `literature`, `matrix`, `source`, `citation` | [Literature Review and Source Synthesis Skills](skills/10-literature-review-and-source-synthesis-skills.md) | paper matrix, synthesis outline, claim-source bank |
+| `idea`, `proposal`, `brainstorm`, `research question` | [Ideas, Brainstorming, Proposal, and Literature Skills](skills/01-ideas-brainstorming-proposal-and-literature-skills.md) | idea stress test, proposal frame, question refinement |
+| `economics methods`, `identification`, `design` | [Empirical Methods Skills for Economics Research](skills/03-empirical-methods-skills-for-economics-research.md) | methods section, design audit, pre-mortem |
+| `finance methods`, `asset pricing`, `corporate finance`, `banking` | [Empirical Methods Skills for Finance Research](skills/04-empirical-methods-skills-for-finance-research.md) | finance methods draft, return/window/survivorship checks |
+| `Python`, `R`, `Stata`, `debug`, `code review` | [Coding, Data Analysis, and Debugging Skills](skills/08-coding-data-analysis-and-debugging-skills.md) | language-specific code plan, diagnosis, toy test |
+| `WRDS`, `CRSP`, `Compustat`, `merge`, `table`, `figure` | [Data Cleaning, Merging, Analysis, and Output Skills](skills/14-data-cleaning-merging-analysis-and-output-skills.md) | pipeline, merge plan, output audit |
+| `DiD`, `IV`, `RD`, `panel`, `time series` | [Causal Inference, Econometrics, and Time-Series Skills](skills/11-causal-inference-econometrics-and-time-series-skills.md) | method diagnostic, estimator checklist |
+| `text-as-data`, `LLM measurement`, `filings` | [Text-as-Data and LLM Measurement Skills](skills/15-text-as-data-and-llm-measurement-skills.md) | labeling protocol, validation plan |
+| `Git`, `DATA.md`, `AGENTS.md`, `AI-use log` | [Git, Data, Replication, and Research Safety Templates](skills/05-git-data-replication-and-research-safety-templates.md) | project safety files and logging templates |
+| `slides`, `Beamer`, `HTML`, `website`, `practice talk` | [Presentations, Slides, Websites, and Talk Practice Skills](skills/06-presentations-slides-websites-and-talk-practice-skills.md) | slide workflow, talk drill, website prompt |
+| `find resources`, `resource scout`, `follow builders`, `tool updates` | [Tool Selection, Updates, and Skill Improvement](skills/09-tool-selection-updates-and-skill-improvement.md) | dated comparison, update filter, resource shortlist |
 
 ### Search By Software
 
 | Software or tool | Use first | What to ask AI to produce |
 | --- | --- | --- |
-| Stata | [Stata Research Workflow Assistant](08-coding-data-analysis-and-debugging-skills.md#skill-9-stata-research-workflow-assistant) | do-file plan, merge/check diagnostics, table command review |
-| R | [R Econometrics Workflow Assistant](08-coding-data-analysis-and-debugging-skills.md#skill-8-r-econometrics-workflow-assistant) | `fixest`/`did`/`rdrobust`/`tidyverse` plan with tests |
-| Python | [Python Empirical Analysis Assistant](08-coding-data-analysis-and-debugging-skills.md#skill-7-python-empirical-analysis-assistant) | pandas/statsmodels/linearmodels plan with toy-data tests |
-| LaTeX/Beamer | [Presentations, Slides, Websites, and Talk Practice Skills](06-presentations-slides-websites-and-talk-practice-skills.md) | paper section, Beamer deck, table/figure formatting |
-| Codex/Claude Code/Cursor | [Project Instructions and Agent Role Templates](07-project-instructions-and-agent-role-templates.md) | project instructions, agent role, approval gates |
+| Stata | [Stata Research Workflow Assistant](skills/08-coding-data-analysis-and-debugging-skills.md#skill-9-stata-research-workflow-assistant) | do-file plan, merge/check diagnostics, table command review |
+| R | [R Econometrics Workflow Assistant](skills/08-coding-data-analysis-and-debugging-skills.md#skill-8-r-econometrics-workflow-assistant) | `fixest`/`did`/`rdrobust`/`tidyverse` plan with tests |
+| Python | [Python Empirical Analysis Assistant](skills/08-coding-data-analysis-and-debugging-skills.md#skill-7-python-empirical-analysis-assistant) | pandas/statsmodels/linearmodels plan with toy-data tests |
+| LaTeX/Beamer | [Presentations, Slides, Websites, and Talk Practice Skills](skills/06-presentations-slides-websites-and-talk-practice-skills.md) | paper section, Beamer deck, table/figure formatting |
+| Codex/Claude Code/Cursor | [Project Instructions and Agent Role Templates](skills/07-project-instructions-and-agent-role-templates.md) | project instructions, agent role, approval gates |
 
 | File | Use it when you need... |
 | --- | --- |
-| [01 Research Ideas, Brainstorming, and Proposal Skills](01-ideas-brainstorming-proposal-and-literature-skills.md) | quick idea stress tests, proposal framing, LLM-friendly paper orientation |
-| [02 Paper Drafting, Revision, and Citation Skills](02-paper-drafting-revision-and-citation-skills.md) | introduction, paper drafting, revision, citation support, referee response |
-| [03 Empirical Methods Skills for Economics Research](03-empirical-methods-skills-for-economics-research.md) | drafting or checking empirical methods in applied economics |
-| [04 Empirical Methods Skills for Finance Research](04-empirical-methods-skills-for-finance-research.md) | drafting or checking empirical methods in asset pricing, corporate finance, banking, household finance |
-| [05 Git, Data, Replication, and Research Safety Templates](05-git-data-replication-and-research-safety-templates.md) | project cleanup, `.gitignore`, AGENTS.md, DATA.md, AI-use log, replication checks |
-| [06 Presentations, Slides, Websites, and Talk Practice Skills](06-presentations-slides-websites-and-talk-practice-skills.md) | HTML slides, Beamer slides, presentation practice, personal academic websites |
-| [07 Project Instructions and Agent Role Templates](07-project-instructions-and-agent-role-templates.md) | ChatGPT/Claude Projects, tough referee, paper summarizer, idea verifier, conference tracker |
-| [08 Coding, Data Analysis, and Debugging Skills](08-coding-data-analysis-and-debugging-skills.md) | Stata/R/Python debugging, code review, table/figure checks, reproducibility |
-| [09 Tool Selection, Updates, and Skill Improvement](09-tool-selection-updates-and-skill-improvement.md) | dated tool comparison, update digest, resource scouting, continuous improvement, bad-advice filter |
-| [10 Literature Review and Source Synthesis Skills](10-literature-review-and-source-synthesis-skills.md) | source-grounded literature review, paper matrices, research gaps, citation-safe synthesis |
-| [11 Causal Inference, Econometrics, and Time-Series Skills](11-causal-inference-econometrics-and-time-series-skills.md) | OLS, panel FE, DiD, IV, RD, event studies, synthetic control, AR/MA/ARMA/VAR checks |
-| [12 Theory Model and Math Skills](12-theory-model-and-math-skills.md) | theory-model reconstruction, assumption audit, proof gaps, economic interpretation |
-| [13 Referee Reports and Peer Review Skills](13-referee-reports-and-peer-review-skills.md) | referee reports, journal response planning, revision triage, GitHub-style feedback handling |
-| [14 Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md) | data pipelines, WRDS/CRSP/Compustat merges, Fama-MacBeth, portfolio sorts, EDA, tables, figures |
-| [15 Text-as-Data and LLM Measurement Skills](15-text-as-data-and-llm-measurement-skills.md) | filings, earnings calls, speeches, news, LLM-generated variables, validation, prompt sensitivity |
-| [16 Structural, Quantitative, and Welfare Skills](16-structural-quantitative-and-welfare-skills.md) | GMM, SMM, MLE, calibration, counterfactuals, welfare, model fit |
-| [17 Verification, Reproducibility, and Disclosure Skills](17-verification-reproducibility-and-disclosure-skills.md) | citation checks, toy-data tests, coefficient checks, proof checks, AI-use disclosure |
-| [18 Research Question, Taste, and Positioning Skills](18-research-question-taste-and-positioning-skills.md) | topic-to-question sharpening, mechanisms, closest-paper positioning, so-what test, AI cost-benefit |
+| [01 Research Ideas, Brainstorming, and Proposal Skills](skills/01-ideas-brainstorming-proposal-and-literature-skills.md) | quick idea stress tests, proposal framing, LLM-friendly paper orientation |
+| [02 Paper Drafting, Revision, and Citation Skills](skills/02-paper-drafting-revision-and-citation-skills.md) | introduction, paper drafting, revision, citation support, referee response |
+| [03 Empirical Methods Skills for Economics Research](skills/03-empirical-methods-skills-for-economics-research.md) | drafting or checking empirical methods in applied economics |
+| [04 Empirical Methods Skills for Finance Research](skills/04-empirical-methods-skills-for-finance-research.md) | drafting or checking empirical methods in asset pricing, corporate finance, banking, household finance |
+| [05 Git, Data, Replication, and Research Safety Templates](skills/05-git-data-replication-and-research-safety-templates.md) | project cleanup, `.gitignore`, AGENTS.md, DATA.md, AI-use log, replication checks |
+| [06 Presentations, Slides, Websites, and Talk Practice Skills](skills/06-presentations-slides-websites-and-talk-practice-skills.md) | HTML slides, Beamer slides, presentation practice, personal academic websites |
+| [07 Project Instructions and Agent Role Templates](skills/07-project-instructions-and-agent-role-templates.md) | ChatGPT/Claude Projects, tough referee, paper summarizer, idea verifier, conference tracker |
+| [08 Coding, Data Analysis, and Debugging Skills](skills/08-coding-data-analysis-and-debugging-skills.md) | Stata/R/Python debugging, code review, table/figure checks, reproducibility |
+| [09 Tool Selection, Updates, and Skill Improvement](skills/09-tool-selection-updates-and-skill-improvement.md) | dated tool comparison, update digest, resource scouting, continuous improvement, bad-advice filter |
+| [10 Literature Review and Source Synthesis Skills](skills/10-literature-review-and-source-synthesis-skills.md) | source-grounded literature review, paper matrices, research gaps, citation-safe synthesis |
+| [11 Causal Inference, Econometrics, and Time-Series Skills](skills/11-causal-inference-econometrics-and-time-series-skills.md) | OLS, panel FE, DiD, IV, RD, event studies, synthetic control, AR/MA/ARMA/VAR checks |
+| [12 Theory Model and Math Skills](skills/12-theory-model-and-math-skills.md) | theory-model reconstruction, assumption audit, proof gaps, economic interpretation |
+| [13 Referee Reports and Peer Review Skills](skills/13-referee-reports-and-peer-review-skills.md) | referee reports, journal response planning, revision triage, GitHub-style feedback handling |
+| [14 Data Cleaning, Merging, Analysis, and Output Skills](skills/14-data-cleaning-merging-analysis-and-output-skills.md) | data pipelines, WRDS/CRSP/Compustat merges, Fama-MacBeth, portfolio sorts, EDA, tables, figures |
+| [15 Text-as-Data and LLM Measurement Skills](skills/15-text-as-data-and-llm-measurement-skills.md) | filings, earnings calls, speeches, news, LLM-generated variables, validation, prompt sensitivity |
+| [16 Structural, Quantitative, and Welfare Skills](skills/16-structural-quantitative-and-welfare-skills.md) | GMM, SMM, MLE, calibration, counterfactuals, welfare, model fit |
+| [17 Verification, Reproducibility, and Disclosure Skills](skills/17-verification-reproducibility-and-disclosure-skills.md) | citation checks, toy-data tests, coefficient checks, proof checks, AI-use disclosure |
+| [18 Research Question, Taste, and Positioning Skills](skills/18-research-question-taste-and-positioning-skills.md) | topic-to-question sharpening, mechanisms, closest-paper positioning, so-what test, AI cost-benefit |
 
 ## Why These Skill Families Exist
 
@@ -202,36 +204,36 @@ flowchart LR
 
 | Stage | First skill to copy |
 | --- | --- |
-| idea | [Topic-to-Tension Research Question Builder](18-research-question-taste-and-positioning-skills.md#skill-1-topic-to-tension-research-question-builder) |
-| literature | [Source-Grounded Literature Review Builder](10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) |
-| design | [Identification Design Pre-Mortem](03-empirical-methods-skills-for-economics-research.md#skill-4-identification-design-pre-mortem) |
-| data execution | [Reproducible Research Data Pipeline Builder](14-data-cleaning-merging-analysis-and-output-skills.md#skill-1-reproducible-research-data-pipeline-builder) |
-| code | [Debug Stata/R/Python Research Code](08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
-| methods | [Economics Methods](03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) or [Finance Methods](04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
-| verification | [Verification Method Selector](17-verification-reproducibility-and-disclosure-skills.md#skill-1-verification-method-selector) |
-| presentation | [Paper-to-Talk Converter](06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter) |
+| idea | [Topic-to-Tension Research Question Builder](skills/18-research-question-taste-and-positioning-skills.md#skill-1-topic-to-tension-research-question-builder) |
+| literature | [Source-Grounded Literature Review Builder](skills/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) |
+| design | [Identification Design Pre-Mortem](skills/03-empirical-methods-skills-for-economics-research.md#skill-4-identification-design-pre-mortem) |
+| data execution | [Reproducible Research Data Pipeline Builder](skills/14-data-cleaning-merging-analysis-and-output-skills.md#skill-1-reproducible-research-data-pipeline-builder) |
+| code | [Debug Stata/R/Python Research Code](skills/08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
+| methods | [Economics Methods](skills/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) or [Finance Methods](skills/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
+| verification | [Verification Method Selector](skills/17-verification-reproducibility-and-disclosure-skills.md#skill-1-verification-method-selector) |
+| presentation | [Paper-to-Talk Converter](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter) |
 
 ## Most-Used Blocks
 
 | Task | Copy this first |
 | --- | --- |
-| early idea | [Research Idea Stress Test](01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
-| proposal | [Proposal Builder](01-ideas-brainstorming-proposal-and-literature-skills.md#skill-2-proposal-builder-for-econfinance) |
-| literature review | [Source-Grounded Literature Review Builder](10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) |
-| intro | [Introduction Spine Builder](02-paper-drafting-revision-and-citation-skills.md#skill-1-introduction-spine-builder) |
-| econ methods | [Draft Empirical Methods Section for Economics](03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) |
-| finance methods | [Draft Empirical Methods Section for Finance](04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
-| causal inference | [Causal Design Diagnostic](11-causal-inference-econometrics-and-time-series-skills.md#skill-1-causal-design-diagnostic) |
-| data pipeline | [Reproducible Research Data Pipeline Builder](14-data-cleaning-merging-analysis-and-output-skills.md#skill-1-reproducible-research-data-pipeline-builder) |
-| WRDS/CRSP/Compustat merge | [WRDS, CRSP, Compustat, and CCM Merge Plan](14-data-cleaning-merging-analysis-and-output-skills.md#skill-2-wrds-crsp-compustat-and-ccm-merge-plan) |
-| text-as-data | [LLM-as-Measurement Protocol](15-text-as-data-and-llm-measurement-skills.md#skill-1-llm-as-measurement-protocol) |
-| structural/quantitative model | [Moments-to-Parameters Audit](16-structural-quantitative-and-welfare-skills.md#skill-2-moments-to-parameters-audit) |
-| verification/disclosure | [AI Reproducibility Packet and Disclosure Draft](17-verification-reproducibility-and-disclosure-skills.md#skill-6-ai-reproducibility-packet-and-disclosure-draft) |
-| theory model | [Economic Model Discussant](12-theory-model-and-math-skills.md#skill-1-economic-model-discussant) |
-| messy repo | [Clean Up Existing Project and Start Git Safely](05-git-data-replication-and-research-safety-templates.md#template-1-clean-up-existing-project-and-start-git-safely) |
-| slides | [Interactive HTML Research Slides](06-presentations-slides-websites-and-talk-practice-skills.md#skill-1-interactive-html-research-slides) |
-| coding | [Debug Stata/R/Python Research Code](08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
-| referee response | [Journal Referee Response Planner](13-referee-reports-and-peer-review-skills.md#skill-2-journal-referee-response-planner) |
+| early idea | [Research Idea Stress Test](skills/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) |
+| proposal | [Proposal Builder](skills/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-2-proposal-builder-for-econfinance) |
+| literature review | [Source-Grounded Literature Review Builder](skills/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) |
+| intro | [Introduction Spine Builder](skills/02-paper-drafting-revision-and-citation-skills.md#skill-1-introduction-spine-builder) |
+| econ methods | [Draft Empirical Methods Section for Economics](skills/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) |
+| finance methods | [Draft Empirical Methods Section for Finance](skills/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
+| causal inference | [Causal Design Diagnostic](skills/11-causal-inference-econometrics-and-time-series-skills.md#skill-1-causal-design-diagnostic) |
+| data pipeline | [Reproducible Research Data Pipeline Builder](skills/14-data-cleaning-merging-analysis-and-output-skills.md#skill-1-reproducible-research-data-pipeline-builder) |
+| WRDS/CRSP/Compustat merge | [WRDS, CRSP, Compustat, and CCM Merge Plan](skills/14-data-cleaning-merging-analysis-and-output-skills.md#skill-2-wrds-crsp-compustat-and-ccm-merge-plan) |
+| text-as-data | [LLM-as-Measurement Protocol](skills/15-text-as-data-and-llm-measurement-skills.md#skill-1-llm-as-measurement-protocol) |
+| structural/quantitative model | [Moments-to-Parameters Audit](skills/16-structural-quantitative-and-welfare-skills.md#skill-2-moments-to-parameters-audit) |
+| verification/disclosure | [AI Reproducibility Packet and Disclosure Draft](skills/17-verification-reproducibility-and-disclosure-skills.md#skill-6-ai-reproducibility-packet-and-disclosure-draft) |
+| theory model | [Economic Model Discussant](skills/12-theory-model-and-math-skills.md#skill-1-economic-model-discussant) |
+| messy repo | [Clean Up Existing Project and Start Git Safely](skills/05-git-data-replication-and-research-safety-templates.md#template-1-clean-up-existing-project-and-start-git-safely) |
+| slides | [Interactive HTML Research Slides](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-1-interactive-html-research-slides) |
+| coding | [Debug Stata/R/Python Research Code](skills/08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
+| referee response | [Journal Referee Response Planner](skills/13-referee-reports-and-peer-review-skills.md#skill-2-journal-referee-response-planner) |
 
 ## How To Use These Blocks
 

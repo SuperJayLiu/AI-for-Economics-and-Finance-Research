@@ -59,7 +59,7 @@ Pick one workflow:
 - revision response
 - replication package
 
-Then go to [Set Up Agents and Automated Research Workflows](../../../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) and create a project setup.
+Then go to [Set Up Agents and Automated Research Workflows](../../../../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) and create a project setup.
 
 ## Sources and Workflow Influences
 

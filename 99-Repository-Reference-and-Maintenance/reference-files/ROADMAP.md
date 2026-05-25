@@ -4,11 +4,11 @@ Use this roadmap as a linked status map. The main reader path is the root [READM
 
 | Version | Reader-facing goal | Main linked surfaces |
 | --- | --- | --- |
-| [v0.2](#v02-resource-first-reorganization) | resource-first bilingual handbook and practical skill library | [01 handbook](../01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md), [02 skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md), [03 workflows](../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md), [ZH Chinese path](../ZH-中文-AI经济金融研究手册/README.md) |
-| [v0.3](#v03-full-research-workflow) | deeper research workflow coverage | [02 skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md), [04 examples](../04-See-Examples-Diagrams-and-Failure-Cases/README.md) |
-| [v0.4](#v04-case-studies) | concrete econ/finance case studies | [04 examples](../04-See-Examples-Diagrams-and-Failure-Cases/README.md), [06 teaching](../06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) |
-| [v0.5](#v05-advanced-automation) | stronger agentic and repeatable workflows | [03 workflows](../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md), [05 sources](../05-Check-Builders-Official-Docs-and-Resources/README.md) |
-| [v1.0](#v10-stable-citable-release) | stable citable release | [citation and maintenance](README.md) |
+| [v0.2](#v02-resource-first-reorganization) | resource-first bilingual handbook and practical skill library | [01 handbook](../../01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md), [02 skills](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md), [03 workflows](../../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md), [ZH Chinese path](../../ZH-中文-AI经济金融研究手册/README.md) |
+| [v0.3](#v03-full-research-workflow) | deeper research workflow coverage | [02 skills](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md), [04 examples](../../04-See-Examples-Diagrams-and-Failure-Cases/README.md) |
+| [v0.4](#v04-case-studies) | concrete econ/finance case studies | [04 examples](../../04-See-Examples-Diagrams-and-Failure-Cases/README.md), [06 teaching](../../06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) |
+| [v0.5](#v05-advanced-automation) | stronger agentic and repeatable workflows | [03 workflows](../../03-Set-Up-Agents-and-Automated-Research-Workflows/README.md), [05 sources](../../05-Check-Builders-Official-Docs-and-Resources/README.md) |
+| [v1.0](#v10-stable-citable-release) | stable citable release | [citation and maintenance](../README.md) |
 
 ```mermaid
 flowchart LR
