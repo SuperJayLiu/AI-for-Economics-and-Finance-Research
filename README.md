@@ -65,6 +65,7 @@ flowchart LR
 | a detailed agentic workflow runbook | [Agentic Workflow Anatomy](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#agentic-workflow-anatomy) |
 | a coauthor, RA, or team workflow with agents | [Collaborating With Coauthors, RAs, And Agents](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md#collaborating-with-coauthors-ras-and-agents) |
 | presentation practice | [Practice My Presentation With AI](02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md#skill-3-practice-my-presentation-with-ai) |
+| a two-hour teaching deck for AI in econ/finance research | [Presentation script](06-Teach-Workshops-Practice-Talks-and-Share-Slides/two-hour-ai-econ-finance-presentation.md) and [HTML slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/two-hour-ai-econ-finance-slides.html) |
 | plain-language explanations of Git, agents, MCPs, and other technical terms | [Beginner Tool Glossary](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md#3-beginner-tool-glossary) |
 | a low-noise AI resource database | [Build a Low-Noise AI Research Resource Database](02-Copy-and-Use-AI-Research-Instructions-and-Templates/09-tool-selection-updates-and-skill-improvement.md#skill-5-build-a-low-noise-ai-research-resource-database) |
 | a weekly AI update filter | [AI Research Update Digest Workflow](03-Set-Up-Agents-and-Automated-Research-Workflows/04-ai-research-update-digest-workflow.md) |

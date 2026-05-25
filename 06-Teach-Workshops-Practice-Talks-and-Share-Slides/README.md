@@ -23,11 +23,32 @@ For beginners, start with ordinary tools: ChatGPT or Claude for chat, GitHub for
 
 | Goal | Use |
 | --- | --- |
+| teach a two-hour presentation | [Two-hour presentation script](two-hour-ai-econ-finance-presentation.md) and [HTML slide deck](two-hour-ai-econ-finance-slides.html) |
 | teach a 90-minute introduction | Two-session workshop, Session 1 only |
 | teach a half-day workshop | both sessions plus live skill-building |
 | onboard RAs | RA onboarding checklist |
 | prepare a seminar or job talk | presentation practice activity |
 | make shareable material | slide-ready outline and HTML/Beamer skills |
+
+## Two-Hour Presentation Kit
+
+Use this if another scholar wants to teach the handbook as a self-contained talk.
+
+| Asset | Use it for | Notes |
+| --- | --- | --- |
+| [Two-hour presentation script](two-hour-ai-econ-finance-presentation.md) | readable GitHub version, speaker plan, timed agenda, demos, exercises | source of truth for teaching |
+| [Interactive HTML slide deck](two-hour-ai-econ-finance-slides.html) | live presentation | open locally in a browser; includes screenshot placeholders |
+| [Presentation and slide skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md) | adapting the talk to other audiences | includes HTML, Beamer, talk-practice, and paper-to-talk prompts |
+
+Suggested use:
+
+```text
+1. Read the Markdown script.
+2. Open the HTML deck in a browser.
+3. Replace screenshot placeholders with safe, non-confidential screenshots if desired.
+4. Use public or synthetic examples only.
+5. Keep the live demo small enough to verify in the room.
+```
 
 ## Beginner Module: What Are These Tools?
 

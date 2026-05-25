@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI for Economics and Finance Research</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #5f6b7a;
+      --paper: #fbfcf8;
+      --line: #d7ded8;
+      --blue: #1f6feb;
+      --green: #257a52;
+      --red: #a43a3a;
+      --gold: #b7791f;
+      --panel: #eef4f2;
+      --dark: #0f1720;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 15% 10%, #eef6ff 0, transparent 28%),
+                  linear-gradient(135deg, #fbfcf8 0%, #eef3ef 100%);
+      overflow: hidden;
+    }
+    a { color: var(--blue); }
+    .deck {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 22px;
+      border-bottom: 1px solid rgba(23, 32, 42, 0.12);
+      background: rgba(251, 252, 248, 0.88);
+      backdrop-filter: blur(10px);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .mark {
+      width: 34px;
+      height: 34px;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      background: #fff;
+    }
+    .brand strong { white-space: nowrap; }
+    .brand span { color: var(--muted); font-size: 14px; }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    button {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 8px;
+      padding: 8px 11px;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover { border-color: var(--blue); }
+    main {
+      position: relative;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      padding: clamp(28px, 5vw, 72px);
+      display: none;
+      overflow: auto;
+    }
+    .slide.active {
+      display: grid;
+      align-content: center;
+      gap: 24px;
+    }
+    .slide.scroll.active { align-content: start; }
+    .kicker {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+    }
+    h1, h2, h3 { margin: 0; line-height: 1.04; letter-spacing: 0; }
+    h1 { font-size: clamp(48px, 8vw, 96px); max-width: 1100px; }
+    h2 { font-size: clamp(38px, 5.8vw, 72px); max-width: 1100px; }
+    h3 { font-size: clamp(24px, 3vw, 38px); }
+    p, li, td, th { font-size: clamp(18px, 2vw, 28px); line-height: 1.35; }
+    p { max-width: 980px; margin: 0; }
+    .sub {
+      color: var(--muted);
+      font-size: clamp(19px, 2.1vw, 30px);
+      max-width: 980px;
+    }
+    .grid { display: grid; gap: 18px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.86);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 14px 40px rgba(23, 32, 42, 0.07);
+    }
+    .card h3 { margin-bottom: 8px; }
+    .card p, .card li { font-size: clamp(16px, 1.7vw, 22px); }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .big-rule {
+      border-left: 8px solid var(--blue);
+      background: #fff;
+      padding: 28px;
+      font-size: clamp(26px, 3vw, 42px);
+      font-weight: 800;
+      line-height: 1.18;
+      max-width: 1050px;
+    }
+    .danger { border-left-color: var(--red); }
+    .good { border-left-color: var(--green); }
+    .warn { border-left-color: var(--gold); }
+    .mini { font-size: clamp(15px, 1.4vw, 19px); color: var(--muted); }
+    .flow {
+      display: flex;
+      align-items: stretch;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .step {
+      flex: 1 1 150px;
+      min-height: 86px;
+      padding: 16px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+      display: grid;
+      align-content: center;
+      font-weight: 800;
+      text-align: center;
+    }
+    .arrow {
+      align-self: center;
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 28px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 13px 15px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #edf4ff;
+      font-size: clamp(15px, 1.6vw, 20px);
+    }
+    td { font-size: clamp(15px, 1.55vw, 21px); }
+    tr:last-child td { border-bottom: 0; }
+    .traffic {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .traffic .card:nth-child(1) { border-top: 8px solid var(--green); }
+    .traffic .card:nth-child(2) { border-top: 8px solid var(--gold); }
+    .traffic .card:nth-child(3) { border-top: 8px solid var(--red); }
+    .prompt {
+      position: relative;
+      background: #101820;
+      color: #f6f8fa;
+      border-radius: 8px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,0.14);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: pre-wrap;
+      font-size: clamp(14px, 1.5vw, 20px);
+      line-height: 1.45;
+    }
+    .copy {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 13px;
+      padding: 6px 8px;
+      color: #101820;
+    }
+    .placeholder {
+      min-height: 230px;
+      border: 2px dashed #9aa8b6;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: repeating-linear-gradient(45deg, #f7fafc, #f7fafc 12px, #eef2f7 12px, #eef2f7 24px);
+      color: var(--muted);
+      text-align: center;
+      padding: 24px;
+      font-weight: 800;
+    }
+    footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 22px 14px;
+      background: rgba(251,252,248,0.9);
+      border-top: 1px solid rgba(23,32,42,0.12);
+    }
+    .bar {
+      height: 9px;
+      background: #dfe7e3;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+      transition: width 180ms ease;
+    }
+    .counter { color: var(--muted); font-size: 14px; }
+    .notes {
+      display: none;
+      border-top: 1px solid var(--line);
+      background: #fffbe8;
+      color: #4b3b14;
+      padding: 14px 22px;
+      font-size: 16px;
+      max-height: 22vh;
+      overflow: auto;
+    }
+    .notes.visible { display: block; }
+    .notes strong { color: #2f260c; }
+    .choice {
+      border: 2px solid var(--line);
+      background: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .choice:hover { border-color: var(--blue); }
+    .choice.revealed.good-answer { border-color: var(--green); background: #eefaf2; }
+    .choice.revealed.bad-answer { border-color: var(--red); background: #fff2f2; }
+    .section {
+      background: linear-gradient(135deg, #0f1720 0%, #17324f 100%);
+      color: #fff;
+    }
+    .section .sub, .section .kicker { color: #d7e8ff; }
+    .section .card { color: var(--ink); }
+    @media (max-width: 860px) {
+      body { overflow: auto; }
+      .deck { min-height: 100vh; }
+      .slide { position: static; display: none; padding: 24px; min-height: calc(100vh - 110px); }
+      .slide.active { display: grid; }
+      .grid.two, .grid.three, .grid.four, .traffic { grid-template-columns: 1fr; }
+      .arrow { display: none; }
+      header { align-items: flex-start; flex-direction: column; }
+      footer { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { overflow: visible; background: #fff; }
+      header, footer, .notes, .copy { display: none !important; }
+      .slide { position: static; display: block !important; page-break-after: always; min-height: 95vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <header>
+      <div class="brand">
+        <div class="mark">AI</div>
+        <div>
+          <strong>AI for Economics and Finance Research</strong><br>
+          <span>Two-hour teaching deck | Use arrow keys, N for notes, F for fullscreen</span>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="prev" aria-label="Previous slide">Prev</button>
+        <button id="next" aria-label="Next slide">Next</button>
+        <button id="notesBtn" aria-label="Toggle speaker notes">Notes</button>
+      </div>
+    </header>
+
+    <main id="slides">
+      <section class="slide active section" data-note="Opening. Set expectation: this is a workflow session, not a tool ranking or prompt show.">
+        <div class="kicker">Two-hour workshop</div>
+        <h1>AI for Economics and Finance Research</h1>
+        <p class="sub">How to use AI as a research workflow assistant while protecting evidence, data, coauthors, and reproducibility.</p>
+        <div class="grid three">
+          <div class="card"><h3>Read</h3><p>Understand the mental model.</p></div>
+          <div class="card"><h3>Copy</h3><p>Use one skill on a real task.</p></div>
+          <div class="card"><h3>Verify</h3><p>Check against source, data, code, or theory.</p></div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="Ask participants: what is one research task where AI already saves you time?">
+        <div class="kicker">0-5 minutes</div>
+        <h2>The promise and the trap</h2>
+        <div class="grid two">
+          <div class="big-rule good">AI can make research labor cheaper.</div>
+          <div class="big-rule danger">AI does not make output true.</div>
+        </div>
+        <p class="sub">The goal is not to produce more research-looking artifacts. The goal is to build accountable workflows.</p>
+      </section>
+
+      <section class="slide" data-note="Make this the repeated phrase for the whole session.">
+        <div class="kicker">Core rule</div>
+        <h2>AI output is not evidence</h2>
+        <div class="big-rule">Treat AI output as a draft, checklist, critique, explanation, or coding aid.</div>
+        <p class="sub">Evidence still comes from sources, data, code, equations, institutional facts, and human judgment.</p>
+      </section>
+
+      <section class="slide scroll" data-note="Keep the tone positive. AI is very useful in execution layers.">
+        <div class="kicker">What AI is good at</div>
+        <h2>Use AI where the work is structured and checkable</h2>
+        <div class="grid three">
+          <div class="card"><h3>Literature</h3><p>Compare supplied papers, build matrices, flag missing facts.</p></div>
+          <div class="card"><h3>Code</h3><p>Explain errors, draft functions, build toy tests, inspect scripts.</p></div>
+          <div class="card"><h3>Writing</h3><p>Improve clarity, structure, flow, and audience fit.</p></div>
+          <div class="card"><h3>Data Work</h3><p>Plan pipelines, variable dictionaries, merge audits, EDA.</p></div>
+          <div class="card"><h3>Presenting</h3><p>Build talk outlines, speaker notes, and Q&A drills.</p></div>
+          <div class="card"><h3>Management</h3><p>Create checklists, logs, issues, project rules, and workflows.</p></div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="Distinguish assistance from responsibility. This is where the audience usually nods.">
+        <div class="kicker">What not to automate</div>
+        <h2>Do not outsource scholarly judgment</h2>
+        <div class="grid two">
+          <div class="card"><h3>Do not let AI decide</h3><ul><li>final research question</li><li>identification credibility</li><li>causal interpretation</li><li>literature contribution</li></ul></div>
+          <div class="card"><h3>Do not let AI handle blindly</h3><ul><li>confidential referee material</li><li>restricted data</li><li>final submission readiness</li><li>public policy or investment claims</li></ul></div>
+        </div>
+      </section>
+
+      <section class="slide scroll" data-note="Define terms slowly. The audience may not know agents, MCPs, or Git.">
+        <div class="kicker">15-25 minutes</div>
+        <h2>Tool map for non-CS researchers</h2>
+        <table>
+          <tr><th>Concept</th><th>Plain meaning</th><th>Use it for</th></tr>
+          <tr><td>Prompt</td><td>one-time instruction</td><td>a quick answer or draft</td></tr>
+          <tr><td>Project</td><td>persistent AI workspace</td><td>one paper, literature review, or talk</td></tr>
+          <tr><td>Skill</td><td>reusable research procedure</td><td>repeated tasks with checks</td></tr>
+          <tr><td>Agent</td><td>AI that can plan, edit files, run steps</td><td>code, repo, data, slide workflows</td></tr>
+          <tr><td>MCP/connector</td><td>connection to external apps or data</td><td>GitHub, Zotero, files, databases</td></tr>
+          <tr><td>GitHub</td><td>version history and collaboration</td><td>recover, review, branch, PR, release</td></tr>
+        </table>
+      </section>
+
+      <section class="slide" data-note="Ask: where are you today? Chat, project, skill, agent, or GitHub workflow?">
+        <div class="kicker">Workflow maturity</div>
+        <h2>From chat to accountable systems</h2>
+        <div class="flow">
+          <div class="step">Chat</div><div class="arrow">></div>
+          <div class="step">Project</div><div class="arrow">></div>
+          <div class="step">Skill</div><div class="arrow">></div>
+          <div class="step">Agent</div><div class="arrow">></div>
+          <div class="step">GitHub + log</div>
+        </div>
+        <p class="sub">Do not jump to agents before you can verify outputs, use Git, and define data rules.</p>
+      </section>
+
+      <section class="slide scroll" data-note="Run the upload-or-not exercise. Click choices to reveal suggested classification.">
+        <div class="kicker">38-50 minutes</div>
+        <h2>Data safety traffic light</h2>
+        <div class="traffic">
+          <div class="card"><h3>Usually lower risk</h3><p>Public abstract, public documentation, synthetic toy data.</p></div>
+          <div class="card"><h3>Ask first</h3><p>Coauthor draft, unpublished slides, variable dictionary, licensed metadata.</p></div>
+          <div class="card"><h3>Do not upload by default</h3><p>Referee reports, restricted data, WRDS extracts, student data, credentials.</p></div>
+        </div>
+        <div class="grid three" style="margin-top:18px">
+          <div class="choice good-answer">Public paper abstract</div>
+          <div class="choice bad-answer">WRDS/CRSP extract</div>
+          <div class="choice bad-answer">Referee report</div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="Use a public abstract or synthetic paragraph. Do not paste private drafts.">
+        <div class="kicker">Live demo 1</div>
+        <h2>Casual prompt vs controlled workflow</h2>
+        <div class="grid two">
+          <div class="card"><h3>Casual</h3><div class="prompt">Summarize this paper and tell me the contribution.</div></div>
+          <div class="card"><h3>Controlled</h3><div class="prompt copyable">Using only the text I provide, create a structured research note for an economics/finance audience.
+
+Return: question, data/setting, method/design/model, cautious main claim, unverifiable items, facts to check, and three seminar questions.
+
+Do not invent citations, results, datasets, robustness checks, or institutional details. If unclear, ask up to five questions.</div></div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="This is the core operational idea. Verification methods differ by artifact.">
+        <div class="kicker">Verification</div>
+        <h2>Verification is the skill</h2>
+        <table>
+          <tr><th>AI output</th><th>Good check</th></tr>
+          <tr><td>Citation claim</td><td>DOI, journal page, and sentence-source match</td></tr>
+          <tr><td>Code</td><td>toy data with known answer, then real run</td></tr>
+          <tr><td>Merge</td><td>match rates, duplicates, unmatched records, timing</td></tr>
+          <tr><td>Coefficient interpretation</td><td>units, baseline, CI, design support</td></tr>
+          <tr><td>Slide claim</td><td>compare against table, figure, and causal design</td></tr>
+        </table>
+      </section>
+
+      <section class="slide" data-note="Screenshot placeholder. Later add a safe screenshot of the root repo README.">
+        <div class="kicker">75-90 minutes</div>
+        <h2>GitHub as safety infrastructure</h2>
+        <div class="grid two">
+          <div>
+            <p class="sub">If AI can edit files, use version control. GitHub gives backup, branches, pull requests, issues, releases, and review history.</p>
+            <div class="big-rule warn">A clean repo is a research safety device.</div>
+          </div>
+          <div class="placeholder">SCREENSHOT PLACEHOLDER<br>GitHub repo home with README visible</div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="Emphasize each file in plain language.">
+        <div class="kicker">Minimal project setup</div>
+        <h2>One paper, one repo, one AI-use log</h2>
+        <div class="grid four">
+          <div class="card"><h3>README.md</h3><p>What is this project and how do I run it?</p></div>
+          <div class="card"><h3>DATA.md</h3><p>Where did data come from and what cannot be uploaded?</p></div>
+          <div class="card"><h3>AGENTS.md</h3><p>What may agents read, edit, run, or never touch?</p></div>
+          <div class="card"><h3>AI-USE-LOG.md</h3><p>What AI helped with, what changed, and what was checked?</p></div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="Replace these only with safe screenshots. No private repo names, data paths, paper drafts, or coauthor comments.">
+        <div class="kicker">Screenshot placeholders</div>
+        <h2>Add safe visuals later</h2>
+        <div class="grid three">
+          <div class="placeholder">SCREENSHOT PLACEHOLDER<br>copy-ready skill page</div>
+          <div class="placeholder">SCREENSHOT PLACEHOLDER<br>toy Git diff</div>
+          <div class="placeholder">SCREENSHOT PLACEHOLDER<br>synthetic AI-use log</div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="This is the agentic workflow. Keep it concrete.">
+        <div class="kicker">90-105 minutes</div>
+        <h2>Agentic workflow: small contracts</h2>
+        <div class="flow">
+          <div class="step">Clarify</div><div class="arrow">></div>
+          <div class="step">Plan</div><div class="arrow">></div>
+          <div class="step">Approve</div><div class="arrow">></div>
+          <div class="step">Edit or run</div><div class="arrow">></div>
+          <div class="step">Check</div><div class="arrow">></div>
+          <div class="step">Log</div>
+        </div>
+        <div class="prompt copyable">Before editing, give me an approval table:
+
+| Proposed action | Files affected | Why needed | Risk | Verification check | Needs approval? |
+
+Wait for approval before editing, running commands, installing packages, or pushing to GitHub.</div>
+      </section>
+
+      <section class="slide" data-note="This slide responds to coauthor/RA collaboration concerns.">
+        <div class="kicker">Team projects</div>
+        <h2>Coauthors and RAs need shared AI rules</h2>
+        <div class="flow">
+          <div class="step">Issue</div><div class="arrow">></div>
+          <div class="step">Branch</div><div class="arrow">></div>
+          <div class="step">Agent plan</div><div class="arrow">></div>
+          <div class="step">PR</div><div class="arrow">></div>
+          <div class="step">Human review</div><div class="arrow">></div>
+          <div class="step">Merge + log</div>
+        </div>
+        <p class="sub">AI use is not only an individual choice when the material belongs to a team.</p>
+      </section>
+
+      <section class="slide section" data-note="Failure cases are memorable. Ask the audience for examples.">
+        <div class="kicker">105-115 minutes</div>
+        <h2>Failure cases make the rules concrete</h2>
+        <p class="sub">The point is not to distrust everything. The point is to match each AI output to the right verification method.</p>
+      </section>
+
+      <section class="slide" data-note="Ask: how would you catch this?">
+        <div class="kicker">Failure case 1</div>
+        <h2>Fake citation</h2>
+        <div class="grid two">
+          <div class="card"><h3>Why it looks plausible</h3><p>The title sounds field-appropriate. The journal name and year look normal.</p></div>
+          <div class="card"><h3>How to catch it</h3><p>Search title, DOI, journal page, author/year. Then check whether the source supports the exact sentence.</p></div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="Use this to explain toy data.">
+        <div class="kicker">Failure case 2</div>
+        <h2>Wrong code that runs</h2>
+        <div class="big-rule danger">Code that runs can still be wrong.</div>
+        <p class="sub">Use toy data with a known answer before trusting AI-written merge, event-study, portfolio-sort, or table code.</p>
+      </section>
+
+      <section class="slide" data-note="This is common in presentations.">
+        <div class="kicker">Failure case 3</div>
+        <h2>Slide title turns correlation into causality</h2>
+        <div class="grid two">
+          <div class="card"><h3>Bad title</h3><p>"Bank closures reduce small-firm employment."</p></div>
+          <div class="card"><h3>Safer title</h3><p>"Employment falls after closures in treated areas; causal interpretation depends on the design."</p></div>
+        </div>
+      </section>
+
+      <section class="slide scroll" data-note="Direct people to use the repo after the session.">
+        <div class="kicker">Copy-ready skills</div>
+        <h2>Do one thing after the workshop</h2>
+        <table>
+          <tr><th>Task</th><th>Use</th></tr>
+          <tr><td>Research idea</td><td>Research Idea Stress Test</td></tr>
+          <tr><td>Literature review</td><td>Source-Grounded Literature Review Builder</td></tr>
+          <tr><td>Empirical methods</td><td>Economics or Finance Methods Skill</td></tr>
+          <tr><td>Data pipeline</td><td>Reproducible Research Data Pipeline Builder</td></tr>
+          <tr><td>Verification</td><td>Verification Method Selector</td></tr>
+          <tr><td>Talk practice</td><td>Practice My Presentation With AI</td></tr>
+        </table>
+      </section>
+
+      <section class="slide" data-note="HTML deck vs Beamer. Useful if the audience asks how to make slides.">
+        <div class="kicker">Slides as research artifacts</div>
+        <h2>Choose the slide format by the job</h2>
+        <div class="grid two">
+          <div class="card"><h3>Interactive HTML</h3><p>Best for teaching, online sharing, mechanism diagrams, public explainers, and workshops.</p></div>
+          <div class="card"><h3>LaTeX/Beamer</h3><p>Best for seminars, conferences, equations, and traditional academic PDF decks.</p></div>
+        </div>
+      </section>
+
+      <section class="slide" data-note="Ask each participant to write one line.">
+        <div class="kicker">Personal next step</div>
+        <h2>Leave with one small workflow</h2>
+        <div class="big-rule">One non-confidential task. One skill. One verification check. One log entry.</div>
+        <p class="sub">Start small enough that you can verify the output today.</p>
+      </section>
+
+      <section class="slide" data-note="Close. Invite feedback via repo or email.">
+        <div class="kicker">Q&A</div>
+        <h2>Questions and next steps</h2>
+        <div class="grid two">
+          <div class="card"><h3>Repo</h3><p><a href="../README.md">Open the handbook README</a></p></div>
+          <div class="card"><h3>Contact</h3><p>Email jay.liu@bristol.ac.uk with subject <span class="tag">AI Econ Finance Teaching</span></p></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="notes" class="notes"></div>
+    <footer>
+      <div class="bar"><span id="progress"></span></div>
+      <div class="counter" id="counter"></div>
+    </footer>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const progress = document.getElementById('progress');
+    const counter = document.getElementById('counter');
+    const notes = document.getElementById('notes');
+    let index = 0;
+    let notesVisible = false;
+
+    function render() {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      progress.style.width = `${((index + 1) / slides.length) * 100}%`;
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      const note = slides[index].dataset.note || 'No speaker note for this slide.';
+      notes.innerHTML = `<strong>Speaker note:</strong> ${note}`;
+      notes.classList.toggle('visible', notesVisible);
+      window.location.hash = `slide-${index + 1}`;
+    }
+    function go(delta) {
+      index = Math.max(0, Math.min(slides.length - 1, index + delta));
+      render();
+    }
+    document.getElementById('next').addEventListener('click', () => go(1));
+    document.getElementById('prev').addEventListener('click', () => go(-1));
+    document.getElementById('notesBtn').addEventListener('click', () => {
+      notesVisible = !notesVisible;
+      render();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') go(1);
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') go(-1);
+      if (event.key.toLowerCase() === 'n') { notesVisible = !notesVisible; render(); }
+      if (event.key.toLowerCase() === 'f') document.documentElement.requestFullscreen?.();
+    });
+    document.querySelectorAll('.choice').forEach((el) => {
+      el.addEventListener('click', () => el.classList.toggle('revealed'));
+    });
+    document.querySelectorAll('.copyable').forEach((el) => {
+      const btn = document.createElement('button');
+      btn.className = 'copy';
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', async (event) => {
+        event.stopPropagation();
+        await navigator.clipboard.writeText(el.innerText.replace('Copy', '').trim());
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1200);
+      });
+      el.appendChild(btn);
+    });
+    const match = window.location.hash.match(/slide-(\d+)/);
+    if (match) index = Math.max(0, Math.min(slides.length - 1, Number(match[1]) - 1));
+    render();
+  </script>
+</body>
+</html>
