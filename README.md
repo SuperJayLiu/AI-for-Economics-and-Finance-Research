@@ -19,9 +19,9 @@ This repository is designed for readers who want to **click, copy, paste, adapt,
 
 The main page keeps only the primary reading and working folders visible. Supporting files and old short pages are consolidated under [Repository Reference and Maintenance](99-Repository-Reference-and-Maintenance/README.md).
 
-### Roadmap In Six Large Clicks
+### Roadmap: Choose Where To Start
 
-Use this roadmap when you are not sure where to click first. The links below are the main navigation; the short flow underneath is only a compact memory aid.
+Use this roadmap when you are not sure where to click first.
 
 <table>
   <tr>
@@ -60,9 +60,9 @@ Use this roadmap when you are not sure where to click first. The links below are
   </tr>
 </table>
 
-### Visual Roadmaps With Larger Text
+### Visual Roadmaps
 
-These diagrams are intentionally simple so the text stays readable in GitHub. Use the linked cards above as the main navigation and the diagrams below as visual memory aids.
+Use these diagrams to understand the flow of the repository.
 
 ```mermaid
 %%{init: {"theme": "base", "flowchart": {"htmlLabels": true, "nodeSpacing": 55, "rankSpacing": 75}, "themeVariables": {"fontSize": "22px", "fontFamily": "Arial", "primaryColor": "#F4F0FF", "primaryBorderColor": "#6D5BD0", "primaryTextColor": "#111827", "lineColor": "#4B5563"}}}%%
