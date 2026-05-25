@@ -8,26 +8,86 @@ These skills are for turning research into usable communication artifacts: inter
 > Slides are not a decoration task. A good slide workflow converts a paper into a clear sequence of claims, evidence, limits, and audience questions.
 
 > [!NOTE]
-> Default add-on for any block on this page: `If any required input, term, method detail, data rule, or output format is unclear, ask me up to five clarifying questions before giving the final output. Define unfamiliar technical terms in plain language. After producing output, state what changed, what did not change, and what the researcher must verify. End with "Questions for you" if anything remains uncertain.`
+> Import/use-as-skill protocol for any block on this page: `Start by collecting only the missing inputs needed for the task. Ask up to five clarifying questions when required inputs, data rules, method details, permissions, audience, or output format are unclear. For long outputs, file-producing tasks, slides, code, methods sections, literature reviews, referee responses, or agentic workflows, first return "Proposed structure and assumptions" and ask the user to confirm before producing the full output. Before finalizing, double-check for unsupported claims, invented citations or results, privacy risks, and mismatch with the requested format. End with "What I produced", "What I did not change", "What you must verify", and "Questions for you".`
 
 ## Choose a Skill
 
 | Need | Use |
 | --- | --- |
-| web-native interactive slides | Skill 1 |
-| traditional academic slides | Skill 2 |
+| full paper or full materials, but slide structure is not confirmed yet | Skill 0 |
+| web-native interactive slides after structure is confirmed | Skill 1 |
+| traditional academic slides after structure is confirmed | Skill 2 |
 | practice Q&A | Skill 3 |
 | academic website | Skill 4 |
 | convert a paper into a talk plan before making slides | Skill 5 |
+
+## Skill 0: Full-Materials Presentation Intake and Structure Confirmation
+
+Use this before creating any full slide deck from a paper, draft, replication package, figures, tables, or mixed materials. The goal is to confirm the presentation type, structure, and evidence before asking AI to produce HTML or Beamer slides.
+
+```text
+Use this as an imported presentation-intake skill for an economics/finance research project.
+
+Task:
+I will provide full paper materials, partial materials, or supporting files. Do not create the final slide deck yet. First inspect the materials and return "Proposed structure and assumptions" for my confirmation.
+
+Materials I am providing:
+- Full paper or draft: [paste/upload/link/none]
+- Abstract and introduction: [paste/upload/link/none]
+- Methods/model section: [paste/upload/link/none]
+- Results, tables, figures, or appendix: [paste/upload/link/none]
+- Existing slides or notes: [paste/upload/link/none]
+- Target talk date/event: [event]
+- Confidentiality status: [public / coauthor draft / unpublished / restricted / unknown]
+
+Presentation type to consider:
+- academic seminar
+- job talk
+- conference talk
+- PhD workshop or brown-bag
+- professional/policy audience
+- teaching session
+- public-facing research summary
+- internal coauthor/RA update
+
+Possible output format:
+- interactive single-file HTML slides
+- LaTeX Beamer slides
+- PowerPoint outline only
+- talk plan only, no slides yet
+- not sure; recommend format
+
+Before producing a deck, ask up to five clarifying questions if any of these are unclear:
+1. audience and expected technical level;
+2. talk length and number of slides;
+3. required format, template, or institutional style;
+4. which claims, tables, figures, or results are verified;
+5. which materials are confidential or should not be shown.
+
+Return only this pre-slide plan:
+1. Material inventory: what I provided and what is missing.
+2. Recommended presentation type and format, with reason.
+3. Proposed deck structure with section titles and approximate timing.
+4. Core research narrative in one paragraph.
+5. Must-use figures/tables and why.
+6. Figures/tables to simplify, move to backup, or omit.
+7. Claims that need evidence before appearing on slides.
+8. Privacy, coauthor, data-license, or disclosure issues.
+9. Backup-slide plan.
+10. Questions for you.
+
+Stop after the pre-slide plan and wait for my confirmation. Do not generate HTML, Beamer, or final slide text until I confirm the structure and format.
+```
 
 ## Skill 1: Interactive HTML Research Slides
 
 Use for shareable, interactive, web-native slides.
 
 ```text
-Create an interactive single-file HTML slide deck for an economics/finance research presentation.
+Create an interactive single-file HTML slide deck for an economics/finance research presentation after the presentation structure has been confirmed.
 
 Inputs:
+- Confirmed deck structure: [paste the approved structure from Skill 0, or say "not confirmed"]
 - Paper title: [title]
 - Audience: [seminar/conference/class/public]
 - Talk length: [minutes]
@@ -40,6 +100,8 @@ Inputs:
 - Visual style: [clean academic / interactive mechanism / finance dashboard / teaching explainer]
 - Interaction style: [timeline / mechanism diagram / data explorer / animated equation / policy dashboard / no interaction]
 
+If the deck structure or format has not been confirmed, do not write the final HTML yet. First return "Proposed structure and assumptions" and ask me to confirm.
+
 Requirements:
 1. Use one self-contained HTML file unless external assets are necessary.
 2. Include keyboard navigation.
@@ -51,6 +113,8 @@ Requirements:
 8. Include a visual preview plan before writing final HTML.
 9. Prevent text overflow; split dense slides rather than shrinking everything.
 10. Make any simulated visual clearly labeled as illustrative.
+11. Use interactive elements to teach the economics/finance logic: mechanism, timeline, treatment timing, portfolio construction, event window, model intuition, data pipeline, or robustness comparison.
+12. Keep animations purposeful and slow enough for a seminar room.
 
 Recommended deck structure:
 1. title and one-sentence question
@@ -70,10 +134,17 @@ Do not:
 - deploy unpublished work publicly without approval
 
 Return:
-- slide-by-slide plan
-- visual style choices
-- HTML file content
-- manual verification checklist
+1. Proposed structure and assumptions, if not already confirmed.
+2. Slide-by-slide plan.
+3. Visual style choices.
+4. Full HTML file content.
+5. Manual verification checklist.
+6. What I produced.
+7. What I did not change.
+8. What you must verify.
+9. Questions for you.
+
+Before finalizing, double-check that every claim is traceable to the paper, table, figure, model, or supplied note; that no confidential material is exposed; and that the deck format matches the confirmed presentation type.
 ```
 
 ## Skill 2: Traditional LaTeX/Beamer Research Slides
@@ -81,9 +152,10 @@ Return:
 Use for standard academic seminars and conferences.
 
 ```text
-Create a LaTeX Beamer slide deck for an economics/finance research talk.
+Create a LaTeX Beamer slide deck for an economics/finance research talk after the presentation structure has been confirmed.
 
 Inputs:
+- Confirmed deck structure: [paste the approved structure from Skill 0, or say "not confirmed"]
 - Paper title: [title]
 - Authors: [authors]
 - Event/audience: [event]
@@ -96,6 +168,8 @@ Inputs:
 - Figures/tables: [files or descriptions]
 - Style preference: [plain professional / journal seminar / teaching]
 - Beamer theme preference: [default/simple/custom institution theme]
+
+If the deck structure or format has not been confirmed, do not write the final Beamer file yet. First return "Proposed structure and assumptions" and ask me to confirm.
 
 Output:
 1. A complete `main.tex` Beamer file.
@@ -112,6 +186,8 @@ Output:
 3. Speaker-note bullets below each slide as comments.
 4. Figure-needed markers with clear filenames.
 5. A backup slide plan for robustness, data details, and extra results.
+6. A claim-to-evidence checklist for the main slides.
+7. A short "What you must verify" list.
 
 Rules:
 - Do not fabricate results.
@@ -119,12 +195,22 @@ Rules:
 - Preserve mathematical notation.
 - Make limitations visible.
 - Use comments for speaker notes and verification reminders.
+- Preserve the confirmed presentation type: academic seminar, job talk, conference talk, professional/policy talk, teaching, public summary, or internal update.
+- For equations and tables, prefer clarity over completeness; move dense derivations and robustness tables to backup slides.
 
 Suggested LaTeX packages only if needed:
 - `amsmath`
 - `booktabs`
 - `graphicx`
 - `appendixnumberbeamer`
+
+Before finalizing, double-check that every claim is traceable to the paper, table, figure, model, or supplied note; that notation is consistent; that no confidential material is exposed; and that the deck format matches the confirmed presentation type.
+
+End with:
+1. What I produced.
+2. What I did not change.
+3. What you must verify.
+4. Questions for you.
 ```
 
 ## Skill 3: Practice My Presentation With AI
@@ -141,6 +227,7 @@ Inputs:
 - Weakest part: [what worries me]
 
 Run a presentation practice session:
+0. If audience, time, main claim, or slide materials are missing, ask clarifying questions before beginning.
 1. Ask 10 likely audience questions.
 2. Ask 5 hostile-but-fair questions.
 3. Ask 5 clarification questions.
@@ -154,6 +241,7 @@ Rules:
 - Do not invent answers.
 - If an answer requires evidence, say what evidence is needed.
 - Separate "answer now" from "need to check before seminar".
+- End with "What I produced", "What I did not change", "What you must verify", and "Questions for you".
 ```
 
 ## Skill 4: Personal Academic Website From GitHub or Google Sites
@@ -186,6 +274,8 @@ Rules:
 - Professional academic tone.
 - No marketing fluff.
 - Do not invent publications or affiliations.
+- If the platform, audience, or public/private status is unclear, ask clarifying questions before drafting final text.
+- End with "What I produced", "What I did not change", "What you must verify", and "Questions for you".
 ```
 
 ## Skill 5: Paper-to-Talk Converter
@@ -220,6 +310,9 @@ Rules:
 - Do not invent visuals.
 - Do not hide limitations.
 - Keep the talk centered on the research question, design/model, and evidence.
+- If the talk format, audience, length, or verified results are unclear, first return "Proposed structure and assumptions" and ask me to confirm.
+- Before finalizing, double-check that every slide claim can be traced to supplied materials.
+- End with "What I produced", "What I did not change", "What you must verify", and "Questions for you".
 ```
 
 Sources and workflow influences: Zara Zhang's frontend slide work, SlideCraft-style workflow ideas, and academic presentation practices. Adapted here for economics and finance research communication.

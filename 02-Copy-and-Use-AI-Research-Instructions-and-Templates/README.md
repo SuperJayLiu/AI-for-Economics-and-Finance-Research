@@ -29,7 +29,7 @@ Use these as the fastest entry points. Each card points to one copy-ready block 
 | draft empirical methods for finance | [Draft Empirical Methods Section for Finance](skills/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) | checking timing, link tables, survivorship, delisting, event windows, and factor-mining risk |
 | debug code in Python, R, or Stata | [Coding, Data Analysis, and Debugging Skills](skills/08-coding-data-analysis-and-debugging-skills.md) | running a toy-data test before trusting real-data output |
 | use agents on files safely | [AGENTS.md for Research Repo](skills/05-git-data-replication-and-research-safety-templates.md#template-3-agentsmd-for-research-repo) | inspecting `git diff`, running checks, and logging AI use |
-| prepare slides or practice a seminar | [Paper-to-Talk Converter](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter) | matching every slide claim to the paper, table, figure, or model |
+| prepare slides or practice a seminar | [Full-Materials Presentation Intake and Structure Confirmation](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-0-full-materials-presentation-intake-and-structure-confirmation) | matching every slide claim to the paper, table, figure, or model |
 | decide whether an AI answer can be accepted | [Verification Method Selector](skills/17-verification-reproducibility-and-disclosure-skills.md#skill-1-verification-method-selector) | choosing source, code, data, math, policy, or disclosure checks |
 | find more tools/resources for one task | [Find More Resources For One Econ/Finance Research Task](skills/09-tool-selection-updates-and-skill-improvement.md#skill-6-find-more-resources-for-one-econfinance-research-task) | rejecting generic hype and testing at most three resources first |
 
@@ -49,6 +49,28 @@ At the end, include a short section called "Questions for you" listing anything 
 
 Use this rule especially for Git, `.gitignore`, branches, worktrees, MCPs, agent permissions, data licenses, identification assumptions, variable construction, and disclosure policies.
 
+## Skill Import Mode
+
+Use this when you want to import a skill into ChatGPT, Claude, Codex, Claude Code, Cursor, or another AI tool and type less later. Paste the relevant skill block once, then add this operating rule:
+
+```text
+Use the pasted block as an imported skill for this task.
+
+Start by collecting only the missing inputs needed to do the work. Ask up to five clarifying questions if required inputs, data rules, method details, permissions, audience, or output format are unclear.
+
+For long outputs, file-producing tasks, slides, code, empirical methods, literature reviews, referee responses, or agentic workflows, first return a section titled "Proposed structure and assumptions" and wait for my confirmation before producing the full output.
+
+Before finalizing, double-check for unsupported claims, invented citations or results, privacy risks, and mismatch with the requested format.
+
+End with four sections:
+1. What I produced.
+2. What I did not change.
+3. What you must verify.
+4. Questions for you.
+```
+
+This makes the skill behave less like a one-off prompt and more like a step-by-step research assistant. It is especially useful when you upload a full paper, code folder, slide deck, referee letter, or replication package.
+
 ## What Is Here
 
 ### How A Copy-Ready Skill Should Work
@@ -58,9 +80,11 @@ Every usable skill should move through the same visible chain.
 ```mermaid
 flowchart LR
   I["Inputs you provide"] --> A["AI asks clarifying questions"]
-  A --> P["Plan and constraints"]
-  P --> O["Output you can use"]
-  O --> V["Verification checklist"]
+  A --> P["Proposed structure and assumptions"]
+  P --> C["You confirm or correct"]
+  C --> O["Output you can use"]
+  O --> D["AI double-checks before reply"]
+  D --> V["Verification checklist"]
   V --> L["AI-use log entry"]
 ```
 
@@ -68,8 +92,10 @@ flowchart LR
 | --- | --- | --- |
 | inputs | exactly what to paste or attach | "give me everything" |
 | clarifying questions | what the AI should ask before acting | AI guesses missing data rules |
-| plan | files, assumptions, steps, risks | AI jumps straight to final prose/code |
+| proposed structure | files, assumptions, steps, risks, and output format | AI jumps straight to final prose/code |
+| confirmation | a chance to correct structure before the long answer | AI creates a full deck/paper/code change without approval |
 | output | draft text, code, table, checklist, or slide plan | vague advice only |
+| double-check | final scan for unsupported claims, privacy issues, and format mismatch | polished output with hidden errors |
 | verification | concrete source/code/data/math/policy check | "verify manually" with no method |
 | log | what to record after using the output | no trace of AI involvement |
 
@@ -143,7 +169,7 @@ Use this table when you know the artifact you need but not the file name. Levels
 | [03 Economics empirical methods](skills/03-empirical-methods-skills-for-economics-research.md) | economics | intermediate | design, data, sample, equation, timing | methods prose or design audit | code, estimand, sample, timing, inference | project or agent |
 | [04 Finance empirical methods](skills/04-empirical-methods-skills-for-finance-research.md) | finance | intermediate | data source, security/firms, timing, model, benchmark | finance methods prose or audit | look-ahead, survivorship, delisting, link tables, multiple testing | project or agent |
 | [05 Git, data, replication safety](skills/05-git-data-replication-and-research-safety-templates.md) | both | beginner-intermediate | project folder, data rules, desired structure | `.gitignore`, `DATA.md`, `AGENTS.md`, AI-use log | Git diff, ignored files, data permissions | GitHub workflow |
-| [06 Presentations, slides, websites](skills/06-presentations-slides-websites-and-talk-practice-skills.md) | both | beginner-intermediate | paper summary, audience, time, figures | HTML slides, Beamer plan, talk drill, website plan | claim-to-evidence match, privacy, public-sharing permission | chat, project, or agent |
+| [06 Presentations, slides, websites](skills/06-presentations-slides-websites-and-talk-practice-skills.md) | both | beginner-intermediate | paper/materials, audience, time, figures, format | confirmed talk structure, HTML slides, Beamer deck, talk drill, website plan | claim-to-evidence match, privacy, public-sharing permission | chat, project, or agent |
 | [07 Project instructions and roles](skills/07-project-instructions-and-agent-role-templates.md) | both | beginner-intermediate | research purpose, role, files, rules | project instructions, role prompts, agent rules | missing-input questions, permissions, output scope | project or agent |
 | [08 Coding, data analysis, debugging](skills/08-coding-data-analysis-and-debugging-skills.md) | both | intermediate | code, error, expected output, data schema | diagnosis, patch plan, toy test, code review | run code, inspect output, compare to design | coding agent |
 | [09 Tool selection and updates](skills/09-tool-selection-updates-and-skill-improvement.md) | both | beginner | task, budget, tool access, risk tolerance | dated tool choice, update digest, resource shortlist | date, official docs, small-task test | chat |
@@ -236,7 +262,7 @@ flowchart LR
 | code | [Debug Stata/R/Python Research Code](skills/08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
 | methods | [Economics Methods](skills/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) or [Finance Methods](skills/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
 | verification | [Verification Method Selector](skills/17-verification-reproducibility-and-disclosure-skills.md#skill-1-verification-method-selector) |
-| presentation | [Paper-to-Talk Converter](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-5-paper-to-talk-converter) |
+| presentation | [Full-Materials Presentation Intake and Structure Confirmation](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-0-full-materials-presentation-intake-and-structure-confirmation) |
 
 ## Most-Used Blocks
 
@@ -256,7 +282,7 @@ flowchart LR
 | verification/disclosure | [AI Reproducibility Packet and Disclosure Draft](skills/17-verification-reproducibility-and-disclosure-skills.md#skill-6-ai-reproducibility-packet-and-disclosure-draft) |
 | theory model | [Economic Model Discussant](skills/12-theory-model-and-math-skills.md#skill-1-economic-model-discussant) |
 | messy repo | [Clean Up Existing Project and Start Git Safely](skills/05-git-data-replication-and-research-safety-templates.md#template-1-clean-up-existing-project-and-start-git-safely) |
-| slides | [Interactive HTML Research Slides](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-1-interactive-html-research-slides) |
+| slides | [Full-Materials Presentation Intake and Structure Confirmation](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-0-full-materials-presentation-intake-and-structure-confirmation) |
 | coding | [Debug Stata/R/Python Research Code](skills/08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
 | referee response | [Journal Referee Response Planner](skills/13-referee-reports-and-peer-review-skills.md#skill-2-journal-referee-response-planner) |
 
@@ -266,9 +292,12 @@ flowchart LR
 2. Replace bracketed fields like `[paper title]`, `[data source]`, or `[target journal]`.
 3. Add your actual materials.
 4. Ask the AI to clarify missing inputs before it writes, edits, or codes.
-5. Ask for a plan before letting AI write, edit, or code.
-6. Verify everything.
-7. Save the accepted output and checks in your AI-use log.
+5. For long outputs, ask for "Proposed structure and assumptions" before the full answer.
+6. Confirm or correct the structure.
+7. Let AI produce the usable output.
+8. Require a final double-check.
+9. Verify everything.
+10. Save the accepted output and checks in your AI-use log.
 
 ## Universal Safety Instruction
 
@@ -281,7 +310,9 @@ Follow all university, employer, journal, conference, funder, data-provider, and
 
 If any input, term, policy, method, data rule, or output format is unclear, ask up to five clarifying questions before giving the final answer. If you proceed with assumptions, state them explicitly. End with "Questions for you" if anything remains uncertain.
 
-Before finishing, state what you changed or produced, what you did not change, and what I must verify manually.
+For long outputs, file-producing tasks, slides, code, empirical methods, literature reviews, referee responses, or agentic workflows, first return "Proposed structure and assumptions" and wait for my confirmation before producing the full output.
+
+Before finishing, double-check for unsupported claims, invented citations or results, privacy risks, and mismatch with the requested format. State what you changed or produced, what you did not change, and what I must verify manually.
 ```
 
 ## Universal Output Contract
@@ -289,13 +320,14 @@ Before finishing, state what you changed or produced, what you did not change, a
 Add this when you want a cleaner answer:
 
 ```text
-Return your answer in five sections:
-1. Direct output I can use.
-2. Assumptions you made.
-3. Items I must verify manually.
-4. Risks or failure modes.
-5. What you changed, what you did not change, and what I must verify.
-6. Questions for you and next action checklist.
+Return your answer in seven sections:
+1. Proposed structure and assumptions, if this is a long or file-producing task.
+2. Direct output I can use.
+3. Assumptions you made.
+4. Items I must verify manually.
+5. Risks or failure modes.
+6. What you produced, what you did not change, and what I must verify.
+7. Questions for you and next action checklist.
 ```
 
 ## Source Use Rule
