@@ -5,6 +5,111 @@
 > [!WARNING]
 > 只要 AI 能改文件，就必须用 Git。只要涉及数据、代码、论文文本或公开发布，就必须有人工批准、人工核查和日志记录。
 
+## 目录
+
+- [Agentic workflow 总览](#agentic-workflow-总览)
+- [可视化批准门](#可视化批准门)
+- [协作地图](#协作地图)
+- [先计划，再开新会话执行](#先计划再开新会话执行)
+- [文件和详细 runbooks](#文件和详细-runbooks)
+- [从零开始设置 Git/GitHub 和 AI agent](#从零开始设置-gitgithub-和-ai-agent)
+- [为什么需要这一页？](#为什么需要这一页)
+- [初学者工具地图](#初学者工具地图)
+- [这些词在实际操作中长什么样？](#这些词在实际操作中长什么样)
+- [选择正确工作流](#选择正确工作流)
+- [Agentic AI 一句话解释](#agentic-ai-一句话解释)
+- [Agentic workflow 应该如何运行？](#agentic-workflow-应该如何运行)
+- [具体任务例子](#具体任务例子)
+- [与合作者、RA 和团队一起使用 AI agent](#与合作者ra-和团队一起使用-ai-agent)
+- [Agent 工作模式](#agent-工作模式)
+- [Agent 规则](#agent-规则)
+- [自动化等级](#自动化等级)
+- [Agent 四道安全门](#agent-四道安全门)
+- [批准表模板](#批准表模板)
+- [什么才算完成](#什么才算完成)
+- [`AGENTS.md` 基本模板](#agentsmd-基本模板)
+- [Tool Concepts](#tool-concepts)
+- [大学和机构规则](#大学和机构规则)
+
+## Agentic AI 一句话解释
+
+Agentic AI 是可以在你设定的边界内计划任务、读取文件、修改文件、运行命令、检查输出并报告结果的 AI 工作方式。对研究者来说，它不是“让 AI 自己做研究”，而是把 AI 放进一个受控循环：先计划、再批准、再执行、再看 diff、再运行检查、最后记录。
+
+## Agentic workflow 总览
+
+Agentic AI 只有放进受控研究循环里才真正有用。这个循环故意比“直接做”慢，因为它让工作可以 review、可以复现、可以追责。
+
+```mermaid
+flowchart TD
+  A["研究者说明目标"] --> B["Agent 检查允许的上下文"]
+  B --> C["Agent 提出计划、文件、风险、检查"]
+  C --> D{"人类批准？"}
+  D -- "否" --> E["修改计划或缩小任务"]
+  D -- "是" --> F["Agent 执行批准步骤"]
+  F --> G["Agent 报告 diff、命令、输出、不确定性"]
+  G --> H{"检查通过？"}
+  H -- "否" --> I["修复、回退或停止"]
+  H -- "是" --> J["AI-use log 和 Git commit"]
+```
+
+## 可视化批准门
+
+| Gate | 问题 | 批准例子 |
+| --- | --- | --- |
+| context gate | agent 能读什么？ | “读 `code/` 和 `paper/`，不要读 `data/raw/`。” |
+| plan gate | agent 将做什么？ | “只起草 merge plan，不要编辑文件。” |
+| edit gate | 哪些文件可以改？ | “只改 `code/build_panel.R` 和 `README.md`。” |
+| run gate | 可以运行什么命令？ | “只运行 toy tests 和 `Rscript code/checks.R`。” |
+| publish gate | 什么可以离开本机？ | “没有批准不要 push、email、deploy 或 upload。” |
+
+## 协作地图
+
+```mermaid
+flowchart LR
+  PI["PI 或 lead author"] --> R["研究规则：问题、数据、披露"]
+  CO["合作者"] --> R
+  RA["RA"] --> W["任务：代码、数据、笔记"]
+  AG["AI agent"] --> W
+  R --> G["GitHub repo: issues、branches、reviews"]
+  W --> G
+  G --> L["AI-use log、PR review、最终人工批准"]
+```
+
+规则：agents 可以帮助产生工作产物，但每个研究决定、数据使用决定、公开 claim 和最终提交都应该有明确的人类负责人。
+
+## 先计划，再开新会话执行
+
+严肃的文件编辑任务不要放在一个很长的聊天里完成 planning、implementation、debugging、revision 和 publishing。长会话会变得嘈杂，也让你更难看清楚改了什么。
+
+```text
+Before implementing, create a short plan.md for this research task.
+
+The plan must include:
+1. task goal;
+2. allowed files;
+3. forbidden files;
+4. data-safety constraints;
+5. expected outputs;
+6. validation commands;
+7. risks and rollback plan;
+8. open questions for me.
+
+Do not edit files yet. After I approve the plan, I will start a fresh execution session and ask you to follow the approved plan.
+```
+
+## 文件和详细 runbooks
+
+英文版详细 runbooks 在主仓库的 `03` 文件夹中。中文版保留同样的使用逻辑：先读本页，再使用对应 runbook。
+
+| 英文 runbook | 中文用途 |
+| --- | --- |
+| Clean Existing Research Project and Set Up Git | 清理旧项目，先备份，再设置 Git 和 `.gitignore` |
+| One Paper, One Repo, One AI Project | 为一篇论文建立 repo、Project、AI-use log |
+| Replication Package Agent Workflow | 检查、运行、记录 replication package |
+| AI Research Update Digest Workflow | 用官方文档和 builders 建低噪音更新系统 |
+| Parallel Agents and Git Worktrees | 用 branches/worktrees 安全并行 agent tasks |
+| GitHub Review Feedback and Publish Workflow | 处理 PR comments、stage、commit、push、open PR |
+
 ## 为什么需要这一页？
 
 普通聊天工具只是回答问题。Agentic AI 不只是回答，它可能会读文件、改代码、运行命令、连接外部工具、生成 commit 或准备发布材料。对研究者来说，这很有用，但也更危险。
@@ -47,6 +152,18 @@
 ```text
 如果你使用非计算机专业经济学/金融学研究者可能不熟悉的软件或 AI 术语，请先用一句话解释，并给出本项目中的例子。
 ```
+
+## 选择正确工作流
+
+| 情况 | 最合适 workflow | 注意 |
+| --- | --- | --- |
+| 旧文件夹很乱 | clean project and Git setup | 不要删除文件或 commit restricted data |
+| 一篇正在进行的论文 | one paper, one repo, one AI project | 文件编辑前先写 project instructions |
+| replication package | replication package agent workflow | 代码未运行、输出未匹配前不要宣称成功 |
+| 合作者、RA 或团队项目 | issues、branches、PRs、AI-use log | consent、file ownership、data access、disclosure |
+| 跟进 AI 更新 | research update digest | tool claims 要带日期，优先 official docs |
+| 多个 AI tasks | branches/worktrees | 防止多个 agents 改同一文件或混淆 output |
+| GitHub feedback | review feedback and publish workflow | 没批准不要 reply、resolve 或 push |
 
 ## 从零开始设置 Git/GitHub 和 AI agent
 
@@ -668,6 +785,87 @@ Gate 4: Trace
 5. 每个任务的验证命令；
 6. merge 顺序和冲突风险。
 ```
+
+## Agent 工作模式
+
+使用能解决问题的最低权限模式。
+
+```mermaid
+flowchart LR
+  A["Explain - 最低风险"] --> B["Plan"]
+  B --> C["Edit"]
+  C --> D["Run"]
+  D --> E["Publish - 最高风险"]
+```
+
+| 模式 | Agent 可以做什么 | 什么时候用 | 什么时候不要用 |
+| --- | --- | --- | --- |
+| explain | 无文件访问地回答问题 | 学一个方法或术语 | 需要改文件 |
+| plan | 检查上下文并提出行动 | 任务不清楚或有风险 | 已经批准了很窄的 edit |
+| edit | 修改批准的文件 | code、docs、slides、paper text 需要 revision | 涉及 raw/confidential files |
+| run | 运行批准的命令 | 需要 code/test/compile checks | 命令可能移动、删除或上传数据 |
+| publish | commit、push、open PR、reply on GitHub | 变化已 review 且可分享 | repo visibility、data sensitivity、authorship 不清楚 |
+
+如果 agent 做太多，复制这段：
+
+```text
+Pause. Do not make further edits or run commands.
+
+Restate:
+1. what you have done;
+2. which files you changed;
+3. which commands you ran;
+4. what remains uncertain;
+5. what you propose to do next.
+
+Wait for approval before continuing.
+```
+
+## Agent 规则
+
+```text
+Plan first. Ask before changing files. Use Git. Run checks. Report uncertainty.
+```
+
+## 自动化等级
+
+| Level | 名称 | 例子 |
+| --- | --- | --- |
+| 0 | manual | 研究者自己读写 |
+| 1 | guided chat | AI 解释方法或 critique paragraph |
+| 2 | project workspace | 一篇论文一个 ChatGPT/Claude Project |
+| 3 | repo-aware assistant | Codex/Claude Code 在 Git repo 中工作 |
+| 4 | semi-automation | AI 运行脚本、检查输出、起草 logs |
+| 5 | human-in-the-loop agent | AI 计划和执行，研究者批准 gates |
+
+如果环境没有批准，不要在 confidential 或 restricted data 上使用 Level 4/5。
+
+## 什么才算完成
+
+| Artifact | Done means |
+| --- | --- |
+| cleaned repo | backup exists, Git initialized, `.gitignore` protects data, raw files untouched |
+| data pipeline | scripts rebuild derived data from raw inputs, with logs and audit tables |
+| code fix | minimal test passes, real script runs, output changes are explained |
+| methods prose | text matches data, code, equation, sample, timing, and inference |
+| slides | claims match paper, figures are correct, limitations are visible |
+| GitHub PR | diff reviewed, checks pass, no confidential material included |
+
+## Tool Concepts
+
+| Tool concept | 在研究中的用途 | 风险 |
+| --- | --- | --- |
+| `AGENTS.md` | repo-level instructions for Codex and other coding agents | 规则太泛会导致 unsafe edits |
+| `CLAUDE.md` | Claude Code project memory/instructions | 过期或过宽的 instructions |
+| Skills | repeated procedures for common tasks | weak skills automate mistakes |
+| MCPs | connect AI tools to apps, files, databases, or services | permissions、tokens、privacy、accidental actions |
+| Git branches | isolate experiments | branch drift and merge conflicts |
+| Worktrees | run parallel branches in separate folders | outputs 混淆 |
+| GitHub PRs | review and discuss changes | public/private boundary and accidental disclosure |
+
+## 大学和机构规则
+
+使用 automation 前，检查 university、employer、funder、data provider、journal、conference 和 coauthor policies。如果 policy 说某个任务不能用 external AI tools，就不要用 external AI tools。拿不准时，使用 synthetic examples、local approved environments，或咨询相关负责人。
 
 ## 下一步
 
