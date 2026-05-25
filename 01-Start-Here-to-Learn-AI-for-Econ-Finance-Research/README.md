@@ -734,6 +734,8 @@ Selected links are grouped below so readers can see the difference between workf
 | Resource | Why it is included |
 | --- | --- |
 | [Gen Li and Siyang Liu, Claude Code Learning Resources for Economics and Finance Researchers](https://gen-li.notion.site/339195e07a238020b8aae6b5a1661f08?v=339195e07a2380c0ad01000c92c92011&pvs=149) | curated econ/finance Claude Code resource database; useful model for category, topic, level, language, and application-tool views |
+| [Frank Lee, Academic Research Skills](https://github.com/franklee16/academic-research-skills) | large academic skill taxonomy covering writing, literature review, data analysis, Stata/R/Python, visualization, peer review, presentations, citations, grants, and project management |
+| [Agentic Assets, Corbis Literature Starter Kit](https://github.com/Agentic-Assets/corbis-literature-starter-kit) | literature workflow pattern for search, mapping, idea positioning, trends, and citation verification |
 | [Paul Goldsmith-Pinkham, Applied Empirical Methods PhD course](https://github.com/paulgp/applied-methods-phd) | practical empirical implementation, research design intuition, and communication |
 | [Paul Goldsmith-Pinkham, Using AI in Research and Teaching](https://paulgp.com/2024/06/24/llm_talk.html) | AI for code explanation, project help, scraping, local models, VS Code, and Git workflows |
 | [Paul Goldsmith-Pinkham, Research in the Time of AI](https://paulgp.com/2026/03/16/research-in-time-of-ai.html) | AI lowering execution costs, research-pipeline changes, p-hacking risk, and slop risk |
@@ -753,13 +755,23 @@ Selected links are grouped below so readers can see the difference between workf
 | [Joshua Gans](https://joshuagans.substack.com/) | AI's effect on research and teaching production |
 | [Luis Garicano](https://sites.google.com/site/luisgaricano/) | AI, knowledge work, task bundling, and the changing value of human judgment |
 | [Aniket Panjwani](https://aniketpanjwani.com/) | economist-facing agent onboarding and dated tool-comparison discipline |
+| [The AI Economist, AI Agents for Economics Research](https://aieconomist.io/tutorials/ai-agents-for-economics-research) | economist-facing training and update path for agentic workflows |
+| Aniket Panjwani, "AI Agents for Economics Research" webinar PDF, provided by the repo maintainer | practical first exercise for cleaning an old project with Git/GitHub plus warnings about Git, skills, and planning |
 | [Brandon Uttley, vibe coding risks](https://www.linkedin.com/pulse/promises-risks-vibe-coding-brandon-uttley-nbk2e/) | caution that AI-generated code needs review, testing, maintainability, and ownership |
 | [luongnv89, Master Claude Code in a Weekend](https://github.com/luongnv89/claude-howto) | progressive Claude Code learning path with copy-paste templates, self-assessment, commands, memory, skills, subagents, MCP, hooks, plugins, and checkpoints |
 | [Piotr Orlowski, Claude Code WRDS Toolkit](https://github.com/piotrek-orlowski/claude-wrds-public) | WRDS specialist agents and skills for CRSP, Compustat, OptionMetrics, TAQ, schema preloading, psql, SSH, and SAS workflows |
 | [Alexander Dickerson, AI Asset Pricing](https://github.com/Alexander-M-Dickerson/ai-asset-pricing) | empirical asset-pricing workflow reference around WRDS, factor models, repeated research automation, and LaTeX paper writing |
 | [Alejandro Lopez-Lira, Research Idea Evaluation Pipeline](https://github.com/alejandroll10/idea-evaluation-pipeline) | staged finance research-idea evaluation pipeline with explicit web-search steps and top-journal fit discipline |
 | [David Yanagizawa-Drott, Project APE](https://ape.socialcatalystlab.org/) | public autonomous policy-evaluation experiment that highlights both scale and the need to expose failures, code, data, and uncertainty |
+| [Thinking with Agents](https://thinkingwithagents.github.io/) | conceptual framing for agentic systems and how they differ from one-shot prompting |
 | [Conor Bronsdon, avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) | two-pass AI-writing audit pattern that can be adapted for preserving academic voice and avoiding generic AI prose |
+| [Antonio Mele, Awesome Econ AI Stuff](https://github.com/meleantonio/awesome-econ-ai-stuff) and [website](https://meleantonio.github.io/awesome-econ-ai-stuff/) | economics-specific AI skills catalog, including Stata/R/Python/econometrics/LaTeX/writing examples and cross-tool skill portability |
+| [Arpit Gupta, AI in Finance](https://github.com/arpitrage/ai-in-finance) | finance teaching materials on AI foundations, document intelligence, risk, market intelligence, fraud detection, and compliance |
+| [FromCSUZhou, Econometrics-Agent](https://github.com/FromCSUZhou/Econometrics-Agent) | specialized econometrics-agent example and reminder that domain agents still need estimator, data, and reproducibility checks |
+| [MaciejMacko / Salesforce, AI Economist](https://github.com/MaciejMacko/ai-economist) | economic simulation and reinforcement-learning framework for advanced policy/mechanism-design workflows |
+| [Han Lulong, Awesome AI for Economists](https://github.com/hanlulong/awesome-ai-for-economists) | broad catalog of AI tools, MCPs, coding tools, causal/econometric resources, simulations, NLP, finance AI, and teaching resources |
+| [Han Lulong, Econ Writing Skill](https://github.com/hanlulong/econ-writing-skill) | economics-writing skill design with cross-platform support and field-specific paper-section guidance |
+| [Reader-submitted Chinese AI workflow note](https://mp.weixin.qq.com/s/oHtZKjtIFp0eh2zAo6XqQA) | Chinese-language reference for future examples; specific claims should be extracted only after manual review because public access can vary |
 | [Zara Zhang, AI learning library](https://zara.faces.site/ai) | curated learning paths and low-noise AI learning |
 | [Zara Zhang, Follow Builders](https://github.com/zarazhangrui/follow-builders) | builder-focused digests, daily/weekly updates, bilingual summaries, and public-source tracking |
 | [Zara Zhang, frontend-slides](https://github.com/zarazhangrui/frontend-slides) | web-native slide skills, visual exploration, single-file HTML artifacts, and avoiding generic AI aesthetics |
@@ -828,4 +840,4 @@ For a fuller access table, see [Dataset Starting Points and Access Notes](../05-
 | [AEA RCT Registry](https://www.aeaweb.org/journals/policies/rct-registry) | trial registration, protocols, and transparency records | public metadata may coexist with embargoed/confidential materials; respect PI and registry permissions |
 | [NBER Public Use Data Archive](https://www.nber.org/research/data) | public-use economic, demographic, and enterprise data | convenient mirrors may lag source updates; check original source and license |
 
-Last checked: 2026-05-24
+Last checked: 2026-05-25

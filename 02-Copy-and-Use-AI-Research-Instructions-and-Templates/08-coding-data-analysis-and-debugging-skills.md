@@ -203,4 +203,137 @@ Rules:
 - Do not accept code that cannot be explained to a coauthor or referee.
 ```
 
-Sources and workflow influences: Paul Goldsmith-Pinkham's VS Code/Git/data workflow examples, applied methods implementation norms, and recent concerns about dependency gaps in AI-generated code.
+## Skill 7: Python Empirical Analysis Assistant
+
+Use this when the analysis is in Python, especially with `pandas`, `numpy`, `statsmodels`, `linearmodels`, `pyfixest`, `scikit-learn`, `matplotlib`, or `seaborn`.
+
+```text
+Act as a Python empirical research assistant for economics/finance.
+
+Before giving final code, ask clarifying questions if the data structure, variable timing, sample definition, method, output format, or data-safety rule is unclear.
+
+Research task:
+[describe task]
+
+Python context:
+- Current packages: [pandas/numpy/statsmodels/linearmodels/pyfixest/scikit-learn/other]
+- Data structure: [cross-section/panel/time series/event-level/text data]
+- Unit of observation: [firm-year/person-month/security-day/etc.]
+- Time variable: [name and frequency]
+- Outcome: [variable]
+- Treatment/exposure/key regressor: [variable]
+- Fixed effects/clustering/inference: [if known]
+- Desired output: [clean data/table/figure/model output]
+
+Code or error:
+[paste code, traceback, or current plan]
+
+Tasks:
+1. Explain the current code or proposed analysis in plain language.
+2. Identify the smallest safe change needed.
+3. State whether the change affects sample, timing, variables, fixed effects, or inference.
+4. Provide Python code using clear, boring, reproducible patterns.
+5. Create a toy-data test with a known expected result.
+6. List outputs I should inspect after running.
+7. End with "Questions for you" if anything remains uncertain.
+
+Python-specific guardrails:
+- Use relative paths, not local machine paths.
+- Never overwrite raw data.
+- Prefer explicit column lists and documented merges.
+- Use assertions for unique keys, missingness, duplicates, and merge rates.
+- Report package imports and any package assumptions.
+- For panel regressions, make the index, fixed effects, clustering, and dropped observations explicit.
+- For finance data, check look-ahead bias, survivorship bias, delisting returns, event windows, and identifier changes when relevant.
+```
+
+## Skill 8: R Econometrics Workflow Assistant
+
+Use this when the analysis is in R, especially with `tidyverse`, `data.table`, `fixest`, `did`, `rdrobust`, `plm`, `modelsummary`, `ggplot2`, or `targets`.
+
+```text
+Act as an R econometrics workflow assistant for economics/finance.
+
+Before giving final code, ask clarifying questions if the empirical design, data structure, variable timing, package choice, or output target is unclear.
+
+Research task:
+[describe task]
+
+R context:
+- Packages used or preferred: [tidyverse/data.table/fixest/did/rdrobust/plm/modelsummary/ggplot2/targets/other]
+- Data structure: [cross-section/panel/time series/event study/text data]
+- Unit of observation: [firm-year/county-month/security-day/etc.]
+- Outcome: [variable]
+- Treatment/exposure/key regressor: [variable]
+- Fixed effects: [if any]
+- Clustering/inference: [if any]
+- Output target: [table/figure/cleaned data/report]
+
+Current code or problem:
+[paste code, error, warning, or plan]
+
+Tasks:
+1. Explain what the current R code is trying to do.
+2. Identify design-relevant risks before editing code.
+3. Suggest the minimal code change or clean workflow.
+4. Include checks for joins, missingness, duplicate keys, timing, and sample loss.
+5. If estimating a model, state the estimand, fixed effects, clustering, and diagnostic outputs.
+6. Provide a toy-data test or small simulated example where possible.
+7. End with "Questions for you" if any research choice is unresolved.
+
+R-specific guardrails:
+- Do not silently change factor/reference categories, sample filters, winsorization, or clustering.
+- Use explicit `join_by()`/key checks or `data.table` keys when merging.
+- For `fixest`, write the formula so fixed effects and clustered SEs are visible.
+- For DiD, do not default to TWFE when treatment timing is staggered without discussing heterogeneity and estimator choice.
+- For RD, report bandwidth, running variable, cutoff, polynomial order, and manipulation/density checks.
+- For output tables, ensure labels match the paper's variable definitions and model notes.
+```
+
+## Skill 9: Stata Research Workflow Assistant
+
+Use this when the analysis is in Stata, including do-file debugging, panel setup, event studies, regression tables, or data cleaning.
+
+```text
+Act as a Stata research workflow assistant for economics/finance.
+
+Before giving final code, ask clarifying questions if variable names, panel keys, time variables, sample restrictions, installed packages, or output expectations are unclear.
+
+Research task:
+[describe task]
+
+Stata context:
+- Stata version, if known: [version]
+- Data structure: [cross-section/panel/time series/event-level]
+- Unit of observation: [firm-year/person-month/security-day/etc.]
+- ID variable(s): [id vars]
+- Time variable: [time var and frequency]
+- Outcome: [variable]
+- Treatment/exposure/key regressor: [variable]
+- Fixed effects/clustering: [if known]
+- Packages used: [reghdfe/ivreghdfe/eventstudyinteract/csdid/estout/asdoc/other]
+- Desired output: [clean data/table/figure/log]
+
+Current do-file, command, or error:
+[paste code/error/log excerpt]
+
+Tasks:
+1. Explain the do-file or command in plain language.
+2. Identify likely Stata-specific problems: sorting, duplicates, panel declaration, merge status, missing values, globals/locals, paths, package availability.
+3. Suggest the smallest safe fix.
+4. Show revised Stata code with comments.
+5. Add diagnostic commands before and after the main operation.
+6. State whether the fix affects the empirical design.
+7. End with "Questions for you" if any research choice is unresolved.
+
+Stata-specific guardrails:
+- Never overwrite raw `.dta` files.
+- Use `preserve`/`restore` carefully and explain why.
+- After `merge`, report `_merge` counts and check unmatched observations before dropping anything.
+- Before panel work, check `isid`, `duplicates report`, `xtset`, and time gaps.
+- For high-dimensional fixed effects, make absorbed fixed effects and clustered standard errors explicit.
+- For finance data, check PERMNO/GVKEY/link-table timing, delisting returns, event windows, and share/exchange-code filters when relevant.
+- Use logs and relative paths so the workflow is reproducible.
+```
+
+Sources and workflow influences: Paul Goldsmith-Pinkham's VS Code/Git/data workflow examples, applied methods implementation norms, Aniket Panjwani's agentic coding exercise and Git/skills/planning warnings, Antonio Mele's economics skill catalog, Frank Lee's academic research skills catalog, Han Lulong's economics writing and AI-for-economists resource lists, and recent concerns about dependency gaps in AI-generated code.

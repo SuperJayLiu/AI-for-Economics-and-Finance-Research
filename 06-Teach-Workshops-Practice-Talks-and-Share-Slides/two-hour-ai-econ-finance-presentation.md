@@ -174,19 +174,9 @@ Ask participants to classify each item:
 | proof step | assumptions, limiting cases, notation |
 | slide title | compare to actual table/figure and causal design |
 
-## Screenshot Placeholders For The HTML Deck
+## Screenshot Guidance For The HTML Deck
 
-Use screenshots only if they contain no private information.
-
-Suggested placeholders:
-
-| Placeholder | What to capture later |
-| --- | --- |
-| `SCREENSHOT: GitHub repo home` | root README with language choice |
-| `SCREENSHOT: Copy-ready skill page` | one skill with copy block visible |
-| `SCREENSHOT: Git diff` | toy diff, no private data |
-| `SCREENSHOT: AI-use log` | synthetic log row |
-| `SCREENSHOT: HTML slide skill` | presentation skill page |
+The HTML deck already labels the screenshot slots. Replace them only with public or synthetic screenshots: no private repo names, data paths, paper drafts, coauthor comments, student data, licensed extracts, referee material, or credentials.
 
 ## Participant Takeaway Sheet
 

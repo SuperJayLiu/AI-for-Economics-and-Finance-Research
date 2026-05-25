@@ -74,7 +74,44 @@ flowchart TD
   W --> F5["02 or 13"]
   S --> F6["06"]
   G --> F7["05, 07, 09, 17"]
+  click F1 "01-ideas-brainstorming-proposal-and-literature-skills.md" "Open idea/proposal skills"
+  click F2 "10-literature-review-and-source-synthesis-skills.md" "Open literature skills"
+  click F3 "14-data-cleaning-merging-analysis-and-output-skills.md" "Open data/output skills"
+  click F4 "11-causal-inference-econometrics-and-time-series-skills.md" "Open econometrics skills"
+  click F5 "02-paper-drafting-revision-and-citation-skills.md" "Open writing skills"
+  click F6 "06-presentations-slides-websites-and-talk-practice-skills.md" "Open presentation skills"
+  click F7 "05-git-data-replication-and-research-safety-templates.md" "Open safety templates"
 ```
+
+### Search By Function
+
+If you are using GitHub search, search these words inside this folder. If you are reading manually, use the links.
+
+| Function / keyword | First place to look | Typical output |
+| --- | --- | --- |
+| `write`, `revise`, `introduction`, `abstract` | [Paper Drafting, Revision, and Citation Skills](02-paper-drafting-revision-and-citation-skills.md) | section draft, revision plan, citation-safe prose |
+| `review`, `referee`, `response`, `R&R` | [Referee Reports and Peer Review Skills](13-referee-reports-and-peer-review-skills.md) | self-review, referee report, response table |
+| `literature`, `matrix`, `source`, `citation` | [Literature Review and Source Synthesis Skills](10-literature-review-and-source-synthesis-skills.md) | paper matrix, synthesis outline, claim-source bank |
+| `idea`, `proposal`, `brainstorm`, `research question` | [Ideas, Brainstorming, Proposal, and Literature Skills](01-ideas-brainstorming-proposal-and-literature-skills.md) | idea stress test, proposal frame, question refinement |
+| `economics methods`, `identification`, `design` | [Empirical Methods Skills for Economics Research](03-empirical-methods-skills-for-economics-research.md) | methods section, design audit, pre-mortem |
+| `finance methods`, `asset pricing`, `corporate finance`, `banking` | [Empirical Methods Skills for Finance Research](04-empirical-methods-skills-for-finance-research.md) | finance methods draft, return/window/survivorship checks |
+| `Python`, `R`, `Stata`, `debug`, `code review` | [Coding, Data Analysis, and Debugging Skills](08-coding-data-analysis-and-debugging-skills.md) | language-specific code plan, diagnosis, toy test |
+| `WRDS`, `CRSP`, `Compustat`, `merge`, `table`, `figure` | [Data Cleaning, Merging, Analysis, and Output Skills](14-data-cleaning-merging-analysis-and-output-skills.md) | pipeline, merge plan, output audit |
+| `DiD`, `IV`, `RD`, `panel`, `time series` | [Causal Inference, Econometrics, and Time-Series Skills](11-causal-inference-econometrics-and-time-series-skills.md) | method diagnostic, estimator checklist |
+| `text-as-data`, `LLM measurement`, `filings` | [Text-as-Data and LLM Measurement Skills](15-text-as-data-and-llm-measurement-skills.md) | labeling protocol, validation plan |
+| `Git`, `DATA.md`, `AGENTS.md`, `AI-use log` | [Git, Data, Replication, and Research Safety Templates](05-git-data-replication-and-research-safety-templates.md) | project safety files and logging templates |
+| `slides`, `Beamer`, `HTML`, `website`, `practice talk` | [Presentations, Slides, Websites, and Talk Practice Skills](06-presentations-slides-websites-and-talk-practice-skills.md) | slide workflow, talk drill, website prompt |
+| `find resources`, `resource scout`, `follow builders`, `tool updates` | [Tool Selection, Updates, and Skill Improvement](09-tool-selection-updates-and-skill-improvement.md) | dated comparison, update filter, resource shortlist |
+
+### Search By Software
+
+| Software or tool | Use first | What to ask AI to produce |
+| --- | --- | --- |
+| Stata | [Stata Research Workflow Assistant](08-coding-data-analysis-and-debugging-skills.md#skill-9-stata-research-workflow-assistant) | do-file plan, merge/check diagnostics, table command review |
+| R | [R Econometrics Workflow Assistant](08-coding-data-analysis-and-debugging-skills.md#skill-8-r-econometrics-workflow-assistant) | `fixest`/`did`/`rdrobust`/`tidyverse` plan with tests |
+| Python | [Python Empirical Analysis Assistant](08-coding-data-analysis-and-debugging-skills.md#skill-7-python-empirical-analysis-assistant) | pandas/statsmodels/linearmodels plan with toy-data tests |
+| LaTeX/Beamer | [Presentations, Slides, Websites, and Talk Practice Skills](06-presentations-slides-websites-and-talk-practice-skills.md) | paper section, Beamer deck, table/figure formatting |
+| Codex/Claude Code/Cursor | [Project Instructions and Agent Role Templates](07-project-instructions-and-agent-role-templates.md) | project instructions, agent role, approval gates |
 
 | File | Use it when you need... |
 | --- | --- |
@@ -86,7 +123,7 @@ flowchart TD
 | [06 Presentations, Slides, Websites, and Talk Practice Skills](06-presentations-slides-websites-and-talk-practice-skills.md) | HTML slides, Beamer slides, presentation practice, personal academic websites |
 | [07 Project Instructions and Agent Role Templates](07-project-instructions-and-agent-role-templates.md) | ChatGPT/Claude Projects, tough referee, paper summarizer, idea verifier, conference tracker |
 | [08 Coding, Data Analysis, and Debugging Skills](08-coding-data-analysis-and-debugging-skills.md) | Stata/R/Python debugging, code review, table/figure checks, reproducibility |
-| [09 Tool Selection, Updates, and Skill Improvement](09-tool-selection-updates-and-skill-improvement.md) | dated tool comparison, update digest, continuous improvement, bad-advice filter |
+| [09 Tool Selection, Updates, and Skill Improvement](09-tool-selection-updates-and-skill-improvement.md) | dated tool comparison, update digest, resource scouting, continuous improvement, bad-advice filter |
 | [10 Literature Review and Source Synthesis Skills](10-literature-review-and-source-synthesis-skills.md) | source-grounded literature review, paper matrices, research gaps, citation-safe synthesis |
 | [11 Causal Inference, Econometrics, and Time-Series Skills](11-causal-inference-econometrics-and-time-series-skills.md) | OLS, panel FE, DiD, IV, RD, event studies, synthetic control, AR/MA/ARMA/VAR checks |
 | [12 Theory Model and Math Skills](12-theory-model-and-math-skills.md) | theory-model reconstruction, assumption audit, proof gaps, economic interpretation |

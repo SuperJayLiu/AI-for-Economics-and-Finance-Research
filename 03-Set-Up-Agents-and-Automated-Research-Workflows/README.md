@@ -53,6 +53,39 @@ flowchart LR
 
 Rule: agents can help produce work products, but a named human should own every research decision, data-use decision, public claim, and final submission.
 
+### Plan First, Then Execute In A Fresh Session
+
+For serious file-editing work, do not let one long chat contain planning, implementation, debugging, revision, and publishing. Long sessions become noisy and make it harder to see what changed.
+
+```mermaid
+flowchart LR
+  A["Planning session"] --> B["Save plan.md"]
+  B --> C["Fresh execution session"]
+  C --> D["Run approved step"]
+  D --> E["Check diff and outputs"]
+  E --> F{"Need redesign?"}
+  F -- "Yes" --> G["Revise plan.md in a new planning session"]
+  F -- "No" --> H["AI-use log and Git commit"]
+```
+
+Copy-ready instruction:
+
+```text
+Before implementing, create a short plan.md for this research task.
+
+The plan must include:
+1. task goal;
+2. allowed files;
+3. forbidden files;
+4. data-safety constraints;
+5. expected outputs;
+6. validation commands;
+7. risks and rollback plan;
+8. open questions for me.
+
+Do not edit files yet. After I approve the plan, I will start a fresh execution session and ask you to follow the approved plan.
+```
+
 ## Files
 
 | File | Use it for |

@@ -188,4 +188,46 @@ Return:
 5. a 30-minute weekly review ritual.
 ```
 
-Sources and workflow influences: Zara Zhang's curated AI learning library and follow-builders digest, Claude Blattman's continuous-improvement loop, Mihail Velikov's curated AI-in-econ wiki, and official documentation-first tool evaluation.
+## Skill 6: Find More Resources For One Econ/Finance Research Task
+
+Use this when you need more tools, examples, papers, datasets, or skills for a specific task, but you do not want a random list.
+
+```text
+Act as a resource scout for economics and finance research workflows.
+
+Task I need help with:
+[example: Stata event-study code / finance text-as-data / Python panel data / R DiD / literature map / paper review / presentation slides]
+
+My field/subfield:
+[field]
+
+My constraints:
+- Data sensitivity: [public/licensed/restricted/private/unknown]
+- Software: [Stata/R/Python/LaTeX/GitHub/Zotero/other]
+- Skill level: [beginner/intermediate/advanced]
+- Time budget: [minutes/hours]
+- Need: [tutorial/tool/skill/code example/dataset/reference/official docs]
+
+Search and evaluate resources using this standard:
+1. direct relevance to economics/finance research;
+2. whether it gives a working example, skill, code, dataset, or documented workflow;
+3. whether it discusses privacy, licenses, reproducibility, or verification;
+4. whether it is maintained or dated;
+5. whether it is official documentation, canonical method reference, or builder-tested material;
+6. what I should not copy blindly.
+
+Return:
+1. Top 10 resources in a table.
+2. For each: URL, type, level, why useful, risk note, and how I should use it.
+3. A "test this first" shortlist of 3 resources.
+4. A "do not use yet" list with reasons.
+5. Questions for you: what I need to clarify before adopting any resource.
+
+Rules:
+- Do not include generic AI hype.
+- Do not rank tools universally.
+- Prefer official docs, field-specific resources, working code, and reusable skills.
+- If a resource requires licensed data, MCP access, or cloud upload, flag the permission risk.
+```
+
+Sources and workflow influences: Zara Zhang's curated AI learning library and follow-builders digest, Claude Blattman's continuous-improvement loop, Mihail Velikov's curated AI-in-econ wiki, Frank Lee's academic research skills taxonomy, Antonio Mele's Awesome Econ AI Stuff, Han Lulong's Awesome AI for Economists and Econ Writing Skill, and official documentation-first tool evaluation.

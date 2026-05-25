@@ -32,6 +32,11 @@ flowchart LR
   E --> F["Record AI use and save a Git commit"]
   G["Examples and failure cases"] -. "calibrate judgment" .-> D
   H["Official docs and selected resources"] -. "verify tool behavior" .-> C
+  click A "01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md" "Open the handbook"
+  click B "02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md" "Open copy-ready skills"
+  click C "03-Set-Up-Agents-and-Automated-Research-Workflows/README.md" "Open setup workflows"
+  click G "04-See-Examples-Diagrams-and-Failure-Cases/README.md" "Open examples"
+  click H "05-Check-Builders-Official-Docs-and-Resources/README.md" "Open sources and resources"
 ```
 
 ### One-Screen Navigation
@@ -52,27 +57,44 @@ flowchart TD
   L --> V
   T --> V
   V --> G["Record AI use and save a Git commit"]
+  click R "01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md" "Open the handbook"
+  click S "02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md" "Open skills"
+  click A "03-Set-Up-Agents-and-Automated-Research-Workflows/README.md" "Open setup"
+  click E "04-See-Examples-Diagrams-and-Failure-Cases/README.md" "Open examples"
+  click L "05-Check-Builders-Official-Docs-and-Resources/README.md" "Open sources"
+  click T "06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md" "Open teaching materials"
 ```
 
 | Working surface | Reader action | Visual clue |
 | --- | --- | --- |
-| `01` handbook | read concepts in order | book path |
-| `02` skills | copy one block and use it | input -> output -> check |
-| `03` setup | follow steps before file-editing AI | plan -> approve -> diff -> commit |
-| `04` examples | learn by seeing good and bad patterns | case card |
-| `05` sources | verify tools, datasets, and claims | source -> rule -> workflow |
-| `06` teaching | turn the handbook into slides, demos, and workshops | talk flow |
+| [01 handbook](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) | read concepts in order | book path |
+| [02 copy-ready skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) | copy one block and use it | input -> output -> check |
+| [03 setup and agents](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) | follow steps before file-editing AI | plan -> approve -> diff -> commit |
+| [04 examples and failures](04-See-Examples-Diagrams-and-Failure-Cases/README.md) | learn by seeing good and bad patterns | case card |
+| [05 sources and datasets](05-Check-Builders-Official-Docs-and-Resources/README.md) | verify tools, datasets, and claims | source -> rule -> workflow |
+| [06 teaching and slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | turn the handbook into slides, demos, and workshops | talk flow |
 
-### Start Here
+If your Markdown viewer does not support clickable Mermaid nodes, use the linked table above.
 
-| Need | Open |
+### Find By Function Or Keyword
+
+Use this table like a search page when you know the task but not the folder.
+
+| Function / keyword | Open directly |
 | --- | --- |
-| Read the handbook like a book | [01 Start Here: Learn AI for Economics and Finance Research](01-Start-Here-to-Learn-AI-for-Econ-Finance-Research/README.md) |
-| Copy usable instructions, skills, and templates | [02 Copy and Use: AI Research Instructions and Templates](02-Copy-and-Use-AI-Research-Instructions-and-Templates/README.md) |
-| Set up agents and automated research workflows | [03 Set Up: Agents and Automated Research Workflows](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) |
-| See concrete examples, diagrams, and failure cases | [04 See Examples: Diagrams and Failure Cases](04-See-Examples-Diagrams-and-Failure-Cases/README.md) |
-| Check official docs and durable references | [05 Check Sources: Builders, Official Docs, and Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) |
-| Teach a workshop, onboard RAs, or prepare talks | [06 Teach and Share: Workshops, Practice Talks, and Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) |
+| `writing`, `introduction`, `abstract`, `paper draft` | [Paper Drafting, Revision, and Citation Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/02-paper-drafting-revision-and-citation-skills.md) |
+| `paper review`, `self-review`, `referee`, `R&R` | [Referee Reports and Peer Review Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/13-referee-reports-and-peer-review-skills.md) |
+| `literature review`, `paper matrix`, `citation support` | [Literature Review and Source Synthesis Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/10-literature-review-and-source-synthesis-skills.md) |
+| `proposal`, `research idea`, `brainstorming`, `so what` | [Ideas, Proposal, and Research Question Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/01-ideas-brainstorming-proposal-and-literature-skills.md) and [Research Question, Taste, and Positioning Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/18-research-question-taste-and-positioning-skills.md) |
+| `empirical methods`, `identification`, `regression design` | [Economics Methods Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/03-empirical-methods-skills-for-economics-research.md) and [Finance Methods Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/04-empirical-methods-skills-for-finance-research.md) |
+| `Python`, `R`, `Stata`, `debugging`, `code review` | [Coding, Data Analysis, and Debugging Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/08-coding-data-analysis-and-debugging-skills.md) |
+| `data cleaning`, `WRDS`, `CRSP`, `Compustat`, `tables`, `figures` | [Data Cleaning, Merging, Analysis, and Output Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/14-data-cleaning-merging-analysis-and-output-skills.md) |
+| `DiD`, `IV`, `RD`, `panel FE`, `time series`, `event study` | [Causal Inference, Econometrics, and Time-Series Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/11-causal-inference-econometrics-and-time-series-skills.md) |
+| `text as data`, `LLM variable`, `filings`, `earnings calls` | [Text-as-Data and LLM Measurement Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/15-text-as-data-and-llm-measurement-skills.md) |
+| `agent`, `Codex`, `Claude Code`, `GitHub`, `AGENTS.md` | [Set Up Agents and Automated Research Workflows](03-Set-Up-Agents-and-Automated-Research-Workflows/README.md) |
+| `datasets`, `resources`, `official docs`, `find more tools` | [Check Builders, Official Docs, and Resources](05-Check-Builders-Official-Docs-and-Resources/README.md) |
+| `find more resources`, `resource scout`, `what should I follow` | [Find More Resources For One Research Task](02-Copy-and-Use-AI-Research-Instructions-and-Templates/09-tool-selection-updates-and-skill-improvement.md#skill-6-find-more-resources-for-one-econfinance-research-task) |
+| `slides`, `presentation`, `workshop`, `teaching` | [Teach Workshops, Practice Talks, and Share Slides](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) |
 
 ### Fast Paths
 

@@ -59,7 +59,7 @@ Use this if another scholar wants to teach the handbook as a self-contained talk
 | Asset | Use it for | Notes |
 | --- | --- | --- |
 | [Two-hour presentation script](two-hour-ai-econ-finance-presentation.md) | readable GitHub version, speaker plan, timed agenda, demos, exercises | source of truth for teaching |
-| [Interactive HTML slide deck](two-hour-ai-econ-finance-slides.html) | live presentation | open locally in a browser; includes screenshot placeholders |
+| [Interactive HTML slide deck](two-hour-ai-econ-finance-slides.html) | live presentation | open locally in a browser |
 | [Presentation and slide skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/06-presentations-slides-websites-and-talk-practice-skills.md) | adapting the talk to other audiences | includes HTML, Beamer, talk-practice, and paper-to-talk prompts |
 
 Suggested use:
@@ -67,7 +67,7 @@ Suggested use:
 ```text
 1. Read the Markdown script.
 2. Open the HTML deck in a browser.
-3. Replace screenshot placeholders with safe, non-confidential screenshots if desired.
+3. Replace any screenshot placeholders only with public or synthetic examples if desired.
 4. Use public or synthetic examples only.
 5. Keep the live demo small enough to verify in the room.
 ```
