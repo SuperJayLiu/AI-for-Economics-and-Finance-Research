@@ -1,0 +1,1398 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  citecolor=blue!55!black,
+  urlcolor=blue!60!black,
+  pdftitle={AI for Economics and Finance Research},
+  pdfauthor={Chaojie Liu}
+}
+
+\definecolor{lightgray}{gray}{0.96}
+\definecolor{ruleblue}{RGB}{33,83,135}
+
+\lstdefinestyle{promptstyle}{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  backgroundcolor=\color{lightgray},
+  rulecolor=\color{gray!50},
+  xleftmargin=1em,
+  xrightmargin=1em,
+  aboveskip=0.8em,
+  belowskip=0.8em
+}
+
+\lstnewenvironment{promptblock}{\lstset{style=promptstyle}}{}
+
+\newcommand{\repo}{\href{https://github.com/SuperJayLiu/AI-for-Economics-and-Finance-Research}{AI for Economics and Finance Research}}
+\newcommand{\contact}{\href{mailto:jay.liu@bristol.ac.uk}{jay.liu@bristol.ac.uk}}
+\newcommand{\rulebox}[1]{\begin{quote}\noindent\textcolor{ruleblue}{\textbf{Rule.}} #1\end{quote}}
+\newcommand{\skill}[1]{\subsubsection*{Copy-ready skill: #1}}
+\newcommand{\source}[2]{#1, \url{#2}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{AI for Economics and Finance Research}
+\rhead{\thepage}
+\setlength{\headheight}{14pt}
+
+\titleformat{\section}{\Large\bfseries\color{ruleblue}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
+
+\title{\textbf{AI for Economics and Finance Research}\\
+\large A Practical Handbook and Skill Library for Responsible AI-Assisted Scholarship}
+\author{Chaojie Liu\\
+\href{mailto:jay.liu@bristol.ac.uk}{jay.liu@bristol.ac.uk}\\
+\repo}
+\date{Working paper manuscript version: May 25, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This manuscript is a practical handbook for economics and finance researchers who want to use artificial intelligence and large language models responsibly across the research workflow. It is written for PhD students, research assistants, junior faculty, applied economists, finance researchers, instructors, and research teams. The central argument is simple: AI can reduce the labor cost of reading, organizing, coding, drafting, checking, presenting, and maintaining research projects, but it cannot replace scholarly responsibility. The scarce skills remain research taste, credible identification, data quality, theory, institutional knowledge, replication discipline, and honest interpretation.
+
+The paper begins with a book-style handbook that explains AI, LLMs, prompts, projects, skills, agents, MCPs, Git, GitHub, data safety, verification, and disclosure in plain language for economics and finance scholars. It then provides copy-ready skills and templates for literature review, empirical methods, finance data work, coding in Stata/R/Python, text-as-data and LLM-generated measurement, theory and structural work, referee responses, presentation practice, agentic workflows, GitHub collaboration, dataset access, and teaching. The manuscript is adapted from the public GitHub repository \repo. Readers should treat tool-specific claims as dated and should always follow their university, employer, coauthor, journal, conference, funder, and data-provider rules.
+\end{abstract}
+
+\noindent\textbf{Keywords:} artificial intelligence; large language models; economics research; finance research; empirical methods; reproducibility; GitHub; research workflow; AI agents; text as data.
+
+\vspace{0.5em}
+\noindent\textbf{Suggested citation.} Liu, Chaojie. 2026. ``AI for Economics and Finance Research: A Practical Handbook and Skill Library for Responsible AI-Assisted Scholarship.'' Working paper manuscript. Repository: \repo.
+
+\vspace{0.5em}
+\noindent\textbf{Repository and updates.} The current GitHub version, issue tracker, citation file, Chinese path, and reusable skill library are maintained at \repo. Questions and suggestions can be sent to \contact.
+
+\tableofcontents
+\newpage
+
+\section{How to Read This Working Paper}
+
+This document turns the GitHub repository into a single citable manuscript. It is not a prompt dump and not a tool ranking. It is a handbook plus a practical toolbox. The order is intentional:
+
+\begin{enumerate}[leftmargin=2em]
+  \item Read the handbook to learn the concepts and safety rules.
+  \item Copy one skill or template for a real research task.
+  \item Put AI into a controlled workflow with Git, logs, and approval gates.
+  \item Study examples and failure cases.
+  \item Check sources, datasets, and official documentation.
+  \item Use the teaching section to run workshops, train research assistants, or prepare talks.
+\end{enumerate}
+
+\rulebox{Do not use AI as an authority. Use it as a draft generator, organizer, critic, coder, checker, and workflow assistant. The researcher remains responsible for claims, citations, data use, code, interpretation, disclosure, and submission.}
+
+\subsection{Choose by role}
+
+\begin{longtable}{p{0.25\linewidth}p{0.32\linewidth}p{0.33\linewidth}}
+\toprule
+\textbf{Reader} & \textbf{Start with} & \textbf{Then do this}\\
+\midrule
+New PhD student & Handbook and minimum setup & Copy one skill on public material and verify it.\\
+Research assistant starting an empirical project & Git/GitHub setup and data safety & Create \texttt{README.md}, \texttt{DATA.md}, \texttt{AGENTS.md}, \texttt{.gitignore}, and an AI-use log.\\
+Junior faculty revising a paper & Writing, review, and referee-response skills & Use AI for diagnosis and organization before rewriting.\\
+Finance researcher working with data & Finance empirical methods and data pipeline skills & Check timing, link tables, delisting returns, survivorship, event windows, and factor-mining risk.\\
+Instructor preparing a workshop & Teaching and slides section & Use the two-hour agenda, live demos, verification exercise, and follow-up template.\\
+Coauthor team or lab lead & Collaboration and agentic workflow templates & Define who may upload data, who approves AI code, who checks claims, and who merges changes.\\
+\bottomrule
+\end{longtable}
+
+\section{Part I. The Handbook}
+
+\subsection{What this handbook is for}
+
+This handbook helps economics and finance scholars build reliable AI-assisted research workflows. It is for scholars who want to know what AI can help with, what it should not be trusted with, how to verify outputs, how to protect data, and how to keep research projects reproducible.
+
+The handbook is especially useful for:
+
+\begin{itemize}[leftmargin=2em]
+  \item PhD students learning to use AI without weakening research discipline;
+  \item research assistants working with code, data, literature notes, and replication packages;
+  \item junior faculty revising papers, responding to referees, or preparing seminar talks;
+  \item finance researchers working with licensed data, event studies, factor models, or text data;
+  \item applied economists working with administrative data, panel data, causal designs, or field experiments;
+  \item instructors and lab leads who want a safe way to teach AI workflows.
+\end{itemize}
+
+\subsection{The basic mental model}
+
+AI should be understood as a controlled assistant, not as a researcher. The useful workflow is:
+
+\begin{center}
+\texttt{researcher goal} \(\rightarrow\) \texttt{context and rules} \(\rightarrow\) \texttt{AI draft or action} \(\rightarrow\) \texttt{human verification} \(\rightarrow\) \texttt{logged output}
+\end{center}
+
+The researcher controls six things:
+
+\begin{longtable}{p{0.22\linewidth}p{0.34\linewidth}p{0.34\linewidth}}
+\toprule
+\textbf{Control} & \textbf{Question} & \textbf{Example}\\
+\midrule
+Input & What is AI allowed to see? & Public abstracts, metadata, toy data, code snippets, or full draft if policy allows.\\
+Task & What should AI do? & Summarize, critique, write code, draft prose, generate a checklist, or review a table.\\
+Boundary & What must AI not do? & Do not invent citations, choose identification, alter raw data, or overclaim causality.\\
+Tool mode & What level of power is needed? & Chat for explanation; project for persistent context; coding agent for file changes.\\
+Verification & How will output be checked? & Source check, toy-data test, regression replication, proof check, or policy check.\\
+Record & What is logged? & Tool/model, task, files touched, accepted output, checks run, uncertainty, commit hash.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Minimum safe setup}
+
+A serious AI-assisted research project should have:
+
+\begin{longtable}{p{0.28\linewidth}p{0.62\linewidth}}
+\toprule
+\textbf{Item} & \textbf{Purpose}\\
+\midrule
+ChatGPT, Claude, Codex, Claude Code, Cursor, or an approved institutional tool & Reading, explanation, coding, drafting, project assistance.\\
+Git and GitHub & Version control, recovery, collaboration, branch review, and audit trail.\\
+\texttt{README.md} & Project purpose, file map, and how to reproduce outputs.\\
+\texttt{DATA.md} & Data sources, permissions, sensitivity, and citation rules.\\
+\texttt{AGENTS.md} or \texttt{CLAUDE.md} & Instructions for file-editing AI agents.\\
+\texttt{AI-USE-LOG.md} & Record of AI use, accepted output, checks, and uncertainty.\\
+\texttt{.gitignore} & Prevent raw, restricted, licensed, secret, or local files from being committed.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Beginner glossary}
+
+\begin{longtable}{p{0.23\linewidth}p{0.67\linewidth}}
+\toprule
+\textbf{Term} & \textbf{Plain-language meaning for research}\\
+\midrule
+LLM & A large language model that predicts and generates text or code from context. It is not a database.\\
+Prompt & A one-time instruction. Useful for small tasks, weak for repeated workflows.\\
+Project & A persistent AI workspace for a paper, literature review, replication, revision, or talk.\\
+Skill & A reusable instruction package for a repeated task. Good skills include inputs, steps, output, risks, and verification.\\
+Agent & An AI system that can plan, use tools, read files, edit files, run commands, and report results.\\
+MCP & A connector standard that lets AI applications connect to tools and data sources. It increases capability and risk.\\
+Context window & The amount of text/files a model can consider at once. More context is not always better.\\
+RAG & Retrieval-augmented generation: AI answers based on retrieved sources instead of model memory alone.\\
+Git & Version control. It records changes and lets researchers inspect or recover earlier versions.\\
+Branch & A separate line of work in Git, useful for AI experiments before merging into the main project.\\
+Pull request & A review surface on GitHub where collaborators can inspect changes before merging.\\
+\texttt{.gitignore} & A file listing local, secret, raw, licensed, or generated files that should not enter Git.\\
+\bottomrule
+\end{longtable}
+
+\subsection{The maturity ladder}
+
+\begin{longtable}{p{0.12\linewidth}p{0.25\linewidth}p{0.53\linewidth}}
+\toprule
+\textbf{Level} & \textbf{Name} & \textbf{Meaning}\\
+\midrule
+0 & No AI & Traditional workflow.\\
+1 & Simple chat & Ask questions manually.\\
+2 & Structured chat & Give context, ask for checks, and verify output.\\
+3 & Project workspace & Use a persistent project for a paper, dataset, or role.\\
+4 & GitHub-assisted workflow & AI helps with files, code, writing, and version control.\\
+5 & Skills-based workflow & Repeated tasks become reusable skills.\\
+6 & Agentic workflow & AI plans, edits files, runs code, and checks results under human approval.\\
+7 & Research operating system & AI, GitHub, data, writing, logs, updates, and teaching are integrated.\\
+\bottomrule
+\end{longtable}
+
+\subsection{What AI is good at}
+
+AI is most useful where the cost of producing a first draft is high and the cost of verification is manageable. Examples include:
+
+\begin{itemize}[leftmargin=2em]
+  \item organizing literature notes into a matrix;
+  \item explaining code and debugging small reproducible examples;
+  \item drafting project instructions, \texttt{DATA.md}, \texttt{AGENTS.md}, and \texttt{AI-USE-LOG.md};
+  \item turning a vague task into a plan with inputs, outputs, risks, and checks;
+  \item generating toy data tests for code;
+  \item improving prose while preserving evidence and caution;
+  \item preparing seminar questions, referee-response tables, and slide outlines;
+  \item checking consistency between methods prose, code, tables, and figures.
+\end{itemize}
+
+\subsection{What AI should not do for you}
+
+AI should not fully automate:
+
+\begin{itemize}[leftmargin=2em]
+  \item research question choice;
+  \item identification strategy or causal interpretation;
+  \item final literature claims;
+  \item final data access decisions;
+  \item referee judgment or confidential peer review;
+  \item final paper submission decisions;
+  \item investment, policy, or welfare recommendations;
+  \item proof correctness or equilibrium logic without manual verification.
+\end{itemize}
+
+\rulebox{AI can automate labor, but not scholarly responsibility.}
+
+\subsection{The economics of AI use}
+
+For economists, a useful decision rule is:
+
+\begin{center}
+\textit{Use AI when expected labor saved exceeds prompt-writing, checking, privacy, and correction costs.}
+\end{center}
+
+This makes AI use a cost-benefit decision, not a moral or technological identity. It is often useful for repeated coding tasks, documentation, structured review, and first-pass organization. It may be wasteful for one-off tasks where writing the prompt and checking the answer takes longer than doing the task directly. It may be unacceptable when verification is impossible or data rules forbid the tool.
+
+\subsection{The ``paper machine, so what?'' test}
+
+AI lowers the cost of producing plausible papers, slides, tables, and code. This makes execution cheaper, but it does not make ideas better. The scarce skills become:
+
+\begin{itemize}[leftmargin=2em]
+  \item asking a sharp research question;
+  \item knowing the closest literatures;
+  \item finding or creating credible data;
+  \item designing credible identification or theory;
+  \item understanding institutions;
+  \item interpreting magnitudes honestly;
+  \item knowing what is actually new;
+  \item resisting p-hacking, HARKing, and narrative inflation.
+\end{itemize}
+
+In finance, this is especially important because AI can industrialize factor stories, backtests, and paper-like narratives. That makes point-in-time data handling, delisting returns, survivorship checks, transaction costs, multiple testing, and out-of-sample validation more important, not less.
+
+\subsection{Responsible use rules}
+
+\begin{enumerate}[leftmargin=2em]
+  \item Humans remain accountable for all research claims.
+  \item AI-generated citations are not citations until verified against original sources.
+  \item Do not upload restricted, licensed, confidential, coauthored, student, or referee material unless policy and consent allow it.
+  \item Do not let AI decide identification strategy or final causal interpretation.
+  \item Use Git before AI edits files.
+  \item Use a project log before AI changes code, data, paper text, or slides.
+  \item Date tool claims and avoid timeless model rankings.
+  \item Follow the strictest relevant rule: university, employer, journal, conference, funder, data provider, coauthor, or law.
+\end{enumerate}
+
+\subsection{Data safety rules}
+
+\begin{longtable}{p{0.28\linewidth}p{0.18\linewidth}p{0.44\linewidth}}
+\toprule
+\textbf{Material} & \textbf{Risk} & \textbf{Default rule}\\
+\midrule
+Public macro data & Low & AI may help with public series IDs, code, documentation, and metadata.\\
+Public filings & Low to medium & Public URLs are usually safer than uploading private annotations or linked datasets.\\
+Journal PDFs and working papers & Medium & Check copyright, access, and citation. Do not ask AI to invent citations.\\
+WRDS, CRSP, Compustat, IBES, OptionMetrics, TAQ & Medium to high & Treat raw extracts and query outputs as licensed material. Use schemas or toy data unless allowed.\\
+Bloomberg, FactSet, LSEG, TRACE licensed products & High & Do not upload extracts to public AI unless the license and institution permit it.\\
+Administrative microdata & High & Use only in approved secure environments.\\
+Bank transactions or proprietary firm data & High & Do not upload to public AI without explicit legal and institutional approval.\\
+Unpublished coauthor drafts & Medium to high & Get consent and follow team rules.\\
+Referee reports or manuscripts & High & Only if journal or conference policy allows it.\\
+Student data & High & Avoid public AI tools unless explicitly approved.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Verification is a skill}
+
+Saying ``verify manually'' is too vague. Verification should be operational:
+
+\begin{longtable}{p{0.22\linewidth}p{0.32\linewidth}p{0.36\linewidth}}
+\toprule
+\textbf{Output type} & \textbf{Verification method} & \textbf{Example}\\
+\midrule
+Citation & DOI, journal page, Google Scholar, publisher page, or library record & Check that the source exists and supports the sentence.\\
+Code & Toy input with known answer & Use a tiny dataset where the correct coefficient, merge count, or table cell is known.\\
+Regression result & Rerun code and inspect sample & Check \(N\), fixed effects, clustering, units, timing, and variable construction.\\
+Theory derivation & Limiting cases and algebra & Check boundary conditions and whether proposition follows from assumptions.\\
+Text-as-data measure & Human validation and sensitivity & Check model version, prompt, seed/temperature, validation set, and drift.\\
+Slide claim & Claim-to-evidence match & Each slide title should map to a table, figure, model, or source.\\
+Policy/disclosure & Official policy source & Check journal, university, funder, and data-provider rules.\\
+\bottomrule
+\end{longtable}
+
+\section{Part II. Direct-Use Skill Library}
+
+\subsection{How to use a skill}
+
+Each skill below is written for copying into an AI tool. Replace bracketed fields with your project facts. Use the clarification rule first when the input is incomplete.
+
+\begin{promptblock}
+Before producing the final answer, check whether any required input, term,
+data rule, method detail, institutional detail, policy constraint, or output
+format is unclear.
+
+If something is unclear, ask up to five numbered clarifying questions first.
+If you can proceed with reasonable assumptions, state those assumptions clearly
+and ask me to confirm or correct them.
+
+At the end, state what you changed or produced, what you did not change, and
+what I must verify manually.
+\end{promptblock}
+
+\subsection{Skill index}
+
+\begin{longtable}{p{0.23\linewidth}p{0.12\linewidth}p{0.16\linewidth}p{0.20\linewidth}p{0.19\linewidth}}
+\toprule
+\textbf{Skill family} & \textbf{Field} & \textbf{Level} & \textbf{Output} & \textbf{Best mode}\\
+\midrule
+Ideas, brainstorming, proposals & Both & Beginner & Idea stress test, proposal frame & Chat or project\\
+Literature review and source synthesis & Both & Beginner/intermediate & Source matrix, synthesis, claim bank & Project with search/RAG\\
+Paper drafting, revision, citation & Both & Intermediate & Intro spine, revision plan, response table & Project\\
+Economics empirical methods & Economics & Intermediate & Methods draft and design audit & Project or coding agent\\
+Finance empirical methods & Finance & Intermediate & Methods draft and finance data checks & Project or coding agent\\
+Causal inference, econometrics, time series & Both & Intermediate/advanced & Estimator and diagnostic checklist & Project\\
+Coding and debugging & Both & Intermediate & Code diagnosis and toy test & Coding agent\\
+Data cleaning, merging, analysis, output & Both & Advanced & Pipeline and output audit & Coding agent\\
+Text-as-data and LLM measurement & Both & Advanced & Measurement protocol and validation plan & Project or agent\\
+Theory, math, structural, welfare & Both & Advanced & Model audit and estimation plan & Project\\
+Git, replication, and research safety & Both & Beginner/intermediate & Safety files and logs & GitHub workflow\\
+Project instructions and agent roles & Both & Beginner/intermediate & Project rules and role prompts & Project or agent\\
+Referee reports and peer review & Both & Intermediate & Report aid and response plan & Project\\
+Presentations, slides, websites, talk practice & Both & Beginner/intermediate & Talk plan, slide workflow, practice drill & Project or agent\\
+Tool selection and updates & Both & Beginner & Dated tool choice and resource filter & Chat\\
+Verification, reproducibility, disclosure & Both & Beginner/intermediate & Verification packet and disclosure draft & Any mode\\
+\bottomrule
+\end{longtable}
+
+\skill{Research idea stress test}
+
+\begin{promptblock}
+Act as an economics/finance research design adviser. Stress-test my research idea.
+
+Research idea:
+[write the idea]
+
+Possible data:
+[data source or unknown]
+
+Possible method:
+[identification strategy, model, theory, structural estimation, or unknown]
+
+Target audience:
+[PhD seminar / field journal / top journal / policy audience]
+
+Before proceeding, ask clarifying questions if required inputs are missing.
+
+Return:
+1. whether the research question is clear;
+2. closest literature types;
+3. possible contribution;
+4. biggest data obstacle;
+5. biggest identification, model, or interpretation obstacle;
+6. where a referee would attack the paper;
+7. three next checks I should perform.
+
+Do not invent citations. State what you changed, what you did not change,
+and what I must verify.
+\end{promptblock}
+
+\skill{Source-grounded literature review builder}
+
+\begin{promptblock}
+Use only the papers, BibTeX, notes, DOI links, or verified links I provide.
+
+Research question:
+[question]
+
+Sources:
+[paste paper list, DOI, BibTeX, or notes]
+
+Return:
+1. a literature matrix: paper, question, data, design/model, finding, limitation,
+   relation to my project;
+2. thematic synthesis rather than paper-by-paper summary;
+3. claims that can be made now and claims requiring manual verification;
+4. source support for each important claim;
+5. missing literatures and search keywords;
+6. citations I must verify manually.
+
+Rules:
+- Do not invent papers, authors, years, journals, or DOI links.
+- If the sources are insufficient, say so directly.
+- Ask clarifying questions if the scope is unclear.
+- End by stating what I must verify.
+\end{promptblock}
+
+\skill{Introduction spine builder}
+
+\begin{promptblock}
+Act as an economics/finance paper introduction adviser. Build an introduction
+spine without inventing results, citations, data, or contribution claims.
+
+Topic:
+[topic]
+
+Research question:
+[one-sentence question]
+
+Closest literature:
+[verified papers, author/year, DOI, BibTeX; or "unknown"]
+
+Data and design:
+[data, sample, method, identification/model]
+
+Core finding:
+[confirmed result only; if no result yet, write "no result yet"]
+
+Target audience:
+[seminar / field journal / top journal / policy audience]
+
+Return:
+1. motivation -> gap/tension -> setting/data -> design -> findings -> contribution;
+2. the job of each paragraph;
+3. claims needing citations;
+4. claims that cannot be made yet;
+5. likely referee attacks;
+6. materials I should add next.
+
+Ask clarifying questions before proceeding if required inputs are missing.
+State what you changed, what you did not change, and what I must verify.
+\end{promptblock}
+
+\skill{Draft empirical methods section for economics}
+
+\begin{promptblock}
+Draft an applied economics empirical methods section using only the facts I provide.
+
+Research question:
+[question]
+
+Data:
+[source, sample, unit, time, variables]
+
+Design:
+[DiD / IV / RD / panel FE / RCT / event study / other]
+
+Equation or model:
+[paste equation or table shell]
+
+Inference:
+[clustering / standard errors / randomization inference / other]
+
+Return:
+1. methods section draft;
+2. assumptions and identifying variation;
+3. sample and timing details;
+4. inference and robustness details;
+5. limitations paragraph;
+6. [needs author input] markers;
+7. what I must verify against code and data.
+
+Do not choose the identification strategy for me. Do not invent robustness checks.
+Ask clarifying questions first if design, sample, timing, or inference is unclear.
+\end{promptblock}
+
+\skill{Check empirical methods section for economics}
+
+\begin{promptblock}
+Audit this applied economics methods section for design, data, code, and prose.
+
+Methods text:
+[paste text]
+
+Data and code description:
+[paste known data, variables, sample, timing, clustering, code notes]
+
+Return:
+1. what the method claims the paper estimates;
+2. whether the estimand, sample, timing, and inference are clear;
+3. inconsistencies between prose, equation, data, and code;
+4. missing assumptions;
+5. likely referee questions;
+6. required robustness and sensitivity checks;
+7. edits that improve clarity without changing meaning.
+
+Do not rewrite identification claims beyond the evidence. Ask clarifying
+questions if details are missing.
+\end{promptblock}
+
+\skill{Draft empirical methods section for finance}
+
+\begin{promptblock}
+Draft a finance empirical methods section.
+
+Field:
+[asset pricing / corporate finance / banking / household finance / market microstructure / accounting-adjacent finance]
+
+Data:
+[CRSP / Compustat / WRDS / SEC / TAQ / TRACE / other]
+
+Sample and timing:
+[sample period, screens, frequency]
+
+Design or model:
+[portfolio sort / Fama-MacBeth / panel FE / event study / factor model / other]
+
+Check explicitly:
+1. look-ahead bias;
+2. survivorship bias;
+3. delisting returns;
+4. CCM/link table rules;
+5. event window and timing;
+6. factor model and benchmark;
+7. multiple testing or factor-mining risk;
+8. transaction costs or implementation concerns when relevant.
+
+Return a methods draft, audit checklist, missing details, and what I must verify.
+Ask clarifying questions if data timing, sample filters, or benchmark rules are unclear.
+\end{promptblock}
+
+\skill{Check empirical methods section for finance}
+
+\begin{promptblock}
+Audit this finance methods section as a skeptical referee.
+
+Methods text:
+[paste text]
+
+Data and code notes:
+[data source, sample, filters, linking rules, event timing, model, benchmark]
+
+Return:
+1. exact empirical design as written;
+2. data timing and point-in-time concerns;
+3. survivorship, delisting, backfill, and link-table concerns;
+4. event-window or return-construction concerns;
+5. factor model, benchmark, and multiple-testing concerns;
+6. table/code consistency checks;
+7. cautious edits that preserve meaning.
+
+Do not add results or robustness checks that were not run. Ask clarifying
+questions if key details are missing.
+\end{promptblock}
+
+\skill{Causal design diagnostic}
+
+\begin{promptblock}
+Act as an applied econometrics design pre-mortem reviewer.
+
+Research question:
+[question]
+
+Treatment/shock/policy:
+[treatment]
+
+Outcome:
+[outcome]
+
+Data structure:
+[unit, time, sample, panel/cross-section]
+
+Current design:
+[DiD / staggered DiD / IV / RD / event study / panel FE / RCT / synthetic control / other]
+
+Equation or code:
+[paste if available]
+
+Ask clarifying questions about timing, comparison group, sample construction,
+clustering, frequency, pre-period, and policy timing.
+
+Return:
+1. identifying variation;
+2. identifying assumptions;
+3. whether estimator matches design;
+4. DiD checks: staggered timing, heterogeneous effects, TWFE weighting, pre-trends;
+5. IV checks: relevance, exclusion, monotonicity, weak IV;
+6. RD checks: running variable, bandwidth, manipulation, local interpretation;
+7. panel/event-study checks: timing, fixed effects, clustering, anticipation, dynamics;
+8. required robustness and sensitivity checks;
+9. claims that cannot be made;
+10. what to verify with data, code, or literature.
+\end{promptblock}
+
+\skill{Data cleaning, merging, and output workflow}
+
+\begin{promptblock}
+Act as a reproducible data-pipeline assistant for an economics/finance project.
+
+Research task:
+[task]
+
+Data sources:
+[FRED/BEA/BLS/IPUMS/WRDS/CRSP/Compustat/SEC/TAQ/TRACE/other]
+
+Data permission:
+[public/licensed/restricted/confidential/unknown]
+
+File structure or schema:
+[variables, keys, unit, time, file list; do not paste confidential raw data]
+
+Target output:
+[analysis dataset / Table 1 / regression tables / figures / replication package]
+
+First classify which materials must not be uploaded to public AI tools and suggest
+safe alternatives such as metadata, toy data, schemas, variable dictionaries, or
+synthetic rows.
+
+Return:
+1. raw -> clean -> analysis -> output pipeline;
+2. input, output, and file-name suggestions for each step;
+3. merge key, timing, duplicate, missing-value, and sample checks;
+4. toy-data known-answer test;
+5. table and figure production checks;
+6. .gitignore, DATA.md, and AI-use log entries;
+7. data license, variable-definition, and result-consistency checks.
+\end{promptblock}
+
+\skill{Debug Stata/R/Python research code}
+
+\begin{promptblock}
+Help me debug this Stata/R/Python research code.
+
+Language:
+[Stata/R/Python]
+
+Research goal:
+[what the code should produce]
+
+Problem:
+[error message or unexpected output]
+
+Code:
+[paste code]
+
+Data structure:
+[variables, unit, time, keys; do not paste confidential raw data]
+
+First:
+1. ask clarifying questions;
+2. explain likely causes;
+3. propose the smallest fix;
+4. design a toy-data known-answer test;
+5. explain how to confirm that real-data output did not change the sample,
+   timing, variable construction, or interpretation.
+
+Do not assume sample restrictions or merge rules.
+\end{promptblock}
+
+\skill{Language-specific coding assistants}
+
+\begin{promptblock}
+Use this language-specific mode:
+[Python / R / Stata]
+
+Task:
+[data cleaning / panel regression / DiD / RD / Fama-MacBeth / portfolio sort / table / figure / debug]
+
+Inputs:
+[schema, code, variable names, expected output, package constraints]
+
+Rules:
+1. Use idiomatic code for the chosen language.
+2. Explain package choices.
+3. Write a minimal toy-data example.
+4. Include checks for sample size, duplicates, missing values, merge counts, and timing.
+5. Return code in a single block, followed by verification steps.
+6. Ask clarifying questions before assuming data structure.
+
+State what changed, what did not change, and what I must verify.
+\end{promptblock}
+
+\skill{Text-as-data and LLM measurement protocol}
+
+\begin{promptblock}
+Act as a text-as-data and LLM-generated measurement reviewer.
+
+Research question:
+[question]
+
+Text source:
+[10-K/10-Q/8-K/earnings calls/news/central bank speeches/social media/other]
+
+Construct:
+[risk disclosure, tone, uncertainty, policy stance, greenwashing, etc.]
+
+Sample and time:
+[firms/countries/documents/time]
+
+Model or tool:
+[LLM/API/local model/dictionary/supervised model/unknown]
+
+Ask clarifying questions about permissions, timestamps, leakage, model version,
+prompt stability, and validation sample.
+
+Return:
+1. construct definition;
+2. annotation or scoring protocol;
+3. prompt/model/version/temperature/seed/logging plan;
+4. validation sample and human/benchmark checks;
+5. prompt sensitivity, model drift, reproducibility checks;
+6. look-ahead and pretraining leakage risks;
+7. methods paragraph draft;
+8. disclosure and replication notes.
+\end{promptblock}
+
+\skill{Theory model discussant}
+
+\begin{promptblock}
+Act as a seminar discussant for an economics or finance theory model. Preserve the
+author's core question and mechanism unless I ask for redesign.
+
+Model or notes:
+[paste model, assumptions, propositions, proof sketch, or intuition]
+
+Target field:
+[micro theory / macro / asset pricing / corporate finance / banking / IO / other]
+
+Return:
+1. the core mechanism in plain language;
+2. assumptions that do real work;
+3. equilibrium or proof gaps;
+4. missing cases or boundary conditions;
+5. empirical implications;
+6. what a skeptical seminar audience would ask;
+7. safe revision suggestions that preserve the mechanism.
+
+Do not claim the proof is correct unless the steps are checked. Ask clarifying
+questions if notation or assumptions are unclear.
+\end{promptblock}
+
+\skill{Structural, quantitative, and welfare audit}
+
+\begin{promptblock}
+Act as a structural/quantitative economics reviewer.
+
+Model:
+[model summary]
+
+Data and moments:
+[moments, sample, variables]
+
+Estimation:
+[GMM/SMM/MLE/calibration/other]
+
+Counterfactual or welfare object:
+[policy/counterfactual/welfare measure]
+
+Return:
+1. model-to-data map;
+2. which moments identify which parameters;
+3. estimation and convergence risks;
+4. calibration vs estimation choices;
+5. counterfactual validity concerns;
+6. welfare interpretation guardrails;
+7. robustness and sensitivity checks;
+8. what code, data, and theory must be verified.
+\end{promptblock}
+
+\skill{Verification method selector}
+
+\begin{promptblock}
+Help me choose how to verify the AI output below.
+
+AI output:
+[paste output]
+
+Research context:
+[literature / code / data / methods / theory / slides / disclosure]
+
+Return:
+1. output type;
+2. main risks;
+3. best verification method;
+4. original sources, code, data, tables, or policy files needed;
+5. accept/revise/reject criteria;
+6. AI-use log entry.
+\end{promptblock}
+
+\skill{Referee response planner}
+
+\begin{promptblock}
+Act as a journal revision planning assistant. I remain responsible for all decisions.
+
+Referee/editor comments:
+[paste comments]
+
+Current paper status:
+[what was revised / what cannot be changed / new analyses available]
+
+Journal or audience:
+[journal/field]
+
+Return:
+1. comment classification: identification, data, theory, writing, robustness, presentation;
+2. repeated concerns across referees;
+3. response strategy for each comment;
+4. what to concede, clarify, test, or decline;
+5. a polite response-table draft;
+6. claims and citations requiring verification;
+7. risks of over-promising.
+
+Do not invent new analyses. Ask clarifying questions if revision scope is unclear.
+\end{promptblock}
+
+\skill{Paper-to-talk converter}
+
+\begin{promptblock}
+Convert my economics/finance paper into a seminar or conference talk structure.
+
+Paper material:
+[abstract/introduction/figures/tables/outline]
+
+Audience:
+[field seminar/general economics/finance seminar/policy audience/PhD workshop]
+
+Length:
+[10/20/45/60/90 minutes]
+
+Required figures/tables:
+[list]
+
+Confidential limits:
+[what cannot be public]
+
+Return:
+1. talk spine;
+2. slide-by-slide outline;
+3. one-sentence purpose for each slide;
+4. claim-to-evidence map;
+5. likely overclaim points;
+6. Q&A practice questions;
+7. optional HTML or Beamer slide-generation path.
+
+Ask clarifying questions before proceeding if audience, time, findings, or privacy
+limits are unclear.
+\end{promptblock}
+
+\skill{Presentation practice with AI}
+
+\begin{promptblock}
+Act as a tough but constructive seminar audience.
+
+Presentation type:
+[paper/job talk/conference presentation/RA update/teaching demo]
+
+Audience:
+[field experts/general economists/finance audience/mixed audience]
+
+Time:
+[minutes]
+
+Outline or slide text:
+[paste outline or slides]
+
+Return:
+1. whether the research question is clear in the first three minutes;
+2. likely questions about design, data, mechanism, and contribution;
+3. friendly, hard-referee, and hostile questions;
+4. cautious answer drafts;
+5. any overclaiming of causality, external validity, policy, or investment implication;
+6. a 20-minute practice plan.
+\end{promptblock}
+
+\skill{Resource finder for one task}
+
+\begin{promptblock}
+Help me find reliable resources for one economics/finance research task. Do not
+give a generic tool list.
+
+Task:
+[learn DiD / build WRDS pipeline / text-as-data / learn Claude Code / finance datasets / other]
+
+My level:
+[beginner/intermediate/advanced]
+
+Constraints:
+[budget, institutional access, data safety, language, software, time]
+
+Return:
+1. at most five high-quality resources;
+2. resource type: official docs / method reference / skill repo / dataset / tutorial / builder workflow;
+3. why each resource is relevant;
+4. license, tool-version, data-safety, or staleness risks;
+5. the smallest test task I should try first;
+6. resources you do not recommend and why.
+
+Ask clarifying questions if my task, access, or level is unclear.
+\end{promptblock}
+
+\section{Part III. Agentic Workflows, Git, and Collaboration}
+
+\subsection{Agentic AI in one sentence}
+
+Agentic AI can plan, read files, edit files, run commands, and report results under human-defined rules. In research, it must run inside a controlled loop:
+
+\begin{center}
+\texttt{goal} \(\rightarrow\) \texttt{plan} \(\rightarrow\) \texttt{approval} \(\rightarrow\) \texttt{edit} \(\rightarrow\) \texttt{diff} \(\rightarrow\) \texttt{test} \(\rightarrow\) \texttt{commit} \(\rightarrow\) \texttt{log}.
+\end{center}
+
+\subsection{From zero to a safe agentic workflow}
+
+\begin{enumerate}[leftmargin=2em]
+  \item Create a GitHub account.
+  \item Install Git and configure name/email.
+  \item Create a private research repository.
+  \item Add \texttt{.gitignore}, \texttt{README.md}, \texttt{DATA.md}, \texttt{AGENTS.md} or \texttt{CLAUDE.md}, and \texttt{AI-USE-LOG.md}.
+  \item Commit the starting state before AI edits anything.
+  \item Create a branch for the AI-assisted task.
+  \item Ask AI for a plan, files to change, risks, and checks.
+  \item Approve or revise the plan.
+  \item Let AI edit only approved files.
+  \item Review \texttt{git diff}.
+  \item Run code/checks.
+  \item Commit and push.
+  \item Open a pull request for coauthor or RA review when collaboration matters.
+\end{enumerate}
+
+\skill{Clean existing project and start Git safely}
+
+\begin{promptblock}
+I want your help cleaning up this research project and setting up a Git repo.
+
+First, copy it to a backup directory. Next, suggest an initial .gitignore and
+create the first repo. Then help me connect it to a private GitHub repo. Then
+check out a new branch and suggest how to restructure the repo using best
+practices for data/code/docs/paper organization and lineage. Then implement the
+approved restructure on the branch. Finally, run any code you modified or moved
+to make sure outputs still line up with prior results.
+
+Before executing, ask clarifying questions about data confidentiality, licensed
+datasets, file paths, GitHub visibility, and commands you are allowed to run.
+Report what changed, what did not change, what checks ran, and what I must verify.
+\end{promptblock}
+
+\skill{\texttt{AGENTS.md} for a research repo}
+
+\begin{promptblock}
+# AGENTS.md
+
+## Project purpose
+[One paragraph: research question, paper stage, and main outputs.]
+
+## Rules for AI agents
+- Ask clarifying questions before editing if task scope, data rules, or file ownership is unclear.
+- Do not read or edit raw, restricted, licensed, confidential, or private files unless explicitly approved.
+- Do not invent citations, results, robustness checks, or institutional details.
+- Before edits: state plan, files, risks, and validation commands.
+- After edits: report diff summary, commands run, outputs changed, and remaining uncertainty.
+- Never overwrite raw data.
+- Keep accepted AI work traceable in AI-USE-LOG.md.
+
+## Validation commands
+[commands to run, or "none yet"]
+\end{promptblock}
+
+\skill{\texttt{DATA.md} starter}
+
+\begin{promptblock}
+# DATA.md
+
+## Data sources
+- [dataset name, provider, version, access date, license/terms]
+
+## Data sensitivity
+- public / licensed / restricted / confidential / coauthored / unknown
+
+## Files never to upload to public AI tools
+- raw data
+- licensed extracts
+- credentials
+- private notes
+- referee material
+- student data
+
+## Safer AI inputs
+- metadata
+- variable dictionaries
+- synthetic rows
+- code snippets
+- public URLs
+\end{promptblock}
+
+\skill{AI-use log entry}
+
+\begin{promptblock}
+## [YYYY-MM-DD] [task title]
+
+Tool/model:
+Mode: chat / project / coding agent / GitHub workflow
+Task:
+Input materials:
+Files touched:
+Output accepted:
+Human edits made:
+Checks run:
+Remaining uncertainty:
+Commit hash or version:
+Disclosure note needed: yes/no
+\end{promptblock}
+
+\subsection{Team collaboration workflow}
+
+When coauthors or research assistants are involved, set rules before AI touches files.
+
+\begin{longtable}{p{0.25\linewidth}p{0.30\linewidth}p{0.35\linewidth}}
+\toprule
+\textbf{Question} & \textbf{Decision needed} & \textbf{Why}\\
+\midrule
+Who may upload material? & PI, coauthor, RA, or nobody without approval & Prevents accidental exposure.\\
+Who approves AI-generated code? & Code owner or methods lead & Code that runs can still be wrong.\\
+Who checks citations? & Author responsible for section & AI cannot verify literature by itself.\\
+Who merges changes? & Repo maintainer or designated coauthor & Prevents unreviewed AI edits.\\
+How is AI use recorded? & Shared AI-use log & Supports disclosure, memory, and reproducibility.\\
+\bottomrule
+\end{longtable}
+
+\skill{Coauthor AI-use agreement}
+
+\begin{promptblock}
+# Team AI-Use Agreement
+
+Project:
+Coauthors/RAs:
+Date:
+
+Approved AI tools:
+[list]
+
+Materials allowed with AI:
+[public abstracts, public code, metadata, toy data, draft text if all consent, etc.]
+
+Materials not allowed with public AI:
+[raw data, licensed data, restricted data, referee material, student data,
+credentials, private coauthor notes, unpublished third-party material]
+
+Human review responsibilities:
+- Claims and citations:
+- Code and results:
+- Data access:
+- Paper text:
+- GitHub merge approval:
+
+Disclosure:
+[journal/conference/university/data-provider rules to check]
+\end{promptblock}
+
+\section{Part IV. Examples and Failure Cases}
+
+\subsection{Worked spine: one synthetic paper}
+
+Consider a synthetic paper on whether local bank branch closures affect small-business credit. A disciplined AI workflow would be:
+
+\begin{enumerate}[leftmargin=2em]
+  \item Use the idea stress test to sharpen the question and mechanism.
+  \item Use source-grounded literature review to map banking, local credit, and firm outcomes.
+  \item Use causal design diagnostic to evaluate timing, treatment, comparison areas, and clustering.
+  \item Use data-pipeline skill to construct branch closures, local markets, and firm outcomes with clear timing.
+  \item Use coding skill to implement toy tests before running full code.
+  \item Use methods drafting skill only after design and code are clear.
+  \item Use verification selector to check citations, code, timing, and interpretation.
+  \item Use paper-to-talk converter to prepare a seminar narrative.
+  \item Record accepted AI assistance in the AI-use log.
+\end{enumerate}
+
+\subsection{Example A: literature review without fake citations}
+
+\textbf{Task.} Build a literature map for asset pricing anomalies.
+
+\textbf{Bad AI output.} A fluent paragraph lists several papers but includes a nonexistent 2018 article and claims that all cited papers use the same out-of-sample test.
+
+\textbf{What went wrong.} The model used ungrounded memory and filled gaps with plausible names and claims.
+
+\textbf{Safer workflow.} Provide verified paper list, DOI links, or BibTeX. Ask for a matrix and claim-to-source bank. Require each claim to point to a supplied source. Use the source-grounded literature review skill.
+
+\subsection{Example B: finance methods and look-ahead bias}
+
+\textbf{Task.} Draft methods for a monthly portfolio sort using CRSP and Compustat.
+
+\textbf{Bad AI output.} It uses fiscal-year accounting variables immediately in January returns and ignores delisting returns.
+
+\textbf{What went wrong.} The output treats data availability as if fiscal-year values were known instantly and ignores standard CRSP return construction.
+
+\textbf{Safer workflow.} Require point-in-time timing rules, CCM link-table rules, share/exchange codes, delisting returns, portfolio formation dates, benchmark factors, transaction costs where relevant, and multiple-testing cautions.
+
+\subsection{Example C: applied economics DiD and panel design}
+
+\textbf{Task.} Check a staggered-treatment DiD design.
+
+\textbf{Bad AI output.} It suggests a conventional two-way fixed effects event study with no discussion of heterogeneous treatment effects or negative-weighting concerns.
+
+\textbf{What went wrong.} The tool supplied a standard-looking specification rather than asking whether the estimand matches treatment timing.
+
+\textbf{Safer workflow.} Ask for group-time treatment effects, imputation or interaction-weighted alternatives where appropriate, treatment timing table, pre-period diagnostics, clustering decision, and sensitivity checks. Remember that insignificant pre-trends are not proof of validity.
+
+\subsection{Failure case library}
+
+\begin{longtable}{p{0.25\linewidth}p{0.30\linewidth}p{0.35\linewidth}}
+\toprule
+\textbf{Failure} & \textbf{Why it looked plausible} & \textbf{Prevention}\\
+\midrule
+Fake citation in literature review & Author/year/journal sounded real & Use DOI, publisher, BibTeX, or verified search before accepting.\\
+Wrong Stata/R/Python code that runs & No syntax error & Run toy-data known-answer tests and inspect sample changes.\\
+Event-study timing error & Plot looked professional & Check event time, anticipation, window, sample, and controls.\\
+LLM text measure not reproducible & Scores looked correlated with outcome & Archive prompt, model, version, date, temperature, validation sample.\\
+AI overwrote raw data & Agent had file permissions & Use Git, backups, `.gitignore`, approval gates, and no-raw-data edit rules.\\
+Slide overclaims causality & Title sounded compelling & Match each slide claim to design, table, figure, or source.\\
+\bottomrule
+\end{longtable}
+
+\section{Part V. Sources, Datasets, and Resource Navigation}
+
+\subsection{Source-use principle}
+
+The repository learns from builders, official documentation, methods papers, and field-specific tools, but it does not copy external skills wholesale unless licensing permits it. The extraction rule is:
+
+\begin{center}
+\texttt{source} \(\rightarrow\) \texttt{workflow pattern} \(\rightarrow\) \texttt{econ/finance adaptation} \(\rightarrow\) \texttt{copy-ready asset} \(\rightarrow\) \texttt{verification rule}.
+\end{center}
+
+\subsection{Selected links by task}
+
+\begin{longtable}{p{0.25\linewidth}p{0.45\linewidth}p{0.20\linewidth}}
+\toprule
+\textbf{Task} & \textbf{Start with} & \textbf{Why}\\
+\midrule
+Learn AI basics for research & \url{https://zara.faces.site/ai}; \url{https://claudeblattman.com/} & Beginner-friendly learning and non-coder workflows.\\
+Learn coding agents for economists & \url{https://paulgp.com/blog.html}; \url{https://psantanna.com/claude-code-my-workflow/workflow-guide.html}; \url{https://aieconomist.io/tutorials/ai-agents-for-economics-research} & Plan-first, Git-aware, agentic workflows.\\
+Find econ/finance AI workflow examples & \url{https://velikov-mihail.github.io/ai-econ-wiki/}; \url{https://meleantonio.github.io/awesome-econ-ai-stuff/}; \url{https://github.com/hanlulong/awesome-ai-for-economists} & Field-specific examples and skills.\\
+Find econometrics references & \url{https://github.com/paulgp/applied-methods-phd}; \url{https://rdpackages.github.io/rdrobust/} & Method standards to check AI against.\\
+Find finance datasets and replication discipline & \url{https://wrds-www.wharton.upenn.edu/}; \url{https://www.sec.gov/edgar/sec-api-documentation}; \url{https://www.openassetpricing.com/} & Data access, filings, anomaly replication.\\
+Check official AI/tool docs & \url{https://developers.openai.com/codex/skills}; \url{https://developers.openai.com/codex/guides/agents-md}; \url{https://modelcontextprotocol.io/docs/getting-started/intro} & Current tool behavior and setup.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Canonical methods and credibility references}
+
+\begin{longtable}{p{0.20\linewidth}p{0.45\linewidth}p{0.25\linewidth}}
+\toprule
+\textbf{Topic} & \textbf{Sources to know} & \textbf{Use}\\
+\midrule
+Text as data & Gentzkow, Kelly, and Taddy, ``Text as Data,'' JEL. \url{https://www.aeaweb.org/articles?id=10.1257/jel.20181020} & Treat text as measurement, not just summarization.\\
+Staggered DiD & Callaway and Sant'Anna; Sun and Abraham; Borusyak, Jaravel, and Spiess; Goodman-Bacon & Check timing, heterogeneity, weighting, and estimands.\\
+Pre-trends & Roth, ``Pretest with Caution.'' & Insignificant pre-trends are not proof of validity.\\
+RD & \url{https://rdpackages.github.io/rdrobust/}; McCrary density test & Check bandwidth, manipulation, robust bias correction.\\
+Weak IV & Montiel Olea and Pflueger; Andrews, Moreira, and Stock & Avoid mechanical first-stage F rules.\\
+Clustering & Abadie et al.; Cameron, Gelbach, and Miller & Treat clustering as design, not formatting.\\
+Finance anomalies & Chen and Zimmermann; Hou, Xue, and Zhang & Check factor mining, sample construction, and out-of-sample discipline.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Dataset decision table}
+
+\begin{longtable}{p{0.26\linewidth}p{0.20\linewidth}p{0.18\linewidth}p{0.26\linewidth}}
+\toprule
+\textbf{Dataset/material} & \textbf{Access type} & \textbf{Public AI upload?} & \textbf{Safer workflow}\\
+\midrule
+FRED, BEA, BLS, World Bank, IMF, OECD aggregate data & Public & Usually yes for public series IDs/docs & Ask AI for retrieval code; log series IDs, dates, vintages.\\
+SEC EDGAR filings & Public & Usually yes for public filing URLs & Log CIK, accession, form, filing date, parser version.\\
+IPUMS or public-use microdata & Registered public-use & Not automatically & Use metadata, variable dictionary, and toy rows unless terms allow more.\\
+WRDS/CRSP/Compustat/IBES/OptionMetrics/TAQ & Licensed institutional & Generally no for raw extracts & Use schemas, dictionaries, toy examples, and code templates.\\
+Bloomberg, FactSet, LSEG, TRACE & Commercial/licensed & Generally no & Use metadata and synthetic examples unless approved.\\
+Administrative or restricted microdata & Restricted/confidential & No unless approved & Use secure environment, synthetic examples, and disclosure review.\\
+Proprietary firm or transaction data & Private/confidential & No unless contract permits & Use schemas and toy data; do not paste records into public AI.\\
+Referee reports, unpublished drafts, coauthor notes & Confidential or coowned & Only if policy and consent allow & Use approved local/institutional tools or abstract questions.\\
+\bottomrule
+\end{longtable}
+
+\skill{Dataset access checklist}
+
+\begin{promptblock}
+Before using AI with a dataset, answer:
+
+1. What is the dataset name, provider, version, and download date?
+2. Is it public, licensed, restricted, confidential, embargoed, or coauthored?
+3. What rules govern redistribution, cloud upload, AI use, and derived outputs?
+4. Does the project require IRB/ethics, DUA, or provider approval?
+5. Can AI work from metadata, variable dictionaries, toy data, or synthetic examples?
+6. What files must stay out of GitHub and public AI tools?
+7. What citation, license note, and access statement will appear in the paper?
+8. What code, logs, and checks will prove that the dataset was handled correctly?
+\end{promptblock}
+
+\subsection{Tool claims must be dated}
+
+Do not write timeless claims such as ``Codex is best'' or ``Claude is best.'' Write dated, task-specific claims:
+
+\begin{promptblock}
+Last checked:
+Tool versions/plans checked:
+Task tested:
+Author's judgment:
+Known uncertainty:
+\end{promptblock}
+
+\section{Part VI. Teaching, Slides, and Dissemination}
+
+\subsection{Two-hour workshop path}
+
+A two-hour presentation should move from concepts to practice:
+
+\begin{longtable}{p{0.15\linewidth}p{0.28\linewidth}p{0.27\linewidth}p{0.20\linewidth}}
+\toprule
+\textbf{Time} & \textbf{Topic} & \textbf{Demo} & \textbf{Warning}\\
+\midrule
+0-10 & What AI can and cannot do & Bad prompt vs controlled workflow & Fluent is not true.\\
+10-30 & Research workflow map & One paper, one repo, one AI project & AI does not choose the question.\\
+30-50 & Copy-ready skills & Literature or methods skill & Ground sources.\\
+50-70 & Git and agentic workflow & Plan, diff, test, commit & No Git, no file-editing AI.\\
+70-90 & Verification exercise & Fake citation or code toy test & Verification is a skill.\\
+90-105 & Data safety and disclosure & Upload-or-not exercise & Policy first.\\
+105-120 & Q\&A and next steps & Personal setup checklist & Start small.\\
+\bottomrule
+\end{longtable}
+
+\subsection{HTML slides vs Beamer slides}
+
+\begin{longtable}{p{0.22\linewidth}p{0.34\linewidth}p{0.34\linewidth}}
+\toprule
+\textbf{Format} & \textbf{Best for} & \textbf{Caution}\\
+\midrule
+Interactive HTML slides & Web sharing, public explainers, workshops, animated mechanisms, project pages & Avoid generic AI aesthetics and distracting animation. Verify every claim and figure.\\
+LaTeX/Beamer slides & Academic seminars, job talks, conferences, math-heavy presentations, journal-style figures & Keep design clean. Do not let AI simplify assumptions or equations incorrectly.\\
+PowerPoint/Keynote & Coauthor editing, institutional templates, conference templates & Version control is weaker; export and archive carefully.\\
+\bottomrule
+\end{longtable}
+
+\skill{Generate a two-hour teaching deck}
+
+\begin{promptblock}
+Create a two-hour workshop deck on AI for economics and finance research.
+
+Audience:
+[PhD students / RAs / faculty / mixed]
+
+Tools available:
+[ChatGPT / Claude / Codex / Claude Code / GitHub / none]
+
+Examples to emphasize:
+[literature review / empirical coding / finance data / slides / agents / data safety]
+
+Return:
+1. slide-by-slide storyboard;
+2. live-demo script;
+3. one hands-on activity;
+4. one verification exercise;
+5. participant handout;
+6. follow-up email template;
+7. where to insert screenshots if I want them later.
+
+Do not require confidential data or paid tools unless I explicitly approve.
+\end{promptblock}
+
+\skill{Follow-up email after a workshop}
+
+\begin{promptblock}
+Write a follow-up email for participants in an AI for economics and finance
+research workshop.
+
+Include:
+1. repository link;
+2. first three tasks to try;
+3. data-safety warning;
+4. Git/GitHub setup reminder;
+5. how to suggest new skills;
+6. how to subscribe to updates;
+7. contact email.
+\end{promptblock}
+
+\section{Part VII. Release, Maintenance, and Citation}
+
+\subsection{Quality-control checklist}
+
+Before releasing a new public version of the repository or manuscript:
+
+\begin{itemize}[leftmargin=2em]
+  \item root README roadmaps are readable in GitHub preview;
+  \item reader pages contain no maintainer-facing notes;
+  \item top folders show README first and keep detailed files nested;
+  \item copy-ready skills include inputs, outputs, verification, and clarification language;
+  \item tool claims have last-checked dates;
+  \item dataset advice mentions access and confidentiality;
+  \item source links are grouped by task;
+  \item Chinese path stays synchronized with English main content;
+  \item examples include good output, bad output, verification, and safer output;
+  \item LaTeX manuscript compiles and hyperlinks are active.
+\end{itemize}
+
+\subsection{How to cite and contribute}
+
+Cite a stable GitHub release when possible. For a manuscript citation, use the title and date on the title page. For a specific skill or template, cite the repository, file path, and commit hash. Suggestions can be sent to \contact. Do not send confidential research data, papers, referee reports, student data, or licensed data by email.
+
+\newpage
+\appendix
+
+\section{Appendix A. Universal Safety Instruction}
+
+\begin{promptblock}
+Do not invent citations, data sources, coefficients, robustness checks,
+institutional details, mathematical derivations, or claims about the literature.
+If information is missing, say exactly what is missing and what I must verify
+manually. Separate verified facts, interpretation, suggestions, and uncertainty.
+
+Follow all university, employer, journal, conference, funder, data-provider,
+and coauthor policies on AI use. If the relevant rule is stricter than this
+instruction, follow the stricter rule.
+
+If any input, term, policy, method, data rule, or output format is unclear,
+ask up to five clarifying questions before giving the final answer. If you
+proceed with assumptions, state them explicitly. End with "Questions for you"
+if anything remains uncertain.
+
+Before finishing, state what you changed or produced, what you did not change,
+and what I must verify manually.
+\end{promptblock}
+
+\section{Appendix B. Universal Output Contract}
+
+\begin{promptblock}
+Return your answer in six sections:
+1. Direct output I can use.
+2. Assumptions you made.
+3. Items I must verify manually.
+4. Risks or failure modes.
+5. What you changed, what you did not change, and what I must verify.
+6. Questions for you and next action checklist.
+\end{promptblock}
+
+\section{Appendix C. Resource Extraction Card}
+
+\begin{promptblock}
+Resource name:
+URL:
+Author/maintainer:
+Category: Learning material / Application tool / Setup / Official docs / Dataset / Methods reference
+Topic:
+Level: Beginner / Intermediate / Advanced
+Language:
+Direct-use value:
+Risk note:
+Where it belongs in this repo:
+Last checked:
+\end{promptblock}
+
+\section{Appendix D. Minimal Bibliographic and Link Notes}
+
+The manuscript deliberately uses URL-based references because many cited sources are live documentation, GitHub repositories, and online workflow guides. Tool documentation and product behavior should be checked again before publication, teaching, or policy use.
+
+\begin{itemize}[leftmargin=2em]
+  \item GitHub repository: \url{https://github.com/SuperJayLiu/AI-for-Economics-and-Finance-Research}
+  \item Paul Goldsmith-Pinkham blog: \url{https://paulgp.com/blog.html}
+  \item Applied Methods PhD: \url{https://github.com/paulgp/applied-methods-phd}
+  \item Pedro Sant'Anna Claude Code workflow: \url{https://psantanna.com/claude-code-my-workflow/workflow-guide.html}
+  \item Claude Blattman: \url{https://claudeblattman.com/}
+  \item Zara Zhang AI learning library: \url{https://zara.faces.site/ai}
+  \item Awesome Econ AI Stuff: \url{https://meleantonio.github.io/awesome-econ-ai-stuff/}
+  \item Mihail Velikov AI Econ Wiki: \url{https://velikov-mihail.github.io/ai-econ-wiki/}
+  \item AI agents for economics research: \url{https://aieconomist.io/tutorials/ai-agents-for-economics-research}
+  \item OpenAI Codex skills: \url{https://developers.openai.com/codex/skills}
+  \item OpenAI AGENTS.md guide: \url{https://developers.openai.com/codex/guides/agents-md}
+  \item Claude Code documentation: \url{https://code.claude.com/docs/en/how-claude-code-works}
+  \item Model Context Protocol: \url{https://modelcontextprotocol.io/docs/getting-started/intro}
+  \item FRED: \url{https://fred.stlouisfed.org/}
+  \item SEC EDGAR APIs: \url{https://www.sec.gov/edgar/sec-api-documentation}
+  \item WRDS: \url{https://wrds-www.wharton.upenn.edu/}
+  \item Open Source Asset Pricing: \url{https://www.openassetpricing.com/}
+\end{itemize}
+
+\end{document}
+
