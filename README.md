@@ -11,8 +11,8 @@ A practical, GitHub-native handbook and resource library for using AI responsibl
 > [!TIP]
 > To use this repository as one AI skill for a real research project, open [`skill-pack/`](skill-pack/README.md). It gives step-by-step guidance for downloading the skill pack, adding it to ChatGPT/Claude/Codex-style tools, and using the handbook knowledge inside one research workspace.
 
-> [!NOTE]
-> Acknowledgement: I appreciate the "AI-self-help group" set up by Prof. Lorenz Kueng at USI Lugano, in which I learned a lot from Lorenz and peers; and also appreciate all scholars in AI, economics, and finance areas who shared their insights and resources online.
+> [!Acknowledgement]
+> I appreciate the "AI-self-help group" set up by Prof. Lorenz Kueng at USI Lugano, in which I learned a lot from Lorenz and peers; and also appreciate all scholars in AI, economics, and finance areas who shared their insights and resources online.
 
 ## Choose Your Language / 选择语言
 
