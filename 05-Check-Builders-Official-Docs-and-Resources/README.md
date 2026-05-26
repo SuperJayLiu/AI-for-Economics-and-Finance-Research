@@ -103,6 +103,8 @@ Use this as the fast view before the long source map.
 | Find econometrics and methods references | [Applied Methods PhD](https://github.com/paulgp/applied-methods-phd), [Callaway-Sant'Anna DiD](https://ideas.repec.org/a/eee/econom/v225y2021i2p200-230.html), [rdrobust](https://rdpackages.github.io/rdrobust/) | method standards to check AI-generated methods against |
 | Find finance datasets and replication discipline | [WRDS](https://wrds-www.wharton.upenn.edu/), [SEC EDGAR APIs](https://www.sec.gov/edgar/sec-api-documentation), [Open Source Asset Pricing](https://www.openassetpricing.com/) | finance data access, filings, and anomaly-replication standards |
 | Find public economics datasets | [FRED](https://fred.stlouisfed.org/), [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392), [IPUMS](https://www.ipums.org/about/terms), [NBER Public Use Data](https://www.nber.org/research/data) | common public or public-use starting points with access rules |
+| Find survey, household finance, and wealth microdata | [ECB HFCS](https://www.ecb.europa.eu/stats/ecb_surveys/hfcs/html/index.en.html), [LIS/LWS](https://www.lisdatacenter.org/our-data/), [Eurostat public microdata](https://ec.europa.eu/eurostat/web/microdata/public-microdata), [SHARE](https://share-eric.eu/), [ESS](https://www.europeansocialsurvey.org/data-portal) | household wealth, income, living conditions, ageing, attitudes, and cross-country survey designs |
+| Find Nordic household/register data | [Statistics Denmark Research Services](https://www.dst.dk/research), [Statistics Sweden MONA](https://www.scb.se/en/services/ordering-data-and-statistics/microdata/mona--statistics-swedens-platform-for-access-to-microdata/), [Statistics Norway research data](https://www.ssb.no/en/data-til-forskning), [microdata.no](https://www.microdata.no/en/), [Statistics Finland FIONA](https://stat.fi/en/services/services-for-researchers/instructions-for-researchers/using-the-datasets/fiona-remote-access-system), [Statistics Iceland microdata service](https://statice.is/services/data-for-scientific-research/) | Nordic register and survey microdata are high-value but usually restricted, remote-access, or institution-approved |
 | Check official AI/tool docs | [OpenAI Codex skills](https://developers.openai.com/codex/skills), [OpenAI AGENTS.md](https://developers.openai.com/codex/guides/agents-md), [Claude Code docs](https://code.claude.com/docs/en/how-claude-code-works), [MCP docs](https://modelcontextprotocol.io/docs/getting-started/intro) | current tool behavior, permissions, and setup |
 | Check responsible-use constraints | your university, employer, journal, funder, conference, coauthor, and data-provider policies | local policy can be stricter than any general AI handbook |
 
@@ -277,6 +279,8 @@ Before asking AI to read, clean, merge, summarize, or transform data, check:
 | FRED, BEA, BLS, World Bank, IMF, OECD aggregate data | public | usually yes for public series IDs and documentation | source citation, revision/vintage, API terms | ask AI for retrieval code and metadata checks; log series IDs and dates |
 | Public SEC filings and EDGAR metadata | public | usually yes for filing URLs and public text | SEC fair-access guidance and parser limits | use CIK/accession/form/date logs and parser-version records |
 | IPUMS or public-use microdata | registered public-use | not automatically | IPUMS terms, reidentification rules, institution rules | use variable metadata, code, and toy rows unless terms allow more |
+| Household surveys and wealth microdata such as HFCS, EU-SILC, SHARE, ESS, LIS/LWS | public-use, registered, or remote/research access depending on dataset | not automatically | dataset-specific access agreement, citation rules, anonymisation limits, cross-country comparability notes | use public metadata, questionnaires, codebooks, toy rows, and registered/approved access paths |
+| Nordic administrative/register household data | restricted research access | no unless explicitly approved in the secure environment | national statistical office rules, project approval, output disclosure rules, data-processing agreement | use remote-access systems and synthetic examples; do not upload extracts to public AI |
 | WRDS/CRSP/Compustat/IBES/OptionMetrics/TAQ | licensed institutional | generally no for raw extracts | WRDS and vendor license, institution cloud/AI rules | use schemas, variable dictionaries, toy examples, and code templates |
 | Bloomberg, FactSet, LSEG, TRACE licensed products | commercial/licensed | generally no | terminal/API/license/redistribution rules | use metadata and synthetic examples; keep extracts out of public AI |
 | Administrative or restricted microdata | restricted/confidential | no unless explicitly approved | DUA, IRB/ethics, secure-environment policy | use approved secure environment, synthetic examples, and disclosure review |
@@ -297,6 +301,55 @@ Before asking AI to read, clean, merge, summarize, or transform data, check:
 | [IMF Data APIs](https://data.imf.org/en/Resource-Pages/IMF-API) | international macro, balance of payments, IFS, WEO-style data | dataset access and portals may vary | record dataset code, API endpoint, filters, and download date |
 | [OECD Data Explorer API](https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html) | OECD indicators and cross-country panels | public/registered access varies by dataset | cite dataset, version, filters, and API date |
 | [NBER Public Use Data Archive](https://www.nber.org/research/data) | public-use economic, demographic, and enterprise datasets | convenient public archive; source updates may not propagate | check the original source and license, not only the NBER mirror |
+
+### Survey, Household Finance, and Nordic Register Data
+
+This subsection is for researchers studying household finance, inequality, ageing, wealth, income, consumption, and household behavior, especially in Europe and Northern Europe. Treat the links below as access maps, not upload permissions.
+
+Northern Europe is not one data-access regime. Denmark, Finland, Iceland, Norway, and Sweden often offer valuable register or survey microdata through national statistical offices or research infrastructures, but access is usually project-based, remote, restricted, and subject to output disclosure checks. Cross-country survey datasets such as HFCS, EU-SILC, SHARE, ESS, and LIS/LWS can be easier to discover, but each still has its own registration, citation, anonymisation, and use rules.
+
+| Source | Best for | Access/confidentiality note | AI-use guidance |
+| --- | --- | --- | --- |
+| [ECB Household Finance and Consumption Survey](https://www.ecb.europa.eu/stats/ecb_surveys/hfcs/html/index.en.html) | household assets, debt, income, consumption, and balance sheets in euro-area countries | anonymised microdata are made available to researchers; country and wave coverage differ, and pandemic timing matters for the 2021 wave | use public questionnaires, reports, and metadata freely; do not upload microdata unless your access agreement and institution allow it |
+| [Eurostat public microdata](https://ec.europa.eu/eurostat/web/microdata/public-microdata) | EU-SILC and other public microdata for income, living conditions, households, and social statistics | public-use files differ from scientific-use files; microdata still carry anonymisation and terms-of-use constraints | use AI for codebooks, variable selection, and toy-code; check whether the version is public-use or research microdata before uploading |
+| [SHARE-ERIC](https://share-eric.eu/) | ageing, health, retirement, household economics, transfers, and life-course research for people aged 50+ in Europe | research infrastructure with data access and documentation; some linked or special modules may have extra requirements | use AI for questionnaires, module maps, and code plans; keep respondent-level data within the approved access workflow |
+| [European Social Survey data portal](https://www.europeansocialsurvey.org/data-portal) | attitudes, beliefs, behavior, social trust, politics, and values across European countries, including Nordic countries in many rounds | generally designed for open research use, but users should still check dataset-specific citation and use terms | good for beginner source-grounded AI practice; log round, edition, country sample, weights, and access date |
+| [LIS and Luxembourg Wealth Study](https://www.lisdatacenter.org/our-data/) | harmonised cross-national income and wealth microdata | LIS/LWS data are accessed through systems such as LISSY/DART and are for registered/non-commercial research use; country-year coverage differs | use AI with public documentation, variable lists, and submitted code drafts; do not paste restricted extracts or output that violates disclosure rules |
+| [Statistics Denmark Research Services](https://www.dst.dk/research) | Danish pseudonymised register microdata on people, households, firms, income, education, labor, housing, and health-linked research contexts | secure research access for authorities, researchers, and analysts; project approval and platform rules apply | use AI on metadata, project plans, and synthetic examples; never paste identifiable or register extracts into public AI |
+| [Statistics Sweden MONA](https://www.scb.se/en/services/ordering-data-and-statistics/microdata/mona--statistics-swedens-platform-for-access-to-microdata/) | Swedish microdata and registry-linked research | MONA is Statistics Sweden's online-access platform; microdata are processed online and do not leave Statistics Sweden | use AI for code skeletons and documentation outside MONA only with metadata or toy data; follow export/output rules |
+| [Statistics Norway access to data](https://www.ssb.no/en/data-til-forskning) | Norwegian unit-level data on persons, businesses, households, income, education, and registers | microdata are reserved for approved research institutes or public authorities; aggregate tables are more broadly accessible | assume no public-AI upload of unit records; use schemas, synthetic rows, and approved secure workflows |
+| [microdata.no](https://www.microdata.no/en/) | easier access to Norwegian registry data for approved users | service from Sikt and Statistics Norway for registry data access; institutional eligibility and terms apply | use AI for scripts and conceptual plans only when consistent with microdata.no rules; do not export or paste protected data |
+| [Sikt research data and NorLAG links](https://sikt.no/en/find-data) | Norwegian survey data, ESS archive pointers, CESSDA catalogue, NorLAG life-course data | some data are open, some require application, and NorLAG combines longitudinal survey and register data | check each collection's access level; use AI with metadata and public questionnaires first |
+| [Statistics Finland FIONA](https://stat.fi/en/services/services-for-researchers/instructions-for-researchers/using-the-datasets/fiona-remote-access-system) | Finnish unit-level research datasets and Statistics Finland microdata | FIONA is a data-secure remote environment; researchers need user licences and agreements, and output checking can apply | do not move unit-level data into public AI; use AI for code on synthetic examples and for documentation drafts |
+| [Statistics Iceland microdata service](https://statice.is/services/data-for-scientific-research/) | Icelandic microdata on the economy and society for scientific research | access is for statistical research purposes and governed by Statistics Iceland security and traceability rules | use metadata and public tables with AI; keep microdata in the approved research-access route |
+
+Copy-ready prompt for Nordic or survey household data:
+
+```text
+Act as a household-finance and survey-data access assistant for an economics/finance project.
+
+Country or dataset:
+[Denmark / Sweden / Norway / Finland / Iceland / HFCS / EU-SILC / SHARE / ESS / LIS-LWS / other]
+
+Research question:
+[question]
+
+Data type:
+[public aggregate / public-use microdata / registered survey microdata / restricted register microdata / unknown]
+
+Variables needed:
+[wealth, debt, income, consumption, housing, assets, pensions, transfers, attitudes, demographics, etc.]
+
+Before suggesting analysis steps:
+1. classify the likely access path and sensitivity;
+2. state what I must not upload to public AI;
+3. list the provider rules, institutional approvals, and output checks I must verify;
+4. suggest safe AI inputs such as questionnaires, metadata, codebooks, variable lists, toy rows, or synthetic examples;
+5. propose a citation, version, country-wave, and access-date log;
+6. warn about cross-country comparability, weights, imputation, survey design, and register-linkage limits.
+
+If the access status, country coverage, or provider rule is unclear, ask clarifying questions before proceeding.
+```
 
 ### Finance, Accounting, and Market Data
 
