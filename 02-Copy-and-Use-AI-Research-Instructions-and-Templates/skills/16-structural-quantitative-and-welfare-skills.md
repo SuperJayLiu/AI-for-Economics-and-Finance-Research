@@ -28,16 +28,16 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 Act as a structural economics/finance model assistant.
 
 Model context:
-- Field: [IO/macro/trade/labor/public/asset pricing/corporate finance/etc.]
-- Research question: [question]
-- Agents: [households/firms/banks/investors/government/etc.]
-- State variables: [states]
-- Choices: [choices]
-- Shocks: [shocks]
-- Constraints: [constraints]
-- Equilibrium concept: [equilibrium]
-- Data/moments available: [moments/data]
-- Counterfactual of interest: [counterfactual]
+- Field: If I have not provided it, ask me to specify: IO/macro/trade/labor/public/asset pricing/corporate finance/etc.
+- Research question: If I have not provided it, ask me to specify: question
+- Agents: If I have not provided it, ask me to specify: households/firms/banks/investors/government/etc.
+- State variables: If I have not provided it, ask me to specify: states
+- Choices: If I have not provided it, ask me to specify: choices
+- Shocks: If I have not provided it, ask me to specify: shocks
+- Constraints: If I have not provided it, ask me to specify: constraints
+- Equilibrium concept: If I have not provided it, ask me to specify: equilibrium
+- Data/moments available: If I have not provided it, ask me to specify: moments/data
+- Counterfactual of interest: If I have not provided it, ask me to specify: counterfactual
 
 Create a model map:
 1. agents;
@@ -72,12 +72,12 @@ Rules:
 Audit how this model maps data moments to structural parameters.
 
 Inputs:
-- Model summary: [paste]
-- Parameters: [list]
-- Moments or target statistics: [list]
-- Estimation method: [GMM/SMM/MLE/calibration/Bayesian/other]
-- Data sources: [sources]
-- Identification claim: [claim]
+- Model summary: If I have not provided it, ask me to specify: paste
+- Parameters: If I have not provided it, ask me to specify: list
+- Moments or target statistics: If I have not provided it, ask me to specify: list
+- Estimation method: If I have not provided it, ask me to specify: GMM/SMM/MLE/calibration/Bayesian/other
+- Data sources: If I have not provided it, ask me to specify: sources
+- Identification claim: If I have not provided it, ask me to specify: claim
 
 For each parameter, answer:
 1. Which moment identifies or disciplines it?
@@ -105,14 +105,14 @@ Rules:
 Design an estimation and validation plan for this quantitative model.
 
 Project facts:
-- Model: [summary]
-- Estimation method: [GMM/SMM/MLE/calibration/Bayesian]
-- Parameters: [list]
-- Data moments: [moments]
-- Objective function: [known/unknown]
-- Simulation requirements: [if any]
-- Software: [R/Python/Julia/Matlab/Stata/etc.]
-- Existing code: [describe]
+- Model: If I have not provided it, ask me to specify: summary
+- Estimation method: If I have not provided it, ask me to specify: GMM/SMM/MLE/calibration/Bayesian
+- Parameters: If I have not provided it, ask me to specify: list
+- Data moments: If I have not provided it, ask me to specify: moments
+- Objective function: If I have not provided it, ask me to specify: known/unknown
+- Simulation requirements: If I have not provided it, ask me to specify: if any
+- Software: If I have not provided it, ask me to specify: R/Python/Julia/Matlab/Stata/etc.
+- Existing code: If I have not provided it, ask me to specify: describe
 
 Create a plan covering:
 1. data preparation;
@@ -146,12 +146,12 @@ Rules:
 Audit this structural or quantitative counterfactual.
 
 Counterfactual:
-- Policy/shock/change: [counterfactual]
-- Baseline model: [summary]
-- Parameters held fixed: [parameters]
-- Equilibrium objects recomputed: [objects]
-- Outcome of interest: [outcomes]
-- Welfare metric: [metric]
+- Policy/shock/change: If I have not provided it, ask me to specify: counterfactual
+- Baseline model: If I have not provided it, ask me to specify: summary
+- Parameters held fixed: If I have not provided it, ask me to specify: parameters
+- Equilibrium objects recomputed: If I have not provided it, ask me to specify: objects
+- Outcome of interest: If I have not provided it, ask me to specify: outcomes
+- Welfare metric: If I have not provided it, ask me to specify: metric
 
 Check:
 1. What exactly changes in the counterfactual?
@@ -177,14 +177,14 @@ Return:
 Review this welfare or policy interpretation from a structural/quantitative paper.
 
 Text:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Model facts:
-- Agents: [agents]
-- Welfare object: [consumer surplus/social welfare/utility/value function/etc.]
-- Counterfactual: [counterfactual]
-- Distributional dimensions: [groups]
-- Key assumptions: [assumptions]
+- Agents: If I have not provided it, ask me to specify: agents
+- Welfare object: If I have not provided it, ask me to specify: consumer surplus/social welfare/utility/value function/etc.
+- Counterfactual: If I have not provided it, ask me to specify: counterfactual
+- Distributional dimensions: If I have not provided it, ask me to specify: groups
+- Key assumptions: If I have not provided it, ask me to specify: assumptions
 
 Check for:
 - welfare object unclear;

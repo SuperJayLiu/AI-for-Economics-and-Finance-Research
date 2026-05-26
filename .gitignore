@@ -203,6 +203,10 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Local OS files and non-repo manuscript exports
+.DS_Store
+SSRN-Working-Paper/
+
 # Ruff stuff:
 .ruff_cache/
 

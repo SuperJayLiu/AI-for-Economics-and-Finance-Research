@@ -32,14 +32,14 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 Diagnose this economics/finance causal design.
 
 Project facts:
-- Research question: [question]
-- Treatment/exposure/shock: [treatment]
-- Outcome: [outcome]
-- Unit and time: [unit/time]
-- Data: [data]
-- Proposed design: [design]
-- Comparison group: [comparison]
-- Main concern: [concern]
+- Research question: If I have not provided it, ask me to specify: question
+- Treatment/exposure/shock: If I have not provided it, ask me to specify: treatment
+- Outcome: If I have not provided it, ask me to specify: outcome
+- Unit and time: If I have not provided it, ask me to specify: unit/time
+- Data: If I have not provided it, ask me to specify: data
+- Proposed design: If I have not provided it, ask me to specify: design
+- Comparison group: If I have not provided it, ask me to specify: comparison
+- Main concern: If I have not provided it, ask me to specify: concern
 
 Check:
 1. What is the implied counterfactual?
@@ -64,14 +64,14 @@ Return:
 Audit this OLS or cross-sectional regression.
 
 Specification:
-[paste equation or table]
+If I have not provided this, ask me to provide: paste equation or table
 
 Context:
-- Outcome: [outcome]
-- Key regressor: [regressor]
-- Controls: [controls]
-- Sample: [sample]
-- Intended interpretation: [interpretation]
+- Outcome: If I have not provided it, ask me to specify: outcome
+- Key regressor: If I have not provided it, ask me to specify: regressor
+- Controls: If I have not provided it, ask me to specify: controls
+- Sample: If I have not provided it, ask me to specify: sample
+- Intended interpretation: If I have not provided it, ask me to specify: interpretation
 
 Check:
 - omitted variables
@@ -97,16 +97,16 @@ Return:
 Audit this panel fixed-effects design.
 
 Specification:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Project facts:
-- Unit: [unit]
-- Time: [time]
-- Outcome: [outcome]
-- Treatment/regressor: [regressor]
-- Fixed effects: [FE]
-- Controls: [controls]
-- Clustering: [cluster]
+- Unit: If I have not provided it, ask me to specify: unit
+- Time: If I have not provided it, ask me to specify: time
+- Outcome: If I have not provided it, ask me to specify: outcome
+- Treatment/regressor: If I have not provided it, ask me to specify: regressor
+- Fixed effects: FE
+- Controls: If I have not provided it, ask me to specify: controls
+- Clustering: If I have not provided it, ask me to specify: cluster
 
 Check:
 1. What variation remains after fixed effects?
@@ -130,13 +130,13 @@ Return:
 Audit this DiD/event-study design.
 
 Project facts:
-- Treatment: [treatment]
-- Treated group: [treated]
-- Control group: [control]
-- Treatment timing: [timing]
-- Outcome: [outcome]
-- Unit/time: [unit/time]
-- Specification/event window: [specification]
+- Treatment: If I have not provided it, ask me to specify: treatment
+- Treated group: If I have not provided it, ask me to specify: treated
+- Control group: If I have not provided it, ask me to specify: control
+- Treatment timing: If I have not provided it, ask me to specify: timing
+- Outcome: If I have not provided it, ask me to specify: outcome
+- Unit/time: If I have not provided it, ask me to specify: unit/time
+- Specification/event window: If I have not provided it, ask me to specify: specification
 
 Check:
 1. parallel trends or identifying assumption;
@@ -170,12 +170,12 @@ Rules:
 Audit this IV design.
 
 Project facts:
-- Endogenous variable: [variable]
-- Instrument: [instrument]
-- Outcome: [outcome]
-- Unit/time: [unit/time]
-- First stage: [summary]
-- Exclusion restriction argument: [argument]
+- Endogenous variable: If I have not provided it, ask me to specify: variable
+- Instrument: If I have not provided it, ask me to specify: instrument
+- Outcome: If I have not provided it, ask me to specify: outcome
+- Unit/time: If I have not provided it, ask me to specify: unit/time
+- First stage: If I have not provided it, ask me to specify: summary
+- Exclusion restriction argument: If I have not provided it, ask me to specify: argument
 
 Check:
 - relevance
@@ -205,12 +205,12 @@ Rules:
 Audit this regression discontinuity design.
 
 Project facts:
-- Running variable: [running variable]
-- Cutoff: [cutoff]
-- Outcome: [outcome]
-- Treatment rule: [rule]
-- Bandwidth: [bandwidth]
-- Unit/time: [unit/time]
+- Running variable: If I have not provided it, ask me to specify: running variable
+- Cutoff: If I have not provided it, ask me to specify: cutoff
+- Outcome: If I have not provided it, ask me to specify: outcome
+- Treatment rule: If I have not provided it, ask me to specify: rule
+- Bandwidth: If I have not provided it, ask me to specify: bandwidth
+- Unit/time: If I have not provided it, ask me to specify: unit/time
 
 Check:
 - continuity assumption
@@ -240,13 +240,13 @@ Rules:
 Audit this synthetic control design.
 
 Project facts:
-- Treated unit: [unit]
-- Treatment date: [date]
-- Donor pool: [pool]
-- Outcomes: [outcomes]
-- Predictors: [predictors]
-- Pre-period: [period]
-- Post-period: [period]
+- Treated unit: If I have not provided it, ask me to specify: unit
+- Treatment date: If I have not provided it, ask me to specify: date
+- Donor pool: If I have not provided it, ask me to specify: pool
+- Outcomes: If I have not provided it, ask me to specify: outcomes
+- Predictors: If I have not provided it, ask me to specify: predictors
+- Pre-period: If I have not provided it, ask me to specify: period
+- Post-period: If I have not provided it, ask me to specify: period
 
 Check:
 - donor pool credibility
@@ -270,12 +270,12 @@ Return:
 Audit this time-series model for economics/finance.
 
 Project facts:
-- Series: [series]
-- Frequency: [daily/monthly/quarterly/etc.]
-- Sample period: [period]
-- Model: [AR/MA/ARMA/ARIMA/VAR/etc.]
-- Purpose: [forecasting/description/policy/asset pricing/etc.]
-- Transformations: [levels/logs/differences/returns]
+- Series: If I have not provided it, ask me to specify: series
+- Frequency: If I have not provided it, ask me to specify: daily/monthly/quarterly/etc.
+- Sample period: If I have not provided it, ask me to specify: period
+- Model: If I have not provided it, ask me to specify: AR/MA/ARMA/ARIMA/VAR/etc.
+- Purpose: If I have not provided it, ask me to specify: forecasting/description/policy/asset pricing/etc.
+- Transformations: If I have not provided it, ask me to specify: levels/logs/differences/returns
 
 Check:
 1. stationarity and transformations;
@@ -300,15 +300,15 @@ Return:
 Audit the standard error and inference plan for this economics/finance design.
 
 Project facts:
-- Research question: [question]
-- Unit of observation: [unit]
-- Treatment/exposure level: [level]
-- Sampling or assignment level: [level]
-- Time dimension: [time]
-- Main specification: [equation/table]
-- Current standard errors: [robust/clustered/two-way/Newey-West/bootstrap/etc.]
-- Number of clusters: [number]
-- Cluster size balance: [balanced/unbalanced/unknown]
+- Research question: If I have not provided it, ask me to specify: question
+- Unit of observation: If I have not provided it, ask me to specify: unit
+- Treatment/exposure level: If I have not provided it, ask me to specify: level
+- Sampling or assignment level: If I have not provided it, ask me to specify: level
+- Time dimension: If I have not provided it, ask me to specify: time
+- Main specification: If I have not provided it, ask me to specify: equation/table
+- Current standard errors: If I have not provided it, ask me to specify: robust/clustered/two-way/Newey-West/bootstrap/etc.
+- Number of clusters: If I have not provided it, ask me to specify: number
+- Cluster size balance: If I have not provided it, ask me to specify: balanced/unbalanced/unknown
 
 Check:
 1. what dependence structure is plausible;

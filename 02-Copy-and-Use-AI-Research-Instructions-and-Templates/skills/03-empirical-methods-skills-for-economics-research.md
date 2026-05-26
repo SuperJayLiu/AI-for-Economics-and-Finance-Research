@@ -36,7 +36,7 @@ Good AI output should:
 - ask which DiD/event-study estimator is used;
 - describe the identifying variation and comparison group;
 - flag pre-trend power, clustering, spillovers, and neighborhood selection;
-- mark missing information as [NEEDS AUTHOR INPUT].
+- mark missing information as NEEDS AUTHOR INPUT.
 
 Bad AI output to reject:
 "Because the regression includes fixed effects, the coefficient identifies the causal effect."
@@ -49,20 +49,20 @@ Reject because fixed effects alone do not establish identification.
 Draft an empirical methods section for an applied economics paper.
 
 Inputs:
-- Research question: [question]
-- Setting/institutional background: [setting]
-- Unit of observation: [unit]
-- Sample period: [period]
-- Data sources: [sources]
-- Outcome variables: [outcomes]
-- Treatment/exposure/shock: [treatment]
-- Control variables: [controls]
-- Empirical design: [DiD/event study/RD/IV/RCT/panel FE/synthetic control/other]
-- Main estimating equation, if any: [equation]
-- Identification assumption: [assumption]
-- Threats to validity: [threats]
-- Inference plan: [standard errors/clustering/randomization inference/etc.]
-- Current estimator or package, if known: [e.g., fixest/reghdfe/csdid/eventstudyinteract/did_imputation/rdrobust/etc.]
+- Research question: If I have not provided it, ask me to specify: question
+- Setting/institutional background: If I have not provided it, ask me to specify: setting
+- Unit of observation: If I have not provided it, ask me to specify: unit
+- Sample period: If I have not provided it, ask me to specify: period
+- Data sources: If I have not provided it, ask me to specify: sources
+- Outcome variables: If I have not provided it, ask me to specify: outcomes
+- Treatment/exposure/shock: If I have not provided it, ask me to specify: treatment
+- Control variables: If I have not provided it, ask me to specify: controls
+- Empirical design: If I have not provided it, ask me to specify: DiD/event study/RD/IV/RCT/panel FE/synthetic control/other
+- Main estimating equation, if any: If I have not provided it, ask me to specify: equation
+- Identification assumption: If I have not provided it, ask me to specify: assumption
+- Threats to validity: If I have not provided it, ask me to specify: threats
+- Inference plan: If I have not provided it, ask me to specify: standard errors/clustering/randomization inference/etc.
+- Current estimator or package, if known: If I have not provided it, ask me to specify: e.g., fixest/reghdfe/csdid/eventstudyinteract/did_imputation/rdrobust/etc.
 
 Write:
 1. Data and sample paragraph.
@@ -84,7 +84,7 @@ Rules:
 - If the design is IV, discuss weak-instrument diagnostics and weak-IV robust inference where relevant.
 - If the design is RD, discuss bandwidth, manipulation, and local interpretation.
 - Use cautious applied economics prose.
-- If information is missing, write [NEEDS AUTHOR INPUT] rather than filling it in.
+- If information is missing, write NEEDS AUTHOR INPUT rather than filling it in.
 
 Output format:
 - Draft methods section.
@@ -98,13 +98,13 @@ Output format:
 Audit this empirical methods section as an applied econometrician.
 
 Text:
-[paste methods section]
+If I have not provided this, ask me to provide: paste methods section
 
 Known project facts:
-- Research question: [question]
-- Data: [data]
-- Design: [design]
-- Main outcome/treatment: [variables]
+- Research question: If I have not provided it, ask me to specify: question
+- Data: If I have not provided it, ask me to specify: data
+- Design: If I have not provided it, ask me to specify: design
+- Main outcome/treatment: If I have not provided it, ask me to specify: variables
 
 Check:
 1. Is the unit of observation clear?
@@ -134,13 +134,13 @@ Return:
 Compare the methods description to the code/table plan.
 
 Methods text:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Code summary or script:
-[paste or describe]
+If I have not provided this, ask me to provide: paste or describe
 
 Table/figure plan:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Identify mismatches:
 - variables named in text but absent in code
@@ -162,16 +162,16 @@ Use before writing or presenting the empirical strategy.
 Act as a skeptical applied microeconomist reviewing my proposed design before I write the methods section.
 
 Project facts:
-- Research question: [question]
-- Setting: [institutional background]
-- Data: [sources, unit, period]
-- Outcome: [outcome]
-- Treatment/exposure/shock: [treatment]
-- Proposed design: [DiD/event study/RD/IV/RCT/panel FE/synthetic control/etc.]
-- Comparison group or identifying variation: [describe]
-- Timing: [what happens when]
-- Main concern: [concern]
-- Estimator currently planned: [if known]
+- Research question: If I have not provided it, ask me to specify: question
+- Setting: If I have not provided it, ask me to specify: institutional background
+- Data: If I have not provided it, ask me to specify: sources, unit, period
+- Outcome: If I have not provided it, ask me to specify: outcome
+- Treatment/exposure/shock: If I have not provided it, ask me to specify: treatment
+- Proposed design: If I have not provided it, ask me to specify: DiD/event study/RD/IV/RCT/panel FE/synthetic control/etc.
+- Comparison group or identifying variation: If I have not provided it, ask me to specify: describe
+- Timing: If I have not provided it, ask me to specify: what happens when
+- Main concern: If I have not provided it, ask me to specify: concern
+- Estimator currently planned: If I have not provided it, ask me to specify: if known
 
 Assess:
 1. What is the implied experiment or quasi-experiment?
@@ -201,13 +201,13 @@ Use when you need honest limitations without vague defensiveness.
 Draft a limitations paragraph for an applied economics empirical paper.
 
 Inputs:
-- Research question: [question]
-- Design: [design]
-- Main result: [result]
-- Data limitations: [limitations]
-- Identification limitations: [limitations]
-- External validity limits: [limits]
-- What the paper still contributes: [contribution]
+- Research question: If I have not provided it, ask me to specify: question
+- Design: If I have not provided it, ask me to specify: design
+- Main result: If I have not provided it, ask me to specify: result
+- Data limitations: If I have not provided it, ask me to specify: limitations
+- Identification limitations: If I have not provided it, ask me to specify: limitations
+- External validity limits: If I have not provided it, ask me to specify: limits
+- What the paper still contributes: If I have not provided it, ask me to specify: contribution
 
 Write a concise limitations paragraph that:
 1. states what the design cannot prove;

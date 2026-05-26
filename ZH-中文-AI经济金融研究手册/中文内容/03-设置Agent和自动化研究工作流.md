@@ -307,7 +307,7 @@ __pycache__/
 ## Data sources
 | Dataset | Provider | Access | Sensitivity | AI-use rule |
 | --- | --- | --- | --- | --- |
-| [name] | [provider] | public/licensed/restricted/private | [level] | [what can/cannot be shared with AI] |
+| 数据集名称 | 提供方 | public/licensed/restricted/private | 敏感级别 | 可以或不可以与 AI 分享的内容 |
 
 ## Files never to upload to public AI tools
 - data/raw/
@@ -399,7 +399,7 @@ git status
 4. 批准一个窄任务。
 5. 检查：git diff
 6. 运行 checks。
-7. 提交：git add [files] && git commit -m "[message]"
+7. 提交：运行 `git add file1 file2`，然后运行 `git commit -m "short message"`
 8. push branch。
 9. 审查后开 PR 或 merge。
 10. 记录 AI-use log。
@@ -527,23 +527,23 @@ flowchart TD
 ```markdown
 | Area | Human owner | Agent may edit? | Review required before merge | Notes |
 | --- | --- | --- | --- | --- |
-| `data/raw/` | [name] | no | yes | original files only |
-| `data/derived/` | [name] | only via approved scripts | yes | rebuild from code |
-| `code/` | [name] | yes, on branch | yes | tests or scripts must run |
-| `paper/` | [name] | only approved sections | yes | preserve claims, citations, notation |
-| `slides/` | [name] | yes, if claims checked | yes | no public sharing without approval |
-| `AI-USE-LOG.md` | [name] | draft entries allowed | yes | final log reviewed by task owner |
+| `data/raw/` | 负责人姓名 | no | yes | original files only |
+| `data/derived/` | 负责人姓名 | only via approved scripts | yes | rebuild from code |
+| `code/` | 负责人姓名 | yes, on branch | yes | tests or scripts must run |
+| `paper/` | 负责人姓名 | only approved sections | yes | preserve claims, citations, notation |
+| `slides/` | 负责人姓名 | yes, if claims checked | yes | no public sharing without approval |
+| `AI-USE-LOG.md` | 负责人姓名 | draft entries allowed | yes | final log reviewed by task owner |
 ```
 
 ### Issue 到 PR 的团队 agent 工作流
 
 ```text
 1. 创建 issue：
-   Title: [agent-task] Audit Table 2 code against methods section
-   Owner: [human name]
-   Files allowed: [code/table2.R, paper/methods.md]
-   Files forbidden: [data/raw/, data/restricted/]
-   Check: [Rscript code/table2.R; compare output/table2.tex]
+   Title: agent task: Audit Table 2 code against methods section
+   Owner: human name responsible for review
+   Files allowed: code/table2.R, paper/methods.md
+   Files forbidden: data/raw/, data/restricted/
+   Check: run Rscript code/table2.R and compare output/table2.tex
 
 2. 创建 branch：
    git checkout -b agent/table2-methods-audit

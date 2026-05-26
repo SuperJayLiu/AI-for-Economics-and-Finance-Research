@@ -27,13 +27,13 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 Review this economics/finance paper draft in stages.
 
 Draft:
-[paste or summarize]
+If I have not provided this, ask me to provide: paste or summarize
 
 Context:
-- Field: [field]
-- Target: [journal/seminar/dissertation/etc.]
-- Stage: [early draft / submission draft / revision]
-- Main concern: [concern]
+- Field: If I have not provided it, ask me to specify: field
+- Target: If I have not provided it, ask me to specify: journal/seminar/dissertation/etc.
+- Stage: If I have not provided it, ask me to specify: early draft / submission draft / revision
+- Main concern: If I have not provided it, ask me to specify: concern
 
 Review order:
 1. research question and contribution;
@@ -63,11 +63,11 @@ Rules:
 Help me plan a journal revision response.
 
 Inputs:
-- Paper summary: [summary]
-- Editor letter: [paste]
-- Referee reports: [paste]
-- Constraints: [data/code/time/coauthor constraints]
-- New results already available: [if any]
+- Paper summary: If I have not provided it, ask me to specify: summary
+- Editor letter: If I have not provided it, ask me to specify: paste
+- Referee reports: If I have not provided it, ask me to specify: paste
+- Constraints: If I have not provided it, ask me to specify: data/code/time/coauthor constraints
+- New results already available: If I have not provided it, ask me to specify: if any
 
 Tasks:
 1. Cluster comments by theme.
@@ -91,10 +91,10 @@ Rules:
 Help me structure a referee report for an economics/finance paper, only if AI use is allowed by the relevant policy.
 
 Paper:
-[paste summary or allowed excerpts]
+If I have not provided this, ask me to provide: paste summary or allowed excerpts
 
 Review focus:
-[identification/theory/data/writing/contribution/etc.]
+If I have not provided this, ask me to provide: identification/theory/data/writing/contribution/etc.
 
 Create:
 1. short summary of the paper's question and contribution;
@@ -118,10 +118,10 @@ Use for research repos, replication packages, and collaborative writing tracked 
 Triage these review comments on a research repo or paper PR.
 
 Comments:
-[paste comments]
+If I have not provided this, ask me to provide: paste comments
 
 Project context:
-[context]
+If I have not provided this, ask me to provide: context
 
 Tasks:
 1. Group comments by file, behavior area, or paper section.

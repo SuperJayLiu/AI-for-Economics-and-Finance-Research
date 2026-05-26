@@ -28,14 +28,14 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 Act as a text-as-data measurement designer for economics/finance research.
 
 Project:
-- Research question: [question]
-- Text corpus: [10-Ks/earnings calls/news/speeches/job postings/etc.]
-- Unit of analysis: [firm-year/document/paragraph/sentence/event/etc.]
-- Outcome or downstream use: [regression/table/figure]
-- Construct to measure: [sentiment/risk/disclosure tone/policy stance/attention/etc.]
-- Time period: [period]
-- Intended model/tool: [ChatGPT/Claude/local model/API/etc.]
-- Confidentiality status: [public/licensed/restricted/confidential]
+- Research question: If I have not provided it, ask me to specify: question
+- Text corpus: If I have not provided it, ask me to specify: 10-Ks/earnings calls/news/speeches/job postings/etc.
+- Unit of analysis: If I have not provided it, ask me to specify: firm-year/document/paragraph/sentence/event/etc.
+- Outcome or downstream use: If I have not provided it, ask me to specify: regression/table/figure
+- Construct to measure: If I have not provided it, ask me to specify: sentiment/risk/disclosure tone/policy stance/attention/etc.
+- Time period: If I have not provided it, ask me to specify: period
+- Intended model/tool: If I have not provided it, ask me to specify: ChatGPT/Claude/local model/API/etc.
+- Confidentiality status: If I have not provided it, ask me to specify: public/licensed/restricted/confidential
 
 Design a measurement protocol with:
 1. construct definition;
@@ -71,13 +71,13 @@ Rules:
 Help me design a human validation sample for an LLM-generated text measure.
 
 Inputs:
-- Construct: [construct]
-- Corpus: [corpus]
-- Unit of text: [document/paragraph/sentence/etc.]
-- Number of observations: [N]
-- Subgroups/time periods that matter: [groups]
-- LLM label schema: [schema]
-- Research use: [regression/descriptive measure/prediction/etc.]
+- Construct: If I have not provided it, ask me to specify: construct
+- Corpus: If I have not provided it, ask me to specify: corpus
+- Unit of text: If I have not provided it, ask me to specify: document/paragraph/sentence/etc.
+- Number of observations: If I have not provided it, ask me to specify: N
+- Subgroups/time periods that matter: If I have not provided it, ask me to specify: groups
+- LLM label schema: If I have not provided it, ask me to specify: schema
+- Research use: If I have not provided it, ask me to specify: regression/descriptive measure/prediction/etc.
 
 Create:
 1. sampling plan for validation examples;
@@ -105,11 +105,11 @@ Rules:
 Design a sensitivity analysis for an LLM-generated text variable.
 
 Current setup:
-- Model/tool: [model/tool]
-- Prompt: [paste]
-- Output variable: [variable]
-- Corpus/sample: [sample]
-- Downstream analysis: [regression/table/figure]
+- Model/tool: If I have not provided it, ask me to specify: model/tool
+- Prompt: If I have not provided it, ask me to specify: paste
+- Output variable: If I have not provided it, ask me to specify: variable
+- Corpus/sample: If I have not provided it, ask me to specify: sample
+- Downstream analysis: If I have not provided it, ask me to specify: regression/table/figure
 
 Create sensitivity tests for:
 1. prompt wording;
@@ -140,13 +140,13 @@ Rules:
 Audit this text-as-data design for leakage and look-ahead bias.
 
 Project facts:
-- Text source: [source]
-- Text timestamp: [timestamp rule]
-- Outcome timing: [timing]
-- Predictor/treatment timing: [timing]
-- LLM/model used: [model]
-- Training/pretraining concern: [known/unknown]
-- Regression design: [design]
+- Text source: If I have not provided it, ask me to specify: source
+- Text timestamp: If I have not provided it, ask me to specify: timestamp rule
+- Outcome timing: If I have not provided it, ask me to specify: timing
+- Predictor/treatment timing: If I have not provided it, ask me to specify: timing
+- LLM/model used: If I have not provided it, ask me to specify: model
+- Training/pretraining concern: If I have not provided it, ask me to specify: known/unknown
+- Regression design: If I have not provided it, ask me to specify: design
 
 Check:
 1. whether text was available before the outcome period;
@@ -172,16 +172,16 @@ Return:
 Draft a methods paragraph for an LLM-generated text variable.
 
 Inputs:
-- Construct measured: [construct]
-- Corpus and sample: [corpus/sample]
-- Unit of text: [unit]
-- Model/tool and version/date: [model/version/date]
-- Prompt family: [summary]
-- Output schema: [schema]
-- Validation set: [details]
-- Human validation results: [results]
-- Sensitivity checks: [results]
-- Limitations: [limitations]
+- Construct measured: If I have not provided it, ask me to specify: construct
+- Corpus and sample: If I have not provided it, ask me to specify: corpus/sample
+- Unit of text: If I have not provided it, ask me to specify: unit
+- Model/tool and version/date: If I have not provided it, ask me to specify: model/version/date
+- Prompt family: If I have not provided it, ask me to specify: summary
+- Output schema: If I have not provided it, ask me to specify: schema
+- Validation set: If I have not provided it, ask me to specify: details
+- Human validation results: If I have not provided it, ask me to specify: results
+- Sensitivity checks: If I have not provided it, ask me to specify: results
+- Limitations: If I have not provided it, ask me to specify: limitations
 
 Write:
 1. a methods paragraph explaining how the variable was generated;
@@ -193,7 +193,7 @@ Rules:
 - Do not imply the LLM directly observes the latent construct.
 - Do not hide prompt/model sensitivity.
 - Do not overclaim causal interpretation from a text measure.
-- Mark missing information as [NEEDS AUTHOR INPUT].
+- Mark missing information as NEEDS AUTHOR INPUT.
 
 Also return:
 - data appendix checklist;

@@ -16,11 +16,11 @@ Use for early-stage ideas before you invest weeks.
 ```text
 Act as a skeptical but constructive economics/finance research advisor.
 
-Project area: [field/subfield]
-Initial idea: [one paragraph]
-Possible data: [data sources, access status, frequency, unit of observation]
-Possible mechanism: [mechanism or theory]
-Target audience: [seminar, PhD field paper, journal, policy audience]
+Project area: If I have not provided it, ask me to specify: field/subfield
+Initial idea: If I have not provided it, ask me to specify: one paragraph
+Possible data: If I have not provided it, ask me to specify: data sources, access status, frequency, unit of observation
+Possible mechanism: If I have not provided it, ask me to specify: mechanism or theory
+Target audience: If I have not provided it, ask me to specify: seminar, PhD field paper, journal, policy audience
 
 Your task:
 1. Restate the research question in one precise sentence.
@@ -47,13 +47,13 @@ Use when turning an idea into a structured proposal.
 Help me turn the following idea into a serious economics/finance research proposal.
 
 Inputs:
-- Working title: [title]
-- Research question: [question]
-- Motivation: [why it matters]
-- Data: [sources, access, sample, frequency, unit]
-- Empirical strategy or model: [current plan]
-- Main concern: [what worries me]
-- Target format: [PhD proposal / grant / seminar / pre-analysis memo]
+- Working title: If I have not provided it, ask me to specify: title
+- Research question: If I have not provided it, ask me to specify: question
+- Motivation: If I have not provided it, ask me to specify: why it matters
+- Data: If I have not provided it, ask me to specify: sources, access, sample, frequency, unit
+- Empirical strategy or model: If I have not provided it, ask me to specify: current plan
+- Main concern: If I have not provided it, ask me to specify: what worries me
+- Target format: If I have not provided it, ask me to specify: PhD proposal / grant / seminar / pre-analysis memo
 
 Produce:
 1. One-paragraph nontechnical motivation.
@@ -80,9 +80,9 @@ Use this for a quick first-pass map after you have real papers, PDFs, BibTeX, or
 ```text
 Build a literature map from the materials I provide. Use only the papers, notes, and citations I give you unless I explicitly ask for search.
 
-Research question: [question]
-My project's intended contribution: [current contribution]
-Materials provided: [PDFs/notes/BibTeX/list]
+Research question: If I have not provided it, ask me to specify: question
+My project's intended contribution: If I have not provided it, ask me to specify: current contribution
+Materials provided: If I have not provided it, ask me to specify: PDFs/notes/BibTeX/list
 
 For each paper, extract:
 - research question
@@ -114,13 +114,13 @@ Use for your own paper so future AI tools read it correctly.
 Create an llms.txt-style orientation file for my paper.
 
 Inputs:
-- Paper title: [title]
-- Authors: [authors]
-- Status: [draft/working paper/submitted/published]
-- Abstract or intro: [paste]
-- Data and methods summary: [paste]
-- Key results: [paste]
-- Limitations: [paste]
+- Paper title: If I have not provided it, ask me to specify: title
+- Authors: If I have not provided it, ask me to specify: authors
+- Status: If I have not provided it, ask me to specify: draft/working paper/submitted/published
+- Abstract or intro: If I have not provided it, ask me to specify: paste
+- Data and methods summary: If I have not provided it, ask me to specify: paste
+- Key results: If I have not provided it, ask me to specify: paste
+- Limitations: If I have not provided it, ask me to specify: paste
 
 Output a plain Markdown file with:
 1. What this paper is about.

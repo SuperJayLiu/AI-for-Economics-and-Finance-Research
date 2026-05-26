@@ -5,6 +5,9 @@
 > [!IMPORTANT]
 > 本仓库不是提示词合集，也不是 AI 工具排行榜。它的核心目标是帮助研究者建立可核查、可复现、可追踪、负责任的 AI 辅助研究工作流。
 
+> [!TIP]
+> 如果你想把整个仓库当作一个 AI research skill 使用，请先打开英文根目录下的 [`skill-pack/`](../skill-pack/README.md)。里面有一步一步的下载、复制、上传和项目设置说明，也包含中文使用入口。
+
 如有中文版本建议，请邮件联系 [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk)，邮件标题建议使用 `[AI Econ Finance Chinese] 中文版本建议`。
 
 ## 安全获取更新
@@ -50,6 +53,7 @@ flowchart LR
 | --- | --- |
 | 像读书一样理解 AI 在经济金融研究中的使用 | [01 从这里开始：AI 经济金融研究手册](中文内容/01-从这里开始：AI经济金融研究手册.md) |
 | 直接复制可用的技能、指令和模板 | [02 复制即用：AI 研究指令与模板](中文内容/02-复制即用：AI研究指令与模板.md) |
+| 把整个仓库作为一个 AI skill 放进 ChatGPT、Claude、Codex 或 Claude Code 项目 | [skill-pack 使用说明](../skill-pack/README.md) |
 | 设置 Codex、Claude Code、GitHub、agent 和自动化工作流 | [03 设置 Agent 和自动化研究工作流](中文内容/03-设置Agent和自动化研究工作流.md) |
 | 看例子、图示、失败案例 | [04 案例、图示与失败案例](中文内容/04-案例图示与失败案例.md) |
 | 查官方文档、builder、外部资源和资料来源 | [05 资料来源、官方文档与更新](中文内容/05-资料来源官方文档与更新.md) |
@@ -70,6 +74,31 @@ AI 可以自动化劳动，但不能替代学术责任。
 - AI 不能替你判断研究问题是否重要。
 - AI 不能替你决定能否上传受限、授权、保密或合作者材料。
 - AI 不能替你承担期刊、会议、学校、基金和数据提供方的合规责任。
+
+## 把本仓库作为一个 AI Skill 使用
+
+如果你不想每次手动查找不同页面，可以使用 skill pack，把本仓库变成一个可以路由到不同任务的 AI research skill。
+
+1. 打开 [skill-pack 使用说明](../skill-pack/README.md)。
+2. 在 GitHub 点击绿色 `Code` 按钮，然后选择 `Download ZIP`，或用 Git clone 仓库。
+3. 打开 `skill-pack/ai-econ-finance-research/SKILL.md`。
+4. 复制全文到 ChatGPT Project instructions、Claude Project instructions、Codex/Claude Code skills，或其他 AI 工具的 project rules。
+5. 如果工具允许上传文件，上传 `skill-pack/ai-econ-finance-research/references/` 文件夹。
+6. 如果不能上传文件，让 AI 告诉你需要哪个 reference 文件，然后手动粘贴。
+7. 第一条消息写：
+
+```text
+Use the AI Econ Finance Research skill.
+I want to work in Chinese. First ask what I want to do.
+```
+
+严肃研究项目建议使用：
+
+```text
+一篇论文 = 一个 AI Project + 一个 Git repo + 一个 AI-use log
+```
+
+不要上传受限数据、授权数据库 extracts、审稿材料、学生数据、合作者未同意的草稿或任何保密材料。
 
 ## 最小安全配置
 
@@ -161,7 +190,7 @@ AI 可以自动化劳动，但不能替代学术责任。
 1. 先读本页，理解总体结构。
 2. 打开 `01` 中文手册，把它当成一本书读。
 3. 进入 `02` 中文模板页，选择一个具体任务，只复制一个技能。
-4. 用自己的研究事实替换方括号内容。
+4. 补充你已经知道的研究事实；如果不知道，就让 AI 先提澄清问题，不要让它猜。
 5. 要求 AI 先给 plan，不要直接执行。
 6. 人工核查引用、代码、数据、系数、识别策略和理论证明。
 7. 把接受的 AI 输出和人工核查记录到 `AI-USE-LOG.md`。

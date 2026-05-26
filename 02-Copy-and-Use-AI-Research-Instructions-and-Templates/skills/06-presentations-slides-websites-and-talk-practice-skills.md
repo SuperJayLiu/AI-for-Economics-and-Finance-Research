@@ -32,13 +32,13 @@ Task:
 I will provide full paper materials, partial materials, or supporting files. Do not create the final slide deck yet. First inspect the materials and return "Proposed structure and assumptions" for my confirmation.
 
 Materials I am providing:
-- Full paper or draft: [paste/upload/link/none]
-- Abstract and introduction: [paste/upload/link/none]
-- Methods/model section: [paste/upload/link/none]
-- Results, tables, figures, or appendix: [paste/upload/link/none]
-- Existing slides or notes: [paste/upload/link/none]
-- Target talk date/event: [event]
-- Confidentiality status: [public / coauthor draft / unpublished / restricted / unknown]
+- Full paper or draft: If I have not provided it, ask me to specify: paste/upload/link/none
+- Abstract and introduction: If I have not provided it, ask me to specify: paste/upload/link/none
+- Methods/model section: If I have not provided it, ask me to specify: paste/upload/link/none
+- Results, tables, figures, or appendix: If I have not provided it, ask me to specify: paste/upload/link/none
+- Existing slides or notes: If I have not provided it, ask me to specify: paste/upload/link/none
+- Target talk date/event: If I have not provided it, ask me to specify: event
+- Confidentiality status: If I have not provided it, ask me to specify: public / coauthor draft / unpublished / restricted / unknown
 
 Presentation type to consider:
 - academic seminar
@@ -87,18 +87,18 @@ Use for shareable, interactive, web-native slides.
 Create an interactive single-file HTML slide deck for an economics/finance research presentation after the presentation structure has been confirmed.
 
 Inputs:
-- Confirmed deck structure: [paste the approved structure from Skill 0, or say "not confirmed"]
-- Paper title: [title]
-- Audience: [seminar/conference/class/public]
-- Talk length: [minutes]
-- Research question: [question]
-- Setting/data: [setting and data]
-- Method/design/model: [method]
-- Main results: [verified results]
-- Figures/tables to include: [list]
-- Tone: [academic/public/teaching]
-- Visual style: [clean academic / interactive mechanism / finance dashboard / teaching explainer]
-- Interaction style: [timeline / mechanism diagram / data explorer / animated equation / policy dashboard / no interaction]
+- Confirmed deck structure: If I have not provided it, ask me to specify: paste the approved structure from Skill 0, or say "not confirmed"
+- Paper title: If I have not provided it, ask me to specify: title
+- Audience: If I have not provided it, ask me to specify: seminar/conference/class/public
+- Talk length: If I have not provided it, ask me to specify: minutes
+- Research question: If I have not provided it, ask me to specify: question
+- Setting/data: If I have not provided it, ask me to specify: setting and data
+- Method/design/model: If I have not provided it, ask me to specify: method
+- Main results: If I have not provided it, ask me to specify: verified results
+- Figures/tables to include: If I have not provided it, ask me to specify: list
+- Tone: If I have not provided it, ask me to specify: academic/public/teaching
+- Visual style: If I have not provided it, ask me to specify: clean academic / interactive mechanism / finance dashboard / teaching explainer
+- Interaction style: If I have not provided it, ask me to specify: timeline / mechanism diagram / data explorer / animated equation / policy dashboard / no interaction
 
 If the deck structure or format has not been confirmed, do not write the final HTML yet. First return "Proposed structure and assumptions" and ask me to confirm.
 
@@ -155,19 +155,19 @@ Use for standard academic seminars and conferences.
 Create a LaTeX Beamer slide deck for an economics/finance research talk after the presentation structure has been confirmed.
 
 Inputs:
-- Confirmed deck structure: [paste the approved structure from Skill 0, or say "not confirmed"]
-- Paper title: [title]
-- Authors: [authors]
-- Event/audience: [event]
-- Talk length: [minutes]
-- Research question: [question]
-- Motivation: [motivation]
-- Data: [data]
-- Empirical strategy/model: [method]
-- Main results: [verified results]
-- Figures/tables: [files or descriptions]
-- Style preference: [plain professional / journal seminar / teaching]
-- Beamer theme preference: [default/simple/custom institution theme]
+- Confirmed deck structure: If I have not provided it, ask me to specify: paste the approved structure from Skill 0, or say "not confirmed"
+- Paper title: If I have not provided it, ask me to specify: title
+- Authors: If I have not provided it, ask me to specify: authors
+- Event/audience: If I have not provided it, ask me to specify: event
+- Talk length: If I have not provided it, ask me to specify: minutes
+- Research question: If I have not provided it, ask me to specify: question
+- Motivation: If I have not provided it, ask me to specify: motivation
+- Data: If I have not provided it, ask me to specify: data
+- Empirical strategy/model: If I have not provided it, ask me to specify: method
+- Main results: If I have not provided it, ask me to specify: verified results
+- Figures/tables: If I have not provided it, ask me to specify: files or descriptions
+- Style preference: If I have not provided it, ask me to specify: plain professional / journal seminar / teaching
+- Beamer theme preference: If I have not provided it, ask me to specify: default/simple/custom institution theme
 
 If the deck structure or format has not been confirmed, do not write the final Beamer file yet. First return "Proposed structure and assumptions" and ask me to confirm.
 
@@ -219,12 +219,12 @@ End with:
 Act as a tough but fair seminar audience for my economics/finance talk.
 
 Inputs:
-- Talk title: [title]
-- Abstract: [abstract]
-- Slide outline or slides: [paste/upload]
-- Audience: [field seminar/conference/job talk/PhD workshop]
-- Main claim: [claim]
-- Weakest part: [what worries me]
+- Talk title: If I have not provided it, ask me to specify: title
+- Abstract: If I have not provided it, ask me to specify: abstract
+- Slide outline or slides: If I have not provided it, ask me to specify: paste/upload
+- Audience: If I have not provided it, ask me to specify: field seminar/conference/job talk/PhD workshop
+- Main claim: If I have not provided it, ask me to specify: claim
+- Weakest part: If I have not provided it, ask me to specify: what worries me
 
 Run a presentation practice session:
 0. If audience, time, main claim, or slide materials are missing, ask clarifying questions before beginning.
@@ -250,16 +250,16 @@ Rules:
 Help me create a simple academic website.
 
 Inputs:
-- Name: [name]
-- Position: [position]
-- Fields: [fields]
-- Email/contact: [contact]
-- Google Scholar/SSRN/ORCID/GitHub: [links]
-- Working papers: [titles, abstracts, links]
-- Publications: [citations, links]
-- Teaching: [courses]
-- CV: [link or file]
-- Preferred platform: [GitHub Pages / Google Sites]
+- Name: If I have not provided it, ask me to specify: name
+- Position: If I have not provided it, ask me to specify: position
+- Fields: If I have not provided it, ask me to specify: fields
+- Email/contact: If I have not provided it, ask me to specify: contact
+- Google Scholar/SSRN/ORCID/GitHub: If I have not provided it, ask me to specify: links
+- Working papers: If I have not provided it, ask me to specify: titles, abstracts, links
+- Publications: If I have not provided it, ask me to specify: citations, links
+- Teaching: If I have not provided it, ask me to specify: courses
+- CV: If I have not provided it, ask me to specify: link or file
+- Preferred platform: If I have not provided it, ask me to specify: GitHub Pages / Google Sites
 
 Produce:
 1. Site structure.
@@ -286,14 +286,14 @@ Use this before making slides.
 Turn this economics/finance paper into a talk plan before creating slides.
 
 Inputs:
-- Paper title: [title]
-- Abstract: [abstract]
-- Introduction or summary: [paste]
-- Methods/model: [paste]
-- Main results: [paste]
-- Audience: [job talk / field seminar / conference / PhD workshop / public policy / teaching]
-- Talk length: [minutes]
-- My main concern: [concern]
+- Paper title: If I have not provided it, ask me to specify: title
+- Abstract: If I have not provided it, ask me to specify: abstract
+- Introduction or summary: If I have not provided it, ask me to specify: paste
+- Methods/model: If I have not provided it, ask me to specify: paste
+- Main results: If I have not provided it, ask me to specify: paste
+- Audience: If I have not provided it, ask me to specify: job talk / field seminar / conference / PhD workshop / public policy / teaching
+- Talk length: If I have not provided it, ask me to specify: minutes
+- My main concern: If I have not provided it, ask me to specify: concern
 
 Create:
 1. one-sentence talk thesis;

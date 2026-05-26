@@ -13,16 +13,16 @@ Use these when deciding what to learn, which tool to use, and whether a new AI u
 Help me choose an AI tool for this economics/finance research task.
 
 Task:
-[describe task]
+If I have not provided this, ask me to provide: describe task
 
 Constraints:
-- Data sensitivity: [public/licensed/restricted/private]
-- Files involved: [PDF/code/data/LaTeX/slides]
-- Need code execution? [yes/no]
-- Need web search? [yes/no]
-- Need GitHub/file editing? [yes/no]
-- Budget or subscription constraints: [constraints]
-- My technical level: [beginner/intermediate/advanced]
+- Data sensitivity: If I have not provided it, ask me to specify: public/licensed/restricted/private
+- Files involved: If I have not provided it, ask me to specify: PDF/code/data/LaTeX/slides
+- Need code execution? if not provided, ask me to specify: yes/no
+- Need web search? if not provided, ask me to specify: yes/no
+- Need GitHub/file editing? if not provided, ask me to specify: yes/no
+- Budget or subscription constraints: If I have not provided it, ask me to specify: constraints
+- My technical level: If I have not provided it, ask me to specify: beginner/intermediate/advanced
 
 Compare only tools you can evaluate for this task. Use dated claims.
 
@@ -47,16 +47,16 @@ Rules:
 Design a low-noise AI information diet for an economics/finance scholar.
 
 My goals:
-[goals]
+If I have not provided this, ask me to provide: goals
 
 Fields:
-[fields]
+If I have not provided this, ask me to provide: fields
 
 Tools I use:
-[tools]
+If I have not provided this, ask me to provide: tools
 
 Time budget per week:
-[minutes]
+If I have not provided this, ask me to provide: minutes
 
 Create:
 1. Official docs to follow.
@@ -77,14 +77,14 @@ Follow builders and official docs. Extract workflows, not opinions.
 Help me improve one of my AI research skills.
 
 Current skill:
-[paste skill]
+If I have not provided this, ask me to provide: paste skill
 
 Evidence from use:
-- What worked: [notes]
-- What failed: [notes]
-- Repeated edits I made manually: [notes]
-- Missing inputs: [notes]
-- Bad outputs: [notes]
+- What worked: If I have not provided it, ask me to specify: notes
+- What failed: If I have not provided it, ask me to specify: notes
+- Repeated edits I made manually: If I have not provided it, ask me to specify: notes
+- Missing inputs: If I have not provided it, ask me to specify: notes
+- Bad outputs: If I have not provided it, ask me to specify: notes
 
 Improve the skill by:
 1. Clarifying trigger/use case.
@@ -107,7 +107,7 @@ Return:
 Evaluate this AI advice for economics/finance researchers.
 
 Advice/source:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Check:
 1. Is it for research, coding, business, marketing, or general productivity?
@@ -137,19 +137,19 @@ Goal:
 Build a small resource database for my AI research workflow.
 
 My field:
-[economics/finance/subfield]
+If I have not provided this, ask me to provide: economics/finance/subfield
 
 My current AI tools:
-[ChatGPT/Claude/Codex/Claude Code/Cursor/VS Code/Zotero/GitHub/other]
+If I have not provided this, ask me to provide: ChatGPT/Claude/Codex/Claude Code/Cursor/VS Code/Zotero/GitHub/other
 
 My skill level:
-[beginner/intermediate/advanced]
+If I have not provided this, ask me to provide: beginner/intermediate/advanced
 
 My weekly time budget:
-[minutes]
+If I have not provided this, ask me to provide: minutes
 
 Resource candidates:
-[paste links, names, or descriptions]
+If I have not provided this, ask me to provide: paste links, names, or descriptions
 
 Create a resource database with these fields:
 1. Name
@@ -196,17 +196,17 @@ Use this when you need more tools, examples, papers, datasets, or skills for a s
 Act as a resource scout for economics and finance research workflows.
 
 Task I need help with:
-[example: Stata event-study code / finance text-as-data / Python panel data / R DiD / literature map / paper review / presentation slides]
+If I have not provided this, ask me to provide: example: Stata event-study code / finance text-as-data / Python panel data / R DiD / literature map / paper review / presentation slides
 
 My field/subfield:
-[field]
+If I have not provided this, ask me to provide: field
 
 My constraints:
-- Data sensitivity: [public/licensed/restricted/private/unknown]
-- Software: [Stata/R/Python/LaTeX/GitHub/Zotero/other]
-- Skill level: [beginner/intermediate/advanced]
-- Time budget: [minutes/hours]
-- Need: [tutorial/tool/skill/code example/dataset/reference/official docs]
+- Data sensitivity: If I have not provided it, ask me to specify: public/licensed/restricted/private/unknown
+- Software: If I have not provided it, ask me to specify: Stata/R/Python/LaTeX/GitHub/Zotero/other
+- Skill level: If I have not provided it, ask me to specify: beginner/intermediate/advanced
+- Time budget: If I have not provided it, ask me to specify: minutes/hours
+- Need: If I have not provided it, ask me to specify: tutorial/tool/skill/code example/dataset/reference/official docs
 
 Search and evaluate resources using this standard:
 1. direct relevance to economics/finance research;

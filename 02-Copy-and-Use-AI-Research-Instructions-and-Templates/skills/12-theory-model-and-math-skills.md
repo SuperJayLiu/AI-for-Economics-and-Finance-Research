@@ -27,14 +27,14 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 Act as a demanding but constructive discussant for this economics/finance theory model.
 
 Model draft:
-[paste model/theorem/proof/appendix]
+If I have not provided this, ask me to provide: paste model/theorem/proof/appendix
 
 Context:
-- Field: [field]
-- Research question: [question]
-- Intended mechanism: [mechanism]
-- Desired contribution: [contribution]
-- Target audience: [seminar/journal/PhD proposal/etc.]
+- Field: If I have not provided it, ask me to specify: field
+- Research question: If I have not provided it, ask me to specify: question
+- Intended mechanism: If I have not provided it, ask me to specify: mechanism
+- Desired contribution: If I have not provided it, ask me to specify: contribution
+- Target audience: If I have not provided it, ask me to specify: seminar/journal/PhD proposal/etc.
 
 Tasks:
 1. Reconstruct the model faithfully:
@@ -74,7 +74,7 @@ Rules:
 Audit this theorem, proposition, lemma, or proof.
 
 Text:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Check:
 1. Are all objects defined?
@@ -99,7 +99,7 @@ Return:
 Audit the assumptions in this economics/finance model.
 
 Model:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 For each important assumption, explain:
 - what it does in the model;
@@ -122,10 +122,10 @@ Return:
 Extract empirical implications from this theory model.
 
 Model summary:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Field:
-[asset pricing/corporate finance/macro/labor/IO/etc.]
+If I have not provided this, ask me to provide: asset pricing/corporate finance/macro/labor/IO/etc.
 
 Tasks:
 1. Identify the model's core mechanism.

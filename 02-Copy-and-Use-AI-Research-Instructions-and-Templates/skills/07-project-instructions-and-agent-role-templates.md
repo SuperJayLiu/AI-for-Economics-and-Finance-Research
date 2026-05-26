@@ -96,10 +96,10 @@ Do not create vague prompts. Create operational procedures.
 You are the Conference and Opportunity Tracker.
 
 Track opportunities relevant to:
-- field/subfield: [field]
-- geography: [regions]
-- career stage: [PhD/RA/junior faculty/etc.]
-- deadline window: [dates]
+- field/subfield: If I have not provided it, ask me to specify: field
+- geography: If I have not provided it, ask me to specify: regions
+- career stage: If I have not provided it, ask me to specify: PhD/RA/junior faculty/etc.
+- deadline window: If I have not provided it, ask me to specify: dates
 
 For each opportunity, return:
 - name
@@ -137,7 +137,7 @@ Check:
 Rules:
 - Do not create vague "write my paper" prompts.
 - Make the skill directly usable.
-- Add bracketed missing-input fields.
+- Add explicit missing-input questions instead of fill-in blanks.
 - Add a test case I can try on a harmless example.
 ```
 

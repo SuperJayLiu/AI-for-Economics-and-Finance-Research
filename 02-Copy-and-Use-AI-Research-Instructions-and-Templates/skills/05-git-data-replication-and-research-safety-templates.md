@@ -157,17 +157,17 @@ After any accepted AI-assisted change, suggest an AI-USE-LOG entry.
 Before using AI on this task, help me check the policy risk.
 
 Task:
-[describe]
+If I have not provided this, ask me to provide: describe
 
 Materials:
-[public paper / coauthor draft / referee report / restricted data / licensed data / student data / code / public data]
+If I have not provided this, ask me to provide: public paper / coauthor draft / referee report / restricted data / licensed data / student data / code / public data
 
 Policies I must consider:
-- university or employer policy: [known/unknown]
-- journal or conference policy: [known/unknown]
-- data-provider license: [known/unknown]
-- funder or IRB/research ethics rule: [known/unknown]
-- coauthor agreement: [known/unknown]
+- university or employer policy: If I have not provided it, ask me to specify: known/unknown
+- journal or conference policy: If I have not provided it, ask me to specify: known/unknown
+- data-provider license: If I have not provided it, ask me to specify: known/unknown
+- funder or IRB/research ethics rule: If I have not provided it, ask me to specify: known/unknown
+- coauthor agreement: If I have not provided it, ask me to specify: known/unknown
 
 Return:
 1. likely risk level;
@@ -225,11 +225,11 @@ Team members:
 ## Human review responsibilities
 | Area | Human owner | What they must verify |
 | --- | --- | --- |
-| data access and licenses | [name] | upload/sharing permissions |
-| code and pipelines | [name] | scripts run, toy tests pass, outputs match design |
-| empirical design | [name] | sample, timing, variables, inference, identification |
-| paper text | [name] | claims, citations, numbers, notation, hedging |
-| slides/public communication | [name] | no overclaiming or accidental disclosure |
+| data access and licenses | named human owner | upload/sharing permissions |
+| code and pipelines | named human owner | scripts run, toy tests pass, outputs match design |
+| empirical design | named human owner | sample, timing, variables, inference, identification |
+| paper text | named human owner | claims, citations, numbers, notation, hedging |
+| slides/public communication | named human owner | no overclaiming or accidental disclosure |
 
 ## Disclosure and policy
 - Check university, employer, funder, journal, conference, data-provider, and coauthor rules before submission or public release.
@@ -244,19 +244,19 @@ Team members:
 You are helping a multi-author economics/finance research project.
 
 Task:
-[describe task]
+If I have not provided this, ask me to provide: describe task
 
 Human task owner:
-[name]
+If I have not provided this, ask me to provide: name
 
 Allowed files:
-[list]
+If I have not provided this, ask me to provide: list
 
 Forbidden files:
-[list, including data/raw, data/restricted, data/private if relevant]
+If I have not provided this, ask me to provide: list, including data/raw, data/restricted, data/private if relevant
 
 Data and confidentiality status:
-[public/licensed/restricted/private/confidential/unknown]
+If I have not provided this, ask me to provide: public/licensed/restricted/private/confidential/unknown
 
 Before editing:
 1. Ask clarifying questions if ownership, consent, allowed files, forbidden files, data sensitivity, validation commands, or expected output is unclear.
@@ -288,7 +288,7 @@ After approved work:
 
 | Date | Tool/model/version | Task | Input materials | Files touched | Output accepted | Human checks | Remaining uncertainty | Disclosure needed? | Commit |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| YYYY-MM-DD | [tool/model/version if known] | [task] | [public/private/licensed/restricted?] | [files] | [what was used] | [checks] | [uncertainty] | [yes/no/check policy] | [hash] |
+| YYYY-MM-DD | tool/model/version if known | task | public/private/licensed/restricted? | files | what was used | checks | uncertainty | yes/no/check policy | commit hash |
 ```
 
 For a fuller reproducibility packet or disclosure paragraph, use [Verification, Reproducibility, and Disclosure Skills](17-verification-reproducibility-and-disclosure-skills.md).
@@ -299,9 +299,9 @@ For a fuller reproducibility packet or disclosure paragraph, use [Verification, 
 Analyze this replication package as a research assistant.
 
 Inputs:
-- Package folder: [path or file list]
-- Paper: [title/link/PDF]
-- Target table/figure: [if any]
+- Package folder: If I have not provided it, ask me to specify: path or file list
+- Paper: If I have not provided it, ask me to specify: title/link/PDF
+- Target table/figure: If I have not provided it, ask me to specify: if any
 
 Tasks:
 1. Identify the main entry scripts.

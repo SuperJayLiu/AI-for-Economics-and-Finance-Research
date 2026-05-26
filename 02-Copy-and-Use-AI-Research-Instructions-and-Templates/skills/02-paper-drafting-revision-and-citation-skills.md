@@ -16,14 +16,14 @@ These are for writing with guardrails. They should improve structure and clarity
 Act as a top-field economics/finance paper editor. Build the spine of my introduction without writing final prose yet.
 
 Inputs:
-- Field: [economics/finance subfield]
-- Research question: [question]
-- Setting: [setting]
-- Data: [data]
-- Identification/model: [design or model]
-- Main results: [verified results only]
-- Contribution claim: [current claim]
-- Target audience/journal: [audience]
+- Field: If I have not provided it, ask me to specify: economics/finance subfield
+- Research question: If I have not provided it, ask me to specify: question
+- Setting: If I have not provided it, ask me to specify: setting
+- Data: If I have not provided it, ask me to specify: data
+- Identification/model: If I have not provided it, ask me to specify: design or model
+- Main results: If I have not provided it, ask me to specify: verified results only
+- Contribution claim: If I have not provided it, ask me to specify: current claim
+- Target audience/journal: If I have not provided it, ask me to specify: audience
 
 Produce:
 1. Motivation: why a serious scholar should care.
@@ -49,12 +49,12 @@ Rules:
 Revise the following academic prose for clarity, precision, and flow while preserving meaning.
 
 Text:
-[paste text]
+If I have not provided this, ask me to provide: paste text
 
 Context:
-- Field: [field]
-- Section: [intro/literature/methods/results/discussion]
-- Target audience: [journal/seminar/policy]
+- Field: If I have not provided it, ask me to specify: field
+- Section: If I have not provided it, ask me to specify: intro/literature/methods/results/discussion
+- Target audience: If I have not provided it, ask me to specify: journal/seminar/policy
 
 Rules:
 1. Preserve all citations, numbers, notation, hypotheses, and hedging.
@@ -75,10 +75,10 @@ Return:
 Create a citation support bank for the claims below using only sources I provide.
 
 Claims:
-[paste claims]
+If I have not provided this, ask me to provide: paste claims
 
 Sources:
-[paste BibTeX, notes, PDFs, or source list]
+If I have not provided this, ask me to provide: paste BibTeX, notes, PDFs, or source list
 
 For each claim, produce a table:
 - claim
@@ -100,10 +100,10 @@ Rules:
 Help me plan a response to referee/editor comments.
 
 Inputs:
-- Paper summary: [summary]
-- Decision letter: [paste]
-- Referee comments: [paste]
-- Constraints: [time/data/code limits]
+- Paper summary: If I have not provided it, ask me to specify: summary
+- Decision letter: If I have not provided it, ask me to specify: paste
+- Referee comments: If I have not provided it, ask me to specify: paste
+- Constraints: If I have not provided it, ask me to specify: time/data/code limits
 
 Produce:
 1. Comment taxonomy: fatal, major, minor, misunderstanding, optional.
@@ -127,15 +127,15 @@ Rules:
 Diagnose this economics/finance paper introduction before rewriting it.
 
 Introduction:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Project facts:
-- Field: [field]
-- Research question: [question]
-- Setting/data/model: [setting/data/model]
-- Identification or mechanism: [design/mechanism]
-- Main result: [verified result]
-- Target audience/journal: [target]
+- Field: If I have not provided it, ask me to specify: field
+- Research question: If I have not provided it, ask me to specify: question
+- Setting/data/model: If I have not provided it, ask me to specify: setting/data/model
+- Identification or mechanism: If I have not provided it, ask me to specify: design/mechanism
+- Main result: If I have not provided it, ask me to specify: verified result
+- Target audience/journal: If I have not provided it, ask me to specify: target
 
 Check the introduction funnel:
 1. broad stakes
@@ -159,7 +159,7 @@ Return:
 Rules:
 - Do not invent results, citations, data, or mechanisms.
 - Do not turn the introduction into a literature review.
-- Use bracketed fields like [MAIN ESTIMATE] or [CLOSEST PAPER] when information is missing.
+- When information is missing, write plain labels such as MAIN ESTIMATE or CLOSEST PAPER and list them under "Questions for you" instead of inventing details.
 ```
 
 ## Skill 6: Finance Journal Prose Revision
@@ -168,12 +168,12 @@ Rules:
 Revise this finance manuscript prose for a serious journal audience while preserving meaning.
 
 Text:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Context:
-- Section: [introduction/results/discussion/literature/etc.]
-- Design/evidence: [brief]
-- Target journal/audience: [target]
+- Section: If I have not provided it, ask me to specify: introduction/results/discussion/literature/etc.
+- Design/evidence: If I have not provided it, ask me to specify: brief
+- Target journal/audience: If I have not provided it, ask me to specify: target
 
 Rules:
 1. Preserve all citations, numbers, notation, variables, sample definitions, and hedging.

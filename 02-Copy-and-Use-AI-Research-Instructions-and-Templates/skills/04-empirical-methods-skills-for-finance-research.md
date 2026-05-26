@@ -50,19 +50,19 @@ Reject because return predictability does not by itself establish a causal mecha
 Draft an empirical methods section for a finance research paper.
 
 Inputs:
-- Field: [asset pricing/corporate finance/banking/household finance/etc.]
-- Research question: [question]
-- Data sources: [CRSP/Compustat/WRDS/TRACE/Dealscan/13F/EDGAR/proprietary/etc.]
-- Unit of observation: [firm-month/stock-day/loan-quarter/fund-month/etc.]
-- Sample period and filters: [period, exchanges, industries, screens]
-- Key variables: [outcomes, predictors, treatment, controls]
-- Empirical design: [panel regression/event study/portfolio sorts/Fama-MacBeth/DiD/IV/RD/structural/etc.]
-- Main equation or portfolio construction: [details]
-- Return measurement, if relevant: [raw/excess/abnormal/risk-adjusted]
-- Risk adjustment, if relevant: [CAPM/FF3/FF5/q-factor/characteristic controls/etc.]
-- Inference: [cluster, Newey-West, double clustering, bootstrap]
-- Data merge and timing rules: [CRSP/Compustat/CCM link rules, reporting lag, return window, availability timing]
-- Finance-specific concerns: [look-ahead, survivorship, delisting returns, microstructure, transaction costs, multiple testing]
+- Field: If I have not provided it, ask me to specify: asset pricing/corporate finance/banking/household finance/etc.
+- Research question: If I have not provided it, ask me to specify: question
+- Data sources: If I have not provided it, ask me to specify: CRSP/Compustat/WRDS/TRACE/Dealscan/13F/EDGAR/proprietary/etc.
+- Unit of observation: If I have not provided it, ask me to specify: firm-month/stock-day/loan-quarter/fund-month/etc.
+- Sample period and filters: If I have not provided it, ask me to specify: period, exchanges, industries, screens
+- Key variables: If I have not provided it, ask me to specify: outcomes, predictors, treatment, controls
+- Empirical design: If I have not provided it, ask me to specify: panel regression/event study/portfolio sorts/Fama-MacBeth/DiD/IV/RD/structural/etc.
+- Main equation or portfolio construction: If I have not provided it, ask me to specify: details
+- Return measurement, if relevant: If I have not provided it, ask me to specify: raw/excess/abnormal/risk-adjusted
+- Risk adjustment, if relevant: If I have not provided it, ask me to specify: CAPM/FF3/FF5/q-factor/characteristic controls/etc.
+- Inference: If I have not provided it, ask me to specify: cluster, Newey-West, double clustering, bootstrap
+- Data merge and timing rules: If I have not provided it, ask me to specify: CRSP/Compustat/CCM link rules, reporting lag, return window, availability timing
+- Finance-specific concerns: If I have not provided it, ask me to specify: look-ahead, survivorship, delisting returns, microstructure, transaction costs, multiple testing
 
 Write:
 1. Data construction and sample screens.
@@ -84,7 +84,7 @@ Rules:
 - Do not interpret a successful backtest as evidence of economic mechanism.
 - Distinguish statistical significance from economic magnitude.
 - If the design is associational, say so.
-- If information is missing, write [NEEDS AUTHOR INPUT] rather than filling it in.
+- If information is missing, write NEEDS AUTHOR INPUT rather than filling it in.
 
 Output format:
 - Draft methods section.
@@ -99,14 +99,14 @@ Output format:
 Audit this finance empirical methods section.
 
 Text:
-[paste methods section]
+If I have not provided this, ask me to provide: paste methods section
 
 Known project facts:
-- Field: [field]
-- Data: [data]
-- Unit/time: [unit and frequency]
-- Design: [design]
-- Main variables: [variables]
+- Field: If I have not provided it, ask me to specify: field
+- Data: If I have not provided it, ask me to specify: data
+- Unit/time: If I have not provided it, ask me to specify: unit and frequency
+- Design: If I have not provided it, ask me to specify: design
+- Main variables: If I have not provided it, ask me to specify: variables
 
 Check:
 1. Are sample screens and data sources clear enough to replicate?
@@ -137,10 +137,10 @@ Return:
 Review this results paragraph for finance overclaiming.
 
 Paragraph:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Design and data:
-[describe]
+If I have not provided this, ask me to provide: describe
 
 Check for:
 - correlation described as causality
@@ -164,15 +164,15 @@ Return:
 Audit this asset-pricing or return-predictability design for factor-mining and backtest risk.
 
 Project facts:
-- Predictor/signal: [signal]
-- Return horizon: [horizon]
-- Sample period: [period]
-- Universe: [stocks/bonds/funds/options/etc.]
-- Portfolio construction or regression: [method]
-- Benchmark/risk model: [CAPM/FF3/FF5/q-factor/characteristics/etc.]
-- Transaction cost or liquidity treatment: [details]
-- Number of signals/specifications tried: [if known]
-- Out-of-sample or validation plan: [plan]
+- Predictor/signal: If I have not provided it, ask me to specify: signal
+- Return horizon: If I have not provided it, ask me to specify: horizon
+- Sample period: If I have not provided it, ask me to specify: period
+- Universe: If I have not provided it, ask me to specify: stocks/bonds/funds/options/etc.
+- Portfolio construction or regression: If I have not provided it, ask me to specify: method
+- Benchmark/risk model: If I have not provided it, ask me to specify: CAPM/FF3/FF5/q-factor/characteristics/etc.
+- Transaction cost or liquidity treatment: If I have not provided it, ask me to specify: details
+- Number of signals/specifications tried: If I have not provided it, ask me to specify: if known
+- Out-of-sample or validation plan: If I have not provided it, ask me to specify: plan
 
 Check:
 1. look-ahead bias
@@ -200,15 +200,15 @@ Return:
 Audit this corporate finance, banking, household finance, or accounting-style panel design.
 
 Project facts:
-- Research question: [question]
-- Unit of observation: [firm-year/bank-quarter/loan-month/etc.]
-- Data sources: [Compustat/CRSP/Dealscan/Call Reports/13F/EDGAR/proprietary/etc.]
-- Treatment/exposure: [treatment]
-- Outcome: [outcome]
-- Controls and fixed effects: [controls/FE]
-- Timing: [when variables are measured]
-- Inference: [clustering]
-- Merge/link rules: [identifier rules, link-date rules, reporting lag]
+- Research question: If I have not provided it, ask me to specify: question
+- Unit of observation: If I have not provided it, ask me to specify: firm-year/bank-quarter/loan-month/etc.
+- Data sources: If I have not provided it, ask me to specify: Compustat/CRSP/Dealscan/Call Reports/13F/EDGAR/proprietary/etc.
+- Treatment/exposure: If I have not provided it, ask me to specify: treatment
+- Outcome: If I have not provided it, ask me to specify: outcome
+- Controls and fixed effects: If I have not provided it, ask me to specify: controls/FE
+- Timing: If I have not provided it, ask me to specify: when variables are measured
+- Inference: If I have not provided it, ask me to specify: clustering
+- Merge/link rules: If I have not provided it, ask me to specify: identifier rules, link-date rules, reporting lag
 
 Check:
 1. whether treatment timing precedes outcomes;
@@ -237,17 +237,17 @@ Use before trusting an event-study graph or writing event-study methods.
 Audit this finance event-study design.
 
 Project facts:
-- Event: [event]
-- Event date definition: [date rule]
-- Unit: [firm/security/fund/bank/etc.]
-- Return or outcome: [outcome]
-- Event window: [window]
-- Estimation window: [window]
-- Benchmark model: [market/CAPM/FF/q-factor/matched firms/etc.]
-- Sample filters: [filters]
-- Clustering/inference: [method]
-- Overlapping events: [yes/no/unknown]
-- Long-horizon or volatile-period design: [yes/no]
+- Event: If I have not provided it, ask me to specify: event
+- Event date definition: If I have not provided it, ask me to specify: date rule
+- Unit: If I have not provided it, ask me to specify: firm/security/fund/bank/etc.
+- Return or outcome: If I have not provided it, ask me to specify: outcome
+- Event window: If I have not provided it, ask me to specify: window
+- Estimation window: If I have not provided it, ask me to specify: window
+- Benchmark model: If I have not provided it, ask me to specify: market/CAPM/FF/q-factor/matched firms/etc.
+- Sample filters: If I have not provided it, ask me to specify: filters
+- Clustering/inference: If I have not provided it, ask me to specify: method
+- Overlapping events: If I have not provided it, ask me to specify: yes/no/unknown
+- Long-horizon or volatile-period design: If I have not provided it, ask me to specify: yes/no
 
 Check:
 1. whether the event date is clearly defined and not chosen using outcomes;

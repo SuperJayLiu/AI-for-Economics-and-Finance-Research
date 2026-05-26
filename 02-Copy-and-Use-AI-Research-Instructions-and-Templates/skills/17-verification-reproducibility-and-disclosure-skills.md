@@ -49,16 +49,16 @@ Bad output to reject:
 Select the right verification method for this AI-assisted research output.
 
 Output to verify:
-[paste or describe]
+If I have not provided this, ask me to provide: paste or describe
 
 Object type:
-[citation/literature claim/code/data merge/table/figure/coefficient/equation/proof/slide/policy claim/LLM measure/other]
+If I have not provided this, ask me to provide: citation/literature claim/code/data merge/table/figure/coefficient/equation/proof/slide/policy claim/LLM measure/other
 
 Project context:
-- Field: [economics/finance subfield]
-- Stakes: [notes/draft/submission/public talk/published paper]
-- Data sensitivity: [public/licensed/restricted/confidential]
-- What AI did: [summarized/wrote/edited/coded/measured/planned]
+- Field: If I have not provided it, ask me to specify: economics/finance subfield
+- Stakes: If I have not provided it, ask me to specify: notes/draft/submission/public talk/published paper
+- Data sensitivity: If I have not provided it, ask me to specify: public/licensed/restricted/confidential
+- What AI did: If I have not provided it, ask me to specify: summarized/wrote/edited/coded/measured/planned
 
 Return:
 1. verification method;
@@ -80,13 +80,13 @@ Rules:
 Check this citation or literature claim.
 
 Claim:
-[paste sentence]
+If I have not provided this, ask me to provide: paste sentence
 
 Citation:
-[citation, DOI, URL, BibTeX, or paper title]
+If I have not provided this, ask me to provide: citation, DOI, URL, BibTeX, or paper title
 
 Available evidence:
-[abstract/notes/PDF excerpt/link]
+If I have not provided this, ask me to provide: abstract/notes/PDF excerpt/link
 
 Verify:
 1. Does the source exist?
@@ -113,16 +113,16 @@ Rules:
 Verify this AI-written research code using a toy input with a known answer.
 
 Code:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Task:
-[merge/variable construction/regression/table/figure/etc.]
+If I have not provided this, ask me to provide: merge/variable construction/regression/table/figure/etc.
 
 Expected behavior:
-[describe]
+If I have not provided this, ask me to provide: describe
 
 Software:
-[Stata/R/Python/Matlab/SAS]
+If I have not provided this, ask me to provide: Stata/R/Python/Matlab/SAS
 
 Create:
 1. a minimal toy dataset;
@@ -150,13 +150,13 @@ Rules:
 Check whether this coefficient interpretation is numerically and economically plausible.
 
 Result:
-- Coefficient: [value]
-- Standard error or CI: [value]
-- Outcome unit: [unit]
-- Treatment/regressor unit: [unit]
-- Variable transformations: [logs/percent/z-score/standardized/etc.]
-- Sample mean or baseline: [value]
-- Claimed interpretation: [paste]
+- Coefficient: If I have not provided it, ask me to specify: value
+- Standard error or CI: If I have not provided it, ask me to specify: value
+- Outcome unit: If I have not provided it, ask me to specify: unit
+- Treatment/regressor unit: If I have not provided it, ask me to specify: unit
+- Variable transformations: If I have not provided it, ask me to specify: logs/percent/z-score/standardized/etc.
+- Sample mean or baseline: If I have not provided it, ask me to specify: value
+- Claimed interpretation: If I have not provided it, ask me to specify: paste
 
 Verify:
 1. correct unit interpretation;
@@ -180,13 +180,13 @@ Return:
 Verify this equation, proof step, or model claim.
 
 Text/equation/proof:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Model context:
-- Objective or proposition: [goal]
-- Variables and parameters: [definitions]
-- Assumptions: [assumptions]
-- Equilibrium or solution concept: [if relevant]
+- Objective or proposition: If I have not provided it, ask me to specify: goal
+- Variables and parameters: If I have not provided it, ask me to specify: definitions
+- Assumptions: If I have not provided it, ask me to specify: assumptions
+- Equilibrium or solution concept: If I have not provided it, ask me to specify: if relevant
 
 Check:
 1. notation consistency;
@@ -215,14 +215,14 @@ Rules:
 Create an AI-use reproducibility packet and disclosure draft for this project.
 
 Project:
-- Paper/project title: [title]
-- AI tools used: [ChatGPT/Claude/Codex/Claude Code/Copilot/etc.]
-- Tasks AI helped with: [writing/code/lit review/text measurement/slides/etc.]
-- Materials given to AI: [public/private/licensed/restricted?]
-- Files touched: [files]
-- Checks run: [checks]
-- Human edits and decisions: [summary]
-- Journal/conference/university policy: [known/unknown]
+- Paper/project title: If I have not provided it, ask me to specify: title
+- AI tools used: If I have not provided it, ask me to specify: ChatGPT/Claude/Codex/Claude Code/Copilot/etc.
+- Tasks AI helped with: If I have not provided it, ask me to specify: writing/code/lit review/text measurement/slides/etc.
+- Materials given to AI: If I have not provided it, ask me to specify: public/private/licensed/restricted?
+- Files touched: If I have not provided it, ask me to specify: files
+- Checks run: If I have not provided it, ask me to specify: checks
+- Human edits and decisions: If I have not provided it, ask me to specify: summary
+- Journal/conference/university policy: If I have not provided it, ask me to specify: known/unknown
 
 Produce:
 1. AI-use log entry;
@@ -242,7 +242,7 @@ Disclosure paragraph should state only true facts:
 Rules:
 - Do not over-disclose private details.
 - Do not claim compliance with a policy unless supplied.
-- If policy is unknown, write [CHECK POLICY].
+- If policy is unknown, write CHECK POLICY.
 ```
 
 ## Minimal AI-Use Log Row

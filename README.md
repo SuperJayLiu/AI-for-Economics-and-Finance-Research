@@ -6,7 +6,7 @@ A practical, GitHub-native handbook and resource library for using AI responsibl
 > This repository is built around a simple workflow: read the handbook, copy a skill, use it on a real research task, verify the output, and record what changed.
 
 > [!TIP]
-> To use this repository as one compact AI instruction, open or import [`SKILL.md`](SKILL.md). It routes an AI assistant to the right handbook section, copy-ready skill, setup workflow, dataset note, Chinese page, or teaching material.
+> To use this repository as one AI skill for a real research project, open [`skill-pack/`](skill-pack/README.md). It gives step-by-step guidance for downloading the skill pack, adding it to ChatGPT/Claude/Codex-style tools, and using the handbook knowledge inside one research workspace.
 
 ## Choose Your Language / 选择语言
 
@@ -33,7 +33,20 @@ The main page keeps only the primary reading and working folders visible. Suppor
 | Draft or audit methods | [Economics Methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md) or [Finance Methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/04-empirical-methods-skills-for-finance-research.md) | methods prose or a design audit that states what must be verified |
 | Build slides or practice a talk | [06 Teach, Present, Or Share](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | a talk flow, slide path, practice prompt, or teaching exercise |
 | Find datasets or resources | [05 Check Sources, Datasets, And Docs](05-Check-Builders-Official-Docs-and-Resources/README.md) | source links, dataset access notes, and AI-use cautions |
-| Use the whole repo as an AI assistant instruction | [SKILL.md](SKILL.md) | one compact router file that tells an AI where to look and how to verify |
+| Use the whole repo as one AI research skill | [Skill Pack](skill-pack/README.md) | one downloadable skill folder with project setup steps and task references |
+
+### Use This Repository As One AI Skill
+
+If you want to use the whole repository in your own research workflow, start with the skill pack:
+
+1. Open [skill-pack](skill-pack/README.md).
+2. Download the repository as a ZIP or clone it with Git.
+3. Open `skill-pack/ai-econ-finance-research/SKILL.md`.
+4. Copy it into ChatGPT Project instructions, Claude Project instructions, Codex/Claude Code skills, or another AI tool's project rules.
+5. Make the `references/` folder available if your tool supports file upload. If not, paste the reference file the AI asks for.
+6. Start with: `Use the AI Econ Finance Research skill. First ask what I want to do.`
+
+For serious projects, use the rule: one paper = one AI project + one Git repo + one AI-use log.
 
 ### Choose By Role
 

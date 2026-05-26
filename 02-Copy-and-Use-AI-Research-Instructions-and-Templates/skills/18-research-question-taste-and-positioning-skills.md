@@ -28,16 +28,16 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 Act as a skeptical economics/finance research advisor.
 
 Broad topic:
-[topic]
+If I have not provided this, ask me to provide: topic
 
 Current idea:
-[one paragraph]
+If I have not provided this, ask me to provide: one paragraph
 
 Possible setting/data:
-[setting/data]
+If I have not provided this, ask me to provide: setting/data
 
 Target audience:
-[field seminar/top field journal/PhD proposal/policy audience/etc.]
+If I have not provided this, ask me to provide: field seminar/top field journal/PhD proposal/policy audience/etc.
 
 Turn this topic into sharper research questions by identifying:
 1. a real economic or financial tension;
@@ -67,16 +67,16 @@ Rules:
 Help me sharpen this paper around competing mechanisms.
 
 Current question:
-[question]
+If I have not provided this, ask me to provide: question
 
 Setting:
-[setting]
+If I have not provided this, ask me to provide: setting
 
 Observed pattern or proposed result:
-[pattern/result]
+If I have not provided this, ask me to provide: pattern/result
 
 Candidate mechanisms:
-[list or say unknown]
+If I have not provided this, ask me to provide: list or say unknown
 
 Produce:
 1. at least two mechanisms that could explain the pattern;
@@ -104,13 +104,13 @@ Rules:
 Audit my contribution claim against the closest papers.
 
 My project:
-- Question: [question]
-- Setting/data: [setting/data]
-- Design/model: [design/model]
-- Main intended contribution: [claim]
+- Question: If I have not provided it, ask me to specify: question
+- Setting/data: If I have not provided it, ask me to specify: setting/data
+- Design/model: If I have not provided it, ask me to specify: design/model
+- Main intended contribution: If I have not provided it, ask me to specify: claim
 
 Closest papers I know:
-[paste citations/notes]
+If I have not provided this, ask me to provide: paste citations/notes
 
 Compare my project to the closest papers by:
 1. research question;
@@ -131,7 +131,7 @@ Return:
 Rules:
 - Do not say "no one has studied" unless the supplied sources prove it.
 - Treat papers as close if they share design/model/variation, not only if they share topic words.
-- Mark every unsupported claim as [VERIFY].
+- Mark every unsupported claim as VERIFY.
 ```
 
 ## Skill 4: The "So What?" Test
@@ -140,13 +140,13 @@ Rules:
 Apply a strict "so what?" test to this economics/finance project.
 
 Project summary:
-[summary]
+If I have not provided this, ask me to provide: summary
 
 Intended audience:
-[audience]
+If I have not provided this, ask me to provide: audience
 
 Main result or expected result:
-[result]
+If I have not provided this, ask me to provide: result
 
 Evaluate:
 1. Why should economists or finance scholars care?
@@ -171,16 +171,16 @@ Return:
 Decide whether I should use AI for this research task.
 
 Task:
-[task]
+If I have not provided this, ask me to provide: task
 
 Context:
-- Stakes: [notes/draft/submission/public output]
-- Confidentiality: [public/private/licensed/restricted]
-- Can I verify the output? [yes/no/how]
-- Estimated time to do manually: [time]
-- Estimated time to prompt/check: [time]
-- Risk if wrong: [low/medium/high]
-- Reuse potential: [one-off/repeated]
+- Stakes: If I have not provided it, ask me to specify: notes/draft/submission/public output
+- Confidentiality: If I have not provided it, ask me to specify: public/private/licensed/restricted
+- Can I verify the output? if not provided, ask me to specify: yes/no/how
+- Estimated time to do manually: If I have not provided it, ask me to specify: time
+- Estimated time to prompt/check: If I have not provided it, ask me to specify: time
+- Risk if wrong: If I have not provided it, ask me to specify: low/medium/high
+- Reuse potential: If I have not provided it, ask me to specify: one-off/repeated
 
 Evaluate:
 1. labor saved;

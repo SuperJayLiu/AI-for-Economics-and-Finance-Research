@@ -48,14 +48,14 @@ Reject because ticker/year matching can be wrong, ignores link validity, and may
 Act as an economics/finance research data-pipeline assistant.
 
 Project:
-- Research question: [question]
-- Data sources: [sources]
-- Software: [Stata/R/Python/SAS/MATLAB]
-- Raw files available: [list files, do not paste restricted data]
-- Unit of observation: [unit]
-- Time frequency: [daily/monthly/quarterly/annual/etc.]
-- Target outputs: [analysis-ready dataset/tables/figures]
-- Data restrictions: [public/licensed/restricted/confidential]
+- Research question: If I have not provided it, ask me to specify: question
+- Data sources: If I have not provided it, ask me to specify: sources
+- Software: If I have not provided it, ask me to specify: Stata/R/Python/SAS/MATLAB
+- Raw files available: If I have not provided it, ask me to specify: list files, do not paste restricted data
+- Unit of observation: If I have not provided it, ask me to specify: unit
+- Time frequency: If I have not provided it, ask me to specify: daily/monthly/quarterly/annual/etc.
+- Target outputs: If I have not provided it, ask me to specify: analysis-ready dataset/tables/figures
+- Data restrictions: If I have not provided it, ask me to specify: public/licensed/restricted/confidential
 
 Design a reproducible pipeline with these stages:
 1. raw data intake;
@@ -81,7 +81,7 @@ Rules:
 - Use relative paths.
 - Separate raw, derived, output, and logs.
 - Include a toy-data test before real-data execution.
-- If project facts are missing, mark [NEEDS AUTHOR INPUT].
+- If project facts are missing, mark NEEDS AUTHOR INPUT.
 
 Output:
 1. proposed folder structure;
@@ -101,16 +101,16 @@ Resource note: external WRDS-oriented agent toolkits show a useful pattern: sepa
 Act as a finance data-construction auditor.
 
 I need a merge plan for:
-- Data sources: [CRSP/Compustat/CCM/IBES/13F/TRACE/Dealscan/other]
-- Unit of observation: [firm-year/firm-quarter/stock-month/stock-day/etc.]
-- Sample period: [period]
-- Required identifiers: [permno/permco/gvkey/cusip/cik/ticker/isin/etc.]
-- Return frequency, if relevant: [daily/monthly]
-- Accounting timing rule: [fiscal year/month, reporting lag, public availability assumption]
-- Link table, if relevant: [CCM linktable rules known/unknown]
-- Outcome variables: [outcomes]
-- Predictor/treatment variables: [predictors]
-- Sample screens: [exchange/share code/industry/price filters/etc.]
+- Data sources: If I have not provided it, ask me to specify: CRSP/Compustat/CCM/IBES/13F/TRACE/Dealscan/other
+- Unit of observation: If I have not provided it, ask me to specify: firm-year/firm-quarter/stock-month/stock-day/etc.
+- Sample period: If I have not provided it, ask me to specify: period
+- Required identifiers: If I have not provided it, ask me to specify: permno/permco/gvkey/cusip/cik/ticker/isin/etc.
+- Return frequency, if relevant: If I have not provided it, ask me to specify: daily/monthly
+- Accounting timing rule: If I have not provided it, ask me to specify: fiscal year/month, reporting lag, public availability assumption
+- Link table, if relevant: If I have not provided it, ask me to specify: CCM linktable rules known/unknown
+- Outcome variables: If I have not provided it, ask me to specify: outcomes
+- Predictor/treatment variables: If I have not provided it, ask me to specify: predictors
+- Sample screens: If I have not provided it, ask me to specify: exchange/share code/industry/price filters/etc.
 
 Create a data merge plan that specifies:
 1. identifier priority and why;
@@ -126,7 +126,7 @@ Create a data merge plan that specifies:
 
 Return:
 - step-by-step merge algorithm;
-- code skeleton in [Stata/R/Python];
+- code skeleton in if not provided, ask me to specify: Stata/R/Python;
 - checks after each merge;
 - red flags that should stop the analysis;
 - exact assumptions I must verify in WRDS/data documentation.
@@ -145,12 +145,12 @@ Rules:
 Create a variable construction dictionary for this economics/finance project.
 
 Project facts:
-- Research question: [question]
-- Data sources: [sources]
-- Unit/time: [unit/time]
-- Variables to construct: [list]
-- Existing code or formulas: [paste or describe]
-- Intended table/figure use: [where each variable appears]
+- Research question: If I have not provided it, ask me to specify: question
+- Data sources: If I have not provided it, ask me to specify: sources
+- Unit/time: If I have not provided it, ask me to specify: unit/time
+- Variables to construct: If I have not provided it, ask me to specify: list
+- Existing code or formulas: If I have not provided it, ask me to specify: paste or describe
+- Intended table/figure use: If I have not provided it, ask me to specify: where each variable appears
 
 For each variable, produce:
 1. final variable name;
@@ -188,15 +188,15 @@ Use this for asset pricing, return predictability, fund performance, and cross-s
 Act as an asset-pricing implementation assistant.
 
 Research task:
-- Signal/predictor: [signal]
-- Returns: [raw/excess/abnormal], frequency [daily/monthly/etc.]
-- Universe: [stocks/funds/bonds/options/etc.]
-- Sample period: [period]
-- Sorting rule or regression design: [portfolio sorts/Fama-MacBeth/panel regression]
-- Controls or characteristics: [list]
-- Risk model or benchmark: [CAPM/FF3/FF5/q-factor/characteristics/etc.]
-- Transaction cost/liquidity treatment: [details]
-- Inference: [Newey-West/Fama-MacBeth SE/clustering/bootstrap/etc.]
+- Signal/predictor: If I have not provided it, ask me to specify: signal
+- Returns: If I have not provided it, ask me to specify whether returns are raw, excess, or abnormal, and whether the frequency is daily, monthly, or another interval.
+- Universe: If I have not provided it, ask me to specify: stocks/funds/bonds/options/etc.
+- Sample period: If I have not provided it, ask me to specify: period
+- Sorting rule or regression design: If I have not provided it, ask me to specify: portfolio sorts/Fama-MacBeth/panel regression
+- Controls or characteristics: If I have not provided it, ask me to specify: list
+- Risk model or benchmark: If I have not provided it, ask me to specify: CAPM/FF3/FF5/q-factor/characteristics/etc.
+- Transaction cost/liquidity treatment: If I have not provided it, ask me to specify: details
+- Inference: If I have not provided it, ask me to specify: Newey-West/Fama-MacBeth SE/clustering/bootstrap/etc.
 
 Create an implementation plan with:
 1. timing diagram: when signal is measured and when returns are realized;
@@ -212,7 +212,7 @@ Create an implementation plan with:
 
 Return:
 - pseudo-code;
-- code skeleton in [Stata/R/Python];
+- code skeleton in if not provided, ask me to specify: Stata/R/Python;
 - expected intermediate outputs;
 - table notes draft;
 - checks that would catch look-ahead bias.
@@ -230,12 +230,12 @@ Rules:
 Design a reproducible EDA/table/figure workflow for this paper.
 
 Inputs:
-- Research question: [question]
-- Analysis-ready dataset: [file or description]
-- Main variables: [variables]
-- Main tables/figures needed: [list]
-- Software: [Stata/R/Python/LaTeX]
-- Target output format: [CSV/LaTeX/HTML/PDF/PNG/SVG]
+- Research question: If I have not provided it, ask me to specify: question
+- Analysis-ready dataset: If I have not provided it, ask me to specify: file or description
+- Main variables: If I have not provided it, ask me to specify: variables
+- Main tables/figures needed: If I have not provided it, ask me to specify: list
+- Software: If I have not provided it, ask me to specify: Stata/R/Python/LaTeX
+- Target output format: If I have not provided it, ask me to specify: CSV/LaTeX/HTML/PDF/PNG/SVG
 
 Create:
 1. EDA checklist;
@@ -275,16 +275,16 @@ Use this before running AI-written code on real data.
 Create a toy-data test for this research code.
 
 Code or task:
-[paste code or describe task]
+If I have not provided this, ask me to provide: paste code or describe task
 
 Expected behavior:
-[what the code should do]
+If I have not provided this, ask me to provide: what the code should do
 
 Research context:
-- Unit/time: [unit/time]
-- Variables: [variables]
-- Method: [merge/variable construction/regression/event study/etc.]
-- Software: [Stata/R/Python]
+- Unit/time: If I have not provided it, ask me to specify: unit/time
+- Variables: If I have not provided it, ask me to specify: variables
+- Method: If I have not provided it, ask me to specify: merge/variable construction/regression/event study/etc.
+- Software: If I have not provided it, ask me to specify: Stata/R/Python
 
 Build a small toy dataset where the correct answer is known by inspection.
 

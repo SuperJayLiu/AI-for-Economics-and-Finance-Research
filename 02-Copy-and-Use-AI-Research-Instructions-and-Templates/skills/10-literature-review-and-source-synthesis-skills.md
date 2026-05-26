@@ -56,7 +56,7 @@ Sources I provide:
 Good AI output should:
 - separate earnings-call literature from asset-pricing predictability literature;
 - identify closest papers by data and measurement, not just topic;
-- mark every unsupported novelty claim as [VERIFY];
+- mark every unsupported novelty claim as VERIFY;
 - propose a paragraph structure, not a final claim of contribution.
 
 Bad AI output to reject:
@@ -70,15 +70,15 @@ Reject unless the AI identifies the exact search method and the closest verified
 Build a source-grounded literature review for an economics/finance research project.
 
 Research project:
-- Field/subfield: [field]
-- Research question: [question]
-- Intended contribution: [contribution]
-- Target audience: [PhD field paper / seminar / journal / proposal]
+- Field/subfield: If I have not provided it, ask me to specify: field
+- Research question: If I have not provided it, ask me to specify: question
+- Intended contribution: If I have not provided it, ask me to specify: contribution
+- Target audience: If I have not provided it, ask me to specify: PhD field paper / seminar / journal / proposal
 
 Sources I provide:
-- Papers/BibTeX/notes: [paste or upload]
-- Sources already read carefully: [list]
-- Sources only skimmed: [list]
+- Papers/BibTeX/notes: If I have not provided it, ask me to specify: paste or upload
+- Sources already read carefully: If I have not provided it, ask me to specify: list
+- Sources only skimmed: If I have not provided it, ask me to specify: list
 
 Tasks:
 1. Group the supplied literature by mechanism, method, setting, and data.
@@ -94,7 +94,7 @@ Rules:
 - Never invent author names, titles, journals, years, results, or citations.
 - Do not write "little is known" unless the supplied evidence supports that claim.
 - Distinguish direct evidence from interpretation.
-- Mark any claim needing citation as [CITE NEEDED].
+- Mark any claim needing citation as CITE NEEDED.
 
 Return:
 1. literature map
@@ -140,7 +140,7 @@ Rules:
 Create a deep reading card for this economics/finance paper.
 
 Paper:
-[paste abstract, notes, or paper text]
+If I have not provided this, ask me to provide: paste abstract, notes, or paper text
 
 Extract:
 1. research question
@@ -170,7 +170,7 @@ Rules:
 Compare these papers as a synthesized literature review, not as a sequence of summaries.
 
 Papers/notes:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Comparison dimensions:
 - question
@@ -199,10 +199,10 @@ Rules:
 Audit my literature positioning for fake novelty risk.
 
 My claim:
-[paste contribution/literature paragraph]
+If I have not provided this, ask me to provide: paste contribution/literature paragraph
 
 Known related papers:
-[paste sources]
+If I have not provided this, ask me to provide: paste sources
 
 Check:
 1. Does the claim sound broader than the evidence?
@@ -224,10 +224,10 @@ Return:
 Build a source support bank for my literature review.
 
 Claims:
-[paste claims]
+If I have not provided this, ask me to provide: paste claims
 
 Supplied sources:
-[paste notes/BibTeX/PDF summaries]
+If I have not provided this, ask me to provide: paste notes/BibTeX/PDF summaries
 
 For each claim, return:
 - claim
@@ -252,14 +252,14 @@ Use this when you have a messy collection of notes and need a readable related-w
 Create a literature review spine for my economics/finance paper.
 
 Project:
-- Research question: [question]
-- Proposed contribution: [contribution]
-- Empirical design or model: [design/model]
-- Setting/data: [setting/data]
-- Target audience: [seminar/journal/proposal]
+- Research question: If I have not provided it, ask me to specify: question
+- Proposed contribution: If I have not provided it, ask me to specify: contribution
+- Empirical design or model: If I have not provided it, ask me to specify: design/model
+- Setting/data: If I have not provided it, ask me to specify: setting/data
+- Target audience: If I have not provided it, ask me to specify: seminar/journal/proposal
 
 Verified sources:
-[paste citation keys and short notes]
+If I have not provided this, ask me to provide: paste citation keys and short notes
 
 Build:
 1. the closest-paper table;
@@ -271,9 +271,9 @@ Build:
 7. one sample synthesis paragraph.
 
 For the sample paragraph, label every sentence as:
-- [SOURCE-GROUNDED]
-- [INTERPRETATION]
-- [NEEDS VERIFICATION]
+- SOURCE-GROUNDED
+- INTERPRETATION
+- NEEDS VERIFICATION
 
 Return:
 - literature review spine;

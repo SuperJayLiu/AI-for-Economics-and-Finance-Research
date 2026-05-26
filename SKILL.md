@@ -9,6 +9,10 @@ Use this file as a compact router for the full GitHub-native handbook:
 
 <https://github.com/SuperJayLiu/AI-for-Economics-and-Finance-Research>
 
+For a downloadable one-skill package with local reference files, use:
+
+`skill-pack/ai-econ-finance-research/SKILL.md`
+
 This skill does not replace the handbook. It tells an AI assistant how to use the handbook with a researcher who wants practical help.
 
 ## How To Use This Skill
@@ -101,4 +105,3 @@ Use a dedicated MCP server only if users need searchable, tool-call access to th
 - `get_chinese_page(section)`
 
 An MCP server is more powerful but requires installation, permissions, hosting or local setup, and maintenance. Start with this skill router first.
-

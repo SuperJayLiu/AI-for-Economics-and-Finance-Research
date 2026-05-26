@@ -18,14 +18,14 @@ For full data-production workflows, use [Data Cleaning, Merging, Analysis, and O
 Act as a research coding assistant for economics/finance.
 
 Code:
-[paste code or error]
+If I have not provided this, ask me to provide: paste code or error
 
 Context:
-- Language/software: [Stata/R/Python/Matlab/SAS]
-- Research task: [task]
-- Data structure: [unit, time, panel/cross-section/time-series]
-- Expected output: [table/figure/data file]
-- Error or problem: [error message or wrong output]
+- Language/software: If I have not provided it, ask me to specify: Stata/R/Python/Matlab/SAS
+- Research task: If I have not provided it, ask me to specify: task
+- Data structure: If I have not provided it, ask me to specify: unit, time, panel/cross-section/time-series
+- Expected output: If I have not provided it, ask me to specify: table/figure/data file
+- Error or problem: If I have not provided it, ask me to specify: error message or wrong output
 
 Tasks:
 1. Explain what the code is trying to do.
@@ -49,10 +49,10 @@ Rules:
 Review this empirical research code for hidden mistakes.
 
 Code:
-[paste code]
+If I have not provided this, ask me to provide: paste code
 
 Paper/method description:
-[paste short description]
+If I have not provided this, ask me to provide: paste short description
 
 Check for:
 - sample restrictions not documented in paper
@@ -83,10 +83,10 @@ Return:
 Check whether this table/figure is consistent with the paper's text and code.
 
 Inputs:
-- Table/figure: [paste or describe]
-- Results paragraph: [paste]
-- Code snippet or table notes: [paste]
-- Empirical design: [brief description]
+- Table/figure: If I have not provided it, ask me to specify: paste or describe
+- Results paragraph: If I have not provided it, ask me to specify: paste
+- Code snippet or table notes: If I have not provided it, ask me to specify: paste
+- Empirical design: If I have not provided it, ask me to specify: brief description
 
 Check:
 1. Are coefficient signs, units, and magnitudes described correctly?
@@ -110,10 +110,10 @@ Return a correction table with:
 Help me convert this regression table into a figure plan for teaching or presentation.
 
 Table:
-[paste table or describe]
+If I have not provided this, ask me to provide: paste table or describe
 
 Audience:
-[MBA/PhD seminar/conference/public/policy]
+If I have not provided this, ask me to provide: MBA/PhD seminar/conference/public/policy
 
 Produce:
 1. What the table shows in one sentence.
@@ -136,10 +136,10 @@ Rules:
 Audit this project for reproducibility gaps.
 
 Inputs:
-- File tree: [paste]
-- Main scripts: [paste names or content]
-- Software: [Stata/R/Python/Matlab/SAS/LaTeX]
-- Target output: [tables/figures/paper]
+- File tree: If I have not provided it, ask me to specify: paste
+- Main scripts: If I have not provided it, ask me to specify: paste names or content
+- Software: If I have not provided it, ask me to specify: Stata/R/Python/Matlab/SAS/LaTeX
+- Target output: If I have not provided it, ask me to specify: tables/figures/paper
 
 Check:
 1. Is there a single entry point to rebuild outputs?
@@ -166,20 +166,20 @@ Use this before accepting code written by ChatGPT, Claude, Codex, Claude Code, C
 Decide whether I should accept this AI-written research code.
 
 Code or diff:
-[paste]
+If I have not provided this, ask me to provide: paste
 
 Research task:
-[task]
+If I have not provided this, ask me to provide: task
 
 Expected output:
-[table/figure/dataset/model result]
+If I have not provided this, ask me to provide: table/figure/dataset/model result
 
 Project facts:
-- Data: [data]
-- Unit/time: [unit/time]
-- Method: [method]
-- Existing baseline output, if any: [describe]
-- Software: [Stata/R/Python/MATLAB/SAS]
+- Data: If I have not provided it, ask me to specify: data
+- Unit/time: If I have not provided it, ask me to specify: unit/time
+- Method: If I have not provided it, ask me to specify: method
+- Existing baseline output, if any: If I have not provided it, ask me to specify: describe
+- Software: If I have not provided it, ask me to specify: Stata/R/Python/MATLAB/SAS
 
 Check:
 1. Does the code implement the stated research design?
@@ -213,20 +213,20 @@ Act as a Python empirical research assistant for economics/finance.
 Before giving final code, ask clarifying questions if the data structure, variable timing, sample definition, method, output format, or data-safety rule is unclear.
 
 Research task:
-[describe task]
+If I have not provided this, ask me to provide: describe task
 
 Python context:
-- Current packages: [pandas/numpy/statsmodels/linearmodels/pyfixest/scikit-learn/other]
-- Data structure: [cross-section/panel/time series/event-level/text data]
-- Unit of observation: [firm-year/person-month/security-day/etc.]
-- Time variable: [name and frequency]
-- Outcome: [variable]
-- Treatment/exposure/key regressor: [variable]
-- Fixed effects/clustering/inference: [if known]
-- Desired output: [clean data/table/figure/model output]
+- Current packages: If I have not provided it, ask me to specify: pandas/numpy/statsmodels/linearmodels/pyfixest/scikit-learn/other
+- Data structure: If I have not provided it, ask me to specify: cross-section/panel/time series/event-level/text data
+- Unit of observation: If I have not provided it, ask me to specify: firm-year/person-month/security-day/etc.
+- Time variable: If I have not provided it, ask me to specify: name and frequency
+- Outcome: If I have not provided it, ask me to specify: variable
+- Treatment/exposure/key regressor: If I have not provided it, ask me to specify: variable
+- Fixed effects/clustering/inference: If I have not provided it, ask me to specify: if known
+- Desired output: If I have not provided it, ask me to specify: clean data/table/figure/model output
 
 Code or error:
-[paste code, traceback, or current plan]
+If I have not provided this, ask me to provide: paste code, traceback, or current plan
 
 Tasks:
 1. Explain the current code or proposed analysis in plain language.
@@ -276,20 +276,20 @@ Act as an R econometrics workflow assistant for economics/finance.
 Before giving final code, ask clarifying questions if the empirical design, data structure, variable timing, package choice, or output target is unclear.
 
 Research task:
-[describe task]
+If I have not provided this, ask me to provide: describe task
 
 R context:
-- Packages used or preferred: [tidyverse/data.table/fixest/did/rdrobust/plm/modelsummary/ggplot2/targets/other]
-- Data structure: [cross-section/panel/time series/event study/text data]
-- Unit of observation: [firm-year/county-month/security-day/etc.]
-- Outcome: [variable]
-- Treatment/exposure/key regressor: [variable]
-- Fixed effects: [if any]
-- Clustering/inference: [if any]
-- Output target: [table/figure/cleaned data/report]
+- Packages used or preferred: If I have not provided it, ask me to specify: tidyverse/data.table/fixest/did/rdrobust/plm/modelsummary/ggplot2/targets/other
+- Data structure: If I have not provided it, ask me to specify: cross-section/panel/time series/event study/text data
+- Unit of observation: If I have not provided it, ask me to specify: firm-year/county-month/security-day/etc.
+- Outcome: If I have not provided it, ask me to specify: variable
+- Treatment/exposure/key regressor: If I have not provided it, ask me to specify: variable
+- Fixed effects: If I have not provided it, ask me to specify: if any
+- Clustering/inference: If I have not provided it, ask me to specify: if any
+- Output target: If I have not provided it, ask me to specify: table/figure/cleaned data/report
 
 Current code or problem:
-[paste code, error, warning, or plan]
+If I have not provided this, ask me to provide: paste code, error, warning, or plan
 
 Tasks:
 1. Explain what the current R code is trying to do.
@@ -338,22 +338,22 @@ Act as a Stata research workflow assistant for economics/finance.
 Before giving final code, ask clarifying questions if variable names, panel keys, time variables, sample restrictions, installed packages, or output expectations are unclear.
 
 Research task:
-[describe task]
+If I have not provided this, ask me to provide: describe task
 
 Stata context:
-- Stata version, if known: [version]
-- Data structure: [cross-section/panel/time series/event-level]
-- Unit of observation: [firm-year/person-month/security-day/etc.]
-- ID variable(s): [id vars]
-- Time variable: [time var and frequency]
-- Outcome: [variable]
-- Treatment/exposure/key regressor: [variable]
-- Fixed effects/clustering: [if known]
-- Packages used: [reghdfe/ivreghdfe/eventstudyinteract/csdid/estout/asdoc/other]
-- Desired output: [clean data/table/figure/log]
+- Stata version, if known: If I have not provided it, ask me to specify: version
+- Data structure: If I have not provided it, ask me to specify: cross-section/panel/time series/event-level
+- Unit of observation: If I have not provided it, ask me to specify: firm-year/person-month/security-day/etc.
+- ID variable(s): If I have not provided it, ask me to specify: id vars
+- Time variable: If I have not provided it, ask me to specify: time var and frequency
+- Outcome: If I have not provided it, ask me to specify: variable
+- Treatment/exposure/key regressor: If I have not provided it, ask me to specify: variable
+- Fixed effects/clustering: If I have not provided it, ask me to specify: if known
+- Packages used: If I have not provided it, ask me to specify: reghdfe/ivreghdfe/eventstudyinteract/csdid/estout/asdoc/other
+- Desired output: If I have not provided it, ask me to specify: clean data/table/figure/log
 
 Current do-file, command, or error:
-[paste code/error/log excerpt]
+If I have not provided this, ask me to provide: paste code/error/log excerpt
 
 Tasks:
 1. Explain the do-file or command in plain language.

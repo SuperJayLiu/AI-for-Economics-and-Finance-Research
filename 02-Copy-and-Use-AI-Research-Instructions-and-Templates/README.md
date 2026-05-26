@@ -2,7 +2,7 @@
 
 This folder is the direct-use toolbox for the repository. Use this README as the index, then open the detailed skill pages inside [`skills/`](skills/) when you want a copy-ready block for a specific research task.
 
-Open a skill page, copy the block you need, paste it into ChatGPT, Claude, Codex, Claude Code, Cursor, GitHub Copilot, or another AI tool, and adapt the bracketed fields. The goal is not to read every file; the goal is to find one usable instruction, run it on a small task, verify it, and save what changed.
+Open a skill page, copy the block you need, paste it into ChatGPT, Claude, Codex, Claude Code, Cursor, GitHub Copilot, or another AI tool, and add the project facts you already know. If the task, data, method, permission rule, or output format is unclear, the skill should ask you clarifying questions before producing the full answer. The goal is not to read every file; the goal is to find one usable instruction, run it on a small task, verify it, and save what changed.
 
 > Copyright (c) 2026 SuperJayLiu (Chaojie Liu). Licensed under the repository MIT License. These instructions/workflows are original to this repository unless otherwise noted. External inspirations are cited in relevant files.
 
@@ -289,7 +289,7 @@ flowchart LR
 ## How To Use These Blocks
 
 1. Copy one block.
-2. Replace bracketed fields like `[paper title]`, `[data source]`, or `[target journal]`.
+2. Add the paper title, data source, target journal, or other project facts you already know. If you do not know them, leave them out and require the AI to ask clarifying questions first.
 3. Add your actual materials.
 4. Ask the AI to clarify missing inputs before it writes, edits, or codes.
 5. For long outputs, ask for "Proposed structure and assumptions" before the full answer.
@@ -337,7 +337,7 @@ Some skills are inspired by public workflow ideas from Paul Goldsmith-Pinkham, Z
 ## Suggest a New Skill
 
 ```text
-Email subject: [AI Econ Finance Skills] Suggest a new skill
+Email subject: If I have not provided it, ask me to specify: AI Econ Finance Skills Suggest a new skill
 
 Suggested skill name:
 Research task:
