@@ -5,8 +5,14 @@
 > [!IMPORTANT]
 > 本仓库不是提示词合集，也不是 AI 工具排行榜。它的核心目标是帮助研究者建立可核查、可复现、可追踪、负责任的 AI 辅助研究工作流。
 
+> [!NOTE]
+> 工作论文版本：可以在 SSRN [阅读、下载或分享论文](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6828424)。该论文基于本仓库 `v1.0.0` 版本；当前仓库版本为 `v1.0.1`。
+
 > [!TIP]
 > 如果你想把整个仓库当作一个 AI research skill 使用，请先打开英文根目录下的 [`skill-pack/`](../skill-pack/README.md)。里面有一步一步的下载、复制、上传和项目设置说明，也包含中文使用入口。
+
+> [!NOTE]
+> 致谢：感谢 Lorenz Kueng 教授在 USI Lugano 组织的 "AI-self-help group"。我从 Lorenz 教授和小组同伴那里学到了很多；也感谢所有在 AI、经济学和金融学领域在线分享见解与资源的学者。
 
 如有中文版本建议，请邮件联系 [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk)，邮件标题建议使用 `[AI Econ Finance Chinese] 中文版本建议`。
 

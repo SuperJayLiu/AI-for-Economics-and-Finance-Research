@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+- No unreleased changes yet.
+
+## v1.0.1 - 2026-05-26
+
+- Added a top-of-README link to the SSRN working paper version based on repository `v1.0.0`: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6828424.
+- Set repository citation metadata to `v1.0.1`.
+- Added English and Chinese acknowledgements for the AI-self-help group set up by Prof. Lorenz Kueng at USI Lugano and for scholars sharing AI, economics, and finance resources online.
+
+## v1.0.0 - 2026-05-26
+
 - Consolidated the reader-facing structure: `01` is now one long handbook README, `02` is a flat copy-and-use skills folder, and `03` is a flat agent/automation workflow folder.
 - Moved old short scaffold pages and repository admin files into `99-Repository-Metadata-and-Archived-Old-Pages` so the main GitHub page is easier to browse.
 - Added directly usable skills for idea testing, proposal building, literature mapping, paper revision, citation support, economics empirical methods, finance empirical methods, Git/data safety, presentations, websites, and project roles.

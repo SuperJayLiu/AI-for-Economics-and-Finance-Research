@@ -1,12 +1,18 @@
 # AI for Economics and Finance Research
 
-A practical, GitHub-native handbook and resource library for using AI responsibly in economics and finance research. I appreciate the "AI-self-help group" set up by Prof. Lorenz Kueng at USI Lugano, in which I learned a lot from Lorenz and peers; and also appreciate all scholars in AI, economics, and finance areas who shared their insights and resources online.
+A practical, GitHub-native handbook and resource library for using AI responsibly in economics and finance research.
 
 > [!IMPORTANT]
 > This repository is built around a simple workflow: read the handbook, copy a skill, use it on a real research task, verify the output, and record what changed.
 
+> [!NOTE]
+> Working paper version: [read, download, or share the SSRN paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6828424), based on repository `v1.0.0`. Current repository version: `v1.0.1`.
+
 > [!TIP]
 > To use this repository as one AI skill for a real research project, open [`skill-pack/`](skill-pack/README.md). It gives step-by-step guidance for downloading the skill pack, adding it to ChatGPT/Claude/Codex-style tools, and using the handbook knowledge inside one research workspace.
+
+> [!NOTE]
+> Acknowledgement: I appreciate the "AI-self-help group" set up by Prof. Lorenz Kueng at USI Lugano, in which I learned a lot from Lorenz and peers; and also appreciate all scholars in AI, economics, and finance areas who shared their insights and resources online.
 
 ## Choose Your Language / 选择语言
 
