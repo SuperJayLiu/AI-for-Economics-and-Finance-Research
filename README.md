@@ -5,6 +5,9 @@ A practical, GitHub-native handbook and resource library for using AI responsibl
 > [!IMPORTANT]
 > This repository is built around a simple workflow: read the handbook, copy a skill, use it on a real research task, verify the output, and record what changed.
 
+> [!TIP]
+> To use this repository as one compact AI instruction, open or import [`SKILL.md`](SKILL.md). It routes an AI assistant to the right handbook section, copy-ready skill, setup workflow, dataset note, Chinese page, or teaching material.
+
 ## Choose Your Language / 选择语言
 
 | English | 中文 |
@@ -30,6 +33,7 @@ The main page keeps only the primary reading and working folders visible. Suppor
 | Draft or audit methods | [Economics Methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md) or [Finance Methods](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/04-empirical-methods-skills-for-finance-research.md) | methods prose or a design audit that states what must be verified |
 | Build slides or practice a talk | [06 Teach, Present, Or Share](06-Teach-Workshops-Practice-Talks-and-Share-Slides/README.md) | a talk flow, slide path, practice prompt, or teaching exercise |
 | Find datasets or resources | [05 Check Sources, Datasets, And Docs](05-Check-Builders-Official-Docs-and-Resources/README.md) | source links, dataset access notes, and AI-use cautions |
+| Use the whole repo as an AI assistant instruction | [SKILL.md](SKILL.md) | one compact router file that tells an AI where to look and how to verify |
 
 ### Choose By Role
 
