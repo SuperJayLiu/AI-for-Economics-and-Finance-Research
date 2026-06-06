@@ -50,7 +50,7 @@ If you want to use the whole repository in your own research workflow, start wit
 3. Open `skill-pack/ai-econ-finance-research/SKILL.md`.
 4. Copy it into ChatGPT Project instructions, Claude Project instructions, Codex/Claude Code skills, or another AI tool's project rules.
 5. Make the `references/` folder available if your tool supports file upload. If not, paste the reference file the AI asks for.
-6. Start with: `Use the AI Econ Finance Research skill. First ask what I want to do.`
+6. Start with: `Use the AI Econ Finance Research skill. First ask what I want to do, identify the relevant skill(s), and ask whether I want you to use and apply them.`
 
 For serious projects, use the rule: one paper = one AI project + one Git repo + one AI-use log.
 
