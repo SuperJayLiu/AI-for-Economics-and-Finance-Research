@@ -1,6 +1,6 @@
 ---
 name: ai-econ-finance-research-handbook
-description: Use this when helping economics or finance scholars use AI for research workflows, including learning core concepts, choosing copy-ready skills, setting up Git/GitHub/agents, checking sources and datasets, drafting or auditing empirical methods, reviewing papers, building slides, teaching workshops, or finding safe data/resource paths. Route the user to the relevant section of the AI for Economics and Finance Research handbook, ask clarifying questions when inputs are missing, confirm structure before long outputs, and enforce verification, privacy, citation, and disclosure checks.
+description: Use this when helping economics or finance scholars use AI for research workflows, including learning core concepts, choosing copy-ready skills, systematic reviews and meta-analysis, surveys/experiments/preregistration, Git/GitHub/agents, sources and datasets, empirical methods, paper review, slides, teaching, or safe data/resource paths. Route the user to the relevant handbook section, ask clarifying questions when inputs are missing, confirm structure before long outputs, and enforce verification, privacy, citation, and disclosure checks.
 ---
 
 # AI for Economics and Finance Research Handbook Router
@@ -48,12 +48,14 @@ If the AI tool cannot open links, ask the user to paste the relevant README or s
 | --- | --- |
 | research idea, proposal, or question sharpening | `02/skills/01-ideas-brainstorming-proposal-and-literature-skills.md` and `02/skills/18-research-question-taste-and-positioning-skills.md` |
 | source-grounded literature review | `02/skills/10-literature-review-and-source-synthesis-skills.md` |
+| systematic review, screening, or meta-analysis | `02/skills/20-systematic-review-and-meta-analysis-skills.md` |
+| survey, randomized experiment, power, or preregistration/PAP | `02/skills/19-survey-experiment-and-preregistration-skills.md` |
 | writing or revising a paper | `02/skills/02-paper-drafting-revision-and-citation-skills.md` |
 | economics empirical methods | `02/skills/03-empirical-methods-skills-for-economics-research.md` |
 | finance empirical methods | `02/skills/04-empirical-methods-skills-for-finance-research.md` |
-| causal inference, DiD, IV, RD, panel FE, time series | `02/skills/11-causal-inference-econometrics-and-time-series-skills.md` |
+| causal inference, DiD, IV, RD, panel FE, time series, forecasting, real-time vintages | `02/skills/11-causal-inference-econometrics-and-time-series-skills.md` |
 | Stata, R, Python, debugging, code review | `02/skills/08-coding-data-analysis-and-debugging-skills.md` |
-| data cleaning, merging, WRDS, CRSP, Compustat, tables, figures | `02/skills/14-data-cleaning-merging-analysis-and-output-skills.md` |
+| data acquisition/provenance, cleaning, merging, WRDS, CRSP, Compustat, tables, figures | `02/skills/14-data-cleaning-merging-analysis-and-output-skills.md` |
 | text-as-data or LLM-as-measurement | `02/skills/15-text-as-data-and-llm-measurement-skills.md` |
 | theory, math, model, proof, equilibrium | `02/skills/12-theory-model-and-math-skills.md` |
 | structural, quantitative, simulation, welfare | `02/skills/16-structural-quantitative-and-welfare-skills.md` |
@@ -62,7 +64,7 @@ If the AI tool cannot open links, ask the user to paste the relevant README or s
 | ChatGPT/Claude/Codex project roles and agent instructions | `02/skills/07-project-instructions-and-agent-role-templates.md` |
 | slides, HTML deck, Beamer deck, talk practice, academic website | `02/skills/06-presentations-slides-websites-and-talk-practice-skills.md` |
 | verification, reproducibility, disclosure | `02/skills/17-verification-reproducibility-and-disclosure-skills.md` |
-| tool selection, AI updates, finding resources | `02/skills/09-tool-selection-updates-and-skill-improvement.md` |
+| tool selection, external-skill intake/deduplication, AI updates, finding resources | `02/skills/09-tool-selection-updates-and-skill-improvement.md` |
 
 ## Default Operating Rules
 

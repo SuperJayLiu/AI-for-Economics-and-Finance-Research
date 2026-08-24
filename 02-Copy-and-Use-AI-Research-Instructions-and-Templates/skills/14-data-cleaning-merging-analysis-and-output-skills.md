@@ -22,6 +22,7 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | implement Fama-MacBeth or portfolio sorts safely | Skill 4 |
 | create EDA, tables, and figures without hidden hand edits | Skill 5 |
 | test AI-written code on toy data before using real data | Skill 6 |
+| acquire data from APIs/files with provenance and no silent fallback | Skill 7 |
 
 ## Filled Mini Example
 
@@ -302,8 +303,61 @@ Rules:
 - Do not say the real code is correct just because the toy test passes.
 ```
 
+## Skill 7: Data Acquisition Contract and Provenance Gate
+
+Use this before an agent calls an API, scraper, connector, MCP server, database, or vendor download workflow.
+
+```text
+Act as a data-acquisition gatekeeper for an economics/finance project.
+
+Inputs:
+- Research variable dictionary and required frequency/unit: ask if missing
+- Candidate sources and official documentation: ask if missing
+- Access type: public/registered/licensed/restricted/proprietary/unknown
+- Credentials or approved compute environment: ask for availability, never ask to paste secrets
+- Required dates/vintages and revision policy: ask if missing
+- Output schema, identifiers, and expected coverage: ask if missing
+- Fallback policy and whether synthetic data are allowed for tests only: ask if missing
+
+Before retrieval, return a source preflight table with:
+1. source owner, endpoint/table/file, documentation URL, access terms, and last checked date;
+2. variable/series identifiers, units, frequency, geography, sample coverage, and vintage/revision behavior;
+3. authentication method and approved storage/compute boundary without revealing credentials;
+4. rate limits, pagination, fair-access/user-agent rules, and retry policy to verify;
+5. expected schema, primary keys, row-count/coverage checks, and known missingness;
+6. license, citation, redistribution, and public-AI restrictions;
+7. ordered fallbacks and the exact user checkpoint before changing source or definition.
+
+For every completed retrieval, create a provenance record containing:
+- source and documentation URL;
+- endpoint/query parameters or manual-download instructions;
+- access timestamp and data vintage/release date;
+- content hash or provider version when available;
+- raw filename, row/column counts, coverage, and schema;
+- transformations, merges, and downstream outputs;
+- warnings, failed pages/requests, and deviations from the approved source plan.
+
+Stop and ask the researcher when:
+- required data are unavailable;
+- a fallback changes the construct, population, frequency, timing, or license;
+- credentials/terms/permissions are unknown;
+- partial retrieval would bias coverage;
+- live data are being replaced with synthetic or simulated data.
+
+Rules:
+- Never silently substitute simulated data, a different provider, or a different variable.
+- Synthetic data may test code, but may not enter empirical results.
+- Never invent endpoint names, schema fields, credentials, or access rights.
+- Keep raw data immutable and separate from derived data.
+- A successful HTTP response is not evidence that the correct series, units, vintage, or population was retrieved.
+```
+
 ## Sources and Workflow Influences
 
 This page draws on applied empirical implementation norms, Paul Goldsmith-Pinkham's emphasis on AI lowering the cost of data assembly and analysis, finance replication concerns, and common WRDS/CRSP/Compustat workflow risks.
 
-Last checked: 2026-05-24
+- [CSMAR Data Center maintainers, `finai-research` (MIT), `fin-data-acquisition`](https://github.com/csmar432/finai-research) — data-source preflight, explicit fallback checkpoints, prohibition on silent simulated-data substitution, and provenance logging. Skill 7 adapts those patterns into provider-neutral research controls and removes source-specific credentials/code assumptions.
+- [World Bank DIME Analytics, *Development Research in Practice: The DIME Analytics Data Handbook*](https://worldbank.github.io/dime-data-handbook/) — data maps, acquisition governance, reproducible processing, and publication-ready provenance.
+- [SEC EDGAR APIs](https://www.sec.gov/edgar/sec-api-documentation) and [FRED/ALFRED APIs](https://fred.stlouisfed.org/docs/api/fred/) — examples of official endpoint, identifier, revision/vintage, fair-access, and documentation checks that should precede data retrieval.
+
+Last checked: 2026-08-24

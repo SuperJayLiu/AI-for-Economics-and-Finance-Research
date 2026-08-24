@@ -2,7 +2,13 @@
 
 ## Unreleased
 
-- No unreleased changes yet.
+- Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
+- Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
+- Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.
+- Expanded the time-series skill with real-time data vintages, forecast origins, pseudo-out-of-sample evaluation, benchmark models, leakage checks, and horizon-specific uncertainty.
+- Added an external-skill intake, semantic-deduplication, license, trust, and trigger-eval gate.
+- Added a dated external skill source/license/deduplication audit and page-level attribution for every adopted workflow pattern.
+- Updated English and Chinese indexes, root and packaged skill routers, maintenance standards, and the external source map for the new families.
 
 ## v1.0.1 - 2026-05-26
 

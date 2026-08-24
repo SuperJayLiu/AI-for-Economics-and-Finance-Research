@@ -19,6 +19,8 @@ Use this when the user wants to work in Chinese.
 8. 修改论文、审稿意见或 response letter
 9. 核查引用、代码、结果、AI 使用记录
 10. 查找资源或数据入口
+11. 设计 survey、随机实验或 pre-analysis plan
+12. 做 systematic review 或 meta-analysis
 
 也请说明：经济学、金融学还是两者；当前研究阶段；材料是否涉及保密、授权、受限、未发表、合作者或学生数据。
 ```
