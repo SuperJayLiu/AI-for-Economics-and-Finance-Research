@@ -23,7 +23,7 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | IV | Skill 5 |
 | RD | Skill 6 |
 | synthetic control | Skill 7 |
-| time-series AR/MA/ARMA/VAR | Skill 8 |
+| time-series modeling, forecasting, nowcasting, or real-time evaluation | Skill 8 |
 | clustering and few-cluster inference | Skill 9 |
 
 ## Skill 1: Causal Design Diagnostic
@@ -264,34 +264,48 @@ Return:
 - safe interpretation language
 ```
 
-## Skill 8: Time-Series AR/MA/ARMA/VAR Check
+## Skill 8: Time-Series, Forecast, and Real-Time Data Check
 
 ```text
-Audit this time-series model for economics/finance.
+Audit this time-series or forecasting workflow for economics/finance.
 
 Project facts:
 - Series: If I have not provided it, ask me to specify: series
 - Frequency: If I have not provided it, ask me to specify: daily/monthly/quarterly/etc.
 - Sample period: If I have not provided it, ask me to specify: period
-- Model: If I have not provided it, ask me to specify: AR/MA/ARMA/ARIMA/VAR/etc.
+- Model: If I have not provided it, ask me to specify: naive/ARIMA/VAR/state-space/factor/ML/etc.
 - Purpose: If I have not provided it, ask me to specify: forecasting/description/policy/asset pricing/etc.
 - Transformations: If I have not provided it, ask me to specify: levels/logs/differences/returns
+- Forecast origin, horizon, and information set: ask if missing
+- Data vintage/revision source: ask if missing
+- Benchmark models and loss/evaluation metric: ask if missing
 
 Check:
-1. stationarity and transformations;
-2. lag selection;
-3. autocorrelation and residual diagnostics;
-4. structural breaks;
-5. seasonality;
-6. out-of-sample validation;
-7. forecast evaluation;
-8. whether causal language is inappropriate.
+1. series definition, units, seasonal adjustment, transformations, missing dates, and publication lags;
+2. whether the information set at each forecast origin excludes future releases and revisions;
+3. whether ALFRED/real-time vintages or archived releases are needed instead of today's revised history;
+4. stationarity, cointegration, lag selection, autocorrelation, seasonality, and structural breaks;
+5. rolling- or expanding-origin pseudo-out-of-sample design with a locked validation/test period;
+6. naive and domain-relevant benchmarks before complex models;
+7. horizon-specific loss, uncertainty intervals, calibration/coverage, and economic decision value;
+8. whether hyperparameter/model selection used the test window or repeatedly searched the same holdout;
+9. robustness across origins, regimes, transformations, releases, and feasible information sets;
+10. whether forecast, structural, impulse-response, and causal claims are being confused.
 
 Return:
 - model-purpose fit
+- information-set and vintage table
+- pseudo-out-of-sample split diagram
+- benchmark and evaluation plan
 - diagnostics to run
 - interpretation limits
 - safer results wording
+
+Rules:
+- Never evaluate a historical forecast using revised data that were unavailable at the forecast origin without labeling it an ex-post exercise.
+- Do not compare a complex model only with weak benchmarks.
+- Do not select the model on the same test window used for the final performance claim.
+- Statistical forecast improvement is not automatically economically material.
 ```
 
 ## Skill 9: Clustering and Inference Check
@@ -332,4 +346,12 @@ Rules:
 - If clusters are few or highly unbalanced, require sensitivity checks.
 ```
 
+## Sources and Workflow Influences
+
 Sources and workflow influences: applied econometrics teaching, credibility-revolution design language, modern DiD/event-study guidance, weak-IV inference, RD practice, clustering guidance, finance event-study cautions, and AI-assisted methods-review workflows.
+
+- [Federal Reserve Bank of St. Louis, ALFRED](https://alfred.stlouisfed.org/) — real-time vintage discipline for evaluating forecasts with the information actually available at each forecast origin.
+- [Rob J. Hyndman and George Athanasopoulos, *Forecasting: Principles and Practice*](https://otexts.com/fpp3/) — forecast-origin evaluation, time-series cross-validation, benchmark models, accuracy measures, transformations, and uncertainty.
+- [K-Dense Inc., `scientific-agent-skills` (MIT), `statsmodels` time-series references](https://github.com/K-Dense-AI/scientific-agent-skills) and [AlterLab, `AlterLab-Academic-Skills` (MIT), time-series/forecasting modules](https://github.com/AlterLab-IEU/AlterLab-Academic-Skills) — examples of packaging time-series diagnostics and executable forecasting workflows as agent skills. Skill 8 keeps the method provider-neutral and adds macroeconomic vintage/leakage gates.
+
+Last checked: 2026-08-24

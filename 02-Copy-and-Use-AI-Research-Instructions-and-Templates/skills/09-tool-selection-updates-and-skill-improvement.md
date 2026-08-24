@@ -230,4 +230,59 @@ Rules:
 - If a resource requires licensed data, MCP access, or cloud upload, flag the permission risk.
 ```
 
+## Skill 7: External Skill Intake, Deduplication, and Trust Audit
+
+Use this before adding an online `SKILL.md`, agent bundle, command pack, or marketplace skill to a research environment or to this repository.
+
+```text
+Act as a conservative external-skill curator for economics/finance research.
+
+Candidate:
+- Repository and exact path/commit/tag: ask if missing
+- Author/maintainer: ask if missing
+- License: ask if missing
+- Claimed task and supported platforms: ask if missing
+- Files, scripts, tools, network access, credentials, and write actions: ask if missing
+
+Existing collection:
+- Current skill names/descriptions/index: ask for it if unavailable
+- Current categories and quality gate: ask for them if unavailable
+
+Run these gates in order:
+1. Provenance: exact source, maintainer, commit/tag, license, last update, archived/fork status.
+2. Relevance: concrete economics/finance research artifact and user, not generic productivity or trading hype.
+3. Duplicate map: compare trigger, inputs, workflow, output, risks, and verification—not only the title.
+4. Decision: ADD as a missing capability; UPDATE/REPLACE a weaker existing block; LINK as a useful external implementation; or REJECT.
+5. Trust: inspect every file, script, dependency, install step, network call, permission, destructive action, secret access, telemetry, and external instruction source.
+6. Adaptation: extract the workflow pattern; do not copy text unless the license permits it and attribution requirements are satisfied.
+7. Quality: focused job, clear trigger and non-trigger, required inputs, concrete output contract, failure modes, data safety, and verification.
+8. Evals: at least two positive trigger cases, two near-miss/non-trigger cases, and one adversarial or missing-input case.
+
+Return a ledger row with:
+- source/author/license/commit/checked date;
+- existing overlap and semantic-similarity explanation;
+- ADD/UPDATE/LINK/REJECT decision;
+- files/permissions/security findings;
+- workflow elements adapted and exact destination;
+- attribution text to add in that destination's Sources/References section;
+- eval cases and remaining manual checks.
+
+Rules:
+- No license or unclear license means do not copy; link or describe at a high level only.
+- A high star count, marketplace rank, or large skill count is not quality evidence.
+- Do not install or execute a candidate merely to inspect its text.
+- Skills with the same name are not automatically duplicates, and different names may be semantic duplicates.
+- Prefer updating one strong existing skill over adding a second overlapping skill.
+```
+
+## Sources and Workflow Influences
+
 Sources and workflow influences: Zara Zhang's curated AI learning library and follow-builders digest, Claude Blattman's continuous-improvement loop, Mihail Velikov's curated AI-in-econ wiki, Frank Lee's academic research skills taxonomy, Antonio Mele's Awesome Econ AI Stuff, Han Lulong's Awesome AI for Economists and Econ Writing Skill, and official documentation-first tool evaluation.
+
+- [OpenAI, “Build skills”](https://developers.openai.com/codex/skills) — focused skill directories, required `name`/`description`, progressive disclosure, clear implicit-trigger descriptions, optional scripts/references/assets, and trigger testing.
+- [O0000-code, `awesome-academic-skills` (CC0-1.0)](https://github.com/O0000-code/awesome-academic-skills) — research-lifecycle indexing with explicit license and execution notes.
+- [AlterLab, `AlterLab-Academic-Skills` (MIT)](https://github.com/AlterLab-IEU/AlterLab-Academic-Skills) — positive and near-miss eval cases, deterministic citation verification, and skill routing boundaries.
+- [K-Dense Inc., `scientific-agent-skills` (MIT)](https://github.com/K-Dense-AI/scientific-agent-skills) — instruction/reference/script separation, local deterministic checks, and explicit compatibility metadata.
+- Discovery-only sources with unclear or absent repository licenses should be linked, not copied. This applies even when a collection is popular or claims thousands of skills.
+
+Last checked: 2026-08-24

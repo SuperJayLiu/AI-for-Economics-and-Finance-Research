@@ -24,6 +24,8 @@ Use these as the fastest entry points. Each card points to one copy-ready block 
 | --- | --- | --- |
 | test whether a research idea is worth pursuing | [Research Idea Stress Test](skills/01-ideas-brainstorming-proposal-and-literature-skills.md#skill-1-research-idea-stress-test) | naming the closest papers, data obstacle, and identification/model obstacle |
 | build a literature review without fake citations | [Source-Grounded Literature Review Builder](skills/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) | checking every claim against supplied sources or verified search results |
+| plan a randomized experiment, survey, or pre-analysis plan | [Survey, Experiment, and Preregistration Skills](skills/19-survey-experiment-and-preregistration-skills.md) | checking assignment/measurement units, power inputs, ethics gates, and prospective timing |
+| run a systematic review or meta-analysis | [Systematic Review and Meta-Analysis Skills](skills/20-systematic-review-and-meta-analysis-skills.md) | reconciling the protocol, screening ledger, study versions, estimands, dependence, and search counts |
 | write or revise an introduction | [Introduction Spine Builder](skills/02-paper-drafting-revision-and-citation-skills.md#skill-1-introduction-spine-builder) | confirming the question, contribution, data/design, and strongest result are accurate |
 | draft empirical methods for applied economics | [Draft Empirical Methods Section for Economics](skills/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) | comparing prose with code, sample, timing, estimand, and inference |
 | draft empirical methods for finance | [Draft Empirical Methods Section for Finance](skills/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) | checking timing, link tables, survivorship, delisting, event windows, and factor-mining risk |
@@ -112,6 +114,8 @@ flowchart TD
   T --> W["Paper prose, revision, or response"]
   T --> S["Slides, talk, website, or teaching material"]
   T --> G["Git, agent rules, disclosure, verification"]
+  T --> X["Survey, experiment, or preregistration"]
+  T --> R["Systematic review or meta-analysis"]
   I --> F1["01 or 18"]
   L --> F2["10"]
   D --> F3["08 or 14"]
@@ -119,6 +123,8 @@ flowchart TD
   W --> F5["02 or 13"]
   S --> F6["06"]
   G --> F7["05, 07, 09, 17"]
+  X --> F8["19"]
+  R --> F9["20"]
   click F1 "01-ideas-brainstorming-proposal-and-literature-skills.md" "Open idea/proposal skills"
   click F2 "10-literature-review-and-source-synthesis-skills.md" "Open literature skills"
   click F3 "14-data-cleaning-merging-analysis-and-output-skills.md" "Open data/output skills"
@@ -126,6 +132,8 @@ flowchart TD
   click F5 "02-paper-drafting-revision-and-citation-skills.md" "Open writing skills"
   click F6 "06-presentations-slides-websites-and-talk-practice-skills.md" "Open presentation skills"
   click F7 "05-git-data-replication-and-research-safety-templates.md" "Open safety templates"
+  click F8 "19-survey-experiment-and-preregistration-skills.md" "Open survey/experiment skills"
+  click F9 "20-systematic-review-and-meta-analysis-skills.md" "Open systematic-review skills"
 ```
 
 ### Search By Function
@@ -137,16 +145,18 @@ If you are using GitHub search, search these words inside this folder. If you ar
 | `write`, `revise`, `introduction`, `abstract` | [Paper Drafting, Revision, and Citation Skills](skills/02-paper-drafting-revision-and-citation-skills.md) | section draft, revision plan, citation-safe prose |
 | `review`, `referee`, `response`, `R&R` | [Referee Reports and Peer Review Skills](skills/13-referee-reports-and-peer-review-skills.md) | self-review, referee report, response table |
 | `literature`, `matrix`, `source`, `citation` | [Literature Review and Source Synthesis Skills](skills/10-literature-review-and-source-synthesis-skills.md) | paper matrix, synthesis outline, claim-source bank |
+| `systematic review`, `screening`, `PRISMA`, `meta-analysis` | [Systematic Review and Meta-Analysis Skills](skills/20-systematic-review-and-meta-analysis-skills.md) | protocol, search log, screening ledger, extraction sheet, pooling audit |
 | `idea`, `proposal`, `brainstorm`, `research question` | [Ideas, Brainstorming, Proposal, and Literature Skills](skills/01-ideas-brainstorming-proposal-and-literature-skills.md) | idea stress test, proposal frame, question refinement |
 | `economics methods`, `identification`, `design` | [Empirical Methods Skills for Economics Research](skills/03-empirical-methods-skills-for-economics-research.md) | methods section, design audit, pre-mortem |
 | `finance methods`, `asset pricing`, `corporate finance`, `banking` | [Empirical Methods Skills for Finance Research](skills/04-empirical-methods-skills-for-finance-research.md) | finance methods draft, return/window/survivorship checks |
 | `Python`, `R`, `Stata`, `debug`, `code review` | [Coding, Data Analysis, and Debugging Skills](skills/08-coding-data-analysis-and-debugging-skills.md) | language-specific code plan, diagnosis, toy test |
-| `WRDS`, `CRSP`, `Compustat`, `merge`, `table`, `figure` | [Data Cleaning, Merging, Analysis, and Output Skills](skills/14-data-cleaning-merging-analysis-and-output-skills.md) | pipeline, merge plan, output audit |
-| `DiD`, `IV`, `RD`, `panel`, `time series` | [Causal Inference, Econometrics, and Time-Series Skills](skills/11-causal-inference-econometrics-and-time-series-skills.md) | method diagnostic, estimator checklist |
+| `WRDS`, `CRSP`, `Compustat`, `API`, `provenance`, `merge`, `table`, `figure` | [Data Cleaning, Merging, Analysis, and Output Skills](skills/14-data-cleaning-merging-analysis-and-output-skills.md) | source preflight, provenance contract, pipeline, merge plan, output audit |
+| `DiD`, `IV`, `RD`, `panel`, `time series`, `forecast`, `data vintage` | [Causal Inference, Econometrics, and Time-Series Skills](skills/11-causal-inference-econometrics-and-time-series-skills.md) | method diagnostic, estimator checklist, pseudo-out-of-sample plan |
+| `survey`, `questionnaire`, `RCT`, `randomization`, `power`, `preregistration`, `PAP` | [Survey, Experiment, and Preregistration Skills](skills/19-survey-experiment-and-preregistration-skills.md) | design gate, instrument plan, allocation audit, pre-analysis plan |
 | `text-as-data`, `LLM measurement`, `filings` | [Text-as-Data and LLM Measurement Skills](skills/15-text-as-data-and-llm-measurement-skills.md) | labeling protocol, validation plan |
 | `Git`, `DATA.md`, `AGENTS.md`, `AI-use log` | [Git, Data, Replication, and Research Safety Templates](skills/05-git-data-replication-and-research-safety-templates.md) | project safety files and logging templates |
 | `slides`, `Beamer`, `HTML`, `website`, `practice talk` | [Presentations, Slides, Websites, and Talk Practice Skills](skills/06-presentations-slides-websites-and-talk-practice-skills.md) | slide workflow, talk drill, website prompt |
-| `find resources`, `resource scout`, `follow builders`, `tool updates` | [Tool Selection, Updates, and Skill Improvement](skills/09-tool-selection-updates-and-skill-improvement.md) | dated comparison, update filter, resource shortlist |
+| `find resources`, `external skill`, `deduplicate`, `license`, `tool updates` | [Tool Selection, Updates, and Skill Improvement](skills/09-tool-selection-updates-and-skill-improvement.md) | dated comparison, skill-intake audit, update filter, resource shortlist |
 
 ### Search By Software
 
@@ -182,6 +192,8 @@ Use this table when you know the artifact you need but not the file name. Levels
 | [16 Structural/quantitative/welfare](skills/16-structural-quantitative-and-welfare-skills.md) | both | advanced | model, moments, parameters, estimation, counterfactual | structural map, estimation plan, welfare guardrail | fit, convergence, identification, counterfactual interpretation | project or coding agent |
 | [17 Verification/disclosure](skills/17-verification-reproducibility-and-disclosure-skills.md) | both | beginner-intermediate | AI output, source/code/data object, target use | verification method, disclosure, reproducibility packet | source/code/data/math/policy check | chat, project, or agent |
 | [18 Research question/taste/positioning](skills/18-research-question-taste-and-positioning-skills.md) | both | beginner-intermediate | topic, mechanism, closest papers, data idea | sharper question, mechanism tension, so-what test | importance, novelty, feasibility, contribution | chat or project |
+| [19 Survey/experiment/preregistration](skills/19-survey-experiment-and-preregistration-skills.md) | both | intermediate-advanced | construct, population, design, assignment/sampling unit, ethics and data constraints | experiment gate, survey plan, PAP, implementation audit | assignment/analysis alignment, power inputs, registry, survey design object | project or agent |
+| [20 Systematic review/meta-analysis](skills/20-systematic-review-and-meta-analysis-skills.md) | both | advanced | protocol question, sources, eligibility, records, extraction data | protocol, screening ledger, extraction audit, pooling plan | search reconciliation, duplicate versions, estimands, heterogeneity, dependence | project, search-grounded agent, or coding agent |
 
 | File | Use it when you need... |
 | --- | --- |
@@ -203,6 +215,8 @@ Use this table when you know the artifact you need but not the file name. Levels
 | [16 Structural, Quantitative, and Welfare Skills](skills/16-structural-quantitative-and-welfare-skills.md) | GMM, SMM, MLE, calibration, counterfactuals, welfare, model fit |
 | [17 Verification, Reproducibility, and Disclosure Skills](skills/17-verification-reproducibility-and-disclosure-skills.md) | citation checks, toy-data tests, coefficient checks, proof checks, AI-use disclosure |
 | [18 Research Question, Taste, and Positioning Skills](skills/18-research-question-taste-and-positioning-skills.md) | topic-to-question sharpening, mechanisms, closest-paper positioning, so-what test, AI cost-benefit |
+| [19 Survey, Experiment, and Preregistration Skills](skills/19-survey-experiment-and-preregistration-skills.md) | randomized studies, survey instruments, power/randomization audits, PAPs, complex-survey inference |
+| [20 Systematic Review and Meta-Analysis Skills](skills/20-systematic-review-and-meta-analysis-skills.md) | reproducible searches, screening ledgers, effect extraction, pooling, publication-selection audits |
 
 ## Why These Skill Families Exist
 
@@ -217,6 +231,8 @@ Use this table when you know the artifact you need but not the file name. Levels
 | writing and slides | AI can improve clarity, but it can also overclaim or flatten the paper's voice. |
 | agents and project rules | file-editing AI needs boundaries: what to touch, what not to touch, what to verify. |
 | verification and disclosure | "Check it" is too vague; this gives concrete checks and AI-use records. |
+| original-data study design | surveys and experiments fail upstream when assignment, sampling, measurement, power, or preregistration is vague. |
+| systematic evidence synthesis | a narrative literature map cannot substitute for a reproducible search, eligibility trail, extraction scheme, and poolability decision. |
 
 ## Why Some Topics Have Separate Files
 
@@ -232,6 +248,8 @@ Most topics should stay in one README-style file. Separate files are useful only
 | theory and math | proof, equilibrium, and model-audit workflows require different guardrails |
 | verification/reproducibility/disclosure | every other skill depends on concrete verification methods |
 | referee/review | reviewer comments, journal responses, and PR-style feedback need a different workflow |
+| survey/experiment/preregistration | original-data collection needs ethics gates, assignment/measurement alignment, field implementation, and prospective analysis commitments |
+| systematic review/meta-analysis | reproducible searching, screening, report-version linking, effect dependence, and quantitative synthesis require a separate audit trail |
 
 ## Research Pipeline: Which Skill Feeds Which
 
@@ -258,6 +276,8 @@ flowchart LR
 | idea | [Topic-to-Tension Research Question Builder](skills/18-research-question-taste-and-positioning-skills.md#skill-1-topic-to-tension-research-question-builder) |
 | literature | [Source-Grounded Literature Review Builder](skills/10-literature-review-and-source-synthesis-skills.md#skill-1-source-grounded-literature-review-builder) |
 | design | [Identification Design Pre-Mortem](skills/03-empirical-methods-skills-for-economics-research.md#skill-4-identification-design-pre-mortem) |
+| original-data design | [Randomized Experiment Design Gate](skills/19-survey-experiment-and-preregistration-skills.md#skill-1-randomized-experiment-design-gate) or [Survey Instrument and Sampling Plan](skills/19-survey-experiment-and-preregistration-skills.md#skill-2-survey-instrument-and-sampling-plan) |
+| systematic evidence synthesis | [Systematic Review Protocol and Search Builder](skills/20-systematic-review-and-meta-analysis-skills.md#skill-1-systematic-review-protocol-and-search-builder) |
 | data execution | [Reproducible Research Data Pipeline Builder](skills/14-data-cleaning-merging-analysis-and-output-skills.md#skill-1-reproducible-research-data-pipeline-builder) |
 | code | [Debug Stata/R/Python Research Code](skills/08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
 | methods | [Economics Methods](skills/03-empirical-methods-skills-for-economics-research.md#skill-1-draft-empirical-methods-section-for-economics) or [Finance Methods](skills/04-empirical-methods-skills-for-finance-research.md#skill-1-draft-empirical-methods-section-for-finance) |
@@ -285,6 +305,9 @@ flowchart LR
 | slides | [Full-Materials Presentation Intake and Structure Confirmation](skills/06-presentations-slides-websites-and-talk-practice-skills.md#skill-0-full-materials-presentation-intake-and-structure-confirmation) |
 | coding | [Debug Stata/R/Python Research Code](skills/08-coding-data-analysis-and-debugging-skills.md#skill-1-debug-statarpython-research-code) |
 | referee response | [Journal Referee Response Planner](skills/13-referee-reports-and-peer-review-skills.md#skill-2-journal-referee-response-planner) |
+| preregistration/PAP | [Pre-Analysis Plan and Preregistration Builder](skills/19-survey-experiment-and-preregistration-skills.md#skill-3-pre-analysis-plan-and-preregistration-builder) |
+| systematic review/meta-analysis | [Systematic Review and Meta-Analysis Skills](skills/20-systematic-review-and-meta-analysis-skills.md) |
+| external skill intake | [External Skill Intake, Deduplication, and Trust Audit](skills/09-tool-selection-updates-and-skill-improvement.md#skill-7-external-skill-intake-deduplication-and-trust-audit) |
 
 ## How To Use These Blocks
 

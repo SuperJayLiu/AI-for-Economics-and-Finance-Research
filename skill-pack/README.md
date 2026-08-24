@@ -127,6 +127,8 @@ Use the skill as a project assistant, not as a one-time prompt.
 | --- | --- |
 | new idea | `00-task-router.md`, `01-handbook-core-concepts.md`, `12-examples-failure-cases.md` |
 | literature review | `03-literature-review.md`, `11-verification-disclosure.md` |
+| survey, randomized experiment, or preregistration | `14-study-design-evidence-synthesis.md`, plus economics/finance methods and data-safety references as needed |
+| systematic review or meta-analysis | `14-study-design-evidence-synthesis.md`, `03-literature-review.md`, `11-verification-disclosure.md` |
 | empirical design | `05-empirical-methods-economics.md` or `06-empirical-methods-finance.md`, plus `09-datasets-access-confidentiality.md` |
 | coding and data | `07-coding-data-stata-r-python.md`, `08-agentic-workflows-git-github.md`, `11-verification-disclosure.md` |
 | paper writing and revision | `04-writing-revision-referee.md`, `11-verification-disclosure.md` |

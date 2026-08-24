@@ -1,6 +1,6 @@
 ---
 name: ai-econ-finance-research
-description: Use this as one AI assistant skill for economics and finance research workflows. It helps scholars choose tasks, load the right reference, use AI safely for literature review, writing, empirical methods, coding, data, Git/GitHub, agents, datasets, slides, teaching, verification, disclosure, and Chinese workflows. It asks clarifying questions when user input is incomplete, confirms structure before long outputs, and enforces citation, privacy, data-access, and reproducibility checks.
+description: Use this as one AI assistant skill for economics and finance research workflows. It helps scholars choose tasks, load the right reference, use AI safely for literature and systematic reviews, surveys, experiments, preregistration, writing, empirical methods, coding, data, Git/GitHub, agents, datasets, slides, teaching, verification, disclosure, and Chinese workflows. It asks clarifying questions when user input is incomplete, confirms structure before long outputs, and enforces citation, privacy, data-access, and reproducibility checks.
 ---
 
 # AI Econ Finance Research Skill
@@ -29,6 +29,8 @@ What do you want to do?
 8. Review, revise, or respond to a paper/referee report
 9. Verify citations, code, claims, or AI use
 10. Work in Chinese
+11. Design a survey/experiment or pre-analysis plan
+12. Run a systematic review or meta-analysis
 
 Also tell me: economics, finance, or both; your current research stage; and whether any material is confidential, licensed, restricted, unpublished, coauthored, or student-related.
 ```
@@ -55,6 +57,7 @@ Read only the relevant reference file first. Do not load every reference unless 
 | verification, reproducibility, disclosure | `references/11-verification-disclosure.md` |
 | examples and failure cases | `references/12-examples-failure-cases.md` |
 | Chinese use | `references/13-chinese-router.md` |
+| survey, experiment, randomization, power, preregistration, systematic review, meta-analysis | `references/14-study-design-evidence-synthesis.md` |
 
 If references are not available, ask the user to paste the relevant reference file or open the matching GitHub page.
 

@@ -101,6 +101,8 @@ Use this as the fast view before the long source map.
 | Learn coding agents for economists | [Paul Goldsmith-Pinkham AI posts](https://paulgp.com/blog.html), [Pedro Sant'Anna workflow guide](https://psantanna.com/claude-code-my-workflow/workflow-guide.html), [The AI Economist agent tutorial](https://aieconomist.io/tutorials/ai-agents-for-economics-research) | practical plan-first, Git-aware, agentic research workflows |
 | Find econ/finance AI workflow examples | [Mihail Velikov AI econ wiki](https://velikov-mihail.github.io/ai-econ-wiki/), [Awesome Econ AI Stuff](https://meleantonio.github.io/awesome-econ-ai-stuff/), [Awesome AI for Economists](https://github.com/hanlulong/awesome-ai-for-economists) | curated field-specific examples and skills |
 | Find econometrics and methods references | [Applied Methods PhD](https://github.com/paulgp/applied-methods-phd), [Callaway-Sant'Anna DiD](https://ideas.repec.org/a/eee/econom/v225y2021i2p200-230.html), [rdrobust](https://rdpackages.github.io/rdrobust/) | method standards to check AI-generated methods against |
+| Design surveys, experiments, and preregistration | [World Bank DIME Data Handbook](https://worldbank.github.io/dime-data-handbook/), [AEA RCT Registry](https://www.socialscienceregistry.org/), [Center for Open Science preregistration](https://www.cos.io/initiatives/prereg) | assignment/measurement units, power, survey operations, prospective plans, and transparent deviations |
+| Run systematic reviews or meta-analyses | [PRISMA 2020](https://www.prisma-statement.org/prisma-2020), [Cochrane Handbook](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current), [Campbell Collaboration](https://www.campbellcollaboration.org/) | protocol, search, screening, effect measures, bias, synthesis, and reporting standards; adapt to economics estimands |
 | Find finance datasets and replication discipline | [WRDS](https://wrds-www.wharton.upenn.edu/), [SEC EDGAR APIs](https://www.sec.gov/edgar/sec-api-documentation), [Open Source Asset Pricing](https://www.openassetpricing.com/) | finance data access, filings, and anomaly-replication standards |
 | Find public economics datasets | [FRED](https://fred.stlouisfed.org/), [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392), [IPUMS](https://www.ipums.org/about/terms), [NBER Public Use Data](https://www.nber.org/research/data) | common public or public-use starting points with access rules |
 | Find survey, household finance, and wealth microdata | [ECB HFCS](https://www.ecb.europa.eu/stats/ecb_surveys/hfcs/html/index.en.html), [LIS/LWS](https://www.lisdatacenter.org/our-data/), [Eurostat public microdata](https://ec.europa.eu/eurostat/web/microdata/public-microdata), [SHARE](https://share-eric.eu/), [ESS](https://www.europeansocialsurvey.org/data-portal) | household wealth, income, living conditions, ageing, attitudes, and cross-country survey designs |
@@ -160,6 +162,8 @@ Last checked:
 
 ## Source-to-Repo Map
 
+For the dated candidate-by-candidate license and duplicate decision, see the [External Skill Source, License, and Deduplication Audit](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md).
+
 | Source | What this repo extracts |
 | --- | --- |
 | [Gen Li and Siyang Liu: Claude Code Learning Resources for Economics and Finance Researchers](https://gen-li.notion.site/339195e07a238020b8aae6b5a1661f08?v=339195e07a2380c0ad01000c92c92011&pvs=149) | resource-library design: category/topic/level/language tags, separate learning/tool/setup views, Chinese-resource routing, and econ/finance Claude Code discovery |
@@ -210,7 +214,11 @@ Last checked:
 | [PaperSpine](https://github.com/WUBING2023/PaperSpine) | staged academic writing skills, branch skills, citation support bank, writing rationale matrix, audit trail |
 | [Nature Skills](https://github.com/Yuan1z0825/nature-skills) | source-grounded skill design, directly usable artifacts, journal-style rules |
 | [OpenAI Help Center: Projects in ChatGPT](https://help.openai.com/en/articles/10169521-chatgpt-projects) | official behavior for ChatGPT Projects, files, instructions, sharing, and project scope |
-| [OpenAI Codex Skills](https://developers.openai.com/codex/skills) | skills as reusable instruction packages |
+| [OpenAI “Build skills”](https://developers.openai.com/codex/skills) | current cross-product skill structure, progressive disclosure, concise trigger descriptions, optional resources/scripts, and trigger testing; used by the external-skill intake gate |
+| [K-Dense Inc.: Scientific Agent Skills](https://github.com/K-Dense-AI/scientific-agent-skills) | MIT-licensed experimental-design, hypothesis/evidence-ledger, literature, statistics, and local-validator patterns; adapted into original-data study-design guardrails rather than copied wholesale |
+| [AlterLab: AlterLab Academic Skills](https://github.com/AlterLab-IEU/AlterLab-Academic-Skills) | MIT-licensed survey design/analysis, preregistration, meta-analysis, routing boundaries, and positive/near-miss eval patterns |
+| [CSMAR Data Center maintainers: finai-research](https://github.com/csmar432/finai-research) | MIT-licensed source-preflight, explicit fallback checkpoint, no-silent-simulation, and provenance patterns for finance-data acquisition |
+| [O0000-code: Awesome Academic Skills](https://github.com/O0000-code/awesome-academic-skills) | CC0 research-lifecycle index with license and execution notes; informs intake metadata, not research-method content |
 | [OpenAI AGENTS.md](https://developers.openai.com/codex/guides/agents-md) | repo-level AI agent instructions |
 | [Claude Help Center: Claude Projects](https://support.anthropic.com/en/articles/9517075-what-are-projects) | official description of Claude project workspaces |
 | [Claude Code Docs: How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works) | agentic loop, project interaction, built-in tools, and command-line workflow |

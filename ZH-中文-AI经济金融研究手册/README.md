@@ -125,6 +125,8 @@ I want to work in Chinese. First ask what I want to do.
 | 任务 | 直接打开 |
 | --- | --- |
 | 检查研究想法、写 proposal、做文献综述、写实证方法 | [02 复制即用：AI 研究指令与模板](中文内容/02-复制即用：AI研究指令与模板.md) |
+| 设计 survey、随机实验或 pre-analysis plan | [19 Survey、Experiment 与 Preregistration Skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/19-survey-experiment-and-preregistration-skills.md) |
+| 做 systematic review 或 meta-analysis | [20 Systematic Review 与 Meta-Analysis Skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/20-systematic-review-and-meta-analysis-skills.md) |
 | 从零设置 Git、GitHub、private repo 和 AI agent | [03 从零开始设置 Git/GitHub 和 AI agent](中文内容/03-设置Agent和自动化研究工作流.md#从零开始设置-gitgithub-和-ai-agent) |
 | 设计数据清洗、合并、变量构造、表格和图形 workflow | [02 数据清洗、合并和输出工作流](中文内容/02-复制即用：AI研究指令与模板.md#数据清洗合并和输出工作流) |
 | 做 text-as-data 或 LLM-generated variable | [02 Text-as-Data 和 LLM Measurement 协议](中文内容/02-复制即用：AI研究指令与模板.md#text-as-data-和-llm-measurement-协议) |
@@ -144,9 +146,11 @@ I want to work in Chinese. First ask what I want to do.
 | `写作`、`introduction`、`abstract`、`论文修改` | [02 复制即用：AI 研究指令与模板](中文内容/02-复制即用：AI研究指令与模板.md) |
 | `paper review`、`referee`、`R&R`、`审稿意见` | [02 复制即用：AI 研究指令与模板](中文内容/02-复制即用：AI研究指令与模板.md) |
 | `literature review`、`文献矩阵`、`citation` | [来源可靠的文献综述](中文内容/02-复制即用：AI研究指令与模板.md#来源可靠的文献综述) |
+| `systematic review`、`screening`、`PRISMA`、`meta-analysis` | [20 Systematic Review 与 Meta-Analysis Skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/20-systematic-review-and-meta-analysis-skills.md) |
 | `Python`、`R`、`Stata`、`debug`、`代码检查` | [02 复制即用：AI 研究指令与模板](中文内容/02-复制即用：AI研究指令与模板.md) |
-| `DiD`、`IV`、`RD`、`panel`、`event study` | [因果识别诊断](中文内容/02-复制即用：AI研究指令与模板.md#因果识别诊断) |
-| `WRDS`、`CRSP`、`Compustat`、`数据合并` | [02 复制即用：AI 研究指令与模板](中文内容/02-复制即用：AI研究指令与模板.md#数据清洗合并和输出工作流) |
+| `DiD`、`IV`、`RD`、`panel`、`event study`、`forecast`、`data vintage` | [因果识别诊断](中文内容/02-复制即用：AI研究指令与模板.md#因果识别诊断) |
+| `survey`、`questionnaire`、`RCT`、`randomization`、`power`、`preregistration`、`PAP` | [19 Survey、Experiment 与 Preregistration Skills](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/19-survey-experiment-and-preregistration-skills.md) |
+| `WRDS`、`CRSP`、`Compustat`、`API`、`provenance`、`数据合并` | [02 复制即用：AI 研究指令与模板](中文内容/02-复制即用：AI研究指令与模板.md#数据清洗合并和输出工作流) |
 | `agent`、`Codex`、`Claude Code`、`GitHub` | [03 设置 Agent 和自动化研究工作流](中文内容/03-设置Agent和自动化研究工作流.md) |
 | `dataset`、`资源`、`官方文档`、`找工具` | [05 资料来源、官方文档与更新](中文内容/05-资料来源官方文档与更新.md) |
 

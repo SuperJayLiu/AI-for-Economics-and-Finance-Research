@@ -50,6 +50,8 @@ Every practical skill, template, or workflow should answer these before it is ac
 | risk warning | the skill names how it can fail in economics/finance research |
 | verification | the skill gives a concrete check, not only "verify manually" |
 | source discipline | external ideas are cited briefly and copied only when license permits |
+| duplicate discipline | trigger, inputs, procedure, output, risks, and verification are compared against active skills before adding a new page |
+| source traceability | the exact destination page names the author/maintainer, URL, license status, adapted pattern, and checked date |
 | data safety | public, licensed, restricted, private, and confidential material are distinguished |
 | update discipline | tool claims are dated when they could change |
 
@@ -65,6 +67,9 @@ Run this checklist before tagging a stable release or announcing a major update:
 [ ] No unclosed code fences.
 [ ] No unsupported "tool X is best" claims without date, task, and uncertainty.
 [ ] No copied external skill/text/figure without license and attribution check.
+[ ] Every external candidate has an ADD/UPDATE/LINK/REJECT row in `SKILL-SOURCE-AUDIT.md`.
+[ ] Every adopted external workflow pattern is credited in the exact destination page, not only in a central source list.
+[ ] Semantic duplicates were checked by trigger, inputs, workflow, output, risk, and verification—not only filename/title.
 [ ] Every new skill has inputs, output, risks, verification, and "Questions for you" logic.
 [ ] Dataset or confidential-material advice follows institution/data-provider/journal caution.
 [ ] Chinese reader path is updated for any major new reader-facing feature.
@@ -85,3 +90,15 @@ When deciding whether to add more content, use this ranking:
 2. Add second: source links that explain a reusable workflow or official tool behavior.
 3. Add cautiously: tool comparisons, social-media advice, broad reading lists.
 4. Do not add: generic AI hype, unsupported rankings, or prompts that encourage unverified research output.
+
+## External Skill Intake Rule
+
+Before adding or replacing an online skill:
+
+1. record the exact repository, path, commit/tag, maintainer, license, and checked date;
+2. inspect all scripts, dependencies, permissions, network calls, secret access, install steps, and external instructions before execution;
+3. compare semantic overlap with active skills;
+4. prefer improving one active page over adding an overlapping page;
+5. if the license is absent or unclear, do not copy—link or describe only at a high level;
+6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
+7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.

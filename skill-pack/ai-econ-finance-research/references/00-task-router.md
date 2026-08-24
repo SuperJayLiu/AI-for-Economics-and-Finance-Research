@@ -6,7 +6,7 @@ Use this reference when the user is unsure where to begin or wants to use the sk
 
 Ask for only what is missing:
 
-1. research stage: idea, literature, data, coding, methods, writing, revision, presentation, teaching, or replication;
+1. research stage: idea, literature, systematic review, original-data design, data, coding, methods, writing, revision, presentation, teaching, or replication;
 2. field: economics, finance, or both;
 3. output wanted: questions, checklist, prose, code, slide plan, agent setup, or resource list;
 4. material status: public, licensed, restricted, confidential, unpublished, coauthored, student-related, or unknown;
@@ -29,6 +29,7 @@ Ask for only what is missing:
 | verification, disclosure | `11-verification-disclosure.md` |
 | examples and failures | `12-examples-failure-cases.md` |
 | Chinese workflow | `13-chinese-router.md` |
+| survey, experiment, preregistration, systematic review, meta-analysis | `14-study-design-evidence-synthesis.md` |
 
 ## Step-By-Step Research Project Setup
 
