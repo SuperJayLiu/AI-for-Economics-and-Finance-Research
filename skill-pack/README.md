@@ -53,10 +53,10 @@ cd AI-for-Economics-and-Finance-Research/skill-pack/ai-econ-finance-research
 
 ```text
 Use the AI Econ Finance Research skill.
-First ask what I want to do.
+First ask what I want to do, identify the relevant skill(s), and ask whether I want you to use and apply them.
 ```
 
-The assistant should then ask what research task you want help with and route you to the right reference.
+The assistant should then ask what research task you want help with, name the relevant skill(s) or reference file(s), ask whether to apply them, and route you to the right reference.
 
 ## Exact First Messages
 
@@ -65,7 +65,7 @@ For a new paper or project, start with this:
 ```text
 Use the AI Econ Finance Research skill.
 I am working on one economics/finance research project.
-First ask what I want to do, what stage I am at, what materials are safe to share, and what output format I need.
+First ask what I want to do, what stage I am at, what materials are safe to share, what output format I need, and whether I want you to use and apply the relevant skill(s).
 Do not produce a long answer until I confirm your proposed structure and assumptions.
 ```
 
@@ -74,7 +74,7 @@ For a specific task, start with this:
 ```text
 Use the AI Econ Finance Research skill.
 Task: help me with a source-grounded literature review / empirical methods draft / Stata debug / finance data merge / seminar presentation.
-First ask clarifying questions if any required input is missing or unclear.
+First identify the relevant skill(s), ask whether to use and apply them, and ask clarifying questions if any required input is missing or unclear.
 End by stating what was produced, what was not changed, what I must verify, and questions for me.
 ```
 
@@ -89,7 +89,7 @@ skill-pack/ai-econ-finance-research/
 Then start with:
 
 ```text
-Use the ai-econ-finance-research skill. I want help with my research project.
+Use the ai-econ-finance-research skill. I want help with my research project. First identify the relevant skill(s), then ask whether to use and apply them.
 ```
 
 If the tool cannot read the reference files automatically, paste the reference file it asks for.

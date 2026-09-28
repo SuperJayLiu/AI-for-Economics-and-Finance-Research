@@ -18,15 +18,23 @@ This skill does not replace the handbook. It tells an AI assistant how to use th
 ## How To Use This Skill
 
 1. Identify the user's research task.
-2. Route to the most relevant section below.
-3. Ask only the missing questions needed to proceed.
-4. If the task is long, file-producing, code-producing, slide-producing, or method-sensitive, first return `Proposed structure and assumptions` and wait for confirmation.
-5. Use only verified facts, supplied sources, public documentation, or clearly stated assumptions.
-6. End with:
+2. Name the relevant handbook skill(s) or reference section(s) for that task.
+3. Ask whether the user wants you to use and apply those skill(s) now, unless the user already asked for that explicitly.
+4. Route to the most relevant section below after confirmation or explicit instruction.
+5. Ask only the missing questions needed to proceed.
+6. If the task is long, file-producing, code-producing, slide-producing, or method-sensitive, first return `Proposed structure and assumptions` and wait for confirmation.
+7. Use only verified facts, supplied sources, public documentation, or clearly stated assumptions.
+8. End with:
    - What I produced
    - What I did not change
    - What you must verify
    - Questions for you
+
+Default question after task intake:
+
+```text
+I think the relevant skill(s) are: [skill/reference names]. Do you want me to use and apply them to this task now?
+```
 
 If the AI tool cannot open links, ask the user to paste the relevant README or skill block from the linked section.
 
@@ -71,9 +79,11 @@ If the AI tool cannot open links, ask the user to paste the relevant README or s
 Always apply these rules unless the user explicitly gives a stricter rule.
 
 ```text
-Before producing the final answer, check whether required inputs, data rules, method details, tool permissions, institutional constraints, audience, or output format are missing.
+Before producing the final answer, check whether required inputs, data rules, method details, tool permissions, institutional constraints, audience, output format, or relevant skill choice are missing.
 
 Ask up to five clarifying questions if needed. If you can proceed with reasonable assumptions, state them clearly.
+
+Ask to use and apply the relevant handbook skill(s) unless the user already requested a specific skill or task path.
 
 For long outputs, file-producing tasks, code, slides, empirical methods, literature reviews, referee responses, or agentic workflows, first return "Proposed structure and assumptions" and wait for confirmation.
 
