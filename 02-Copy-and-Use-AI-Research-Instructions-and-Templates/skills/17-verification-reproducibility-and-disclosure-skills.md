@@ -22,6 +22,7 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | coefficient/result interpretation | Skill 4 |
 | equation/proof/model claim | Skill 5 |
 | AI-use reproducibility/disclosure | Skill 6 |
+| evidence in an LLM-based paper | [LLM Paper Evidence Audit](#llm-paper-evidence-audit) |
 
 ## Filled Mini Example
 
@@ -245,6 +246,25 @@ Rules:
 - If policy is unknown, write CHECK POLICY.
 ```
 
+For LLM-generated measures, attach the following audit to the existing reproducibility packet; use it to distinguish archived evidence from checks still needed.
+
+## LLM Paper Evidence Audit
+
+Inputs: manuscript and appendix, model/prompt records, safe corpus metadata, human validation records, benchmark results, analysis code, and intended prediction or estimation claim. Ask only for missing material needed for that claim. Produce one evidence matrix containing `claim | evidence location | observed finding | missing check | responsible researcher`, plus a prioritized acceptance/revision decision.
+
+| Audit area | Evidence to locate and assess |
+| --- | --- |
+| Model provenance | exact snapshot or weight identifier, run date, settings, and known limitations of vendor availability |
+| Prompt provenance | full retained prompts, development history, tested variants, and selection rule |
+| Information boundary | text availability/revision dates, target timing, training-cutoff evidence or unknown status, and contamination tests |
+| Human validation | sampling and coding rubric, adjudication, untouched evaluation observations, error by subgroup |
+| Benchmarks | simple and domain-specific alternatives under the same information set and evaluation split |
+| Construct validity | evidence against the score merely tracking length, tone, size, or another rival construct |
+| Reproduction | executable run order, environment, item-level reconciliation, retained permitted responses, and rerun/drift limits |
+| Economic interpretation | units, plausible magnitudes, incremental information, and claims warranted by the design |
+
+Use [measurement validation and leakage skills](15-text-as-data-and-llm-measurement-skills.md) for unresolved measurement issues. Do not certify the paper from its prose alone, infer a training cutoff from a model's release date, or interpret a reproducible score as a causal effect.
+
 ## Minimal AI-Use Log Row
 
 ```text
@@ -265,4 +285,6 @@ Commit hash:
 
 This page draws on reproducible research norms, journal disclosure practice, AI-use logs, citation-audit workflows, toy-data testing, and model/proof verification habits in economics and finance.
 
-Last checked: 2026-05-24
+- Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover dated 2026-10-30; accessed 2026-11-03. Influence: scope of LLM paper auditing, adapted into the repository's existing evidence and reproducibility packet. No explicit reuse license found on author page/PDF. This is an original high-level adaptation; no slide wording, prompts, templates, figures, or presentation structure copied. Lecture is not covered by the repository MIT license.
+
+Last checked: 2026-11-03 (LLM paper audit and attribution)

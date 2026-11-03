@@ -67,7 +67,7 @@ Run this checklist before tagging a stable release or announcing a major update:
 [ ] No unclosed code fences.
 [ ] No unsupported "tool X is best" claims without date, task, and uncertainty.
 [ ] No copied external skill/text/figure without license and attribution check.
-[ ] Every external candidate has an ADD/UPDATE/LINK/REJECT row in `SKILL-SOURCE-AUDIT.md`.
+[ ] Every external candidate has an ADD/UPDATE/LINK/DO NOT COPY decision in `SKILL-SOURCE-AUDIT.md`, with reasons for rejected candidates.
 [ ] Every adopted external workflow pattern is credited in the exact destination page, not only in a central source list.
 [ ] Semantic duplicates were checked by trigger, inputs, workflow, output, risk, and verification—not only filename/title.
 [ ] Every new skill has inputs, output, risks, verification, and "Questions for you" logic.
@@ -102,3 +102,7 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+For recurring research-source audits, record the latest fetched `origin/main`, clean-tree status, and last successful audit boundary before editing. Unknown local changes must remain untouched and block repository writes. Compare publication/revision dates separately from access dates and HTTP deployment metadata; preserve hashes for mutable priority PDFs. Log authorship, applicability, maintenance evidence, security concerns, and rights even for LINK/DO NOT COPY outcomes. Never infer a paper revision from a page timestamp alone.
+
+Use original high-level summaries when teaching materials lack explicit reuse permission; do not reproduce slide text, figures, prompts, templates, or extended structure. Page-level attribution must identify the author, affiliation where relevant, title, original URL/DOI, limitations, exact influence, exclusions, and check date. Before pushing, check links/anchors, code fences, duplicate headings, index/router coverage, and `git diff --check`. Commit only this run's validated paths on a dated branch from the latest `origin/main`; never force-push or merge automatically. No substantive accepted change means no commit or push.

@@ -22,6 +22,24 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 | prevent look-ahead and leakage in text measures | Skill 4 |
 | document an LLM-generated variable for a paper | Skill 5 |
 
+## Interpretation and Validation Contract
+
+Before using Skill 1, distinguish the document-to-feature mapping, the feature-to-score prediction, and the subsequent economic estimand. Good predictive performance establishes neither construct validity nor causal identification. Document aggregation, preprocessing, and representation choices must match the economic unit and information date.
+
+Use Skills 1-3 to produce the following acceptance artifacts before scaling:
+
+| Artifact | Required evidence |
+| --- | --- |
+| Construct specification | anchored coding rubric agreed before examining downstream coefficients |
+| Validation split | human labels with adjudication; separate development examples from an untouched evaluation sample; include representative and difficult cases |
+| Diagnostic report | held-out agreement/calibration and subgroup errors; external benchmark comparison; score distribution, missingness, refusal rate, and suspicious bunching |
+| Stability report | prompt, model, example-order, and chunking perturbations; preserve all variants and explain economically material changes |
+| Incremental-value test | compare a dictionary, a suitable domain classifier, and simple controls on the same held-out units and timing; include downstream magnitude and uncertainty |
+
+These checks operationalize definition, human labeling, comparison, distribution inspection, stress testing, and competing-measure evaluation without replacing the existing five skills. Set acceptance criteria from the research use, rather than optimizing for significance. A high agreement rate alone does not correct measurement error in a downstream regression; choose and document an appropriate validation-based estimation strategy when inference depends on generated measures.
+
+For bulk execution, also apply the [batch acceptance gate](08-coding-data-analysis-and-debugging-skills.md#batch-measurement-acceptance).
+
 ## Skill 1: LLM-as-Measurement Protocol
 
 ```text
@@ -157,6 +175,10 @@ Check:
 6. whether the prompt embeds outcome information;
 7. whether repeated prompt tuning created p-hacking risk;
 8. whether model-version drift affects comparability.
+9. whether target outcomes or near-identical documents were publicly available during training; distinguish training contamination/memorization from future information in the supplied prompt;
+10. whether post-cutoff or prospectively collected test cases are feasible; treat an unknown training cutoff as unknown, including for open-weight models;
+11. whether removing identifiers changes performance because it removes leakage or because it destroys useful economic information; compare both and report the trade-off, without calling anonymization proof of no memorization;
+12. whether a lagged-outcome or persistence benchmark explains apparent predictive gains. Restrict claims to prediction unless separate evidence supports a mechanism.
 
 Return:
 - leakage risks by severity;
@@ -214,6 +236,10 @@ prompt_text:
 model_provider:
 model_name:
 model_version_or_snapshot:
+model_training_cutoff_and_evidence_or_unknown:
+document_publication_and_revision_dates:
+forecast_origin_or_information_cutoff:
+development_or_heldout_split:
 run_date:
 temperature_or_randomness_setting:
 seed_if_available:
@@ -229,4 +255,7 @@ commit_hash:
 
 This page draws on economics text-as-data practice, LLM measurement and reproducibility concerns, finance text sources such as filings and earnings calls, and the general principle that AI-generated variables must be validated like measurement instruments.
 
-Last checked: 2026-05-24
+- Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover 2026-10-30, and [Text Data in Finance](https://mjha91.github.io/pdf/TextDataFinance.pdf), undated; accessed 2026-11-03. Influences: construct diagnostics, competing measures, contamination threats, and the distinction between representation, prediction, and economic analysis. No explicit reuse license found on the author page or either PDF. Only original high-level adaptations and links are included; no lecture text, prompts, figures, templates, or extended slide structure copied. The repository MIT license does not cover these sources.
+- Jens Ludwig, Sendhil Mullainathan, and Ashesh Rambachan, [Large Language Models: An Applied Econometric Framework, arXiv v4](https://arxiv.org/abs/2412.07031v4), revised 2025-12-05; checked 2026-11-03. Influence: prediction leakage versus validation-based downstream estimation. The record uses arXiv's non-exclusive distribution license, not an open adaptation license; only a brief original summary/link, no text, equations, proofs, or code copied. This is baseline context, not a claimed new 2026 result.
+
+Last checked: 2026-11-03 (new contract, leakage extensions, and source records)

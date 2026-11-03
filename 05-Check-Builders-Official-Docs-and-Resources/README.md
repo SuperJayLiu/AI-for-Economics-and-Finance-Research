@@ -162,6 +162,22 @@ Last checked:
 
 ## Source-to-Repo Map
 
+### Research Methods Audit: 2026-11-03
+
+This first recurring audit establishes a baseline, not a claim that every source is newly published. Identity is checked against the author's own site or official publication/project record. The [central audit](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md#2026-11-03-first-recurring-audit) records semantic overlap, dates, security, rights, and decisions. No candidate software was installed or executed.
+
+| Source and author/maintainer | Date and use here | Rights and scope of use |
+| --- | --- | --- |
+| Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf); [author identity/resources](https://mjha91.github.io/) | Cover 2026-10-30; UPDATE existing agent, coding, review, measurement, and verification workflows with evidence gates | No explicit reuse license found on author page/PDF; original high-level adaptations and links only; no slide text, prompts, figures, templates, or extended presentation structure copied |
+| Manish Jha, Georgia State University, [Text Data in Finance](https://mjha91.github.io/pdf/TextDataFinance.pdf) | Undated; UPDATE existing text measurement and interpretation boundary; do not infer a revision from server metadata | No explicit reuse license found; original high-level summary and link only, no lecture text, figures, templates, or slide structure copied |
+| Calonico, Cattaneo, Farrell, Titiunik / rdpackages, [rdrobust changelog](https://github.com/rdpackages/rdrobust/blob/main/CHANGELOG.md) and [R metadata](https://raw.githubusercontent.com/rdpackages/rdrobust/main/R/rdrobust/DESCRIPTION) | 2026-10-01 entry, R metadata 4.1.1; UPDATE existing economics methods audit with version-sensitive RD verification | GPL-3 project; original summary/link only, no software, tests, or manual text copied; installed-channel availability not verified |
+| American Economic Association, [Data and Code Availability Policy](https://www.aeaweb.org/journals/data/data-code-policy) | February 2026; UPDATE existing replication intake with current deposit checks | Copyright retained; limited encouragement for institutional policy adaptation, not assumed blanket permission; original summary only, no policy text/forms/logos copied |
+| Jens Ludwig, Sendhil Mullainathan, Ashesh Rambachan, [Large Language Models: An Applied Econometric Framework](https://arxiv.org/abs/2412.07031v4) | arXiv v4, 2025-12-05; LINK baseline context for prediction leakage and validation-based downstream estimation | arXiv non-exclusive distribution license is not a general reuse license; original short summary/link, no text, equations, proofs, or code copied |
+| Andreas Ferrara, [A Practitioner's Guide to Using Large Language Models and Generative AI in Economic History](https://www.nber.org/papers/w35374), DOI 10.3386/w35374 | June 2026 NBER record; LINK for future full-paper audit; current overlap with coding, data, and measurement is substantial | No adaptation license established; bibliographic link only, no text, examples, checklists, code, or replication assets copied; full paper not verified this run |
+| Anne Lundgaard Hansen, [Validating Large Language Model Annotations](https://www.federalreserve.gov/econres/feds/validating-large-language-model-annotations.htm), DOI 10.17016/FEDS.2026.020 | March 2026 FEDS paper; page updated 2026-08-25; LINK for further evaluation when labels are scarce | No item-specific reuse license established; original scope note/link only, no text, framework, code, or figures copied; no claim that page update proves paper revision |
+
+All rows accessed/checked 2026-11-03. These lectures and papers are not relicensed by this repository's MIT license. The Ferrara and Hansen links are reading candidates, not endorsed replacements for human validation or measurement-error inference. NBER page/PDF access was incomplete (403); an author-submitted arXiv record independently verified the Ludwig et al. baseline.
+
 For the dated candidate-by-candidate license and duplicate decision, see the [External Skill Source, License, and Deduplication Audit](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md).
 
 | Source | What this repo extracts |

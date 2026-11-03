@@ -89,6 +89,9 @@ tmp/
 - Ask for approval before restructuring folders.
 - Before editing code, explain the plan.
 - After editing code, run the smallest relevant test or script.
+- Specify the permitted sample, identifier/link-date rules, information availability dates, fixed effects, clustering, and result baseline for this project; ask the researcher to resolve missing design choices.
+- Preserve these decisions during implementation. Report row counts, key uniqueness, merge outcomes, and estimation-sample changes alongside the diff.
+- Keep independent review read-only and record unresolved findings before accepting a change; an agent's approval does not replace research verification.
 - After editing paper text, preserve citations, numbers, notation, and hedging.
 - Do not invent results, citations, robustness checks, or institutional facts.
 - Ask clarifying questions if the task, data sensitivity, validation command, or permission boundary is unclear.
@@ -312,6 +315,7 @@ Tasks:
 6. Identify missing files or unclear instructions.
 7. Propose a run order.
 8. Explain what can be replicated and what cannot.
+9. For an AEA submission, check the current policy against the package: data access conditions and costs, redistribution rights, program-to-exhibit mapping, environment/runtime, and a top-level PDF README. Separate files approved for public deposit from any separately authorized private replication access; a draft deposit is not a safe place for confidential files.
 
 Rules:
 - Do not alter files yet.
@@ -321,3 +325,6 @@ Rules:
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's emphasis on replication package infrastructure and AI-assisted code/data workflows; Git and GitHub documentation.
+
+- Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover 2026-10-30; checked 2026-11-03. Influence: research-specific instruction boundaries and diff/sample evidence. No explicit reuse license found on the author page/PDF; original high-level adaptation only. No lecture wording, instruction-file templates, figures, or slide structure copied; source is outside this repository's MIT license.
+- American Economic Association, [Data and Code Availability Policy](https://www.aeaweb.org/journals/data/data-code-policy), February 2026 version; checked 2026-11-03. Influence: policy-specific intake checks. The page encourages institutional policy adaptation but retains copyright and trademark restrictions; no blanket open license assumed. Only an original summary and link are included, with no policy text, forms, or logos copied.

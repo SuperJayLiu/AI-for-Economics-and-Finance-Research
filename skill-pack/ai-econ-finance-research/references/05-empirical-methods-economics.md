@@ -45,3 +45,9 @@ Include identifying variation, assumptions, estimator/design fit, inference, rob
 ## Verification
 
 Check methods prose against code, sample construction, variable definitions, timing, clustering, and reported tables.
+
+For RD software changes, preserve the original environment and record package version/options. The official `rdrobust` 2026-10-01 entry identifies result-affecting fixes, including sharp covariate-adjusted derivative estimates with order at least two. Establish whether the specification is affected and compare fixed versus selected bandwidth results before interpreting a change. Do not silently upgrade a replication environment.
+
+## Sources and Workflow Influences
+
+Sebastian Calonico, Matias D. Cattaneo, Max H. Farrell, Rocio Titiunik / rdpackages, [rdrobust changelog](https://github.com/rdpackages/rdrobust/blob/main/CHANGELOG.md) and [R metadata](https://raw.githubusercontent.com/rdpackages/rdrobust/main/R/rdrobust/DESCRIPTION), 2026-10-01; checked 2026-11-03. Influence: specification-specific version checks. GPL-3 is declared; no implementation, tests, or documentation text copied, only an original summary and links. Package-channel availability was not independently checked.

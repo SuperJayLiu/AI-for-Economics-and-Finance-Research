@@ -94,6 +94,10 @@ Output format:
 
 ## Skill 2: Check Empirical Methods Section for Economics
 
+### RD Software Version Check
+
+When an RD estimate changes after a software update, first preserve the old environment and record the language, package version, options, sample, and running-variable scale. The official `rdrobust` 2026-10-01 audit reports a correction for sharp RD with covariates and derivative order at least two, plus changes to bandwidth and degenerate-sample handling. Check whether the actual specification is affected; compare fixed-bandwidth and selected-bandwidth runs before changing the substantive interpretation. Do not silently upgrade a replication environment or attribute a software correction to economic robustness. The version check supplements the existing RD design audit.
+
 ```text
 Audit this empirical methods section as an applied econometrician.
 
@@ -220,3 +224,5 @@ Also return a checklist of claims in the paper that should be softened.
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's Applied Empirical Methods course emphasis on practical implementation, research design intuition, communication, and disentangling the experiment behind causal claims.
+
+- Sebastian Calonico, Matias D. Cattaneo, Max H. Farrell, and Rocio Titiunik / rdpackages, [rdrobust changelog](https://github.com/rdpackages/rdrobust/blob/main/CHANGELOG.md), 2026-10-01 entry, and [R package metadata](https://raw.githubusercontent.com/rdpackages/rdrobust/main/R/rdrobust/DESCRIPTION); checked 2026-11-03. Influence: specification-specific software-version checks in the existing methods audit. The project and R metadata identify GPL-3; no implementation, tests, or documentation text copied into this MIT repository, only an original summary and links. R metadata says 4.1.1; release availability on each package channel is not independently certified here.

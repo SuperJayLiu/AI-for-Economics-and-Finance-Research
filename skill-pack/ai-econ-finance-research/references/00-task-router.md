@@ -27,6 +27,7 @@ Ask for only what is missing:
 | datasets, household finance, Nordic data | `09-datasets-access-confidentiality.md` |
 | slides, talk practice, teaching | `10-slides-teaching-websites.md` |
 | verification, disclosure | `11-verification-disclosure.md` |
+| text-as-data, LLM measurement, memorization, LLM paper audit | `11-verification-disclosure.md`; add `07-coding-data-stata-r-python.md` for bulk execution |
 | examples and failures | `12-examples-failure-cases.md` |
 | Chinese workflow | `13-chinese-router.md` |
 | survey, experiment, preregistration, systematic review, meta-analysis | `14-study-design-evidence-synthesis.md` |

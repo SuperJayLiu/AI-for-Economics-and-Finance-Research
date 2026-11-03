@@ -37,8 +37,18 @@ Before changing code, explain the likely issue, propose a minimal plan, and ask 
 Produce corrected code or a patch plan, a toy-data known-answer test, and a checklist for sample, timing, variables, merges, and output interpretation.
 ```
 
+## Batch Measurement
+
+For bulk LLM labeling, require an input-ID manifest, a hand-checked pilot, bounded retries/spending, and a resumable item ledger. Reconcile missing, duplicate, refused, malformed, and validated responses before accepting completion. A failed response is not a substantive zero. Keep licensed text and credentials out of public logs. For the detailed contract, use the handbook's [batch acceptance gate](https://github.com/SuperJayLiu/AI-for-Economics-and-Finance-Research/blob/main/02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/08-coding-data-analysis-and-debugging-skills.md#batch-measurement-acceptance).
+
+An accounted-for failure remains unusable for analysis until resolved or covered by a documented, researcher-approved exclusion rule with reported coverage/sample effects.
+
 ## Language Notes
 
 - Stata: check `merge`, duplicates, `xtset`, `reghdfe`, `esttab`, clustering, and missing values.
 - R: check `dplyr`, `fixest`, `did`, `rdrobust`, date handling, joins, and reproducible scripts.
 - Python: check `pandas`, `statsmodels`, `linearmodels`, merge keys, index types, and environment reproducibility.
+
+## Sources and Workflow Influences
+
+Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover 2026-10-30; checked 2026-11-03. Influence: scripted item-level accountability in bulk measurement. No explicit reuse license found on author page/PDF; original high-level adaptation only, with no lecture text, prompts, templates, code, figures, or slide structure copied. Lecture remains outside the repository MIT license.

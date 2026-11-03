@@ -189,6 +189,8 @@ Check:
 5. Is the code simpler than the problem requires, or unnecessarily clever?
 6. What toy-data test should pass?
 7. What real-data output should be compared to the previous version?
+8. Does the diff match the allowed files and decisions? Reconcile filter counts, unique keys, join cardinality, unmatched records, and the final estimation sample against the baseline. Treat unexplained differences as unresolved failures even if execution succeeds.
+9. When an independent review is warranted, provide only the artifact, design contract, dictionary, and safe validation inputs to a fresh reviewer; request evidence without edits. Record that no independent review occurred if unavailable. Do not call a fresh implementation session an independent review.
 
 Return:
 - accept / revise / reject;
@@ -202,6 +204,16 @@ Rules:
 - Do not accept code that changes the empirical design without explicit human approval.
 - Do not accept code that cannot be explained to a coauthor or referee.
 ```
+
+### Batch Measurement Acceptance
+
+For repeated LLM labeling, extend this gate to a scripted job with an input manifest and a resumable per-item ledger. First hand-check a small pilot using the same parser and schema as the full run. Record item ID, input/prompt hashes, model snapshot, attempt, timestamp, response or permitted secure reference, parse status, error, and cost where available. Keep credentials and restricted text out of public logs.
+
+Reconcile requested IDs against validated outputs: detect missing, duplicate, unexpected, refused, and malformed responses. Keep failed items separate from substantive zero labels. Bound retries and spending, preserve failed attempts, and resume only unresolved items. Completion requires every requested item to have an explicit validated or failed status; a chat summary is insufficient. Provider batch pricing and limits require a separate current-docs check.
+
+A fully reconciled ledger can still contain unusable measurements. Before downstream analysis, resolve failed items or apply a documented, researcher-approved exclusion rule and report the resulting coverage and sample change.
+
+For construct and leakage checks, use [Text-as-Data and LLM Measurement](15-text-as-data-and-llm-measurement-skills.md).
 
 ## Skill 7: Python Empirical Analysis Assistant
 
@@ -396,3 +408,5 @@ Reject output if:
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's VS Code/Git/data workflow examples, applied methods implementation norms, Aniket Panjwani's agentic coding exercise and Git/skills/planning warnings, Antonio Mele's economics skill catalog, Frank Lee's academic research skills catalog, Han Lulong's economics writing and AI-for-economists resource lists, and recent concerns about dependency gaps in AI-generated code.
+
+- Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover dated 2026-10-30; checked 2026-11-03. Influence: independent code review, diff/sample inspection, and scripted item-level measurement accountability. No explicit reuse license found on author page/PDF; original high-level adaptation only. No slide text, example prompts, code, templates, figures, or presentation structure copied; source is not relicensed under the repository MIT license.
