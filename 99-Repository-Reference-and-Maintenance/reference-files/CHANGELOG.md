@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+### 2026-11-03 Research Source Audit
+
+- Updated existing agent planning/review, research instruction, code acceptance, bulk measurement, LLM validation/leakage, paper review, and verification workflows; no new skill pages.
+- Added specification-specific checks for the official October 2026 `rdrobust` fixes and current AEA replication-deposit intake requirements.
+- Credited Manish Jha (Georgia State University) and other primary sources on each affected substantive page; unlicensed teaching materials are linked with original high-level adaptations only.
+- Synchronized English/Chinese navigation, root/package routing, and maintenance rules. See the [dated source/license/deduplication audit](SKILL-SOURCE-AUDIT.md#2026-11-03-first-recurring-audit) for accepted changes, link-only candidates, source fingerprints, and validation scope.
+
+### Prior Unreleased Changes
+
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
 - Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
 - Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.

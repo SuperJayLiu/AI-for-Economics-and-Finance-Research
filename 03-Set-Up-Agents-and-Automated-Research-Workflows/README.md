@@ -86,6 +86,14 @@ The plan must include:
 Do not edit files yet. After I approve the plan, I will start a fresh execution session and ask you to follow the approved plan.
 ```
 
+### Independent Review and Acceptance Evidence
+
+Extend the existing plan-first workflow with a separate review before execution and a separate acceptance check afterwards. Give a reviewer the saved plan or final artifact, research question, data dictionary, permitted sample, and validation contract. Withhold the implementation conversation and preferred verdict. Request file/line evidence and unresolved design questions; keep the review read-only. A fresh execution session alone is not an independent review, and agreement between agents is not validation.
+
+For a data change, retain a before/after sample ledger: observations entering each filter, unique keys, merge cardinality, unmatched cases, and final estimation observations. Compare the actual `git diff` with the permitted file list and reconcile altered results with this ledger. Stop for unexplained changes. Use a separate chat or a human reviewer when independent agents are unavailable or not authorized.
+
+See [code acceptance](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/08-coding-data-analysis-and-debugging-skills.md#skill-6-ai-written-code-acceptance-gate) and [research instruction files](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/05-git-data-replication-and-research-safety-templates.md#template-3-agentsmd-for-research-repo).
+
 ## Files
 
 | File | Use it for |
@@ -901,3 +909,7 @@ At minimum, every AI-assisted research repo should tell agents:
 ## University and Institution Rules
 
 Before using automation, check your university, employer, funder, data provider, journal, conference, and coauthor policies. If a policy says a task cannot use external AI tools, do not use external AI tools for that task. When in doubt, use synthetic examples, local approved environments, or ask the relevant authority.
+
+## Sources and Workflow Influences
+
+- Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover dated 2026-10-30; accessed 2026-11-03. Influence: plan review, independent critique, and diff/sample verification within the existing workflow. No explicit reuse license found on the linked author page or PDF; this is an original high-level adaptation. No slide text, prompts, figures, templates, or presentation structure copied; the repository MIT license does not apply to the lecture.

@@ -57,6 +57,7 @@ If the AI tool cannot open links, ask the user to paste the relevant README or s
 | Stata, R, Python, debugging, code review | `02/skills/08-coding-data-analysis-and-debugging-skills.md` |
 | data acquisition/provenance, cleaning, merging, WRDS, CRSP, Compustat, tables, figures | `02/skills/14-data-cleaning-merging-analysis-and-output-skills.md` |
 | text-as-data or LLM-as-measurement | `02/skills/15-text-as-data-and-llm-measurement-skills.md` |
+| LLM paper evidence audit, memorization, bulk labeling | [text measurement](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/15-text-as-data-and-llm-measurement-skills.md), [LLM audit](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/17-verification-reproducibility-and-disclosure-skills.md#llm-paper-evidence-audit), [batch acceptance](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/08-coding-data-analysis-and-debugging-skills.md#batch-measurement-acceptance) |
 | theory, math, model, proof, equilibrium | `02/skills/12-theory-model-and-math-skills.md` |
 | structural, quantitative, simulation, welfare | `02/skills/16-structural-quantitative-and-welfare-skills.md` |
 | referee report, paper review, response to reviewers | `02/skills/13-referee-reports-and-peer-review-skills.md` |

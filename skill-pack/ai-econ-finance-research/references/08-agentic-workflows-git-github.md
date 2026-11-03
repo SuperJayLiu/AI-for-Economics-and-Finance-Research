@@ -22,6 +22,8 @@ Guide the user through:
 
 ## Collaboration Rules
 
+Distinguish a fresh execution session from an independent review. When authorized and useful, give a read-only reviewer the plan/artifact, research contract, and safe validation inputs without the implementation conversation or preferred verdict. Record findings with evidence. Acceptance also requires reconciling the diff, filter counts, keys, merges, and final estimation sample; agreement between agents is insufficient. A human or separate chat can perform the review.
+
 Ask who is responsible for:
 
 - uploading data;
@@ -51,3 +53,7 @@ After changes, summarize the diff, run or specify checks, update the AI-use log,
 - use branches for experiments;
 - use pull requests for coauthor/RA review;
 - use worktrees only when the user understands multiple working directories.
+
+## Sources and Workflow Influences
+
+Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover 2026-10-30; accessed 2026-11-03. Influence: independent review and sample/diff evidence in the existing plan workflow. No explicit reuse license found on author page/PDF; original high-level adaptation only. No lecture wording, prompts, templates, figures, or presentation structure copied; lecture is outside the repository MIT license.

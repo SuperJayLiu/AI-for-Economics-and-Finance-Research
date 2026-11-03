@@ -55,6 +55,7 @@ Read only the relevant reference file first. Do not load every reference unless 
 | datasets, access, confidentiality, survey, household finance, Nordic data | `references/09-datasets-access-confidentiality.md` |
 | slides, presentation practice, teaching, websites | `references/10-slides-teaching-websites.md` |
 | verification, reproducibility, disclosure | `references/11-verification-disclosure.md` |
+| text-as-data, LLM measurement, contamination/memorization, LLM paper evidence audit | `references/11-verification-disclosure.md`; bulk execution also uses `references/07-coding-data-stata-r-python.md` |
 | examples and failure cases | `references/12-examples-failure-cases.md` |
 | Chinese use | `references/13-chinese-router.md` |
 | survey, experiment, randomization, power, preregistration, systematic review, meta-analysis | `references/14-study-design-evidence-synthesis.md` |

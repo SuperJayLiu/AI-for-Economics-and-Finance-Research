@@ -16,6 +16,7 @@ Ask what output they want and route to the right reference or full repo file.
 | datasets and access | `09-datasets-access-confidentiality.md` |
 | slides, teaching, websites | `10-slides-teaching-websites.md` |
 | verification and disclosure | `11-verification-disclosure.md` |
+| text measurement, leakage, LLM paper audit | `11-verification-disclosure.md`; bulk jobs also use `07-coding-data-stata-r-python.md` |
 | survey, experiment, preregistration, systematic review, meta-analysis | `14-study-design-evidence-synthesis.md` |
 
 ## Universal Skill Behavior

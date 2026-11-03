@@ -250,9 +250,10 @@ Existing collection:
 
 Run these gates in order:
 1. Provenance: exact source, maintainer, commit/tag, license, last update, archived/fork status.
+   Distinguish publication date, substantive revision, access date, and server deployment date. For a mutable PDF, retain a content hash and any visible version/date; a changed HTTP Last-Modified header alone is not evidence of changed methods. If no date/license can be established, mark it unknown rather than inferring one.
 2. Relevance: concrete economics/finance research artifact and user, not generic productivity or trading hype.
 3. Duplicate map: compare trigger, inputs, workflow, output, risks, and verification—not only the title.
-4. Decision: ADD as a missing capability; UPDATE/REPLACE a weaker existing block; LINK as a useful external implementation; or REJECT.
+4. Decision: ADD as a missing capability; UPDATE/REPLACE a weaker existing block; LINK as useful context or an external implementation; DO NOT COPY where reuse permission is unclear. Combine UPDATE with DO NOT COPY when only an original high-level adaptation is justified; reject unsuitable material without importing it.
 5. Trust: inspect every file, script, dependency, install step, network call, permission, destructive action, secret access, telemetry, and external instruction source.
 6. Adaptation: extract the workflow pattern; do not copy text unless the license permits it and attribution requirements are satisfied.
 7. Quality: focused job, clear trigger and non-trigger, required inputs, concrete output contract, failure modes, data safety, and verification.
@@ -261,7 +262,7 @@ Run these gates in order:
 Return a ledger row with:
 - source/author/license/commit/checked date;
 - existing overlap and semantic-similarity explanation;
-- ADD/UPDATE/LINK/REJECT decision;
+- ADD/UPDATE/LINK/DO NOT COPY decision and reason for any rejection;
 - files/permissions/security findings;
 - workflow elements adapted and exact destination;
 - attribution text to add in that destination's Sources/References section;
@@ -273,6 +274,7 @@ Rules:
 - Do not install or execute a candidate merely to inspect its text.
 - Skills with the same name are not automatically duplicates, and different names may be semantic duplicates.
 - Prefer updating one strong existing skill over adding a second overlapping skill.
+- For recurring audits, use the last successful audit as the time boundary. On the first run, establish a dated baseline and label older context explicitly. Prioritize the known Manish Jha finance lectures in the central source audit, but accept only demonstrable incremental improvements.
 ```
 
 ## Sources and Workflow Influences
@@ -284,5 +286,6 @@ Sources and workflow influences: Zara Zhang's curated AI learning library and fo
 - [AlterLab, `AlterLab-Academic-Skills` (MIT)](https://github.com/AlterLab-IEU/AlterLab-Academic-Skills) — positive and near-miss eval cases, deterministic citation verification, and skill routing boundaries.
 - [K-Dense Inc., `scientific-agent-skills` (MIT)](https://github.com/K-Dense-AI/scientific-agent-skills) — instruction/reference/script separation, local deterministic checks, and explicit compatibility metadata.
 - Discovery-only sources with unclear or absent repository licenses should be linked, not copied. This applies even when a collection is popular or claims thousands of skills.
+- Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover 2026-10-30, and [Text Data in Finance](https://mjha91.github.io/pdf/TextDataFinance.pdf), undated; checked 2026-11-03. Influence here: known-priority source monitoring; the PDF hash/date distinction is this repository's audit safeguard. No explicit reuse license found on author page/PDFs. No lecture text, figures, prompts, templates, or slide structure copied; lectures remain outside the repository MIT license.
 
-Last checked: 2026-08-24
+Last checked: 2026-11-03 (date evidence, priority-source monitoring, and decision vocabulary)

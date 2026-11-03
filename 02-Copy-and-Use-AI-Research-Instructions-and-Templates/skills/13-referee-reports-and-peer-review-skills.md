@@ -23,6 +23,8 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 
 ## Skill 1: Staged Self-Review Before Submission
 
+For papers whose variables or forecasts come from LLMs, use the [LLM paper evidence audit](17-verification-reproducibility-and-disclosure-skills.md#llm-paper-evidence-audit) during stages 2-3. Return a claim-to-evidence matrix with page/table/code locations and unresolved requests. Review model/prompt records, timing, validation, benchmarks, construct validity, replication, and economic magnitude together. Missing evidence is not evidence of a failed method; do not invent a successful check. For confidential refereeing, first establish that the journal permits the proposed AI use.
+
 ```text
 Review this economics/finance paper draft in stages.
 
@@ -138,3 +140,5 @@ Rules:
 ```
 
 Sources and workflow influences: the repository author's paper-review and GitHub comment-handling skills, journal revision practice, and GitHub PR review safety workflows.
+
+- Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf), cover dated 2026-10-30; checked 2026-11-03. Influence: LLM-specific evidence requests within existing methods/evidence review. No explicit reuse license found on author page/PDF; original high-level adaptation and link only. No lecture wording, referee prompts, templates, figures, or slide structure copied; lecture is outside the repository MIT license.
