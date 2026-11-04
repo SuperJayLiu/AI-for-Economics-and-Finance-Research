@@ -94,6 +94,14 @@ Output format:
 
 ## Skill 2: Check Empirical Methods Section for Economics
 
+### DML Sensitivity Benchmark State Check
+
+Use this addition when a sensitivity benchmark removes observed controls and refits a double/debiased machine-learning model. Request the installed version or source commit, estimator class, treatment-specific learner settings, removed controls, sample, and cross-fitting splits. Keep the original fitted model and environment as the comparison baseline.
+
+The official DoubleML Python PR #441, merged 2026-11-03, addresses missing learners when rebuilding reduced-covariate sub-models in the **unreleased vector API**. Its reported failure is an exception during refitting; it is not evidence that the released legacy API produced incorrect estimates. Check the actual API and commit before diagnosing an affected project or recommending an upgrade.
+
+Before accepting the benchmark, verify that the refit actually excludes the named controls, retains the intended learner configuration for each treatment, and uses documented comparable splits and samples. Check that benchmarking leaves the original coefficients and covariate list unchanged. Where both implementations support the same specification, compare with a separately specified reference estimator under matched settings and predeclared numerical tolerances. Return a configuration/comparison table, any exception or discrepancy, and unresolved verification needs. Successful execution alone does not establish a valid omitted-confounding benchmark or causal identification.
+
 ```text
 Audit this empirical methods section as an applied econometrician.
 
@@ -219,4 +227,8 @@ Write a concise limitations paragraph that:
 Also return a checklist of claims in the paper that should be softened.
 ```
 
+## Sources and Workflow Influences
+
 Sources and workflow influences: Paul Goldsmith-Pinkham's Applied Empirical Methods course emphasis on practical implementation, research design intuition, communication, and disentangling the experiment behind causal claims.
+
+- DoubleML team, maintained by Philipp Bach and Sven Klaassen, [PR #441: carry over learners to rebuilt sensitivity-benchmark sub-models](https://github.com/DoubleML/doubleml-for-py/pull/441), merged 2026-11-03, and [treatment-specific configuration and baseline-invariance tests](https://github.com/DoubleML/doubleml-for-py/commit/5d4da666a68c9cfce5430d0dd059c6ab60662a7f); checked 2026-11-04. Influence: the state/configuration checks above, within the existing methods audit. The [pinned project license](https://github.com/DoubleML/doubleml-for-py/blob/1af040fd1c922a4c7d30d01b7c21f208d5e3377a/LICENSE) is BSD-3-Clause. Only an original procedural summary and links are included; no implementation, tests, fixtures, or documentation text copied. Upstream tests were inspected, not executed; package-channel availability is not certified.

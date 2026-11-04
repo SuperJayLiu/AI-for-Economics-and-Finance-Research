@@ -48,7 +48,7 @@ Read only the relevant reference file first. Do not load every reference unless 
 | skill overview | `references/02-skills-index.md` |
 | literature review, source synthesis, citation-safe mapping | `references/03-literature-review.md` |
 | writing, revision, referee reports, response letters | `references/04-writing-revision-referee.md` |
-| economics empirical methods | `references/05-empirical-methods-economics.md` |
+| economics methods, DML benchmarks, numerical policy/Riccati checks | `references/05-empirical-methods-economics.md` |
 | finance empirical methods | `references/06-empirical-methods-finance.md` |
 | Stata, R, Python, data cleaning, tables, figures | `references/07-coding-data-stata-r-python.md` |
 | Git, GitHub, agents, project setup, collaboration | `references/08-agentic-workflows-git-github.md` |

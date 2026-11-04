@@ -142,6 +142,14 @@ Rules:
 
 ## Skill 4: Counterfactual Validity Check
 
+### Numerical Policy Verification
+
+Apply this gate when the counterfactual depends on a numerical policy rule, especially discounted linear-quadratic control. Ask for the original objective, transition equations, discount factor, state/control ordering, solver convention, constraints, and code version. Separate errors in translating the model from changes in the economic mechanism.
+
+Map every solver argument back to the supplied equations, including cross-term signs and transposes. For a time-invariant period loss with a state-control cross term, absorbing discounting into the transition and control matrices through `sqrt(beta)` leaves that period-loss cross term unscaled. Check this convention against the actual objective and solver; do not apply it mechanically to a differently normalized problem.
+
+Evaluate the Riccati/Bellman residual using the original equations, independently of the matrix-construction routine being audited. Where feasible, compare the resulting rule and discounted objective with an alternative solution on a small case, with stated tolerances and the relevant existence/stability conditions. Record whether constraints enter the optimization or are imposed afterward by clipping the unconstrained rule; these represent different policy problems. Return the equation-to-code map, residual/comparison evidence, and limitations. A solver's success flag or a plausible impulse response cannot certify the policy or welfare claim.
+
 ```text
 Audit this structural or quantitative counterfactual.
 
@@ -207,4 +215,6 @@ Return:
 
 This page adapts theory-model audit logic, structural-estimation workflow norms, and AI-assisted code/debugging patterns into direct-use prompts for quantitative economics and finance.
 
-Last checked: 2026-05-24
+- Thomas J. Sargent and John Stachurski / QuantEcon, *Intermediate Quantitative Economics with Python*, [Phillips Curve Tradeoffs revision](https://github.com/QuantEcon/lecture-python.myst/commit/4d82fffbb1280f8f6980a45dbe518e677f5c9a39), 2026-11-03, especially `phillips_learning.md` and `phillips_lost_conquest.md`; checked 2026-11-04. Influence: model-to-solver discount/cross-term consistency and the distinction between ex-post constraint clipping and constrained optimization. The [lecture footer](https://python.quantecon.org/phillips_learning.html) declares CC BY-SA 4.0; this does not permit relicensing lecture expression as MIT-only material. This page contains an original high-level verification procedure and mathematical facts, with links; no lecture prose, derivations, code, figures, exercise solutions, or extended structure copied. The pinned source revision, rather than the rendered site's older changelog, establishes the update date. Full lecture computations were not executed.
+
+Numerical policy gate checked: 2026-11-04. Other skill blocks were not comprehensively re-audited in this run.

@@ -102,3 +102,5 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+For software or computational-teaching updates, distinguish the affected API and source commit from released package availability. Record whether the observed failure is an exception, a state mutation, or a changed estimate. Acceptance evidence should verify the claimed configuration or equations directly; a successful run, plausible plot, or upstream test description is insufficient. Preserve the original fit/environment and state which numerical or upstream checks were actually executed.

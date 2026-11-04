@@ -51,14 +51,14 @@ If the AI tool cannot open links, ask the user to paste the relevant README or s
 | systematic review, screening, or meta-analysis | `02/skills/20-systematic-review-and-meta-analysis-skills.md` |
 | survey, randomized experiment, power, or preregistration/PAP | `02/skills/19-survey-experiment-and-preregistration-skills.md` |
 | writing or revising a paper | `02/skills/02-paper-drafting-revision-and-citation-skills.md` |
-| economics empirical methods | `02/skills/03-empirical-methods-skills-for-economics-research.md` |
+| economics empirical methods, DML sensitivity benchmark state | `02/skills/03-empirical-methods-skills-for-economics-research.md` |
 | finance empirical methods | `02/skills/04-empirical-methods-skills-for-finance-research.md` |
 | causal inference, DiD, IV, RD, panel FE, time series, forecasting, real-time vintages | `02/skills/11-causal-inference-econometrics-and-time-series-skills.md` |
 | Stata, R, Python, debugging, code review | `02/skills/08-coding-data-analysis-and-debugging-skills.md` |
 | data acquisition/provenance, cleaning, merging, WRDS, CRSP, Compustat, tables, figures | `02/skills/14-data-cleaning-merging-analysis-and-output-skills.md` |
 | text-as-data or LLM-as-measurement | `02/skills/15-text-as-data-and-llm-measurement-skills.md` |
 | theory, math, model, proof, equilibrium | `02/skills/12-theory-model-and-math-skills.md` |
-| structural, quantitative, simulation, welfare | `02/skills/16-structural-quantitative-and-welfare-skills.md` |
+| structural, quantitative, simulation, Riccati/policy verification, welfare | `02/skills/16-structural-quantitative-and-welfare-skills.md` |
 | referee report, paper review, response to reviewers | `02/skills/13-referee-reports-and-peer-review-skills.md` |
 | Git, data safety, AGENTS.md, AI-use log | `02/skills/05-git-data-replication-and-research-safety-templates.md` |
 | ChatGPT/Claude/Codex project roles and agent instructions | `02/skills/07-project-instructions-and-agent-role-templates.md` |

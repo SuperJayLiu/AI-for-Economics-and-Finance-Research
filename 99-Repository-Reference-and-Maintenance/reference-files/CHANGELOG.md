@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+### 2026-11-04 Incremental Methods Audit
+
+- Strengthened existing economics methods and structural counterfactual pages with DML sensitivity-benchmark state checks and numerical policy/Riccati verification; no new skill pages.
+- Based on official DoubleML and QuantEcon updates of 2026-11-03; preserve the unreleased-vector API boundary and CC BY-SA lecture rights. Source code, tests, and lecture expression were not copied.
+- Synchronized discovery/routing, exact-page attribution, source map, and maintenance standards. The [central audit](SKILL-SOURCE-AUDIT.md#2026-11-04-incremental-methods-audit) records priority-source fingerprints, pending-PR deduplication, rights, limitations, and verification scope.
+
+### Earlier Unreleased Changes
+
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
 - Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
 - Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.
