@@ -20,7 +20,7 @@ Ask for only what is missing:
 | a copy-ready instruction | `02-skills-index.md` |
 | literature review | `03-literature-review.md` |
 | writing, revision, referee response | `04-writing-revision-referee.md` |
-| economics empirical methods | `05-empirical-methods-economics.md` |
+| economics methods, DML benchmarks, numerical policy/Riccati checks | `05-empirical-methods-economics.md` |
 | finance empirical methods | `06-empirical-methods-finance.md` |
 | code, data, tables, figures | `07-coding-data-stata-r-python.md` |
 | Git, GitHub, agents, collaboration | `08-agentic-workflows-git-github.md` |

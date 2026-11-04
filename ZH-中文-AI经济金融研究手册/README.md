@@ -153,6 +153,8 @@ I want to work in Chinese. First ask what I want to do.
 | `WRDS`、`CRSP`、`Compustat`、`API`、`provenance`、`数据合并` | [02 复制即用：AI 研究指令与模板](中文内容/02-复制即用：AI研究指令与模板.md#数据清洗合并和输出工作流) |
 | `agent`、`Codex`、`Claude Code`、`GitHub` | [03 设置 Agent 和自动化研究工作流](中文内容/03-设置Agent和自动化研究工作流.md) |
 | `dataset`、`资源`、`官方文档`、`找工具` | [05 资料来源、官方文档与更新](中文内容/05-资料来源官方文档与更新.md) |
+| `DML`、`DoubleML`、`敏感性基准` | [DML 敏感性基准的模型状态检查](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-sensitivity-benchmark-state-check) |
+| `Riccati`、`LQ control`、`数值政策规则` | [数值政策规则及 Riccati 验证](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/16-structural-quantitative-and-welfare-skills.md#numerical-policy-verification) |
 
 ## 中文内容同步规则
 

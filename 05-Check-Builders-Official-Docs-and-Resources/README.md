@@ -162,6 +162,17 @@ Last checked:
 
 ## Source-to-Repo Map
 
+### Research Methods Audit: 2026-11-04
+
+The incremental window starts at the previous successful audit, 2026-11-03 02:10:17 UTC. See the [central evidence and deduplication ledger](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md#2026-11-04-incremental-methods-audit). These are updates inside existing skills, not new skill families. All rows checked 2026-11-04.
+
+| Source and maintainer | Increment and destination | Rights and exclusions |
+| --- | --- | --- |
+| DoubleML team, maintainers Philipp Bach and Sven Klaassen, [PR #441](https://github.com/DoubleML/doubleml-for-py/pull/441), merged 2026-11-03, and [test extension](https://github.com/DoubleML/doubleml-for-py/commit/5d4da666a68c9cfce5430d0dd059c6ab60662a7f) | UPDATE `03` methods audit and packaged economics reference: reduced-covariate refits, treatment-specific configuration, unchanged baseline, and matched reference comparisons. The reported refit exception concerns the unreleased vector API | [BSD-3-Clause](https://github.com/DoubleML/doubleml-for-py/blob/1af040fd1c922a4c7d30d01b7c21f208d5e3377a/LICENSE); original high-level procedure/links only; no implementation, test, fixture, or documentation text copied; no upstream execution or release certification |
+| Thomas J. Sargent and John Stachurski / QuantEcon, *Intermediate Quantitative Economics with Python*, [Phillips Curve Tradeoffs revision](https://github.com/QuantEcon/lecture-python.myst/commit/4d82fffbb1280f8f6980a45dbe518e677f5c9a39), 2026-11-03 | UPDATE `16` counterfactual audit and packaged economics reference: discount/cross-term translation, independent equation checks, and constraint interpretation | [Lecture footer](https://python.quantecon.org/phillips_learning.html) declares CC BY-SA 4.0; no MIT relicensing of lecture expression. Original high-level verification procedure and mathematical facts only; no prose, derivations, code, figures, solutions, or extended structure copied |
+
+Priority recheck: Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf) and [Text Data in Finance](https://mjha91.github.io/pdf/TextDataFinance.pdf) have identical content hashes to the 2026-11-03 audit. No new adaptation here; existing work remains in [draft PR #4](https://github.com/SuperJayLiu/AI-for-Economics-and-Finance-Research/pull/4). No explicit reuse license established; LINK + DO NOT COPY, with no slide text, figures, prompts, templates, or extended structure reproduced. An access or deployment date is not a substantive revision date.
+
 For the dated candidate-by-candidate license and duplicate decision, see the [External Skill Source, License, and Deduplication Audit](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md).
 
 | Source | What this repo extracts |

@@ -183,6 +183,8 @@ Use this table like a search page when you know the task but not the folder.
 
 | Function / keyword | Open directly |
 | --- | --- |
+| `DML`, `DoubleML`, `sensitivity benchmark` | [DML Sensitivity Benchmark State Check](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-sensitivity-benchmark-state-check) |
+| `Riccati`, `LQ control`, `numerical policy rule` | [Numerical Policy Verification](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/16-structural-quantitative-and-welfare-skills.md#numerical-policy-verification) |
 | `writing`, `introduction`, `abstract`, `paper draft` | [Paper Drafting, Revision, and Citation Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/02-paper-drafting-revision-and-citation-skills.md) |
 | `paper review`, `self-review`, `referee`, `R&R` | [Referee Reports and Peer Review Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/13-referee-reports-and-peer-review-skills.md) |
 | `literature review`, `paper matrix`, `citation support` | [Literature Review and Source Synthesis Skills](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/10-literature-review-and-source-synthesis-skills.md) |
