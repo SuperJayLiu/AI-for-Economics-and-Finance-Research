@@ -219,4 +219,21 @@ Write a concise limitations paragraph that:
 Also return a checklist of claims in the paper that should be softened.
 ```
 
-Sources and workflow influences: Paul Goldsmith-Pinkham's Applied Empirical Methods course emphasis on practical implementation, research design intuition, communication, and disentangling the experiment behind causal claims.
+## DML Tuning Audit for Skills 2 and 3
+
+Use when methods or code claim cross-fitted DML after nuisance-model tuning. Obtain the package/API/source version, tuning spaces, preset parameters, learner pipelines, treatment names, repetition/fold indices, split IDs, scorer, and stored predictions. Keep missing evidence explicitly unverified.
+
+1. Map each returned tuning result to its treatment, repetition, and fold; exercise unequal treatment/repetition counts. Reject aliased result entries or shared mutable fitted pipeline state that contaminates folds. Check that each prediction uses a fit excluding its evaluation observation; immutable parameter metadata may be shared.
+2. For partial tuning, compare untuned learners' parameters before and after. Under identical data, splits, and randomness, compare nuisance predictions, coefficients, and standard errors with a fresh reference fit that sets only the selected tuned parameters directly.
+3. Recompute the tuning objective with its actual inner splits, scoring rule, and data subset. A different outer-fold loss need not improve. Separately check that the subsequent fit uses the selected parameters; in double cross-fitting, exercise unequal inner/outer fold counts and verify each outer fold's parameters reach its inner models.
+4. Return a configuration/index map, comparison tolerances and discrepancies, prediction provenance, and affected-result review list. Preserve the original environment; do not silently upgrade or declare all published DML results invalid.
+
+Official DoubleML PRs #447 and #438 fix production behavior. Although #446's description calls it test-only, its final diff also changes production parameter routing for double cross-fitting; do not classify changes from PR prose alone. The #447 issue reports the partial-tuning problem in 0.11.4, but this audit does not independently certify the affected release range or availability of a fixed distribution. These failures differ from the unreleased vector sensitivity-refit exception covered in the 2026-11-04 audit.
+
+For generated proxies used as controls, also apply the [role and identification check](15-text-as-data-and-llm-measurement-skills.md#generated-controls-role-and-identification-check).
+
+## Sources and Workflow Influences
+
+Paul Goldsmith-Pinkham's Applied Empirical Methods course emphasizes practical implementation, research design intuition, communication, and disentangling the experiment behind causal claims.
+
+- DoubleML team, maintained by Philipp Bach and Sven Klaassen: [leave untuned learners unchanged, PR #447](https://github.com/DoubleML/doubleml-for-py/pull/447), merge `ddf496e7c17cb81e5be19d553558b0eb8c0d1b56`; [treatment/repetition indexing, PR #438](https://github.com/DoubleML/doubleml-for-py/pull/438), merge `38be59c3a8714e2f0ea4b4d76a63f0cc503602a3`; [LPLR tuning-objective validation, PR #446](https://github.com/DoubleML/doubleml-for-py/pull/446), merge `4d83c5cb289756d08e98ecb0010de48a3b252f0f`. Merged 2026-11-04; checked 2026-11-05. Pinned [BSD-3-Clause license](https://github.com/DoubleML/doubleml-for-py/blob/ddf496e7c17cb81e5be19d553558b0eb8c0d1b56/LICENSE), copyright Bach/Chernozhukov/Klaassen/Kurz/Spindler. Influence: original audit procedure for tuning state, index mapping, and matched-objective verification. No source code, tests, fixtures, or documentation wording copied or executed; no dependencies or research data transferred. [Issue #444](https://github.com/DoubleML/doubleml-for-py/issues/444) supplies the reported release context, not independent release certification.

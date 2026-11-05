@@ -9,6 +9,14 @@ This folder is not a link dump. It explains which external resources influenced 
 
 Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay.liu@bristol.ac.uk) with subject `[AI Econ Finance Sources] Resource suggestion`.
 
+## Methods Sources Checked on 2026-11-05
+
+- DoubleML team (maintainers Philipp Bach/Sven Klaassen), [#447](https://github.com/DoubleML/doubleml-for-py/pull/447), [#438](https://github.com/DoubleML/doubleml-for-py/pull/438), [#446](https://github.com/DoubleML/doubleml-for-py/pull/446), merged 2026-11-04: original tuning-state, split-index, and objective-verification procedures in existing skill 03 and packaged economics ref 05. [Pinned BSD-3-Clause](https://github.com/DoubleML/doubleml-for-py/blob/ddf496e7c17cb81e5be19d553558b0eb8c0d1b56/LICENSE); no code, tests, or documentation copied/executed. #446's final production diff overrides its test-only description. Fixed distribution availability not certified.
+- Timothy Christensen/Daniel Vebman, Yale University, [Regression with Many Generated Controls, v1](https://arxiv.org/abs/2611.06855v1), submitted 2026-11-04: original control-role/assumption gate in existing skill 15. ArXiv perpetual non-exclusive distribution license is not general reuse permission; no text, equations, examples, figures, code, or structure copied. Preprint consistency conditions are not a general inference/validation exemption.
+- Priority recheck: Manish Jha, Georgia State University, [AI for Finance Research](https://mjha91.github.io/pdf/AIFinanceResearch.pdf) and [Text Data in Finance](https://mjha91.github.io/pdf/TextDataFinance.pdf), accessed 2026-11-05. Both byte-identical to prior audits; no new adaptation. No explicit reuse license established; link/attribution only, no lecture text, figures, templates, or structure copied. Existing pending PR #4 already covers the practical patterns.
+
+See the [central decision and deduplication ledger](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md#2026-11-05-incremental-methods-audit) and the exact destination pages for versioned evidence and exclusions.
+
 ## Update Notifications and Privacy
 
 Readers can stay informed through GitHub-native notifications or a minimal email update list.
