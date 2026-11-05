@@ -18,6 +18,8 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 
 ## Start With A Task Card
 
+Methods verification: use the [DML tuning audit](skills/03-empirical-methods-skills-for-economics-research.md#dml-tuning-audit-for-skills-2-and-3) for tuned cross-fitting, and the [generated-controls check](skills/15-text-as-data-and-llm-measurement-skills.md#generated-controls-role-and-identification-check) for latent-confounder proxies. These extend existing skills; dated sources and rights are recorded on those pages and in the [source audit](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md#2026-11-05-incremental-methods-audit).
+
 Use these as the fastest entry points. Each card points to one copy-ready block and one verification habit.
 
 | I want to... | Copy first | Then verify by... |

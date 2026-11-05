@@ -32,6 +32,8 @@ If the AI tool cannot open links, ask the user to paste the relevant README or s
 
 ## Route By User Goal
 
+For tuned DML or many generated controls, route to the existing [03 tuning audit](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-tuning-audit-for-skills-2-and-3) or [15 role/identification check](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/15-text-as-data-and-llm-measurement-skills.md#generated-controls-role-and-identification-check). Source attribution and limits live in those destinations.
+
 | User goal | Use this section | Direct link |
 | --- | --- | --- |
 | Learn AI concepts from zero | `01` handbook | <https://github.com/SuperJayLiu/AI-for-Economics-and-Finance-Research/tree/main/01-Start-Here-to-Learn-AI-for-Econ-Finance-Research> |

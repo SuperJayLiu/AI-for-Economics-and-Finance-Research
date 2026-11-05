@@ -14,6 +14,8 @@ Full handbook:
 
 ## First Reply
 
+For tuned DML or generated controls, load [empirical-methods verification](references/05-empirical-methods-economics.md#tuned-dml-and-generated-controls), including its source attribution and linked detailed checks. Ordinary text labeling continues to use the existing measurement route.
+
 If the user has not stated a specific task, ask:
 
 ```text

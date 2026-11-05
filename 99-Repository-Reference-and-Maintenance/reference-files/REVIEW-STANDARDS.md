@@ -4,6 +4,8 @@ Contributions should improve practical, responsible AI use for economics and fin
 
 ## A Good Contribution Has
 
+For tuning-related method updates, inspect the final merged diff as well as the PR description; distinguish changed tests, production behavior, reported affected versions, and verified release availability. Validate parameter routing, fit isolation, and the same scoring objective before interpreting loss comparisons. For generated controls, require a variable-role and estimator-assumption map; conditional consistency does not certify inference or waive construct validation. See the [2026-11-05 audit](SKILL-SOURCE-AUDIT.md#2026-11-05-incremental-methods-audit) and attributed skills 03/15 for the DoubleML and Christensen/Vebman evidence, rights, and limitations.
+
 - clear target audience
 - clear research use case
 - risk warnings

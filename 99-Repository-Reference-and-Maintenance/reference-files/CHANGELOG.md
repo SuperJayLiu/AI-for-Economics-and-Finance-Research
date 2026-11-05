@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-05 Research Methods Audit
+
+- Updated existing skill 03 and packaged economics ref 05 with DML partial-tuning isolation, treatment/repetition and inner/outer parameter mapping, and matched tuning-objective checks. Inspect final diffs: DoubleML #446 includes a production change despite its description.
+- Updated existing skill 15 with a generated-control role/identification gate based on Christensen/Vebman v1; no new skill family and no general validation or inference exemption.
+- Synchronized English/Chinese discovery, root/package routing, sources, standards, and central/page-level attribution. Jha lecture fingerprints are unchanged; pending PRs #4/#5 were included in deduplication and not reimported.
+
 ## Unreleased
 
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.

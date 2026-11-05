@@ -201,6 +201,14 @@ Also return:
 - disclosure sentence for the paper or appendix.
 ```
 
+## Generated Controls: Role and Identification Check
+
+Apply within Skill 1 when generated measures serve as controls for a latent confounder. First record the observed target regressor, latent confounder, proxy-generation inputs, proxy panel, estimator, and intended coefficient. Separate this role from measuring the outcome, treatment, or construct itself.
+
+Ask whether the latent control would remove confounding, what information the proxies retain, and why the selected estimator can use it. More prompts or PCA alone do not establish identification. Distinguish linear adjustment from flexible adjustment on factors; proxy-as-instrument strategies need their own assumptions. Request evidence about common proxy errors, factor recovery, remaining regressor variation, and estimator-specific regularity conditions.
+
+Return an assumption-to-evidence table and unresolved identification/inference claims. Do not treat a conditional consistency result as a ready-made standard-error procedure, or remove human construct validation merely because validation-free identification is possible in a particular model. Freeze proxy selection before comparing downstream significance.
+
 ## Minimal Archive Fields for LLM-Generated Variables
 
 ```text
@@ -229,4 +237,6 @@ commit_hash:
 
 This page draws on economics text-as-data practice, LLM measurement and reproducibility concerns, finance text sources such as filings and earnings calls, and the general principle that AI-generated variables must be validated like measurement instruments.
 
-Last checked: 2026-05-24
+- Timothy Christensen and Daniel Vebman, Yale University, [Regression with Many Generated Controls, arXiv:2611.06855v1](https://arxiv.org/abs/2611.06855v1), submitted 2026-11-04 18:10:56 UTC; checked 2026-11-05. Author identity checked against [Yale's Christensen profile](https://economics.yale.edu/people/timothy-christensen), the paper affiliations, and Vebman's author site. The [versioned full text](https://arxiv.org/html/2611.06855v1) carries arXiv's perpetual non-exclusive distribution license, not general reuse permission. Influence: original role/assumption audit for many generated controls, bounded by the paper's working model and consistency results. No prose, equations, proofs, examples, figures, code, or extended structure copied; no implementation executed. This preprint is not a general exemption from validation or a certified inference recipe.
+
+Last checked: 2026-11-05
