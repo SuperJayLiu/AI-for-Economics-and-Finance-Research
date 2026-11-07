@@ -4,6 +4,9 @@ Contributions should improve practical, responsible AI use for economics and fin
 
 ## A Good Contribution Has
 
+For stateful estimator updates, inspect final merged diffs, not only PR descriptions. Check artifact provenance across refits and independent storage flags. For inference fallbacks, identify the affected branch and distinguish point estimates from uncertainty; centering checks do not certify identification. See the attributed [2026-11-07 audit](SKILL-SOURCE-AUDIT.md#2026-11-07-incremental-methods-audit).
+
+
 - clear target audience
 - clear research use case
 - risk warnings

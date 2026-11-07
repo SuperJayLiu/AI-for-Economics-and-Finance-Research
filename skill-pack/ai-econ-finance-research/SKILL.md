@@ -14,6 +14,9 @@ Full handbook:
 
 ## First Reply
 
+For DML refits, stale diagnostics, or nonpositive-nu2 sensitivity warnings, load [reference 05](references/05-empirical-methods-economics.md#dml-fit-artifacts-and-sensitivity-fallback-audit); require fit-artifact identity and fallback-centering evidence.
+
+
 If the user has not stated a specific task, ask:
 
 ```text

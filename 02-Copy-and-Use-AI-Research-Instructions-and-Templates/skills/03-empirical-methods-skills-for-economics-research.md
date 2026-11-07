@@ -220,3 +220,22 @@ Also return a checklist of claims in the paper that should be softened.
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's Applied Empirical Methods course emphasis on practical implementation, research design intuition, communication, and disentangling the experiment behind causal claims.
+
+## DML Fit Artifacts and Sensitivity Fallback Audit
+
+Use with Skill 3 when methods or tables depend on repeated DML fits, nuisance diagnostics, CATE/GATE, or sensitivity bounds. Request the exact package version/source revision, fit order, storage flags, sample/fold identifiers, warnings, and relevant outputs. Missing evidence stays **UNVERIFIED**; a successful fit alone does not validate its diagnostics or inference.
+
+```text
+Audit the supplied DML fit history and sensitivity outputs.
+
+1. Map every prediction, nuisance target, stored learner, diagnostic, and heterogeneity output to the fit that produced it. Record the sample, folds, specification, and storage flags. After a refit that disables storage, old artifacts must be unavailable; do not use their presence as evidence that current artifacts exist. Check prediction and model storage independently, including predictions enabled/models disabled.
+2. Where execution is authorized, compare a reused object's latest fit with a fresh object under matched data, folds, learners, and settings. Diagnostics and CATE/GATE requiring unavailable predictions must stop explicitly. Preserve the old fit separately; do not recover missing current predictions by silently substituting earlier ones.
+3. If a sensitivity warning reports a nonpositive nu2 and re-estimation from the Riesz representer, isolate that fallback. Verify the stored influence contributions are centered over observations for each repetition/treatment and that the maximum-bias influence contribution has approximately zero mean, using a documented numerical tolerance. Match array axes and the implementation's definition before checking means.
+4. Separate coefficients and sensitivity point quantities from uncertainty in the bounds. A centering correction can change bound standard errors while leaving the coefficient, re-estimated nu2, and maximum-bias point quantity unchanged. Compare matched reference calculations; neither disappearance of a warning nor narrower bounds establishes credible identification. The fallback remains non-orthogonal and warrants substantive review.
+
+Return an evidence table: artifact/fit identity or fallback branch, observed check, tolerance/reference, pass/fail/unverified, affected result, and required action. Distinguish merged source fixes from verified installed-release availability; do not assert an affected release range without evidence.
+```
+
+### Sources and Workflow Influences for This Audit
+
+- DoubleML team; maintainers Philipp Bach and Sven Klaassen, **“fix: drop predictions and models of a previous fit when fit() doesn't store them”**, [PR #452](https://github.com/DoubleML/doubleml-for-py/pull/452), merged 2026-11-06 12:18:03 UTC, source revision `a3493c3b7a444b6ddd730ad05c2c0e6c67ac19c3`; and **“fix: center psi_nu2 in the nu2 re-estimation fallback”**, [PR #450](https://github.com/DoubleML/doubleml-for-py/pull/450), merged 2026-11-06 12:17:47 UTC, revision `aadcbcd1daeb90c14a865a5bec93a6358fe9a1c9`. [Pinned BSD-3-Clause license](https://github.com/DoubleML/doubleml-for-py/blob/a3493c3b7a444b6ddd730ad05c2c0e6c67ac19c3/LICENSE). Checked 2026-11-07. Original adaptation: fit-artifact provenance/storage checks and branch-specific influence-centering verification. No upstream code, tests, fixtures, prose, or document structure copied; no candidate software installed or executed. Final diffs inspected: #452 also improves the missing-storage error despite its earlier body suggesting otherwise. Release availability and applied results are not certified.
