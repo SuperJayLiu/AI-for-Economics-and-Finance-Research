@@ -18,6 +18,9 @@
 
 ## 安全获取更新
 
+DML 重复拟合或敏感性警告：使用现有[拟合产物与回退路径审计](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-fit-artifacts-and-sensitivity-fallback-audit)，核对预测值是否属于当前拟合、影响函数是否按重复/处理维度中心化；缺失证据标记为未验证。
+
+
 推荐优先使用 GitHub 原生通知，这样维护者不需要额外收集你的邮箱。
 
 | 方式 | 如何使用 | 信息安全说明 |

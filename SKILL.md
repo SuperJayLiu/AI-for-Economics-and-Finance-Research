@@ -17,6 +17,9 @@ This skill does not replace the handbook. It tells an AI assistant how to use th
 
 ## How To Use This Skill
 
+For DML refits, stale diagnostics, or nonpositive-nu2 sensitivity warnings, route to the existing [methods audit](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-fit-artifacts-and-sensitivity-fallback-audit). Require fit identity/storage evidence and branch-specific verification.
+
+
 1. Identify the user's research task.
 2. Route to the most relevant section below.
 3. Ask only the missing questions needed to proceed.

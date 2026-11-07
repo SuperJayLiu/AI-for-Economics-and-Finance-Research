@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- 2026-11-07: Updated existing economics methods and packaged ref 05 with DML fit-artifact provenance/storage gates and sensitivity-fallback influence-centering checks; synchronized bilingual discovery, routing, source attribution, maintenance standards, and central audit. No new skill page; prior pending PR content was not reimported.
+
+
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
 - Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
 - Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.

@@ -18,6 +18,9 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 
 ## Start With A Task Card
 
+DML refits or sensitivity warnings: use the existing [fit-artifact and fallback audit](skills/03-empirical-methods-skills-for-economics-research.md#dml-fit-artifacts-and-sensitivity-fallback-audit) to check whether diagnostics belong to the current fit and whether fallback influence contributions are centered.
+
+
 Use these as the fastest entry points. Each card points to one copy-ready block and one verification habit.
 
 | I want to... | Copy first | Then verify by... |

@@ -524,3 +524,7 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+## DoubleML Source Audit — 2026-11-07
+
+DoubleML team, maintainers Philipp Bach and Sven Klaassen: [#452, fit storage lifecycle](https://github.com/DoubleML/doubleml-for-py/pull/452) and [#450, sensitivity fallback centering](https://github.com/DoubleML/doubleml-for-py/pull/450), merged November 6, checked November 7, 2026. [BSD-3-Clause at inspected revision](https://github.com/DoubleML/doubleml-for-py/blob/a3493c3b7a444b6ddd730ad05c2c0e6c67ac19c3/LICENSE). Original adaptation of current-fit artifact checks and fallback-specific influence verification in [existing methods skill 03](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-fit-artifacts-and-sensitivity-fallback-audit) and packaged ref 05. No upstream code, tests, fixtures, prose, or structure copied/executed. Source merges are not installed-release certification. See the [central decision ledger](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md#2026-11-07-incremental-methods-audit).
