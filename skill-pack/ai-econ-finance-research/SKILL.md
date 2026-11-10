@@ -14,6 +14,8 @@ Full handbook:
 
 ## First Reply
 
+For RDFlex bandwidth claims, load [reference 05](references/05-empirical-methods-economics.md#rdflex-final-bandwidth-reporting-audit); distinguish final realized windows, reported metadata, and numerical estimates.
+
 If the user has not stated a specific task, ask:
 
 ```text
