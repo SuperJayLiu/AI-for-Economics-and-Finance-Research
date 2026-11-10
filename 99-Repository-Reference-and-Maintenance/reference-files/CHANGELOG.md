@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- 2026-11-10: Updated existing economics methods and packaged reference 05 with RDFlex final-bandwidth reconciliation, asymmetric-window retention, and metadata-versus-estimate boundaries; synchronized bilingual discovery, routing, source attribution, standards, and central audit. No new skill page or repeated import of pending PRs #4–7.
+
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
 - Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
 - Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.

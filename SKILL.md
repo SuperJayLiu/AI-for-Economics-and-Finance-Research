@@ -17,6 +17,8 @@ This skill does not replace the handbook. It tells an AI assistant how to use th
 
 ## How To Use This Skill
 
+For DoubleML RDFlex bandwidth reporting, route to the [existing economics methods audit](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rdflex-final-bandwidth-reporting-audit); require final left/right bandwidth records by repetition, not only a scalar summary.
+
 1. Identify the user's research task.
 2. Route to the most relevant section below.
 3. Ask only the missing questions needed to proceed.

@@ -18,6 +18,8 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 
 ## Start With A Task Card
 
+For RDFlex bandwidth claims, use the existing [final-bandwidth reporting audit](skills/03-empirical-methods-skills-for-economics-research.md#rdflex-final-bandwidth-reporting-audit) to reconcile per-repetition final windows and asymmetric bandwidths.
+
 Use these as the fastest entry points. Each card points to one copy-ready block and one verification habit.
 
 | I want to... | Copy first | Then verify by... |

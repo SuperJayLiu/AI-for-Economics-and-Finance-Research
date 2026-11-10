@@ -524,3 +524,9 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+## DoubleML Bandwidth Reporting Source — 2026-11-10
+
+DoubleML team; maintainers Philipp Bach and Sven Klaassen; contributor `vrjdev`, **“fix: report the final bandwidth in RDFlex.h for n_iterations=1”**, [PR #456](https://github.com/DoubleML/doubleml-for-py/pull/456), merged 2026-11-10 07:56:43 UTC, revision `a8ef43d39abb386c12c8d687f85288f36f467db7`. [Pinned BSD-3-Clause license](https://github.com/DoubleML/doubleml-for-py/blob/a8ef43d39abb386c12c8d687f85288f36f467db7/LICENSE); maintainer identities verified in the pinned project README. Checked 2026-11-10. Original adaptation: reconcile reported and realized final RD bandwidths by repetition, retain asymmetric bandwidths, and distinguish metadata repair from estimator changes. No upstream code, tests, fixtures, prose, or document structure copied, installed, or executed. The merged source does not establish installed-release availability or certify applied estimates.
+
+See the [existing economics methods audit](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rdflex-final-bandwidth-reporting-audit) and [central decision ledger](../99-Repository-Reference-and-Maintenance/reference-files/SKILL-SOURCE-AUDIT.md#2026-11-10-incremental-methods-audit).

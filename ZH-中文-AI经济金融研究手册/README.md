@@ -18,6 +18,8 @@
 
 ## 安全获取更新
 
+RDFlex 带宽报告：使用现有[最终带宽核查](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rdflex-final-bandwidth-reporting-audit)，逐次核对最终估计的左右带宽；单个最大值不能证明双侧对称，报告属性修复也不能证明系数发生修正。
+
 推荐优先使用 GitHub 原生通知，这样维护者不需要额外收集你的邮箱。
 
 | 方式 | 如何使用 | 信息安全说明 |

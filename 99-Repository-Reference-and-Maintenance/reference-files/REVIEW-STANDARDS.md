@@ -4,6 +4,8 @@ Contributions should improve practical, responsible AI use for economics and fin
 
 ## A Good Contribution Has
 
+For software reporting fixes, reconcile public summaries with final computation records and preserve side/repetition dimensions. Do not infer a numerical estimate correction from a metadata repair. The attributed [2026-11-10 audit](SKILL-SOURCE-AUDIT.md#2026-11-10-incremental-methods-audit) supplies an RD example.
+
 - clear target audience
 - clear research use case
 - risk warnings
