@@ -4,6 +4,8 @@ Contributions should improve practical, responsible AI use for economics and fin
 
 ## A Good Contribution Has
 
+For validation fixes, inspect final patches and tests: configuration can change between construction and execution, and setters can alter schema contracts. Record static acceptance separately from delivered computation. See the attributed [2026-11-11 audit](SKILL-SOURCE-AUDIT.md#2026-11-11-incremental-methods-audit).
+
 - clear target audience
 - clear research use case
 - risk warnings

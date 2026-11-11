@@ -18,6 +18,8 @@ Questions or suggestions for this part: email [jay.liu@bristol.ac.uk](mailto:jay
 
 ## Start With A Task Card
 
+For RDFlex Pipelines or mutable RD data, use the existing [learner-weight and running-variable audit](skills/03-empirical-methods-skills-for-economics-research.md#rdflex-learner-weight-and-running-variable-audit).
+
 Use these as the fastest entry points. Each card points to one copy-ready block and one verification habit.
 
 | I want to... | Copy first | Then verify by... |

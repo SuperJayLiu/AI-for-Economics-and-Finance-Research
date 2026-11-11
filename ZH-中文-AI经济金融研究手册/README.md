@@ -18,6 +18,8 @@
 
 ## 安全获取更新
 
+RDFlex 的 Pipeline 权重与 RD 数据列：使用现有[学习器权重和运行变量核查](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rdflex-learner-weight-and-running-variable-audit)，逐层验证权重传递，并在 fit 前及更改列名后重新核查。
+
 推荐优先使用 GitHub 原生通知，这样维护者不需要额外收集你的邮箱。
 
 | 方式 | 如何使用 | 信息安全说明 |
