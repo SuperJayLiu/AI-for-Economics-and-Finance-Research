@@ -14,6 +14,8 @@ Full handbook:
 
 ## First Reply
 
+For RDFlex weights or RD column changes, load [reference 05](references/05-empirical-methods-economics.md#rdflex-learner-weight-and-running-variable-audit); verify configuration at fit and running-variable/covariate disjointness.
+
 If the user has not stated a specific task, ask:
 
 ```text
