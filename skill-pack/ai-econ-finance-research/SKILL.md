@@ -98,3 +98,7 @@ Always apply these rules.
 ## Access Reality
 
 This skill can use local reference files only if the AI tool has access to them. If not, ask the user to paste the relevant file. Do not pretend to have read unavailable files.
+
+## Clustered Framework Arithmetic Route
+
+For sums or differences of clustered DoubleML frameworks, load [reference 05](references/05-empirical-methods-economics.md#clustered-doubleml-framework-arithmetic-audit). Require operation-specific covariance evidence and record unsupported operations explicitly.

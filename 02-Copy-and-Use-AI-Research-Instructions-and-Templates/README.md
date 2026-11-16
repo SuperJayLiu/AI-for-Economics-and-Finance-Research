@@ -371,3 +371,7 @@ Risks/failure modes:
 Verification checklist:
 External inspiration or source, if any:
 ```
+
+## Clustered DoubleML Contrast Checks
+
+For sums or differences of clustered DoubleML frameworks, use the [operation and covariance audit](skills/03-empirical-methods-skills-for-economics-research.md#clustered-doubleml-framework-arithmetic-audit) before accepting reported uncertainty.
