@@ -98,3 +98,7 @@ Always apply these rules.
 ## Access Reality
 
 This skill can use local reference files only if the AI tool has access to them. If not, ask the user to paste the relevant file. Do not pretend to have read unavailable files.
+
+## Weighted IV Diagnostic Route
+
+For weighted IV R-squared or Sargan diagnostics, load [reference 05](references/05-empirical-methods-economics.md#weighted-iv-diagnostic-reconciliation). Reconcile residual definitions, samples and weights before accepting reported diagnostics.

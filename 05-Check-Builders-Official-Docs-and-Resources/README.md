@@ -524,3 +524,9 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+## Checked Methods Maintenance: Weighted IV Diagnostics
+
+fixest project; maintainer Laurent Berge, verified in [pinned DESCRIPTION](https://github.com/lrberge/fixest/blob/76adcc876acda767bc749303c6c4e5758778add9/DESCRIPTION); contributor GitHub account `soodoku`: [PR #703, weighted second-stage IV R-squared](https://github.com/lrberge/fixest/pull/703), merged 2026-11-16 17:09:34 UTC at `8b9fd7af9951b330f0144a332695bceeeab6be57`; [PR #708, weighted Sargan total sum of squares](https://github.com/lrberge/fixest/pull/708), merged 17:54:42 UTC at `271b7e8b8a166f3e879d7cdf837fd87736a3a1fb`. Checked 2026-11-16 against both final two-file patches, including tests; DESCRIPTION declares GPL-3. **UPDATE + LINK**, no ADD: original diagnostic-reconciliation procedure only; no upstream code, tests, data, prose or extended structure copied or executed. These are merged-source checks, not a claim that a particular installed/CRAN release includes them or that overidentification tests prove instrument validity.
+
+Apply through the existing [economics methods audit](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#weighted-iv-diagnostic-reconciliation).

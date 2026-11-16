@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- 2026-11-16 evening: Updated existing economics methods and packaged reference 05 with weighted IV R-squared/Sargan diagnostic reconciliation, grounded in fixest #703/#708. Synchronized bilingual discovery, routing, sources, review standards and central audit; no new skill page or import of pending PRs #4–10.
+
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
 - Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
 - Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.
