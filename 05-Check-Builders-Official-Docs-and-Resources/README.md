@@ -524,3 +524,9 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+## Checked Methods Maintenance: Clustered Framework Arithmetic
+
+DoubleML team; maintainers Philipp Bach and Sven Klaassen (pinned README); contributor `vrjdev`: [PR #460, “fix: raise NotImplementedError for adding or subtracting clustered DoubleMLFramework objects”](https://github.com/DoubleML/doubleml-for-py/pull/460), merged 2026-11-15 06:05:22 UTC at `6a92b231214dc977b76b9ca27e2a8e2d2a9860e1`. [Pinned BSD-3-Clause license](https://github.com/DoubleML/doubleml-for-py/blob/6a92b231214dc977b76b9ca27e2a8e2d2a9860e1/LICENSE). Checked 2026-11-16 against all three final changed files, including one-/two-way cluster tests. **UPDATE + LINK**: original workflow adaptation for operation-specific inference acceptance; no source code, tests, fixtures, prose, or extended structure copied or executed. Merged source is not evidence of installed-release availability or valid applied estimates.
+
+Apply through the existing [economics methods audit](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#clustered-doubleml-framework-arithmetic-audit); component clustering does not certify contrast inference.

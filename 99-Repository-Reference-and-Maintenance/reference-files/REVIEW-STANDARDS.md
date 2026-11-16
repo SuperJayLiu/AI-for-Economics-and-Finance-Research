@@ -102,3 +102,7 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+## Operation-Specific Clustered Inference Acceptance
+
+For sums or differences of clustered DoubleML frameworks, require revision and exact-operation evidence, sample/cluster alignment, justified joint covariance, and reconciliation with tables. An unsupported-operation exception is a stop condition for the requested uncertainty claim. Scalar/sign controls cannot certify contrast inference. See the [existing methods audit](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#clustered-doubleml-framework-arithmetic-audit) and its dated source attribution.
