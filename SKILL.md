@@ -107,3 +107,7 @@ Use a dedicated MCP server only if users need searchable, tool-call access to th
 - `get_chinese_page(section)`
 
 An MCP server is more powerful but requires installation, permissions, hosting or local setup, and maintenance. Start with this skill router first.
+
+## Weighted IV Diagnostic Route
+
+For weighted IV R-squared or Sargan diagnostics, route to [economics methods: diagnostic reconciliation](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#weighted-iv-diagnostic-reconciliation). Require residual/sample/weight evidence and the diagnostic-specific inference assumptions.

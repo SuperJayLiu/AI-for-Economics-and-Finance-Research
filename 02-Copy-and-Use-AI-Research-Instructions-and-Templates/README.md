@@ -371,3 +371,7 @@ Risks/failure modes:
 Verification checklist:
 External inspiration or source, if any:
 ```
+
+## Weighted IV Diagnostic Checks
+
+For weighted IV R-squared or Sargan output, use the [diagnostic reconciliation audit](skills/03-empirical-methods-skills-for-economics-research.md#weighted-iv-diagnostic-reconciliation) to verify residual definitions, samples and consistent weights.

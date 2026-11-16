@@ -102,3 +102,7 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+## Weighted IV Diagnostic Acceptance
+
+Require installed revision, statistic-specific residual definitions, identical estimation rows, weight/centering consistency, auxiliary regression and reference-distribution assumptions for weighted IV R-squared and Sargan diagnostics. Reconcile any changes with tables; do not equate fit or non-rejection with instrument validity. See the [existing methods audit](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#weighted-iv-diagnostic-reconciliation) and its source attribution.

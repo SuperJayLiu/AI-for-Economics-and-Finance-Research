@@ -208,3 +208,7 @@ I want to work in Chinese. First ask what I want to do.
 ## 与英文版的关系
 
 中文路径不是英文首页的摘要，而是面向中文读者的完整阅读和使用路径。英文路径仍会先接收部分新增资料、外部链接和细分技能文件；中文路径应按上面的同步规则把主内容、目录、表格、工作流和直接可用模板补齐。若发现中英文主页面存在内容差异，请通过邮件建议需要同步的具体页面和小标题。
+
+## 加权 IV 诊断核查
+
+对加权 IV 的 R² 或 Sargan 输出，核对残差定义、样本、权重及辅助回归，并区分拟合诊断与识别依据。使用现有 [03 经济学方法核查](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#weighted-iv-diagnostic-reconciliation)。
