@@ -107,3 +107,5 @@ Use a dedicated MCP server only if users need searchable, tool-call access to th
 - `get_chinese_page(section)`
 
 An MCP server is more powerful but requires installation, permissions, hosting or local setup, and maintenance. Start with this skill router first.
+
+For R rdrobust with explicit bwcheck, route to [RD row-order verification](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rd-row-order-and-bandwidth-floor-verification); require paired row alignment, selected/fixed bandwidth evidence and an installed-revision check.

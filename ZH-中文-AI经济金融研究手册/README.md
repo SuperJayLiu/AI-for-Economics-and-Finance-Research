@@ -208,3 +208,5 @@ I want to work in Chinese. First ask what I want to do.
 ## 与英文版的关系
 
 中文路径不是英文首页的摘要，而是面向中文读者的完整阅读和使用路径。英文路径仍会先接收部分新增资料、外部链接和细分技能文件；中文路径应按上面的同步规则把主内容、目录、表格、工作流和直接可用模板补齐。若发现中英文主页面存在内容差异，请通过邮件建议需要同步的具体页面和小标题。
+
+RD 复现核查（2026-11-17）：[检查行顺序不变性与带宽下限](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rd-row-order-and-bandwidth-floor-verification)。对 R rdrobust 的特定 bwcheck 选项，将所有输入成对置换，比较排序和乱序结果；先解释数值差异，再解释经济意义。

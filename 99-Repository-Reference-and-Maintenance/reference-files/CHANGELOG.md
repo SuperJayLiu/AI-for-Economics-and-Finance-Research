@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- 2026-11-17: Extended existing economics methods and packaged reference 05 with R rdrobust row-order/bandwidth-floor verification, grounded in official #28. Synchronized bilingual navigation, routes, sources, standards and attribution; no new skill page or import of pending PRs #4–11.
+
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
 - Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
 - Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.

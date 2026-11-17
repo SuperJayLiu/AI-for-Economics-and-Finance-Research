@@ -524,3 +524,7 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+### RD Software Update Checked 2026-11-17
+
+rdpackages / Calonico, Cattaneo, Farrell and Titiunik: [rdrobust #28](https://github.com/rdpackages/rdrobust/pull/28), merged 2026-11-17, adds an explicit sort for a right-side bandwidth-floor path in R. GPL-3 per pinned package metadata; original summary/link only, no source/tests/assets copied. See [existing methods verification](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rd-row-order-and-bandwidth-floor-verification) for scope, complete attribution and installed-release limits. This extends an existing audit rather than adding a new estimator skill.

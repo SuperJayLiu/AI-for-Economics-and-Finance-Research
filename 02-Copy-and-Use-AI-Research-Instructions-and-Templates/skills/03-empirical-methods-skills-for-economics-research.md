@@ -220,3 +220,22 @@ Also return a checklist of claims in the paper that should be softened.
 ```
 
 Sources and workflow influences: Paul Goldsmith-Pinkham's Applied Empirical Methods course emphasis on practical implementation, research design intuition, communication, and disentangling the experiment behind causal claims.
+
+## RD Row-Order and Bandwidth-Floor Verification
+
+Use within the existing methods/code audit for R `rdrobust()` or `rdbwselect()` when bandwidth selection uses an explicit `bwcheck`, especially with `masspoints = "off"` and variance estimation other than nearest-neighbor. Required inputs: exact installed revision, complete options, cutoff, running variable, outcome, stable row IDs, sample exclusions, covariates, weights, clusters and fuzzy-treatment inputs where used. Missing evidence remains **UNVERIFIED**.
+
+```text
+1. Preserve the replication environment and original result. Record selected estimation/bias bandwidths, effective samples, coefficients, standard errors and intervals. A package version string alone may not identify the source revision containing a fix.
+2. Hold the analytic sample, row identities and all options fixed. Apply the SAME permutation to every row-aligned input, then compare original, running-variable-sorted and several reproducibly shuffled orders within a justified numerical tolerance. Check both the bandwidth selector and the estimator; never shuffle x separately from y, covariates, weights, clusters or treatment status.
+3. Trace the bandwidth floor to distances of distinct running-variable values from the cutoff on each side. Verify nearest-value ordering and the available distinct support when the requested count exceeds it. Duplicating rows does not create new support. A misplaced pilot floor can change a final selected bandwidth even when the final bandwidth exceeds that floor.
+4. If selected-bandwidth fits differ, compare genuinely identical explicit estimation AND bias bandwidths to help separate selection from estimation; preserve all other inputs/options. This is a diagnostic decomposition, not proof of correctness. Record remaining differences and reconcile affected tables before interpreting them economically.
+5. The audited R source correction explicitly sorts right-side distinct values before reading the floor. The upstream changelog identifies R 4.0.0–4.1.1 for this option path and labels the correction Unreleased. Confirm the actual installed code; do not generalize to all RD specifications, Python/Stata, or an available CRAN fix. Do not silently upgrade an archived replication environment or treat sorting as a substitute for a verified correction.
+6. Stop interpretation of unexplained order-dependent results. Passing these checks verifies a computational contract; it does not establish RD continuity, absence of manipulation, adequate support, or valid causal inference. Separate inspected upstream tests from tests actually executed locally.
+
+Return a ledger: revision/options, IDs and sample alignment, distinct support and floor checks, permutation/sorted comparisons and tolerances, fixed-bandwidth diagnostic, affected outputs, unresolved discrepancies and next action.
+```
+
+### Sources and Workflow Influences for RD Row Order
+
+Sebastian Calonico, Matias D. Cattaneo, Max H. Farrell and Rocio Titiunik / rdpackages, maintainer Calonico verified in [pinned R DESCRIPTION](https://github.com/rdpackages/rdrobust/blob/ddf48c41871cb44913a45aa540c761d5c5472118/R/rdrobust/DESCRIPTION); contributor GitHub account `soodoku`: [rdrobust PR #28](https://github.com/rdpackages/rdrobust/pull/28), merged 2026-11-17 04:07:16 UTC, revision `ddf48c41871cb44913a45aa540c761d5c5472118`; [pinned changelog](https://github.com/rdpackages/rdrobust/blob/ddf48c41871cb44913a45aa540c761d5c5472118/CHANGELOG.md). Checked 2026-11-17: all four final changed files inspected, with surrounding selector/estimator code and complete invariance test file. DESCRIPTION declares GPL-3. **UPDATE + LINK**, no ADD: original workflow for paired input permutations, distinct-support floors, selection/estimation decomposition and interpretation stop rules. No upstream code, tests, datasets, prose or extended structure copied or executed. Upstream test assertions inspected, not independently reproduced; merged source is not certification of a released package. The repository MIT license does not relicense the linked source.
