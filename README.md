@@ -394,3 +394,5 @@ AI 可以自动化劳动，但不能替代学术责任。AI 输出只能作为�
 | [04 案例与失败案例](ZH-中文-AI经济金融研究手册/中文内容/04-案例图示与失败案例.md) | 真实研究场景中的好用法、坏用法和失败案例。 |
 | [05 资料来源与更新](ZH-中文-AI经济金融研究手册/中文内容/05-资料来源官方文档与更新.md) | 安全订阅更新、跟进官方文档和判断外部资源。 |
 | [06 教学与分享](ZH-中文-AI经济金融研究手册/中文内容/06-教学工作坊展示与分享.md) | 工作坊、RA 培训、展示练习和教学材料。 |
+
+RD replication check: [verify row-order invariance and bandwidth floors](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rd-row-order-and-bandwidth-floor-verification) before interpreting R rdrobust results under explicit bwcheck options (audited 2026-11-17).

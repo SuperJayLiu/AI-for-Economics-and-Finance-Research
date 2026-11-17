@@ -98,3 +98,5 @@ Always apply these rules.
 ## Access Reality
 
 This skill can use local reference files only if the AI tool has access to them. If not, ask the user to paste the relevant file. Do not pretend to have read unavailable files.
+
+For R rdrobust with explicit bwcheck, use [RD row-order verification](references/05-empirical-methods-economics.md#rd-row-order-and-bandwidth-floor-verification); require paired row alignment, bandwidth and revision evidence.

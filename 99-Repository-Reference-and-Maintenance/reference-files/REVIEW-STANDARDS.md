@@ -102,3 +102,7 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+### RD Row-Order Acceptance Gate
+
+For R rdrobust with explicit bwcheck, require exact revision/options, stable analytic rows, paired permutations of every input, sorted/shuffled bandwidth and estimator comparisons, distinct-support checks and explicit estimation/bias bandwidth controls when diagnosing discrepancies. Do not accept unexplained order dependence or infer causal validity from passing. See [method contract and attribution](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#rd-row-order-and-bandwidth-floor-verification), checked 2026-11-17.
