@@ -524,3 +524,7 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+### Group-Effect Software Update Checked 2026-11-18
+
+DoubleML project: [scalar GATE fix #466](https://github.com/DoubleML/doubleml-for-py/pull/466), merged November 18, concerns unreleased scalar PLR/IRM input handling. BSD-3-Clause verified at merge revision; original summary/link only, no source/tests/assets copied. See [method contract and full attribution](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#group-encoding-and-gate-verification) for encoding, membership and installed-revision limits. No new skill family.
