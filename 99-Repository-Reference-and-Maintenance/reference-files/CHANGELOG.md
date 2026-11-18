@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- 2026-11-18: Updated existing economics methods and packaged reference 05 with DoubleML scalar GATE encoding/membership verification based on official #466. Synchronized bilingual navigation, routing, sources, standards and attribution; no new page or import of pending #4–12.
+
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
 - Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
 - Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.

@@ -98,3 +98,5 @@ Always apply these rules.
 ## Access Reality
 
 This skill can use local reference files only if the AI tool has access to them. If not, ask the user to paste the relevant file. Do not pretend to have read unavailable files.
+
+For DoubleML scalar GATE, use [group encoding verification](references/05-empirical-methods-economics.md#group-encoding-and-gate-verification); require membership/alignment evidence and matched-fit dtype comparisons.
