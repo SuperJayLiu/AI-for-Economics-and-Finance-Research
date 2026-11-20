@@ -102,3 +102,7 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+### IV Rank Diagnostic Acceptance Gate
+
+Require exact revision, retained instrument/endogenous column counts, common sample and weights, covariance/cluster corrections, first-stage degrees of freedom and explicit statistic/p-value normalization. Missing/singular diagnostics stop interpretation; matched benchmarks must document conventions and tolerances. Rank rejection alone does not validate instrument exogeneity or eliminate weak-IV concerns. See [contract and attribution](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#iv-rank-diagnostic-verification), checked 2026-11-20.

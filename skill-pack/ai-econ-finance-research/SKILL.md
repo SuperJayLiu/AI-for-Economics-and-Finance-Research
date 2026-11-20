@@ -98,3 +98,5 @@ Always apply these rules.
 ## Access Reality
 
 This skill can use local reference files only if the AI tool has access to them. If not, ask the user to paste the relevant file. Do not pretend to have read unavailable files.
+
+For fixest IV rank diagnostics, use [rank-diagnostic verification](references/05-empirical-methods-economics.md#iv-rank-diagnostic-verification); require matched sample/weights/covariance and statistic/p-value normalization evidence.
