@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- 2026-11-20: Strengthened existing economics methods and packaged reference 05 with fixest IV rank-diagnostic normalization, dimension, weight and covariance verification from official #709; synchronized bilingual navigation, routes, sources, standards and attribution. No new skill family or import of pending #4–13.
+
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
 - Added a new systematic-review and meta-analysis family covering protocols, searches, screening ledgers, report/version deduplication, estimand harmonization, dependent effects, pooling, and publication-selection audits.
 - Added a provider-neutral data-acquisition contract with source preflight, explicit fallback checkpoints, no silent simulated-data substitution, and provenance records.

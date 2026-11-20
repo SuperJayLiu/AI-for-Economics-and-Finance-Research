@@ -524,3 +524,7 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+### IV Diagnostic Update Checked 2026-11-20
+
+Laurent Berge / fixest: [official rank-diagnostic correction #709](https://github.com/lrberge/fixest/pull/709), merged November 20; GPL-3 verified in pinned package metadata. Original summary/link only, no code/tests/assets copied. See [method contract and full attribution](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#iv-rank-diagnostic-verification) for final-patch scope, weight/dimension/covariance checks and source-versus-execution limits.
