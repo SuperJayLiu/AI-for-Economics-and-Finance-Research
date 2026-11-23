@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-23 Incremental Methods Audit
+
+- Updated existing 03 and packaged empirical-method reference with IV prediction targets, endogenous inputs, selective coefficient-name mapping, covariance alignment, no-newdata path checks and uncertainty limits.
+- Audited fixest #714 (merged November 22); original workflow prose only, GPL-3 upstream assets linked. No new skill or upstream code imported.
+- Synchronized English/Chinese discovery, routers, sources, review standards and central/page attribution; pending #4–14 deduplicated, not imported.
+
 ## Unreleased
 
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.

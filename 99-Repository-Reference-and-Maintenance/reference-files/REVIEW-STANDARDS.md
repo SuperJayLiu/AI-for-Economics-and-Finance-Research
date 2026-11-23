@@ -102,3 +102,7 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+## IV Prediction Acceptance — 2026-11-23
+
+For prediction-dependent empirical workflows, require a declared structural/projection/forecast target; retained input/coefficient/covariance identities; intercept-only and legitimate-prefix checks; sample/fast-path comparisons; and supported uncertainty evidence. Mark source inspection separately from execution and interval coverage. Reject silent column omission or unsupported intervals. The dated [IV prediction source and workflow](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#sources-and-workflow-influences-for-iv-prediction) documents Berge/Butts, fixest #714, GPL-3 and the original-adaptation/no-copy boundary.

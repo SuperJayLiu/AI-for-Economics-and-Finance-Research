@@ -524,3 +524,9 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+## IV Prediction Source Check — 2026-11-23
+
+Laurent Berge / official fixest project; contributor Kyle Butts (both identified in the [pinned DESCRIPTION](https://github.com/lrberge/fixest/blob/6371909a0249b19373f5923af44ce75792346e36/DESCRIPTION)): [fix predict() for IV models, PR #714](https://github.com/lrberge/fixest/pull/714), merged 2026-11-22 16:19:10 UTC at `6371909a0249b19373f5923af44ce75792346e36`. GPL-3 applies to upstream assets. Checked 2026-11-23: the complete single-file final patch, full pinned `predict.fixest` function and [prediction documentation](https://github.com/lrberge/fixest/blob/6371909a0249b19373f5923af44ce75792346e36/man/predict.fixest.Rd). **UPDATE + LINK**: original adaptation of input, coefficient-name and covariance-alignment verification. No upstream code, tests, wording, figures, templates or extended structure copied or executed. This PR adds no tests; inspection is not numerical certification or evidence of availability in an installed release. Existing no-newdata fast paths and restrictions on prediction uncertainty still require separate checks.
+
+Adapted checks: [existing empirical-method skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#iv-prediction-verification).

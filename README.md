@@ -1,5 +1,7 @@
 # AI for Economics and Finance Research
 
+Dated methods check (2026-11-23): [IV prediction verification](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#iv-prediction-verification) covers endogenous inputs, retained names, covariance alignment and unsupported uncertainty requests.
+
 A practical, GitHub-native handbook and resource library for using AI responsibly in economics and finance research.
 
 > [!IMPORTANT]
