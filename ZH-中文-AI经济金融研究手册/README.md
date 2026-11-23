@@ -1,5 +1,7 @@
 # 中文入口：AI 经济金融研究手册
 
+2026-11-23 方法核查：[IV 预测验证](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#iv-prediction-verification)检查内生变量输入、保留列名与协方差对齐，并区分结构预测值、第一阶段投影和可行预测。
+
 这是本仓库的中文阅读入口。请先阅读本 README 了解整体结构，再进入 [`中文内容/`](中文内容/) 查看完整中文页面：手册、复制即用技能、Agent 与 Git 工作流、案例、资源和教学材料。目标是帮助经济学和金融学研究者用中文理解本仓库如何使用，并快速找到可以直接复制使用的 AI 研究技能、工作流模板和安全规则。部分专业术语保留英文，例如 prompt、skill、agent、MCP、Git、GitHub、LaTeX、Beamer、DiD、IV、RD。
 
 > [!IMPORTANT]
