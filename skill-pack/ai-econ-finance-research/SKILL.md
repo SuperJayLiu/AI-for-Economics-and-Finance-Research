@@ -98,3 +98,5 @@ Always apply these rules.
 ## Access Reality
 
 This skill can use local reference files only if the AI tool has access to them. If not, ask the user to paste the relevant file. Do not pretend to have read unavailable files.
+
+For scalar PLR near-zero errors or changed treatment units, use [DML treatment scale and residual verification](references/05-empirical-methods-economics.md#dml-treatment-scale-and-residual-verification); require residual and fixed-split evidence.

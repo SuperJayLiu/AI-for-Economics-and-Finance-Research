@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-25 Incremental Methods Audit
+
+- Updated existing 03 and packaged reference 05 with scalar-PLR unit/residual diagnostics, fixed-split rescaling checks and numerical/identification boundaries. No new skill.
+- Audited DoubleML #467 (merged November 24); original prose only, BSD-3-Clause assets linked. Synchronized bilingual navigation, routers, sources, standards and central/page attribution.
+- Deduplicated pending #4–15 without importing them; run began November 24 and completed November 25 Europe/London.
+
 ## Unreleased
 
 - Added a new survey, randomized-experiment, preregistration/PAP, implementation-audit, and complex-survey skill family.
