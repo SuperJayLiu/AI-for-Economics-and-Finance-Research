@@ -524,3 +524,9 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+## DML Treatment Scale Source Check — 2026-11-25
+
+DoubleML official Python project, maintained by Philipp Bach and Sven Klaassen ([pinned README](https://github.com/DoubleML/doubleml-for-py/blob/50663c993d8056d3e75ca4c226fcdcdb555133c6/README.md)); contributor `vrjdev`, merged by Sven Klaassen: [scalar score scale checks, PR #467](https://github.com/DoubleML/doubleml-for-py/pull/467), merged 2026-11-24 15:30:18 UTC, revision `50663c993d8056d3e75ca4c226fcdcdb555133c6`. [BSD-3-Clause license](https://github.com/DoubleML/doubleml-for-py/blob/50663c993d8056d3e75ca4c226fcdcdb555133c6/LICENSE). Checked 2026-11-25: all five final patches, the full pinned linear-score estimator, scalar-PLR residual/score implementations and fit/tuning call sites, and added test cases. **UPDATE + LINK**: original adaptation of unit-rescaling, cancellation and treatment-residual verification. No upstream code, test fixtures, wording, figures, templates or extended structure copied; no upstream installation or tests executed. The PR explicitly concerns the unreleased scalar API, not a newly established bug in a released package. Source inspection and local score arithmetic do not certify package execution, identification or interval coverage.
+
+Adapted workflow: [existing empirical-method skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-treatment-scale-and-residual-verification).

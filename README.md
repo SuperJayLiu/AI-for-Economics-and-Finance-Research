@@ -1,5 +1,7 @@
 # AI for Economics and Finance Research
 
+Dated methods check (2026-11-25): [DML treatment scale and residual verification](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-treatment-scale-and-residual-verification) separates small units, score cancellation and negligible residual treatment variation.
+
 A practical, GitHub-native handbook and resource library for using AI responsibly in economics and finance research.
 
 > [!IMPORTANT]

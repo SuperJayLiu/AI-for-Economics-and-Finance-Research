@@ -1,5 +1,7 @@
 # 中文入口：AI 经济金融研究手册
 
+2026-11-25 方法核查：[DML 处理变量尺度与残差验证](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#dml-treatment-scale-and-residual-verification)区分小单位、得分导数抵消与残差变异接近零；数值检查不等同于识别或推断有效性。
+
 这是本仓库的中文阅读入口。请先阅读本 README 了解整体结构，再进入 [`中文内容/`](中文内容/) 查看完整中文页面：手册、复制即用技能、Agent 与 Git 工作流、案例、资源和教学材料。目标是帮助经济学和金融学研究者用中文理解本仓库如何使用，并快速找到可以直接复制使用的 AI 研究技能、工作流模板和安全规则。部分专业术语保留英文，例如 prompt、skill、agent、MCP、Git、GitHub、LaTeX、Beamer、DiD、IV、RD。
 
 > [!IMPORTANT]

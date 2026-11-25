@@ -102,3 +102,7 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+## DML Treatment Scale Acceptance — 2026-11-25
+
+Require exact API/revision, treatment units and origin, sample/fold/prediction equivalence, per-repetition derivative/residual diagnostics, separate cancellation and residual failure cases, and coefficient/SE rescaling evidence. Do not equate a numerical threshold with identification or infer released-package behavior from unreleased scalar code. Distinguish source review, arithmetic controls and package execution. The dated [workflow attribution](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#sources-and-workflow-influences-for-dml-treatment-scale) records DoubleML maintainers/contributor, PR #467, BSD-3-Clause, original adaptation and exclusions.
