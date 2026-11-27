@@ -1,5 +1,7 @@
 # 中文入口：AI 经济金融研究手册
 
+方法更新（2026-11-27）：[多维聚类拆分与重新拟合审核](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#multiway-cluster-split-and-refit-audit)区分每个聚类维度的折数与总折数，核对重拟合及重复次数变化后的分组和预测记录。
+
 这是本仓库的中文阅读入口。请先阅读本 README 了解整体结构，再进入 [`中文内容/`](中文内容/) 查看完整中文页面：手册、复制即用技能、Agent 与 Git 工作流、案例、资源和教学材料。目标是帮助经济学和金融学研究者用中文理解本仓库如何使用，并快速找到可以直接复制使用的 AI 研究技能、工作流模板和安全规则。部分专业术语保留英文，例如 prompt、skill、agent、MCP、Git、GitHub、LaTeX、Beamer、DiD、IV、RD。
 
 > [!IMPORTANT]

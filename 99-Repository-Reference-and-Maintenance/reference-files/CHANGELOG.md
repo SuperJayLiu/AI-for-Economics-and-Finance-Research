@@ -38,3 +38,9 @@
 - Created GitHub-native handbook scaffold.
 - Added beginner entry point, learning paths, roadmap, citation metadata, contribution guidance, and section overviews.
 - Added complete starter AI project guides for literature review, empirical papers, theory papers, replication, and seminar presentations.
+
+## 2026-11-27
+
+- Updated existing empirical-method page 03 and packaged reference 05 with [cluster split/refit verification](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#multiway-cluster-split-and-refit-audit), based on DoubleML PR #468. No new skill family.
+- Synchronized bilingual entry points, routers, sources, acceptance standards and central/page attribution. Original prose only; no upstream code or lecture assets copied.
+- Pending earlier daily branches remain independent and require shared-file merge review.

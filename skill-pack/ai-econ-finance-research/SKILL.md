@@ -98,3 +98,5 @@ Always apply these rules.
 ## Access Reality
 
 This skill can use local reference files only if the AI tool has access to them. If not, ask the user to paste the relevant file. Do not pretend to have read unavailable files.
+
+For clustered DML refits or changed repetitions, use the [multiway cluster split and refit audit](references/05-empirical-methods-economics.md#multiway-cluster-split-and-refit-audit); require partition and dependent-artifact evidence.
