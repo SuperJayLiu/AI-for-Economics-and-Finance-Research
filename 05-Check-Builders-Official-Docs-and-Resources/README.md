@@ -524,3 +524,9 @@ These are not fully settled and should be updated carefully:
 | AI for teaching | course assistants and study tools are improving | student privacy, academic integrity, instructor controls |
 | LLM-generated variables | AI can become a measurement instrument in empirical work | validation, model-version drift, prompt sensitivity, disclosure norms |
 | AI execution layer | agents can now clean data and implement estimators | reproducibility, data lineage, and toy-data tests |
+
+## Cluster Split Source Check — 2026-11-27
+
+DoubleML official Python project, maintained by Philipp Bach and Sven Klaassen ([pinned README](https://github.com/DoubleML/doubleml-for-py/blob/baf9b87260e46f3d078dd187812ef797439d40ad/README.md)); contributor `vrjdev`, merged by Sven Klaassen: [PR #468, multi-way cluster fold comparison in scalar fit](https://github.com/DoubleML/doubleml-for-py/pull/468), merged 2026-11-27 13:01:44 UTC at `baf9b87260e46f3d078dd187812ef797439d40ad`. [Pinned BSD-3-Clause license](https://github.com/DoubleML/doubleml-for-py/blob/baf9b87260e46f3d078dd187812ef797439d40ad/LICENSE). Checked 2026-11-27: both final patches, scalar fit/draw/set splitting paths, reset hooks and four parametrized cluster test cases. **UPDATE + LINK**: original adaptation of split-preservation and refit acceptance checks. No upstream code, tests, fixtures, wording, figures, templates or extended structure copied; no upstream code installed or executed. This patch concerns the unreleased scalar API; it does not establish a released-package defect, valid cluster assignment, identification or confidence-interval coverage.
+
+Adapted workflow: [existing empirical-method skill](../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#multiway-cluster-split-and-refit-audit).

@@ -102,3 +102,7 @@ Before adding or replacing an online skill:
 5. if the license is absent or unclear, do not copy—link or describe only at a high level;
 6. add positive trigger, near-miss/non-trigger, and missing-input/adversarial eval cases;
 7. update `SKILL-SOURCE-AUDIT.md` and the destination page's `Sources and Workflow Influences` section together.
+
+## Cluster Split Acceptance — 2026-11-27
+
+Require exact API/revision, cluster dimensions, per-dimension versus total fold counts, partitions and repetition ledger, unchanged-setting preservation and deliberate-redraw controls. Revalidate split-dependent artifacts after a redraw; neither matching shapes nor fold counts establish provenance, identification or coverage. Distinguish source inspection from package execution and unreleased APIs from installed releases. The [page attribution](../../02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#sources-and-workflow-influences-for-cluster-split-semantics) records DoubleML maintainers, PR #468, BSD-3-Clause and adaptation limits.

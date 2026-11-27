@@ -107,3 +107,5 @@ Use a dedicated MCP server only if users need searchable, tool-call access to th
 - `get_chinese_page(section)`
 
 An MCP server is more powerful but requires installation, permissions, hosting or local setup, and maintenance. Start with this skill router first.
+
+For clustered DML refits or changed repetition counts, route to the [multiway cluster split and refit audit](02-Copy-and-Use-AI-Research-Instructions-and-Templates/skills/03-empirical-methods-skills-for-economics-research.md#multiway-cluster-split-and-refit-audit); require per-dimension counts, partition preservation and dependent-artifact provenance.
